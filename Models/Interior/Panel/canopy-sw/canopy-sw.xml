@@ -1,0 +1,49 @@
+<?xml version="1.0"?>
+
+<PropertyList>
+
+ <path>canopy-sw.ac</path>
+
+    <animation>
+       <type>range</type>
+       <min-m>0</min-m>
+       <max-m>5</max-m>
+    </animation>
+ 
+  <animation>
+ <object-name>lever</object-name>
+   <type>material</type>
+     <emission> 
+      <factor-prop>systems/electrical/outputs/instrument-lights-norm</factor-prop>
+        <red>0.2</red>
+        <green>0.5</green>
+        <blue>0.2</blue>
+      </emission>
+  </animation>
+
+
+ <animation>
+  <type>rotate</type>
+  <object-name>lever</object-name>
+   <property>/instrumentation/doors/crew/position-norm</property>
+   <interpolation>
+      <entry><ind>1</ind><dep> -30 </dep></entry>
+      <entry><ind>0.1</ind><dep>-30 </dep></entry>
+      <entry><ind>0</ind><dep> 30 </dep></entry>
+   </interpolation>
+  <center>
+   <x-m> 0 </x-m>
+   <y-m> 0.014 </y-m>
+   <z-m> 0 </z-m>
+  </center>
+  <axis>
+   <x> 0 </x>
+   <y> -1 </y>
+   <z> 0 </z>
+  </axis>
+ </animation>
+
+
+
+</PropertyList>
+

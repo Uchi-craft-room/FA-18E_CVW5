@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<PropertyList>
+
+ <path>flap-transit.ac</path>
+
+  <animation>
+    <type>noshadow</type>
+    <object-name>caution</object-name>
+  </animation>
+
+  <animation>
+    <type>select</type>
+    <object-name>caution</object-name>
+  <condition>
+     <or>
+      <and>
+       <greater-than>
+            <property>surface-positions/flap-pos-norm</property>
+            <value>0.1</value>
+       </greater-than>
+       <less-than>
+            <property>surface-positions/flap-pos-norm</property>
+            <value>0.2</value>
+       </less-than>
+       <greater-than>
+	   <property>systems/electrical/volts</property>
+	   <value>24</value>
+       </greater-than>
+      </and>
+      <and>
+       <greater-than>
+            <property>surface-positions/flap-pos-norm</property>
+            <value>0.3</value>
+       </greater-than>
+       <less-than>
+            <property>surface-positions/flap-pos-norm</property>
+            <value>0.4</value>
+       </less-than>
+       <greater-than>
+	   <property>systems/electrical/volts</property>
+	   <value>24</value>
+       </greater-than>
+      </and>
+      <and>
+       <greater-than>
+            <property>surface-positions/flap-pos-norm</property>
+            <value>0.5</value>
+       </greater-than>
+       <less-than>
+            <property>surface-positions/flap-pos-norm</property>
+            <value>0.6</value>
+       </less-than>
+       <greater-than>
+	   <property>systems/electrical/volts</property>
+	   <value>24</value>
+       </greater-than>
+      </and>
+      <and>
+       <greater-than>
+            <property>surface-positions/flap-pos-norm</property>
+            <value>0.7</value>
+       </greater-than>
+       <less-than>
+            <property>surface-positions/flap-pos-norm</property>
+            <value>0.8</value>
+       </less-than>
+       <greater-than>
+	   <property>systems/electrical/volts</property>
+	   <value>24</value>
+       </greater-than>
+      </and>
+     </or>
+   </condition>
+  </animation>
+
+  <animation>
+    <type>material</type>
+    <object-name>caution</object-name>
+    <emission>
+      <red>   1 </red>
+      <green> 1 </green>
+      <blue>  1 </blue>
+    </emission> 
+  </animation> 
+
+  <animation>
+    <type>material</type>
+    <object-name>case</object-name>
+    <emission>
+      <factor-prop>systems/electrical/outputs/instrument-lights-norm</factor-prop>
+      <red> 0.5 </red>
+      <green> 0.2 </green>
+      <blue>  0.2 </blue>
+    </emission> 
+  </animation> 
+</PropertyList>
+
+
+

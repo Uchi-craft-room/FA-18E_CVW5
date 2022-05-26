@@ -1,0 +1,1048 @@
+<?xml version="1.0"?>
+
+<PropertyList>
+
+ <name>NAV Mode Hud</name>
+
+
+
+    <enable3d>true</enable3d>
+
+
+    <ladder>
+        <name>Pitch Ladder</name>
+        <type>pitch</type>
+        <x>-25</x>
+        <y>-124</y>
+        <width>50</width>
+        <height>255</height>
+        <condition>
+		<and>
+			<or>
+				<property>controls/electric/engine/generator</property>
+				<property>controls/electric/engine[1]/generator</property>
+			</or>
+			<greater-than>
+				<property>systems/electrical/volts</property>
+				<value>16</value>
+			</greater-than>
+		</and>
+        </condition>
+        <roll-input>
+		<property>orientation/roll-deg</property>
+        </roll-input>
+        <pitch-input>
+		<property>orientation/pitch-deg</property>
+        </pitch-input>
+        <compression-factor>11</compression-factor>
+        <display-span>30.0</display-span>
+        <divisions>5.0</divisions>
+        <screen-hole>10</screen-hole>
+        <lbl-pos>0</lbl-pos>
+	<zero-bar-overlength>150</zero-bar-overlength>
+	<enable-dive-bar-angle>false</enable-dive-bar-angle>
+	<enable-dynamic-origin>true</enable-dynamic-origin>
+	<enable-fuselage-ref-line>false</enable-fuselage-ref-line>
+	<enable-target-spot>false</enable-target-spot>
+	<enable-velocity-vector>true</enable-velocity-vector>
+	<enable-drift-marker>false</enable-drift-marker>
+	<enable-alpha-bracket>true</enable-alpha-bracket>
+	<enable-energy-marker>false</enable-energy-marker>
+	<enable-climb-dive-marker>false</enable-climb-dive-marker>
+	<enable-energy-worm>false</enable-energy-worm>
+	<enable-waypoint-marker>false</enable-waypoint-marker>
+	<enable-zenith>false</enable-zenith>
+	<enable-nadir>false</enable-nadir>
+	<enable-hat>true</enable-hat>
+    </ladder>
+
+
+    <turn-bank-indicator>
+        <name>Turn Bank Indicator</name>
+        <x>-90</x>
+        <y>-90</y>
+        <width>180</width>
+        <height>180</height>
+
+        <condition>
+         <and>
+         <or>
+            <property>controls/electric/engine/generator</property>
+            <property>controls/electric/engine[1]/generator</property>
+         </or>
+         <greater-than>
+            <property>systems/electrical/volts</property>
+            <value>16</value>
+         </greater-than>
+         </and>
+        </condition>
+
+        <bank-input>
+            <property>/orientation/roll-deg</property>
+            <factor>-1</factor>
+        </bank-input>
+        <sideslip-input>
+            <property>/orientation/side-slip-deg</property>
+        </sideslip-input>
+        <gap-width>10</gap-width>
+        <bank-scale>true</bank-scale>
+        <bank-scale-radius>180</bank-scale-radius>
+        <option>bottom</option>
+    </turn-bank-indicator>
+
+    <tape>
+        <name>NAV BEARING </name>
+        <x>-40</x>
+        <y>44</y>
+        <width>80</width>
+        <height>40</height>
+        <condition>
+        <and>
+            <equals>
+               <property>instrumentation/steer-mode</property>
+               <value>3</value>
+            </equals>
+         <greater-than>
+            <property>systems/electrical/volts</property>
+            <value>16</value>
+         </greater-than>
+           <not>
+              <equals>
+                <property>instrumentation/nav/crosstrack-heading-error-deg</property>
+                <value>0</value>
+              </equals>
+           </not>
+         </and>
+        </condition>
+        <input>
+            <property>/instrumentation/nav/nav-needle-error-deg</property>
+            <factor>-1</factor>
+            <max>14.5</max>
+            <min>-14.5</min>
+        </input>
+        <display-span>31</display-span>
+        <option>top</option>
+        <option>notext</option>
+        <major-divisions>20</major-divisions>
+        <minor-divisions>0</minor-divisions>
+        <tick-bottom>true</tick-bottom>
+        <tick-top>true</tick-top>
+        <tick-right>false</tick-right>
+        <tick-left>false</tick-left>
+        <cap-bottom>false</cap-bottom>
+        <cap-top>false</cap-top>
+        <cap-right>true</cap-right>
+        <cap-left>true</cap-left>
+        <marker-offset>0</marker-offset>
+        <enable-pointer>false</enable-pointer>
+        <pointer-type>fixed</pointer-type>
+        <tick-type>line</tick-type>
+        <tick-length>variable</tick-length>
+    </tape>
+
+
+
+    <tape>
+        <name>TACAN BEARING </name>
+        <x>-40</x>
+        <y>44</y>
+        <width>80</width>
+        <height>40</height>
+        <condition>
+        <and>
+            <equals>
+               <property>instrumentation/steer-mode</property>
+               <value>2</value>
+            </equals>
+         <greater-than>
+            <property>systems/electrical/volts</property>
+            <value>16</value>
+         </greater-than>
+           <not>
+              <equals>
+                <property>instrumentation/tacan/indicated-distance-nm</property>
+                <value>0</value>
+              </equals>
+           </not>
+         </and>
+        </condition>
+        <input>
+            <property>/instrumentation/tacan/tacan-needle-error-deg</property>
+            <factor>-1</factor>
+            <max>14.5</max>
+            <min>-14.5</min>
+        </input>
+        <display-span>31</display-span>
+        <option>top</option>
+        <option>notext</option>
+        <major-divisions>20</major-divisions>
+        <minor-divisions>0</minor-divisions>
+        <tick-bottom>true</tick-bottom>
+        <tick-top>true</tick-top>
+        <tick-right>false</tick-right>
+        <tick-left>false</tick-left>
+        <cap-bottom>false</cap-bottom>
+        <cap-top>false</cap-top>
+        <cap-right>true</cap-right>
+        <cap-left>true</cap-left>
+        <marker-offset>0</marker-offset>
+        <enable-pointer>false</enable-pointer>
+        <pointer-type>fixed</pointer-type>
+        <tick-type>line</tick-type>
+        <tick-length>variable</tick-length>
+    </tape>
+
+
+
+
+    <!--Altitude at agl-ft 1000 greater-->
+    <label>
+        <name>Altitude at agl-ft 1000 greater</name>
+        <condition>
+         <and>
+         <greater-than>
+            <property>position/gear-agl-ft</property>
+            <value>1000</value>
+         </greater-than>
+         <or>
+            <property>controls/electric/engine/generator</property>
+            <property>controls/electric/engine[1]/generator</property>
+         </or>
+         <greater-than>
+            <property>systems/electrical/volts</property>
+            <value>16</value>
+         </greater-than>
+        </and>
+        </condition>
+        <input>
+            <property>instrumentation/altimeter/indicated-altitude-ft</property>
+            <factor>1</factor>
+        </input>
+        <x>40</x>
+        <y>-6</y>
+        <width>28</width>
+        <height>10</height>
+        <halign>right</halign>
+        <format>%4.0f</format>
+        <box>true</box>
+        <enable-pointer>false</enable-pointer>
+        <option>left</option>
+        <pointer-width>0</pointer-width>
+        <pointer-length>0</pointer-length>
+    </label>
+
+
+
+    <!--Radar Altitude at agl-ft 1000 than-->
+    <label>
+        <name>Radar Altitude at agl-ft 1000 than</name>
+        <condition>
+         <and>
+         <less-than>
+            <property>position/gear-agl-ft</property>
+            <value>1000</value>
+         </less-than>
+         <or>
+            <property>controls/electric/engine/generator</property>
+            <property>controls/electric/engine[1]/generator</property>
+         </or>
+         <greater-than>
+            <property>systems/electrical/volts</property>
+            <value>16</value>
+         </greater-than>
+        </and>
+        </condition>
+        <input>
+            <property>position/gear-agl-ft</property>
+            <factor>1</factor>
+        </input>
+        <x>40</x>
+        <y>-6</y>
+        <width>28</width>
+        <height>10</height>
+        <halign>right</halign>
+        <format>%4.0f</format>
+        <box>true</box>
+        <enable-pointer>false</enable-pointer>
+        <option>left</option>
+        <pointer-width>0</pointer-width>
+        <pointer-length>0</pointer-length>
+    </label>
+
+
+   <label>
+        <name>RadioALT Mark</name>
+        <x>70</x>
+        <y>-2</y>
+        <width>1</width>
+        <height>1</height>
+        <format>R</format>
+        <condition>
+         <and>
+         <less-than>
+            <property>position/gear-agl-ft</property>
+            <value>1000</value>
+         </less-than>
+         <or>
+            <property>controls/electric/engine/generator</property>
+            <property>controls/electric/engine[1]/generator</property>
+         </or>
+         <greater-than>
+            <property>systems/electrical/volts</property>
+            <value>16</value>
+         </greater-than>
+        </and>
+        </condition>
+    </label>
+
+
+
+    <!--KIAS speed-->
+    <label>
+        <name>KIAS speed</name>
+        <condition>
+         <and>
+         <greater-than>
+            <property>systems/electrical/volts</property>
+            <value>16</value>
+         </greater-than>
+        </and>
+        </condition>
+        <x>-60</x>
+        <y>-6</y>
+        <width>22</width>
+        <height>10</height>
+        <halign>right</halign>
+        <format>%4.0f</format>
+        <box>true</box>
+        <input>
+            <property>/velocities/airspeed-kt</property>
+        </input>
+    </label>
+
+
+    <!--VSI-->
+    <label>
+        <name>VSI label</name>
+        <condition>
+         <and>
+         <or>
+            <property>controls/electric/engine/generator</property>
+            <property>controls/electric/engine[1]/generator</property>
+         </or>
+         <greater-than>
+            <property>systems/electrical/volts</property>
+            <value>16</value>
+         </greater-than>
+        </and>
+        </condition>
+        <input>
+            <property>velocities/vertical-speed-fps</property>
+            <factor>60</factor>
+        </input>
+        <x>40</x>
+        <y>4</y>
+        <width>28</width>
+        <height>10</height>
+        <halign>right</halign>
+        <format>%3.0f</format>
+        <box>false</box>
+        <enable-pointer>false</enable-pointer>
+        <option>left</option>
+        <pointer-width>0</pointer-width>
+        <pointer-length>0</pointer-length>
+    </label>
+
+   <label>
+        <name>VSI v Mark</name>
+        <x>42</x>
+        <y>8</y>
+        <width>1</width>
+        <height>1</height>
+        <format>v</format>
+        <condition>
+         <and>
+         <less-than>
+            <property>velocities/vertical-speed-fps</property>
+            <value>0</value>
+         </less-than>
+         <or>
+            <property>controls/electric/engine/generator</property>
+            <property>controls/electric/engine[1]/generator</property>
+         </or>
+         <greater-than>
+            <property>systems/electrical/volts</property>
+            <value>16</value>
+         </greater-than>
+        </and>
+        </condition>
+    </label>
+
+
+    <tape>
+        <name>Gyrocompass</name>
+        <x>-40</x>
+        <y>36</y>
+        <width>80</width>
+        <height>10</height>
+        <condition>
+         <and>
+         <or>
+            <property>controls/electric/engine/generator</property>
+            <property>controls/electric/engine[1]/generator</property>
+         </or>
+         <greater-than>
+            <property>systems/electrical/volts</property>
+            <value>16</value>
+         </greater-than>
+        </and>
+        </condition>
+        <input>
+            <property>orientation/heading-deg</property>
+            <factor>0.1</factor>
+            <max>85</max>
+            <min>0</min>
+        </input>
+        <display-span>3</display-span>
+        <modulo>360</modulo>
+        <option>top</option>
+        <major-divisions>1</major-divisions>
+        <minor-divisions>0.2</minor-divisions>
+        <tick-bottom>false</tick-bottom>
+        <tick-top>false</tick-top>
+        <tick-right>false</tick-right>
+        <tick-left>false</tick-left>
+        <cap-bottom>true</cap-bottom>
+        <cap-top>false</cap-top>
+        <cap-right>false</cap-right>
+        <cap-left>false</cap-left>
+        <marker-offset>0</marker-offset>
+        <enable-pointer>false</enable-pointer>
+        <pointer-type>fixed</pointer-type>
+        <tick-type>line</tick-type>
+        <tick-length>variable</tick-length>
+    </tape>
+
+    <label>
+        <name>Gyro Heading Marker</name>
+        <x>0</x>
+        <y>33</y>
+        <width>1</width>
+        <height>2</height>
+        <format>^</format>
+        <condition>
+         <and>
+         <or>
+            <property>controls/electric/engine/generator</property>
+            <property>controls/electric/engine[1]/generator</property>
+         </or>
+         <greater-than>
+            <property>systems/electrical/volts</property>
+            <value>16</value>
+         </greater-than>
+        </and>
+        </condition>
+    </label>
+
+
+
+    <label>
+        <name>W Mark1</name>
+        <x>2</x>
+        <y>0</y>
+        <width>1</width>
+        <height>1</height>
+        <format>v</format>
+        <condition>
+         <greater-than>
+            <property>systems/electrical/volts</property>
+            <value>16</value>
+         </greater-than>
+        </condition>
+    </label>
+
+    <label>
+        <name>W Mark2</name>
+        <x>-2</x>
+        <y>0</y>
+        <width>1</width>
+        <height>1</height>
+        <format>v</format>
+        <condition>
+         <greater-than>
+            <property>systems/electrical/volts</property>
+            <value>16</value>
+         </greater-than>
+        </condition>
+    </label>
+
+
+    <label>
+        <name>Alpha deg</name>
+        <x>-38</x>
+        <y>-37</y>
+       <width>1</width>
+        <height>1</height>
+        <condition>
+         <greater-than>
+            <property>systems/electrical/volts</property>
+            <value>16</value>
+         </greater-than>
+        </condition>
+        <input>
+            <property>orientation/alpha-deg</property>
+        </input>
+        <format>%4.1f</format>
+        <halign>right</halign>
+    </label>
+
+    <label>
+        <name>Alpha Mark</name>
+        <x>-62</x>
+        <y>-37</y>
+       <width>1</width>
+        <height>1</height>
+        <format>A</format>
+        <halign>left</halign>
+        <condition>
+         <greater-than>
+            <property>systems/electrical/volts</property>
+            <value>16</value>
+         </greater-than>
+        </condition>
+    </label>
+
+
+    <label>
+        <name>MACH Number</name>
+        <x>-55</x>
+        <y>-45</y>
+       <width>1</width>
+        <height>1</height>
+        <condition>
+         <greater-than>
+            <property>systems/electrical/volts</property>
+            <value>16</value>
+         </greater-than>
+        </condition>
+        <input>
+            <property>velocities/mach</property>
+        </input>
+        <format>%4.1f</format>
+        <halign>left</halign>
+    </label>
+
+    <label>
+        <name>MACH M</name>
+        <x>-58</x>
+        <y>-45</y>
+       <width>1</width>
+        <height>1</height>
+        <format>M</format>
+        <halign>left</halign>
+        <condition>
+         <greater-than>
+            <property>systems/electrical/volts</property>
+            <value>16</value>
+         </greater-than>
+        </condition>
+    </label>
+
+    <label>
+        <name>G Load</name>
+        <x>-55.5</x>
+        <y>-53</y>
+        <width>1</width>
+        <height>1</height>
+        <condition>
+         <greater-than>
+            <property>systems/electrical/volts</property>
+            <value>16</value>
+         </greater-than>
+        </condition>
+        <input>
+            <property>accelerations/pilot/z-accel-fps_sec</property>
+            <factor>-0.03108095</factor>
+            <damp>1.0</damp>
+        </input>
+        <format>%4.1f</format>
+        <halign>left</halign>
+    </label>
+
+    <label>
+        <name>G Mark</name>
+        <x>-56.5</x>
+        <y>-53</y>
+        <width>1</width>
+        <height>1</height>
+        <format>G</format>
+        <condition>
+         <greater-than>
+            <property>systems/electrical/volts</property>
+            <value>16</value>
+         </greater-than>
+        </condition>
+    </label>
+
+    <label>
+        <name>ILST</name>
+        <x>56</x>
+        <y>-37</y>
+        <width>1</width>
+        <height>1</height>
+        <format>ILST</format>
+        <condition>
+           <and>
+            <equals>
+               <property>instrumentation/steer-mode</property>
+               <value>0</value>
+            </equals>
+            <greater-than>
+            <property>systems/electrical/volts</property>
+            <value>16</value>
+            </greater-than>
+           </and>
+        </condition>
+    </label>
+
+    <label>
+        <name>ILSN</name>
+        <x>56</x>
+        <y>-37</y>
+        <width>1</width>
+        <height>1</height>
+        <format>ILSN</format>
+        <condition>
+           <and>
+            <equals>
+               <property>instrumentation/steer-mode</property>
+               <value>1</value>
+            </equals>
+            <greater-than>
+            <property>systems/electrical/volts</property>
+            <value>16</value>
+            </greater-than>
+           </and>
+        </condition>
+    </label>
+
+    <label>
+        <name>TCN</name>
+        <x>56</x>
+        <y>-37</y>
+        <width>1</width>
+        <height>1</height>
+        <format>TCN</format>
+        <condition>
+           <and>
+            <equals>
+               <property>instrumentation/steer-mode</property>
+               <value>2</value>
+            </equals>
+            <greater-than>
+            <property>systems/electrical/volts</property>
+            <value>16</value>
+            </greater-than>
+           </and>
+        </condition>
+    </label>
+
+    <label>
+        <name>NAV</name>
+        <x>56</x>
+        <y>-37</y>
+        <width>1</width>
+        <height>1</height>
+        <format>NAV</format>
+        <condition>
+           <and>
+            <equals>
+               <property>instrumentation/steer-mode</property>
+               <value>3</value>
+            </equals>
+            <greater-than>
+            <property>systems/electrical/volts</property>
+            <value>16</value>
+            </greater-than>
+           </and>
+        </condition>
+    </label>
+
+    <label>
+        <name>DME miles</name>
+        <x>51</x>
+        <y>-43</y>
+        <width>1</width>
+        <height>1</height>
+        <condition>
+          <and>        
+              <property>instrumentation/dme/in-range</property>
+              <not>
+                <property>instrumentation/nav/has-gs</property>
+              </not>
+            <greater-than>
+            <property>systems/electrical/volts</property>
+            <value>16</value>
+           </greater-than>
+          </and>        
+        </condition>
+        <input>
+          <property>instrumentation/dme/indicated-distance-nm</property>
+          <factor>1</factor>
+          <damp>1.0</damp>
+        </input>
+        <format>%4.1f</format>
+        <halign>left</halign>
+    </label>
+
+    <label>
+        <name>DME miles NM</name>
+        <x>50</x>
+        <y>-43</y>
+        <width>1</width>
+        <height>1</height>
+        <condition>
+           <and>        
+              <property>instrumentation/dme/in-range</property>
+              <not>
+                <property>instrumentation/nav/has-gs</property>
+              </not>
+         <greater-than>
+            <property>systems/electrical/volts</property>
+            <value>16</value>
+         </greater-than>
+           </and>        
+        </condition>
+        <format>N</format>
+        <halign>right</halign>
+    </label>
+
+    <label>
+        <name>DME TIME MIN</name>
+        <x>60</x>
+        <y>-50</y>
+        <width>1</width>
+        <height>1</height>
+        <condition>
+          <and>        
+              <property>instrumentation/dme/in-range</property>
+              <not>
+                <property>instrumentation/nav/has-gs</property>
+              </not>
+            <greater-than>
+            <property>systems/electrical/volts</property>
+            <value>16</value>
+           </greater-than>
+          </and>        
+        </condition>
+        <input>
+          <property>instrumentation/dme/indicated-time-min</property>
+          <factor>1</factor>
+          <damp>1.0</damp>
+        </input>
+        <format>%4.1f</format>
+        <halign>right</halign>
+    </label>
+
+    <label>
+        <name>DME MIN</name>
+        <x>75</x>
+        <y>-50</y>
+        <width>1</width>
+        <height>1</height>
+        <condition>
+           <and>        
+              <property>instrumentation/dme/in-range</property>
+              <not>
+                <property>instrumentation/nav/has-gs</property>
+              </not>
+         <greater-than>
+            <property>systems/electrical/volts</property>
+            <value>16</value>
+         </greater-than>
+           </and>        
+        </condition>
+        <format>min</format>
+        <halign>right</halign>
+    </label>
+
+    <label>
+        <name>glide-slope miles</name>
+        <x>55</x>
+        <y>-50</y>
+        <width>1</width>
+        <height>1</height>
+        <condition>
+           <and>
+            <less-than>
+               <property>instrumentation/steer-mode</property>
+               <value>1.5</value>
+            </less-than>
+            <property>instrumentation/nav/gs-in-range</property>
+            <property>instrumentation/nav/has-gs</property>
+            <greater-than>
+            <property>systems/electrical/volts</property>
+            <value>16</value>
+            </greater-than>
+           </and>
+        </condition>
+        <input>
+          <property>instrumentation/nav/gs-distance</property>
+          <factor>0.000621</factor>
+          <damp>1.0</damp>
+        </input>
+        <format>%4.1f</format>
+        <halign>right</halign>
+    </label>
+
+    <label>
+        <name>glide-slope miles NM</name>
+        <x>66</x>
+        <y>-50</y>
+        <width>1</width>
+        <height>1</height>
+        <condition>
+           <and>
+            <less-than>
+               <property>instrumentation/steer-mode</property>
+               <value>1.5</value>
+            </less-than>
+            <property>instrumentation/nav/gs-in-range</property>
+            <property>instrumentation/nav/has-gs</property>
+         <greater-than>
+            <property>systems/electrical/volts</property>
+            <value>16</value>
+         </greater-than>
+           </and>
+        </condition>
+        <format>NM</format>
+        <halign>right</halign>
+    </label>
+
+
+    <ladder>
+        <name>PULL_UP1</name>
+        <type>pitch</type>
+        <x>-25</x>
+        <y>-105</y>
+        <width>50</width>
+        <height>255</height>
+   <condition>
+    <and>
+       <less-than>
+         <property>position/gear-agl-ft</property>
+         <value>1300</value>
+       </less-than>
+
+       <less-than>
+         <property>velocities/vertical-speed-fps</property>
+         <value>-50</value>
+       </less-than>
+         <greater-than>
+            <property>systems/electrical/volts</property>
+            <value>16</value>
+         </greater-than>
+   </and>
+   </condition>
+        <roll-input>
+          <property>controls/electric/engine/generator</property>
+          <factor>45</factor>
+        </roll-input>
+        <pitch-input>
+            <property>controls/electric/engine/generator</property>
+        </pitch-input>
+        <compression-factor>11.63</compression-factor>
+        <display-span>0</display-span>
+        <divisions>15</divisions>
+        <screen-hole>5</screen-hole>
+        <lbl-pos>10</lbl-pos>
+        <zero-bar-overlength>120</zero-bar-overlength>
+    </ladder>
+
+    <ladder>
+        <name>PULL_UP2</name>
+        <type>pitch</type>
+        <x>-25</x>
+        <y>-105</y>
+        <width>50</width>
+        <height>255</height>
+   <condition>
+    <and>
+       <less-than>
+         <property>position/gear-agl-ft</property>
+         <value>1300</value>
+       </less-than>
+
+       <less-than>
+         <property>velocities/vertical-speed-fps</property>
+         <value>-50</value>
+       </less-than>
+         <greater-than>
+            <property>systems/electrical/volts</property>
+            <value>16</value>
+         </greater-than>
+   </and>
+   </condition>
+        <roll-input>
+          <property>controls/electric/engine/generator</property>
+          <factor>-45</factor>
+        </roll-input>
+        <pitch-input>
+            <property>controls/electric/engine/generator</property>
+        </pitch-input>
+        <compression-factor>11.63</compression-factor>
+        <display-span>0</display-span>
+        <divisions>15</divisions>
+        <screen-hole>5</screen-hole>
+        <lbl-pos>10</lbl-pos>
+        <zero-bar-overlength>120</zero-bar-overlength>
+    </ladder>
+
+
+    <tape>
+        <name>Crosstrack</name>
+        <x>-30</x>
+        <y>85</y>
+        <width>30</width>
+        <height>30</height>
+        <condition>
+        <and>
+         <greater-than>
+            <property>systems/electrical/volts</property>
+            <value>16</value>
+         </greater-than>
+              <equals>
+                <property>instrumentation/nav/crosstrack-heading-error-deg</property>
+                <value>0</value>
+              </equals>
+         </and>
+        </condition>
+
+        <input>
+            <property>instrumentation/nav/heading-needle-deflection</property>
+            <factor>-1</factor>
+            <max>7</max>
+            <min>-7</min>
+        </input>
+        <display-span>20</display-span>
+        <option>top</option>
+        <option>notext</option>
+        <major-divisions>20</major-divisions>
+        <minor-divisions>0</minor-divisions>
+        <tick-bottom>true</tick-bottom>
+        <tick-top>true</tick-top>
+        <tick-right>false</tick-right>
+        <tick-left>false</tick-left>
+        <cap-bottom>false</cap-bottom>
+        <cap-top>false</cap-top>
+        <cap-right>true</cap-right>
+        <cap-left>true</cap-left>
+        <marker-offset>0</marker-offset>
+        <enable-pointer>false</enable-pointer>
+        <pointer-type>fixed</pointer-type>
+        <tick-type>line</tick-type>
+        <tick-length>variable</tick-length>
+    </tape>
+
+
+
+    <tape>
+        <name>localizer</name>
+        <x>-30</x>
+        <y>-117</y>
+        <width>60</width>
+        <height>120</height>
+        <condition>
+        <and>
+            <less-than>
+               <property>instrumentation/steer-mode</property>
+               <value>1.5</value>
+            </less-than>
+         <greater-than>
+            <property>systems/electrical/volts</property>
+            <value>16</value>
+         </greater-than>
+           <not>
+              <equals>
+                <property>instrumentation/nav/crosstrack-heading-error-deg</property>
+                <value>0</value>
+              </equals>
+           </not>
+            <property>instrumentation/nav/gs-in-range</property>
+            <property>instrumentation/nav/has-gs</property>
+         </and>
+        </condition>
+
+        <input>
+            <property>instrumentation/nav/heading-needle-deflection</property>
+            <factor>-1</factor>
+            <max>9</max>
+            <min>-9</min>
+        </input>
+        <display-span>20</display-span>
+        <option>top</option>
+        <option>notext</option>
+        <major-divisions>20</major-divisions>
+        <minor-divisions>0</minor-divisions>
+        <tick-bottom>true</tick-bottom>
+        <tick-top>true</tick-top>
+        <tick-right>false</tick-right>
+        <tick-left>false</tick-left>
+        <cap-bottom>false</cap-bottom>
+        <cap-top>false</cap-top>
+        <cap-right>true</cap-right>
+        <cap-left>true</cap-left>
+        <marker-offset>0</marker-offset>
+        <enable-pointer>false</enable-pointer>
+        <pointer-type>fixed</pointer-type>
+        <tick-type>line</tick-type>
+        <tick-length>variable</tick-length>
+    </tape>
+
+
+    <tape>
+        <name>glide-slope</name>
+        <x> -30 </x>
+        <y>-118</y>
+        <width>60</width>
+        <height>60</height>
+
+        <condition>
+           <and>
+            <less-than>
+               <property>instrumentation/steer-mode</property>
+               <value>1.5</value>
+            </less-than>
+            <property>instrumentation/nav/gs-in-range</property>
+            <property>instrumentation/nav/has-gs</property>
+           </and>
+        </condition>
+
+        <input>
+            <property>instrumentation/nav[0]/gs-needle-deflection</property>
+            <factor>-2.6</factor>
+            <max>10</max>
+            <min>-10</min>
+        </input>
+        <display-span>20</display-span>
+        <option>vertical</option>
+        <option>notext</option>
+        <major-divisions>20</major-divisions>
+        <minor-divisions>0</minor-divisions>
+        <tick-bottom>false</tick-bottom>
+        <tick-top>false</tick-top>
+        <tick-right>true</tick-right>
+        <tick-left>true</tick-left>
+        <cap-bottom>false</cap-bottom>
+        <cap-top>false</cap-top>
+        <cap-right>false</cap-right>
+        <cap-left>false</cap-left>
+        <marker-offset>0</marker-offset>
+        <enable-pointer>false</enable-pointer>
+        <pointer-type>fixed</pointer-type>
+        <tick-type>line</tick-type>
+        <tick-length>variable</tick-length>
+    </tape>
+
+
+</PropertyList>

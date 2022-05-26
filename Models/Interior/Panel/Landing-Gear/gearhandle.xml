@@ -1,0 +1,155 @@
+<?xml version="1.0"?>
+
+<PropertyList>
+
+<path>gearhandle.ac</path>
+
+<!-- GEAR HANDLE -->
+
+  <animation>
+	  <type>material</type>
+	  <object-name>base</object-name>
+	  <object-name>gear_handle</object-name>
+	  <emission>
+		  <red>   0.2 </red>
+		  <green> 0.5 </green>
+		  <blue>  0.2 </blue>
+		  <factor-prop>systems/electrical/outputs/instrument-lights-norm</factor-prop>
+	  </emission>
+  </animation>
+
+  <animation>
+	  <type>material</type>
+	  <object-name>gear_handle_knob</object-name>
+	  <emission>
+		  <red>   1 </red>
+		  <green> 1 </green>
+		  <blue>  1 </blue>
+	  </emission>
+  </animation>
+
+  <animation>
+    <type>pick</type>
+    <visible>true</visible>
+    <object-name>gear_handle</object-name>
+    <action>
+	<button>0</button>
+	<repeatable>false</repeatable>
+	<binding>
+		<command>property-toggle</command>
+		<property>controls/gear/gear-down</property>
+	</binding>
+	<binding>
+		<command>property-toggle</command>
+		<property>sim/sound/click</property>
+	</binding>
+    </action>
+  </animation>
+
+<animation>
+	<type>select</type>
+	<object-name>gear_handle_knob</object-name>
+	<condition>
+		<and>
+		<greater-than>
+			<property>gear/gear[2]/position-norm</property>
+			<value>0.1</value>
+		</greater-than>
+		<less-than>
+			<property>gear/gear[2]/position-norm</property>
+			<value>0.9</value>
+		</less-than>
+		</and>
+	</condition>
+</animation>
+
+<animation>
+	<type>translate</type>
+	<object-name>gear_handle</object-name>
+	<object-name>gear_handle_knob</object-name>
+	<property>controls/gear/gear-down</property>
+	<factor>-0.04</factor>
+	<center>
+		<x-m>-6.219 </x-m>
+		<y-m>-0.429 </y-m>
+		<z-m> 0.594 </z-m>
+	</center>
+	<axis>
+		<x> 0 </x>
+		<y> 0.1 </y>
+		<z> 1 </z>
+	</axis>
+  </animation>
+
+<!-- HOOK HANDLE -->
+
+  <animation>
+	  <type>material</type>
+	  <object-name>hook_handle</object-name>
+	  <emission>
+		  <red>   0.2 </red>
+		  <green> 0.5 </green>
+		  <blue>  0.2 </blue>
+		  <factor-prop>systems/electrical/outputs/instrument-lights-norm</factor-prop>
+	  </emission>
+  </animation>
+
+  <animation>
+	<type>pick</type>
+	<visible>true</visible>
+	<object-name>hook_handle</object-name>
+	<action>
+		<button>0</button>
+		<repeatable>false</repeatable>
+		<binding>
+			<command>property-toggle</command>
+			<property>controls/gear/tailhook</property>
+		</binding>
+		<binding>
+			<command>property-toggle</command>
+			<property>sim/sound/click</property>
+		</binding>
+	</action>
+  </animation>
+
+<animation>
+	<type>translate</type>
+	<object-name>hook_handle</object-name>
+	<property>controls/gear/tailhook</property>
+	<factor>-0.04</factor>
+	<offset-deg>0</offset-deg>
+	<center>
+		<x-m>-6.219 </x-m>
+		<y-m> 0.429 </y-m>
+		<z-m> 0.594 </z-m>
+	</center>
+	<axis>
+		<x>0</x>
+		<y>-0.1</y>
+		<z>1</z>
+	</axis>
+</animation>
+
+<animation>
+	<type>select</type>
+	<object-name>hook_lamp</object-name>
+	<condition>
+		<greater-than>
+			<property>gear/gear[2]/hook</property>
+			<value>0.9</value>
+		</greater-than>
+	</condition>
+</animation>
+
+  <animation>
+	  <type>material</type>
+	  <object-name>hook_lamp</object-name>
+	  <emission>
+		  <red>   1 </red>
+		  <green> 1 </green>
+		  <blue>  1 </blue>
+	  </emission>
+  </animation>
+
+
+</PropertyList>

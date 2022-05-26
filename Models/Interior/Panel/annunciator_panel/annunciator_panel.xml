@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<PropertyList>
+
+  <path>annunciator_panel.ac</path>
+
+  <animation>
+    <type>material</type>
+    <object-name>panel</object-name>
+    <emission>
+      <red>   0.2 </red>
+      <green> 0.5 </green>
+      <blue>  0.2 </blue>
+      <factor-prop>systems/electrical/outputs/instrument-lights-norm</factor-prop>
+    </emission>
+  </animation>
+
+  <animation>
+    <type>material</type>
+    <object-name>REC</object-name>
+    <object-name>SPD-BRK</object-name>
+    <object-name>L-BAR-GRN</object-name>
+    <object-name>L-BAR-RED</object-name>
+    <object-name>master</object-name>
+    <emission>
+      <red>   1 </red>
+      <green> 1 </green>
+      <blue>  1 </blue>
+    </emission>
+  </animation>
+
+  <animation>
+    <type>select</type>
+    <object-name>REC</object-name>
+    <condition>
+	<greater-than>
+		<property>systems/electrical/volts</property>
+		<value>16</value>
+	</greater-than>
+    </condition>
+  </animation>
+
+  <animation>
+    <type>select</type>
+    <object-name>SPD-BRK</object-name>
+    <condition>
+	<and>
+	<property>controls/flight/speedbrake</property>
+	<greater-than>
+		<property>systems/electrical/volts</property>
+		<value>16</value>
+	</greater-than>
+	</and>
+    </condition>
+  </animation>
+
+  <animation>
+    <type>select</type>
+    <object-name>L-BAR-GRN</object-name>
+    <condition>
+	<and>
+	<equals>
+		<property>gear/launchbar/state</property>
+		<value>Engaged</value>
+	</equals>
+	<greater-than>
+		<property>systems/electrical/volts</property>
+		<value>16</value>
+	</greater-than>
+	</and>
+    </condition>
+  </animation>
+
+  <animation>
+    <type>select</type>
+    <object-name>L-BAR-RED</object-name>
+    <condition>
+	<and>
+	<equals>
+		<property>gear/launchbar/state</property>
+		<value>NONE</value>
+	</equals>
+	<greater-than>
+		<property>systems/electrical/volts</property>
+		<value>16</value>
+	</greater-than>
+	</and>
+    </condition>
+  </animation>
+
+  <animation>
+    <type>select</type>
+    <object-name>master</object-name>
+    <condition>
+	<and>
+            <property>sim/model/lights/sbc1/state</property>
+	<equals>
+		<property>gear/launchbar/state</property>
+		<value>Engaged</value>
+	</equals>
+	<property>gear/gear/has-brake</property>
+	<greater-than>
+		<property>systems/electrical/volts</property>
+		<value>16</value>
+	</greater-than>
+	</and>
+    </condition>
+  </animation>
+
+
+
+</PropertyList>
+
+
+
+
+
+
+
+
+
+

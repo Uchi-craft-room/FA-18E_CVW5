@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<PropertyList>
+
+ <path>TEWS-panel.ac</path>
+
+  <animation>
+    <type>material</type>
+    <object-name>base</object-name>
+    <emission>
+      <red>   0.5 </red>
+      <green> 0.2 </green>
+      <blue>  0.2 </blue>
+      <factor-prop>systems/electrical/outputs/instrument-lights-norm</factor-prop>
+    </emission>
+  </animation>
+
+
+</PropertyList>
+

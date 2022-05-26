@@ -1,0 +1,202 @@
+<?xml version="1.0"?>
+
+<PropertyList>
+
+    <path>steer-mode-sw.ac</path>
+
+
+  <animation>
+    <object-name>base</object-name>
+    <object-name>knob</object-name>
+    <object-name>lever</object-name>
+   <type>material</type>
+     <emission>
+      <factor-prop>systems/electrical/outputs/instrument-lights-norm</factor-prop>
+        <red>0.5</red>
+        <green>0.2</green>
+        <blue>0.2</blue>
+      </emission>
+  </animation>
+
+  <animation>
+    <type>pick</type>
+    <object-name>knob</object-name>
+    <action>
+      <button>0</button>
+      <repeatable>true</repeatable>
+      <interval-sec>0.1</interval-sec>
+            <binding>
+              <command>property-toggle</command>
+              <property>sim/sound/click</property>
+            </binding>
+        <binding>
+                <command>nasal</command>
+                <script>dmesw.dme_step(1)</script>
+       </binding>
+    </action>
+  </animation>
+
+  <animation>
+    <type>pick</type>
+    <object-name>knob</object-name>
+    <action>
+      <button>1</button>
+      <repeatable>true</repeatable>
+      <interval-sec>0.1</interval-sec>
+            <binding>
+              <command>property-toggle</command>
+              <property>sim/sound/click</property>
+            </binding>
+        <binding>
+                <command>nasal</command>
+                <script>dmesw.dme_step(-1)</script>
+       </binding>
+    </action>
+  </animation>
+
+
+  <animation>
+    <type>pick</type>
+    <object-name>knob</object-name>
+    <action>
+      <button>3</button>
+            <binding>
+              <command>property-toggle</command>
+              <property>sim/sound/click</property>
+            </binding>
+        <binding>
+                <command>nasal</command>
+                <script>dmesw.dme_step(1)</script>
+       </binding>
+    </action>
+  </animation>
+
+  <animation>
+    <type>pick</type>
+    <object-name>knob</object-name>
+    <action>
+      <button>4</button>
+            <binding>
+              <command>property-toggle</command>
+              <property>sim/sound/click</property>
+            </binding>
+        <binding>
+                <command>nasal</command>
+                <script>dmesw.dme_step(-1)</script>
+       </binding>
+    </action>
+  </animation>
+
+<animation>
+  <type>rotate</type>
+  <object-name>knob</object-name>
+  <property>instrumentation/steer-mode</property>
+  <factor>55</factor>
+  <center>
+   <x-m>0.010</x-m>
+   <y-m>0.001</y-m>
+   <z-m>0.003</z-m>
+  </center>
+  <axis>
+   <x>1</x>
+   <y>0</y>
+   <z>0</z>
+  </axis>
+ </animation>
+
+  <animation>
+    <type>pick</type>
+    <object-name>lever</object-name>
+    <action>
+      <button>0</button>
+      <repeatable>true</repeatable>
+      <interval-sec>0.1</interval-sec>
+            <binding>
+              <command>property-toggle</command>
+              <property>sim/sound/click</property>
+            </binding>
+        <binding>
+                <command>nasal</command>
+                <script>dmesw.dme_step(1)</script>
+       </binding>
+    </action>
+  </animation>
+
+  <animation>
+    <type>pick</type>
+    <object-name>lever</object-name>
+    <action>
+      <button>1</button>
+      <repeatable>true</repeatable>
+      <interval-sec>0.1</interval-sec>
+            <binding>
+              <command>property-toggle</command>
+              <property>sim/sound/click</property>
+            </binding>
+        <binding>
+                <command>nasal</command>
+                <script>dmesw.dme_step(-1)</script>
+       </binding>
+    </action>
+  </animation>
+
+
+  <animation>
+    <type>pick</type>
+    <object-name>lever</object-name>
+    <action>
+      <button>3</button>
+            <binding>
+              <command>property-toggle</command>
+              <property>sim/sound/click</property>
+            </binding>
+        <binding>
+                <command>nasal</command>
+                <script>dmesw.dme_step(1)</script>
+       </binding>
+    </action>
+  </animation>
+
+  <animation>
+    <type>pick</type>
+    <object-name>lever</object-name>
+    <action>
+      <button>4</button>
+            <binding>
+              <command>property-toggle</command>
+              <property>sim/sound/click</property>
+            </binding>
+        <binding>
+                <command>nasal</command>
+                <script>dmesw.dme_step(-1)</script>
+       </binding>
+    </action>
+  </animation>
+
+<animation>
+  <type>rotate</type>
+  <object-name>lever</object-name>
+  <property>instrumentation/steer-mode</property>
+  <factor>20</factor>
+  <center>
+   <x-m>-0.013</x-m>
+   <y-m>0.032</y-m>
+   <z-m>0.009</z-m>
+  </center>
+  <axis>
+   <x>0</x>
+   <y>-1</y>
+   <z>0</z>
+  </axis>
+ </animation>
+
+
+    <animation>
+       <type>range</type>
+       <min-m>0</min-m>
+       <max-m>10</max-m>
+    </animation>
+
+</PropertyList>
+
+

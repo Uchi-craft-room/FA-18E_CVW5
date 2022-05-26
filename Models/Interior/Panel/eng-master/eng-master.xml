@@ -1,0 +1,424 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<PropertyList>
+
+ <path>eng-master.ac</path>
+
+  <animation>
+    <type>material</type>
+    <object-name>ext-pwr</object-name>
+    <object-name>starter</object-name>
+    <emission>
+      <red> 0.4 </red>
+      <green> 0.4 </green>
+      <blue>  0.4 </blue>
+    </emission>
+  </animation>
+
+  <animation>
+    <type>material</type>
+    <object-name>ready-lamp-on</object-name>
+    <emission>
+      <red> 1 </red>
+      <green> 1 </green>
+      <blue>  1 </blue>
+    </emission>
+  </animation>
+
+  <animation>
+    <type>material</type>
+    <object-name>base</object-name>
+    <object-name>ready-lamp-off</object-name>
+    <object-name>eng-ctrl-LH</object-name>
+    <object-name>eng-master-LH</object-name>
+    <object-name>eng-master-RH</object-name>
+    <object-name>range-knob</object-name>
+    <emission>
+      <red>   0.5 </red>
+      <green> 0.2 </green>
+      <blue>  0.2 </blue>
+      <factor-prop>systems/electrical/outputs/instrument-lights-norm</factor-prop>
+    </emission>
+  </animation>
+
+
+<!-- ENG MASTER RH-->
+
+  <animation>
+    <type>pick</type>
+    <visible>true</visible>
+    <object-name>eng-master-RH</object-name>
+    <action>
+      <button>0</button>
+      <repeatable>false</repeatable>
+      <binding>
+        <command>property-toggle</command>
+        <property>controls/engines/engine[0]/master-sw</property>
+      </binding>
+      <binding>
+        <command>property-toggle</command>
+        <property>sim/sound/click</property>
+      </binding>
+    </action>
+  </animation>
+
+  <animation>
+    <type>rotate</type>
+    <object-name>eng-master-RH</object-name>
+    <property>controls/engines/engine[0]/master-sw</property>
+    <factor>22.5</factor>
+    <offset>-22.5</offset>
+    <axis>
+      <x>  0 </x>
+      <y> -1 </y>
+      <z>  0 </z>
+    </axis>
+    <center>
+      <x-m> -0.001 </x-m>
+      <y-m> 0.005 </y-m>
+      <z-m> -0.171 </z-m>
+    </center>
+  </animation>
+
+
+<!-- ENG MASTER LH -->
+
+  <animation>
+    <type>pick</type>
+    <visible>true</visible>
+    <object-name>eng-master-LH</object-name>
+    <action>
+      <button>0</button>
+      <repeatable>false</repeatable>
+      <binding>
+        <command>property-toggle</command>
+        <property>controls/engines/engine[1]/master-sw</property>
+      </binding>
+      <binding>
+        <command>property-toggle</command>
+        <property>sim/sound/click</property>
+      </binding>
+    </action>
+  </animation>
+
+  <animation>
+    <type>rotate</type>
+    <object-name>eng-master-LH</object-name>
+    <property>controls/engines/engine[1]/master-sw</property>
+    <factor>22.5</factor>
+    <offset>-22.5</offset>
+    <axis>
+      <x>  0 </x>
+      <y> -1 </y>
+      <z>  0 </z>
+    </axis>
+    <center>
+      <x-m> -0.001 </x-m>
+      <y-m> 0.005 </y-m>
+      <z-m> -0.171 </z-m>
+    </center>
+  </animation>
+
+
+
+
+
+<!-- CADC -->
+
+  <animation>
+    <type>pick</type>
+    <visible>true</visible>
+    <object-name>ext-pwr</object-name>
+    <action>
+      <button>0</button>
+      <repeatable>false</repeatable>
+      <binding>
+          <command>property-assign</command>
+          <property>controls/APU/fire-switch</property>
+          <value type="int">1</value>
+      </binding>
+      <binding>
+        <command>property-assign</command>
+        <property>controls/electric/battery-switch</property>
+        <value>true</value>
+      </binding>
+      <binding>
+        <command>property-toggle</command>
+        <property>sim/sound/click</property>
+      </binding>
+      <mod-up>
+        <binding>
+          <command>property-assign</command>
+          <property>controls/APU/fire-switch</property>
+          <value type="int">0</value>
+        </binding>
+      </mod-up>
+    </action>
+  </animation>
+
+  <animation>
+    <type>rotate</type>
+    <object-name>ext-pwr</object-name>
+          <property>controls/APU/fire-switch</property>
+    <factor>35</factor>
+    <axis>
+      <x>  0 </x>
+      <y> -1 </y>
+      <z>  0 </z>
+    </axis>
+    <center>
+      <x-m> -0.001 </x-m>
+      <y-m>  0.004 </y-m>
+      <z-m> -0.104 </z-m>
+    </center>
+  </animation>
+
+
+
+
+<!-- READY LAMP -->
+
+  <animation>
+   <type>select</type>
+    <object-name>ready-lamp-on</object-name>
+     <condition>
+      <and>
+      <equals>
+      <property>/controls/APU/ready</property>
+      <value>1</value>
+      </equals>
+      <equals>
+      <property>controls/APU/off-start-run</property>
+      <value>1</value>
+      </equals>
+      </and>
+     </condition>
+  </animation>
+
+
+<!--	radar range adj	-->
+<animation>
+  <type>pick</type>
+  <object-name>5</object-name>
+  <action>
+     <button>0</button>
+     <repeatable>true</repeatable>
+     <interval-sec>0.2</interval-sec>
+     <binding>
+        <command>property-assign</command>
+	<property>instrumentation/radar/range-control</property>
+	<value>0</value>
+     </binding>
+     <binding>
+        <command>property-assign</command>
+	<property>instrumentation/radar/range-ratio</property>
+        <value>0.0204</value>
+     </binding>
+  </action>
+</animation>
+
+<animation>
+  <type>pick</type>
+  <object-name>10</object-name>
+  <action>
+     <button>0</button>
+     <repeatable>true</repeatable>
+     <interval-sec>0.2</interval-sec>
+     <binding>
+        <command>property-assign</command>
+	<property>instrumentation/radar/range-control</property>
+	<value>1</value>
+     </binding>
+     <binding>
+        <command>property-assign</command>
+	<property>instrumentation/radar/range-ratio</property>
+        <value>0.0102</value>
+     </binding>
+  </action>
+</animation>
+
+<animation>
+  <type>pick</type>
+  <object-name>20</object-name>
+  <action>
+     <button>0</button>
+     <repeatable>true</repeatable>
+     <interval-sec>0.2</interval-sec>
+     <binding>
+        <command>property-assign</command>
+	<property>instrumentation/radar/range-control</property>
+	<value>2</value>
+     </binding>
+     <binding>
+        <command>property-assign</command>
+	<property>instrumentation/radar/range-ratio</property>
+        <value>0.0051</value>
+     </binding>
+  </action>
+</animation>
+
+<animation>
+  <type>pick</type>
+  <object-name>40</object-name>
+  <action>
+     <button>0</button>
+     <repeatable>true</repeatable>
+     <interval-sec>0.2</interval-sec>
+     <binding>
+        <command>property-assign</command>
+	<property>instrumentation/radar/range-control</property>
+	<value>3</value>
+     </binding>
+     <binding>
+        <command>property-assign</command>
+	<property>instrumentation/radar/range-ratio</property>
+        <value>0.00255</value>
+     </binding>
+  </action>
+</animation>
+
+<animation>
+  <type>pick</type>
+  <object-name>80</object-name>
+  <action>
+     <button>0</button>
+     <repeatable>true</repeatable>
+     <interval-sec>0.2</interval-sec>
+     <binding>
+        <command>property-assign</command>
+	<property>instrumentation/radar/range-control</property>
+	<value>4</value>
+     </binding>
+     <binding>
+        <command>property-assign</command>
+	<property>instrumentation/radar/range-ratio</property>
+        <value>0.001275</value>
+     </binding>
+  </action>
+</animation>
+
+
+<animation>
+  <type>pick</type>
+  <object-name>160</object-name>
+  <action>
+     <button>0</button>
+     <repeatable>true</repeatable>
+     <interval-sec>0.2</interval-sec>
+     <binding>
+        <command>property-assign</command>
+	<property>instrumentation/radar/range-control</property>
+	<value>5</value>
+     </binding>
+     <binding>
+        <command>property-assign</command>
+	<property>instrumentation/radar/range-ratio</property>
+        <value>0.000638</value>
+     </binding>
+  </action>
+</animation>
+
+
+
+
+  <animation>
+    <type>rotate</type>
+     <object-name>range-knob</object-name>
+     <property>instrumentation/radar/range-control</property>
+      <factor> 45 </factor>
+        <axis>
+            <x>-1.0</x>
+            <y>0.0</y>
+            <z>0.0</z>
+        </axis>
+        <center>
+            <x-m>0.004</x-m>
+            <y-m>0.035</y-m>
+            <z-m>-0.045</z-m>
+        </center>
+  </animation>
+
+
+<!--  engine[0] starter -->
+  <animation>
+    <type>pick</type>
+    <visible>false</visible>
+    <object-name>starter0</object-name>
+    <action>
+      <button>0</button>
+      <repeatable>false</repeatable>
+      <binding>
+        <command>property-toggle</command>
+        <property>controls/engines/engine/starter</property>
+      </binding>
+      <binding>
+        <command>property-toggle</command>
+        <property>sim/sound/click</property>
+      </binding>
+    </action>
+  </animation>
+
+  <animation>
+    <type>rotate</type>
+    <object-name>starter</object-name>
+    <property>controls/engines/engine[0]/starter</property>
+    <factor>20</factor>
+    <axis>
+      <x>  0 </x>
+      <y>  0 </y>
+      <z>  1 </z>
+    </axis>
+    <center>
+      <x-m> 0.003 </x-m>
+      <y-m> 0.054 </y-m>
+      <z-m>-0.100 </z-m>
+    </center>
+  </animation>
+
+<!--  engine[1] starter -->
+  <animation>
+    <type>pick</type>
+    <visible>false</visible>
+    <object-name>starter1</object-name>
+    <action>
+      <button>0</button>
+      <repeatable>false</repeatable>
+      <binding>
+        <command>property-toggle</command>
+        <property>controls/engines/engine[1]/starter</property>
+      </binding>
+      <binding>
+        <command>property-toggle</command>
+        <property>sim/sound/click</property>
+      </binding>
+    </action>
+  </animation>
+
+  <animation>
+    <type>rotate</type>
+    <object-name>starter</object-name>
+    <property>controls/engines/engine[1]/starter</property>
+    <factor>-40</factor>
+    <axis>
+      <x>  0 </x>
+      <y>  0 </y>
+      <z>  1 </z>
+    </axis>
+    <center>
+      <x-m> 0.003 </x-m>
+      <y-m> 0.054 </y-m>
+      <z-m>-0.100 </z-m>
+    </center>
+  </animation>
+
+
+<!-- *** LoD *** -->
+	<animation>
+		<type>range</type>
+		<min-m>0</min-m>
+		<max-m>5</max-m>
+	</animation>
+
+
+</PropertyList>
+

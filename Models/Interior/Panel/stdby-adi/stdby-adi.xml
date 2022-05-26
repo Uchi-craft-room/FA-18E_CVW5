@@ -1,0 +1,132 @@
+<?xml version="1.0"?>
+<PropertyList>
+
+	<path>stdby-adi.ac</path>
+
+	<animation>
+		<type>rotate</type>
+		<object-name>drum</object-name>
+		<property>orientation/roll-deg</property>
+		<center>
+			<x-m>-0.0113</x-m>
+			<y-m>0.0</y-m>
+			<z-m>0.0</z-m>
+		</center>
+		<axis>
+			<x>1</x>
+			<y>0</y>
+			<z>0</z>
+		</axis>
+	</animation>
+
+	<animation>
+		<type>rotate</type>
+		<object-name>bkg</object-name>
+		<property>orientation/roll-deg</property>
+		<center>
+			<x-m>0.0</x-m>
+			<y-m>0.0</y-m>
+			<z-m>0.0</z-m>
+		</center>
+		<axis>
+			<x>1</x>
+			<y>0</y>
+			<z>0</z>
+		</axis>
+	</animation>
+
+	<animation>
+		<type>rotate</type>
+		<object-name>drum</object-name>
+		<property>orientation/pitch-deg</property>
+		<factor>1.5</factor>
+		<center>
+			<x-m>-0.0113</x-m>
+			<y-m>0.0</y-m>
+			<z-m>0.0</z-m>
+		</center>
+		<axis>
+			<x>0</x>
+			<y>1</y>
+			<z>0</z>
+		</axis>
+	</animation>
+
+	<animation>
+		<type>rotate</type>
+		<object-name>bank-index</object-name>
+		<property>orientation/roll-deg</property>
+		<center>
+			<x-m>0</x-m>
+			<y-m>0</y-m>
+			<z-m>0</z-m>
+		</center>
+		<axis>
+			<x>1</x>
+			<y>0</y>
+			<z>0</z>
+		</axis>
+	</animation>
+
+	<animation>
+		<type>select</type>
+		<object-name>off-flag</object-name>
+		<condition>
+			<less-than>
+				<property>systems/electrical/volts</property>
+				<value>24</value>
+			</less-than>
+		</condition>
+	</animation>
+
+
+	<!-- lighting -->
+
+	<animation>
+		<object-name>mount</object-name>
+		<object-name>button</object-name>
+		<type>material</type>
+		<emission>
+			<factor-prop>systems/electrical/outputs/instrument-lights-norm</factor-prop>
+			<red>0.5</red>
+			<green>0.2</green>
+			<blue>0.2</blue>
+		</emission>
+	</animation>
+
+
+	<animation>
+		<object-name>scale</object-name>
+		<object-name>bank-index</object-name>
+		<object-name>ring</object-name>
+		<object-name>bkg</object-name>
+		<object-name>drum</object-name>
+                <object-name>plane</object-name>
+		<type>material</type>
+		<emission>
+			<factor-prop>systems/electrical/outputs/instrument-lights-norm</factor-prop>
+			<red>0.5</red>
+			<green>0.5</green>
+			<blue>0.0</blue>
+		</emission>
+	</animation>
+
+	<animation>
+                <object-name>off-flag</object-name>
+		<type>material</type>
+		<emission>
+			<factor-prop>systems/electrical/outputs/instrument-lights-norm</factor-prop>
+			<red>1</red>
+			<green>1</green>
+			<blue>1</blue>
+		</emission>
+	</animation>
+
+
+	<animation>
+		<type>range</type>
+		<min-m>0</min-m>
+		<max-m>10</max-m>
+	</animation>
+
+</PropertyList>

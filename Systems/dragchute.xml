@@ -1,0 +1,38 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<system name="dragchute">
+ <property>sim/model/dragchute/target-speed-fps</property>
+ <channel name="Dragchute">
+
+   <switch name="systems/dragchute/linked">
+     <default value="-1"/>
+     <test value="0">
+       sim/model/dragchute/position-norm gt 0.95
+       gear/gear/wow == 1
+       gear/unit[0]/wheel-speed-fps lt 50
+     </test>
+   </switch>
+
+   <summer name="systems/dragchute/speed-error">
+     <input>sim/model/dragchute/target-speed-fps</input>
+     <input>-gear/unit[0]/wheel-speed-fps</input>
+   </summer>
+
+   <pid name="systems/dragchute/force">
+     <input>systems/dragchute/speed-error</input>
+     <kp>sim/model/dragchute/kp</kp>
+     <ki>sim/model/dragchute/ki</ki>
+     <kd>sim/model/dragchute/kd</kd>
+     <trigger>systems/dragchute/linked</trigger>
+     <output>sim/model/dragchute/force</output>
+   </pid>
+
+   <switch name="systems/dragchute/force-output">
+     <default value="0"/>
+     <test value="systems/dragchute/force">
+       systems/dragchute/linked == 0
+     </test>
+     <output>external_reactions/dragchute/magnitude</output>
+   </switch>
+
+ </channel>
+</system>

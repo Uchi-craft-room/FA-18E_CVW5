@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<PropertyList>
+
+ <path>eng-caution.ac</path>
+
+  <animation>
+    <type>noshadow</type>
+    <object-name>fire-RH</object-name>
+    <object-name>caution-RH</object-name>
+    <object-name>fire-LH</object-name>
+    <object-name>caution-LH</object-name>
+  </animation>
+
+<!-- CAUTION -->
+
+  <animation>
+    <type>select</type>
+    <object-name>caution-LH</object-name>
+    <condition>
+       <and>
+        <greater-than>
+	  <property>systems/electrical/volts</property>
+	  <value>16</value>
+        </greater-than>
+
+        <equals>
+          <property>engines/engine[1]/out-of-fuel</property>
+          <value>true</value>
+        </equals>
+
+        <property>/sim/model/lights/sbc1/state</property>
+      </and>
+   </condition>
+  </animation>
+
+  <animation>
+    <type>select</type>
+    <object-name>caution-RH</object-name>
+    <condition>
+       <and>
+        <greater-than>
+	  <property>systems/electrical/volts</property>
+	  <value>16</value>
+        </greater-than>
+
+        <equals>
+          <property>engines/engine[0]/out-of-fuel</property>
+          <value>true</value>
+        </equals>
+
+        <property>/sim/model/lights/sbc1/state</property>
+      </and>
+   </condition>
+  </animation>
+
+<!-- FIRE -->
+
+  <animation>
+    <type>select</type>
+    <object-name>fire-RH</object-name>
+    <condition>
+       <and>
+        <greater-than>
+	  <property>systems/electrical/volts</property>
+	  <value>16</value>
+        </greater-than>
+
+        <less-than>
+	  <property>systems/electrical/volts</property>
+	  <value>20</value>
+        </less-than>
+
+        <property>/sim/model/lights/sbc1/state</property>
+      </and>
+   </condition>
+  </animation>
+
+  <animation>
+    <type>select</type>
+    <object-name>fire-LH</object-name>
+    <condition>
+       <and>
+        <greater-than>
+	  <property>systems/electrical/volts</property>
+	  <value>16</value>
+        </greater-than>
+
+        <less-than>
+	  <property>systems/electrical/volts</property>
+	  <value>20</value>
+        </less-than>
+
+        <property>/sim/model/lights/sbc1/state</property>
+      </and>
+   </condition>
+  </animation>
+
+  <animation>
+    <type>material</type>
+    <object-name>fire-RH</object-name>
+    <object-name>caution-RH</object-name>
+    <object-name>fire-LH</object-name>
+    <object-name>caution-LH</object-name>
+    <emission>
+      <red>   1 </red>
+      <green> 1 </green>
+      <blue>  1 </blue>
+    </emission> 
+  </animation> 
+</PropertyList>
+
+
+

@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<PropertyList>
+
+  <path>anticollision-cone.ac</path>
+
+<animation>
+	<type>select</type>
+        <object-name>lamp</object-name>
+	<condition>
+          <property>sim/rendering/rembrandt/enabled</property>
+        </condition>
+</animation>
+
+	<animation>
+		<type>dist-scale</type>
+		<object-name>lamp</object-name>
+		<interpolation>
+			<entry><ind>0</ind><dep>1</dep></entry>
+			<entry><ind>100</ind><dep>10</dep></entry>
+			<entry><ind>1000</ind><dep>100</dep></entry>
+		</interpolation>
+	</animation>
+
+ <animation>
+   <type>light</type>
+   <light-type>point</light-type>
+   <object-name>lamp</object-name>
+   <nopreview/>
+   <position>
+     <x>0</x>
+     <y>0</y>
+     <z>0</z>
+   </position>
+   <ambient>
+     <r>1.0</r>
+     <g>0.0</g>
+     <b>0.0</b>
+     <a>1.0</a>
+   </ambient>
+   <diffuse>
+     <r>1.0</r>
+     <g>0.0</g>
+     <b>0.0</b>
+     <a>1.0</a>
+   </diffuse>
+   <specular>
+     <r>1.0</r>
+     <g>0.0</g>
+     <b>0.0</b>
+     <a>1.0</a>
+   </specular>
+   <attenuation>
+     <c>1</c>
+     <l>0</l>
+     <q>80</q>
+   </attenuation>
+   <cutoff>85</cutoff>
+   <near-m>0.01</near-m>
+   <far-m>0.7</far-m>
+ </animation>
+
+   <animation>
+        <type>select</type>
+        <object-name>lamp</object-name>
+    <condition>
+       <property>controls/lighting/beacon-state/state</property>
+    </condition>
+    </animation>
+
+  
+</PropertyList>

@@ -1,0 +1,71 @@
+<?xml version="1.0"?>
+
+
+<PropertyList>
+
+	<path>stdby-asi.ac</path>
+
+	<animation>
+		<type>rotate</type>
+		<object-name>needle</object-name>
+		<property>/orientation/alpha-deg</property>
+		<interpolation>
+			<entry><ind>0</ind><dep>0</dep></entry>
+			<entry><ind>50</ind><dep>14</dep></entry>
+			<entry><ind>100</ind><dep>90</dep></entry>
+			<entry><ind>150</ind><dep>157</dep></entry>
+			<entry><ind>200</ind><dep>202</dep></entry>
+			<entry><ind>800</ind><dep>338</dep></entry>
+		</interpolation>
+		<center>
+			<x-m>0</x-m>
+			<y-m>0</y-m>
+			<z-m>0</z-m>
+		</center>
+		<axis>
+			<x>1</x>
+			<y>0</y>
+			<z>0</z>
+		</axis>
+	</animation>
+
+
+	<animation>
+		<object-name>mount</object-name>
+		<type>material</type>
+		<emission> 
+			<factor-prop>systems/electrical/outputs/instrument-lights-norm</factor-prop>
+			<red>0.5</red>
+			<green>0.2</green>
+			<blue>0.2</blue>
+		</emission>
+	</animation>
+
+
+	<animation>
+                <object-name>face</object-name>
+                <object-name>needle</object-name> 
+		<type>material</type>
+		<emission> 
+			<factor-prop>systems/electrical/outputs/instrument-lights-norm</factor-prop>
+			<red>0.5</red>
+			<green>0.5</green>
+			<blue>0.0</blue>
+		</emission>
+	</animation>
+
+
+
+	<!-- *** LoD *** -->
+	<animation>
+		<type>range</type>
+		<min-m>0</min-m>
+		<max-m>10</max-m>
+	</animation>
+
+</PropertyList>
+
+
+
+
+

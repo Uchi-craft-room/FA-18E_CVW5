@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<PropertyList>
+
+  <path>asi.ac</path>
+
+  <animation>
+    <type>material</type>
+    <object-name>face</object-name>
+    <object-name>needle</object-name>
+    <emission>
+      <factor-prop>systems/electrical/outputs/instrument-lights-norm</factor-prop>
+      <red>   0.2 </red>
+      <green> 0.5 </green>
+      <blue>  0.2 </blue>
+    </emission> 
+  </animation>    
+
+  <animation>
+    <type>rotate</type>
+    <object-name>needle</object-name>
+    <property>instrumentation/airspeed-indicator/indicated-speed-kt</property>
+    <interpolation>
+      <entry><ind>   0 </ind><dep>   0 </dep></entry>
+      <entry><ind>  20 </ind><dep>  10.7 </dep></entry>
+      <entry><ind>  40 </ind><dep>  19.2 </dep></entry>
+      <entry><ind>  60 </ind><dep>  28.9</dep></entry>
+      <entry><ind>  80 </ind><dep>  38.8</dep></entry>
+      <entry><ind> 100 </ind><dep> 47.0</dep></entry>
+      <entry><ind> 110 </ind><dep>   55.8</dep></entry>
+      <entry><ind> 120 </ind><dep>   65.0</dep></entry>
+      <entry><ind> 130 </ind><dep>   77.4</dep></entry>
+      <entry><ind> 140 </ind><dep>   91.9</dep></entry>
+      <entry><ind> 150 </ind><dep>   109.9</dep></entry>
+      <entry><ind> 160 </ind><dep>   123.8</dep></entry>
+      <entry><ind> 170 </ind><dep>   136.0</dep></entry>
+      <entry><ind> 180 </ind><dep>   150.3</dep></entry>
+      <entry><ind> 190 </ind><dep>   163.7</dep></entry>
+      <entry><ind> 200 </ind><dep>   177.9</dep></entry>
+      <entry><ind> 250 </ind><dep>   200.1</dep></entry>
+      <entry><ind> 300 </ind><dep>   216.3</dep></entry>
+      <entry><ind> 400 </ind><dep>   235.8</dep></entry>
+      <entry><ind> 500 </ind><dep>   253.9</dep></entry>
+      <entry><ind> 600 </ind><dep>   270.7</dep></entry>
+      <entry><ind> 700 </ind><dep>   286.1</dep></entry>
+      <entry><ind> 800 </ind><dep>   300.0</dep></entry>
+      <entry><ind> 850 </ind><dep>   313.0</dep></entry>
+    </interpolation>
+    <axis>
+      <x> -1 </x>
+      <y>  0 </y>
+      <z>  0 </z>
+    </axis>
+  </animation>
+
+</PropertyList>
+
+
+
+
+

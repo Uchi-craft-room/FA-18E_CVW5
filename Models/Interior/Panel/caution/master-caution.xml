@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<PropertyList>
+
+ <path>master-caution.ac</path>
+
+  <animation>
+    <type>noshadow</type>
+    <object-name>caution</object-name>
+  </animation>
+
+  <animation>
+    <type>select</type>
+    <object-name>caution</object-name>
+  <condition>
+   <and>
+     <not>
+     <property>gear/gear[0]/wow</property>
+     <property>/sim/model/lights/sbc1/state</property>
+     </not>
+     <less-than>
+	   <property>systems/electrical/volts</property>
+	   <value>16</value>
+     </less-than>
+    </and>
+   </condition>
+  </animation>
+
+  <animation>
+    <type>material</type>
+    <object-name>caution</object-name>
+    <emission>
+      <!-- <factor-prop>systems/electrical/outputs/instrument-lights-norm</factor-prop> -->
+      <red>   1 </red>
+      <green> 1 </green>
+      <blue>  1 </blue>
+    </emission> 
+  </animation> 
+</PropertyList>
+
+
+

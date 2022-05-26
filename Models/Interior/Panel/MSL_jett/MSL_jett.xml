@@ -1,0 +1,39 @@
+<?xml version="1.0"?>
+
+<PropertyList>
+  <path>MSL_jett.ac</path>
+
+ <animation>
+     <object-name>Cube</object-name>
+    <type>material</type>
+    <emission> 
+	<factor-prop>systems/electrical/outputs/instrument-lights-norm</factor-prop>
+	<red>  0.50 </red>
+	<green>0.25 </green>
+	<blue> 0.25 </blue>
+    </emission>
+  </animation> 
+
+  <animation>
+    <type>range</type>
+    <min-m>0</min-m>
+    <max-m>5</max-m>
+  </animation>
+
+</PropertyList>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

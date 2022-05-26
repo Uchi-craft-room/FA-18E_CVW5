@@ -1,0 +1,155 @@
+<PropertyList>
+
+  <path>dragchute_part.ac</path>
+
+  <animation>
+    <type>select</type>
+    <object-name>line</object-name>
+    <object-name>chute1</object-name>
+    <object-name>chute2</object-name>
+    <object-name>chute3</object-name>
+    <object-name>chute4</object-name>
+    <object-name>chute5</object-name>
+    <condition>
+      <greater-than>
+          <property>/sim/model/dragchute/position-norm</property>
+          <value>0.3</value>
+      </greater-than>
+    </condition>
+  </animation>
+
+  <animation>
+    <type>translate</type>
+    <object-name>pull-chute-line</object-name>
+    <object-name>chute-bag</object-name>
+    <object-name>pull-chute</object-name>
+      <property>/sim/model/dragchute/position-norm</property>
+  <interpolation>
+   <entry> <ind> 0.0 </ind> <dep>-10 </dep></entry>
+   <entry> <ind> 0.3 </ind> <dep>-4 </dep></entry>
+   <entry> <ind> 1.0 </ind> <dep> 0 </dep></entry>
+  </interpolation>
+    <axis>
+      <x>1</x>
+      <y>0</y>
+      <z>0</z>
+    </axis>
+  </animation>
+
+
+  <animation>
+    <type>rotate</type>
+    <object-name>pull-chute</object-name>
+    <object-name>pull-chute-line</object-name>
+      <property>/sim/model/dragchute/position-norm</property>
+  <interpolation>
+   <entry> <ind> 0.0 </ind> <dep> 0 </dep></entry>
+   <entry> <ind> 0.8 </ind> <dep> 0 </dep></entry>
+   <entry> <ind> 1.0 </ind> <dep>-50 </dep></entry>
+  </interpolation>
+    <center>
+      <x-m>21.012</x-m>
+      <y-m>0</y-m>
+      <z-m>0</z-m>
+    </center>
+    <axis>
+      <x>0</x>
+      <y>1</y>
+      <z>0</z>
+    </axis>
+  </animation>
+
+  <animation>
+    <type>rotate</type>
+    <object-name>pull-chute-line</object-name>
+      <property>/sim/model/dragchute/position-norm</property>
+  <interpolation>
+   <entry> <ind> 0.0 </ind> <dep> 0 </dep></entry>
+   <entry> <ind> 0.8 </ind> <dep> 0 </dep></entry>
+   <entry> <ind> 1.0 </ind> <dep> 80 </dep></entry>
+  </interpolation>
+    <center>
+      <x-m>20.733</x-m>
+      <y-m>-0.109</y-m>
+      <z-m> 0.337</z-m>
+    </center>
+    <axis>
+      <x>0</x>
+      <y>1</y>
+      <z>0</z>
+    </axis>
+  </animation>
+
+
+
+  <animation>
+    <type>translate</type>
+    <object-name>line</object-name>
+    <object-name>chute1</object-name>
+    <object-name>chute2</object-name>
+    <object-name>chute3</object-name>
+    <object-name>chute4</object-name>
+    <object-name>chute5</object-name>
+      <property>/sim/model/dragchute/position-norm</property>
+  <interpolation>
+   <entry> <ind> 0.0 </ind> <dep>-4 </dep></entry>
+   <entry> <ind> 0.3 </ind> <dep>-4 </dep></entry>
+   <entry> <ind> 1.0 </ind> <dep> 0 </dep></entry>
+  </interpolation>
+    <axis>
+      <x>1</x>
+      <y>0</y>
+      <z>0</z>
+    </axis>
+  </animation>
+
+
+  <animation>
+    <type>rotate</type>
+    <object-name>line</object-name>
+    <object-name>chute1</object-name>
+    <object-name>chute2</object-name>
+    <object-name>chute3</object-name>
+    <object-name>chute4</object-name>
+    <object-name>chute5</object-name>
+      <property>/sim/model/dragchute/position-norm</property>
+  <interpolation>
+   <entry> <ind> 0.0 </ind> <dep>-45 </dep></entry>
+   <entry> <ind> 0.3 </ind> <dep>-45 </dep></entry>
+   <entry> <ind> 1.0 </ind> <dep> 0 </dep></entry>
+  </interpolation>
+    <center>
+      <x-m>19.483</x-m>
+      <y-m>0</y-m>
+      <z-m>0</z-m>
+    </center>
+    <axis>
+      <x>0</x>
+      <y>1</y>
+      <z>0</z>
+    </axis>
+  </animation>
+
+  <animation>
+    <type>rotate</type>
+    <object-name>line</object-name>
+      <property>/sim/model/dragchute/position-norm</property>
+  <interpolation>
+   <entry> <ind> 0.0 </ind> <dep> 61 </dep></entry>
+   <entry> <ind> 0.3 </ind> <dep> 61 </dep></entry>
+   <entry> <ind> 1.0 </ind> <dep> 0 </dep></entry>
+  </interpolation>
+    <center>
+      <x-m>17.983</x-m>
+      <y-m>-0.464</y-m>
+      <z-m> 1.427</z-m>
+    </center>
+    <axis>
+      <x>0</x>
+      <y>1</y>
+      <z>0</z>
+    </axis>
+  </animation>
+
+
+</PropertyList>

@@ -1,0 +1,244 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<PropertyList>
+
+  <sim include="Nasal/views.xml">
+
+    <fuel-fraction>1.0</fuel-fraction>
+
+    <startup>
+      <splash-texture>Aircraft/FA-18E_CVW5/FA-18E_CVW5-splash.png</splash-texture>
+    </startup>
+
+    <sound>
+      <path archive="y">Aircraft/FA-18E_CVW5/Sounds/FA-18E_CVW5-sound.xml</path>
+    </sound>
+
+    <model>
+      <path archive="y">Aircraft/FA-18E_CVW5/Models/FA-18E_CVW5.xml</path>
+      <livery>
+        <file type="string">default</file>
+      </livery>
+    </model>
+
+    <flaps>
+      <setting>0.00</setting>
+      <setting>0.50</setting>
+      <setting>1.00</setting>
+    </flaps>
+
+   <airport>
+        <runways>
+            <start-offset-m>20</start-offset-m>
+        </runways>
+    </airport>
+
+
+    <multiplay>
+      <chat_display>1</chat_display>
+      <generic>
+        <int type="int">0</int>  <!-- 0 immat -->
+        <int type="int">0</int>  <!-- 1 immat -->
+        <int type="int">0</int>  <!-- 2 immat -->
+        <int type="int">0</int>  <!-- 3 immat -->
+        <int type="int">0</int>  <!-- 4 immat -->
+        <int type="int">0</int>  <!-- 5 immat -->
+        <int type="bool">0</int> <!-- 6 smoke -->
+        <int type="int">0</int>  <!-- 7 color -->
+        <float n="0" alias="instrumentation/doors/crew/position-norm"/>
+        <float n="1" alias="surface-positions/speedbrake-pos-norm"/>
+        <float n="2" alias="engines/engine[0]/out-of-fuel"/>
+        <float n="3" alias="engines/engine[0]/afterburner"/>
+        <float n="4" alias="engines/engine[1]/out-of-fuel"/>
+        <float n="5" alias="engines/engine[1]/afterburner"/>
+        <float n="6" alias="sim/model/dragchute/position-norm"/>
+        <float n="7" alias="consumables/fuel/ext-tank-ctr-selected"/>
+        <float n="8" alias="consumables/fuel/ext-tank-wing-selected"/>
+        <float n="9" alias="gear/gear[0]/compression-m"/>
+        <float n="10" alias="gear/gear[1]/compression-m"/>
+      </generic>
+    </multiplay>
+
+    <help>
+      <title>FA-18E_CVW5</title>
+
+      <key>
+        <name>d</name>
+        <desc>Open/Close canopy</desc>
+      </key>
+
+      <key>
+       <name>Ctrl-B</name>
+       <desc>Open/Close speed brake</desc>
+      </key>
+
+      <key>
+       <name>e</name>
+       <desc>Up/Down arresting hook</desc>
+      </key>
+
+      <key>
+       <name>j</name>
+       <desc>Open/Close dragchute</desc>
+      </key>
+    </help>
+
+    <menubar include="Dialogs/FA-18E_CVW5-menu.xml"/>
+
+  <hud>
+   <path n="1">Aircraft/FA-18E_CVW5/Models/Interior/Panel/hud/hud1.xml</path>
+   <path n="2">Aircraft/FA-18E_CVW5/Models/Interior/Panel/hud/hud2.xml</path>
+   <visibility n="1">true</visibility>
+   <clipping>
+       <left type="double">-90</left>
+       <right type="double">90</right>
+       <top type="double">75</top><!-- 70 -->
+       <bottom type="double">-130</bottom><!-- -100 -->
+   </clipping>
+   <font>
+    <size>6</size>
+    <name>default.txf</name>
+   </font>
+  </hud>
+
+
+	<state include="States/take-off-overlay.xml" />
+	<state include="States/carrier-take-off-overlay.xml" />
+	<state include="States/cruise-overlay.xml" />
+	<state include="States/carrier-landing-overlay.xml" />
+	<state include="States/landing-overlay.xml" />
+
+
+</sim>
+
+  <input>
+    <keyboard include="Nasal/FA-18E_CVW5-keyboard.xml"/>
+  </input>
+
+ <engines>
+  <engine n="0">
+   <running>true</running>
+  </engine>
+  <engine n="1">
+   <running>true</running>
+  </engine>
+ </engines>
+
+ <consumables>
+  <fuel>
+   <tank n="0">
+    <level-gal_us archive="y">595.2</level-gal_us>
+   </tank>
+   <tank n="1">
+    <level-gal_us archive="y">595.2</level-gal_us>
+   </tank>
+   <tank n="2">
+    <level-gal_us archive="y">595.2</level-gal_us>
+   </tank>
+   <tank n="3">
+    <level-gal_us archive="y">595.2</level-gal_us>
+   </tank>
+   <tank n="4">
+    <level-gal_us archive="y">595.2</level-gal_us>
+   </tank>
+   <tank n="5">
+    <level-gal_us archive="y">595.2</level-gal_us>
+   </tank>
+   <tank n="6">
+    <level-gal_us archive="y">595.2</level-gal_us>
+   </tank>
+   <tank n="7">
+    <level-gal_us archive="y">595.2</level-gal_us>
+   </tank>
+  </fuel>
+ </consumables>
+
+ 
+  <nasal>
+    <doors>
+      <file>Aircraft/FA-18E_CVW5/Nasal/doors.nas</file>
+    </doors>
+    <dragchute>
+      <file>Aircraft/FA-18E_CVW5/Nasal/wingfold.nas</file>
+    </dragchute>
+    <FA-18E_CVW5>
+      <file>Aircraft/FA-18E_CVW5/Nasal/electrical.nas</file>
+      <file>Aircraft/FA-18E_CVW5/Nasal/light.nas</file>
+      <file>Aircraft/FA-18E_CVW5/Nasal/light-manager.nas</file>
+      <file>Aircraft/FA-18E_CVW5/Nasal/liveries.nas</file>
+      <file>Aircraft/FA-18E_CVW5/Nasal/immat.nas</file>
+      <file>Aircraft/FA-18E_CVW5/Nasal/instruments.nas</file>
+      <file>Aircraft/FA-18E_CVW5/Models/Interior/Panel/kns80/kns80.nas</file>
+      <file>Aircraft/FA-18E_CVW5/Nasal/vhf22.nas</file>
+      <file>Aircraft/FA-18E_CVW5/Nasal/vir32.nas</file>
+      <file>Aircraft/FA-18E_CVW5/Models/Interior/Panel/TEWS/radar.nas</file>
+    </FA-18E_CVW5>    
+    <m877>
+     <file>Aircraft/FA-18E_CVW5/Models/Interior/Panel/chronograph/M877.nas</file>
+   </m877>
+   <dmesw>
+       <file>Aircraft/FA-18E_CVW5/Nasal/dmesw.nas</file>
+   </dmesw>
+   <nav_scripts>
+      <file>Aircraft/FA-18E_CVW5/Nasal/nav_scripts.nas</file>
+   </nav_scripts>
+   <aar>
+      <file>Aircraft/Generic/aar.nas</file>
+   </aar>
+  </nasal>
+
+  <instrumentation>
+    <navcomputer>
+     <brg-switch-position>2</brg-switch-position>
+     <mode-switch-position>1</mode-switch-position>
+    </navcomputer>
+   <radar-altimeter>
+      <decision-height>300</decision-height>
+    </radar-altimeter>
+    <gps>
+     <serviceable>true</serviceable> 
+    </gps>
+    <radar>
+      <minimized type="bool" archive="y">false</minimized>
+      <switch type="string" archive="y">ON</switch>
+      <mode-control type="int" archive="y">2</mode-control>
+      <WXmode  type="string" archive="y">WX</WXmode>
+      <POSmode  type="string" archive="y">POS</POSmode>
+      <DATmode  type="string" archive="y">DAT</DATmode>
+      <display-controls> 
+        <WX type="bool" archive="y">true</WX>
+        <data type="bool" archive="y">false</data>
+        <pos type="bool" archive="y">false</pos>
+      </display-controls>
+      <serviceable type="bool">true</serviceable>
+      <range type="int" archive="y">8</range>
+      <display-mode type="string" archive="y">map</display-mode>
+    </radar>
+    <wxradar>
+      <range type="int" archive="y">8</range>
+      <minimized type="bool" archive="y">false</minimized>
+      <switch type="string" archive="y">ON</switch>
+      <mode type="string" archive="y">WX</mode>
+      <lightning type="bool" archive="y">false</lightning>
+      <display-mode type="string" archive="y">map</display-mode>
+      <serviceable type="bool" >true</serviceable>
+    </wxradar>
+  </instrumentation>
+
+
+ <systems>
+  <refuel>
+   <type>boom</type>
+   <serviceable type="bool">true</serviceable>
+   <max-fuel-transfer-lbs-min>6000</max-fuel-transfer-lbs-min>
+   <offset-x-m>0</offset-x-m>
+   <offset-y-m>0</offset-y-m>
+   <offset-z-m>0</offset-z-m>
+  </refuel>
+ </systems>
+
+
+</PropertyList>
+
+
+

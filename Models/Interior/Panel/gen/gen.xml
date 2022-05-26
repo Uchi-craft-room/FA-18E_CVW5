@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<PropertyList>
+
+ <path>gen.ac</path>
+
+
+  <animation>
+    <type>material</type>
+    <object-name>base</object-name>
+    <object-name>needle</object-name>
+    <emission>
+      <red>   0.2 </red>
+      <green> 0.5 </green>
+      <blue>  0.2 </blue>
+      <factor-prop>systems/electrical/outputs/instrument-lights-norm</factor-prop>
+    </emission>
+  </animation>
+
+  <animation>
+    <type>material</type>
+    <object-name>gen-LH</object-name>
+    <object-name>gen-RH</object-name>
+    <object-name>BATT</object-name>
+    <emission>
+      <red>   0.5 </red>
+      <green> 0.5 </green>
+      <blue>  0.5 </blue>
+    </emission>
+  </animation>
+
+
+<!--   GEN-on  -->
+
+  <animation>
+    <type>pick</type>
+    <visible>true</visible>
+    <object-name>gen-LH</object-name>
+    <action>
+      <button>0</button>
+      <repeatable>false</repeatable>
+      <binding>
+        <command>property-toggle</command>
+        <property>controls/electric/engine[0]/generator</property>
+      </binding>
+      <binding>
+        <command>property-toggle</command>
+        <property>sim/sound/click</property>
+      </binding>
+    </action>
+  </animation>
+
+  <animation>
+    <type>pick</type>
+    <visible>true</visible>
+    <object-name>gen-RH</object-name>
+    <action>
+      <button>0</button>
+      <repeatable>false</repeatable>
+      <binding>
+        <command>property-toggle</command>
+        <property>controls/electric/engine[1]/generator</property>
+      </binding>
+      <binding>
+        <command>property-toggle</command>
+        <property>sim/sound/click</property>
+      </binding>
+    </action>
+  </animation>
+
+  <animation>
+    <type>rotate</type>
+    <object-name>gen-LH</object-name>
+    <property>controls/electric/engine[0]/generator</property>
+    <factor>60</factor>
+    <axis>
+      <x>  0 </x>
+      <y> -1 </y>
+      <z>  0 </z>
+    </axis>
+    <center>
+      <x-m>-0.001 </x-m>
+      <y-m>-0.003 </y-m>
+      <z-m>-0.077 </z-m>
+    </center>
+  </animation>
+
+  <animation>
+    <type>rotate</type>
+    <object-name>gen-RH</object-name>
+    <property>controls/electric/engine[1]/generator</property>
+    <factor>60</factor>
+    <axis>
+      <x>  0 </x>
+      <y> -1 </y>
+      <z>  0 </z>
+    </axis>
+    <center>
+      <x-m>-0.001 </x-m>
+      <y-m>-0.003 </y-m>
+      <z-m>-0.077 </z-m>
+    </center>
+  </animation>
+
+
+
+
+<!--   BATT-ON   -->
+
+ <animation>
+    <type>pick</type>
+    <visible>true</visible>
+    <object-name>BATT</object-name>
+    <action>
+      <button>0</button>
+      <repeatable>false</repeatable>
+      <binding>
+	<command>property-toggle</command>
+	<property>controls/APU/off-start-run</property>
+      </binding>
+      <binding>
+        <command>property-toggle</command>
+        <property>sim/sound/click</property>
+      </binding>
+    </action>
+  </animation>
+
+  <animation>
+    <type>rotate</type>
+    <object-name>BATT</object-name>
+		<property>controls/APU/off-start-run</property>
+    <factor>60</factor>
+    <axis>
+      <x>  0 </x>
+      <y> -1 </y>
+      <z>  0 </z>
+    </axis>
+    <center>
+      <x-m>-0.001 </x-m>
+      <y-m>-0.003 </y-m>
+      <z-m>-0.077 </z-m>
+    </center>
+  </animation>
+
+
+  <animation>
+    <type>rotate</type>
+    <object-name>needle</object-name>
+    <property>systems/electrical/volts</property>
+    <interpolation>
+      <entry><ind>   0 </ind><dep>   0 </dep></entry>
+      <entry><ind>  16 </ind><dep>  30 </dep></entry>
+      <entry><ind>  30 </ind><dep> 140 </dep></entry>
+    </interpolation>
+    <axis>
+      <x>-1 </x>
+      <y> 0 </y>
+      <z> 0 </z>
+    </axis>
+    <center>
+      <x-m> 0.004 </x-m>
+      <y-m>-0.042 </y-m>
+      <z-m>-0.032 </z-m>
+    </center>
+  </animation>
+
+
+
+<!-- LOD -->
+    <animation>
+		<type>range</type>
+		<min-m>0</min-m>
+		<max-m>5</max-m>
+	</animation>
+
+</PropertyList>
+

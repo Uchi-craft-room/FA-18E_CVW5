@@ -1,0 +1,2640 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<PropertyList>
+
+  <path>FA-18E_CVW5.ac</path>
+
+  <animation>
+    <type>noshadow</type>
+    <object-name>HUDglass</object-name>
+    <object-name>wind-shield</object-name>
+    <object-name>wind-shield.001</object-name>
+    <object-name>canopy-glass</object-name>
+    <object-name>canopy-glass.001</object-name>
+    <object-name>canopy-mirror</object-name>
+    <object-name>landinglight-lenz</object-name>
+    <object-name>taxinglight-lenz</object-name>
+  </animation>
+
+   <effect>
+    <inherits-from>Effects/model-transparent</inherits-from>
+    <object-name>HUDglass</object-name>
+    <object-name>canopy-mirror</object-name>
+   </effect>
+
+
+  <effect>
+        <name>refrect-effect</name>
+        <inherits-from>Aircraft/Generic/Effects/Fuselagereflect</inherits-from>
+        <object-name>gear-inner-nose.001</object-name>
+        <object-name>act_left_inner.001</object-name>
+        <object-name>gear_left_inner.001</object-name>
+        <object-name>act_right_inner.001</object-name>
+        <object-name>gear_right_inner.001</object-name>
+    </effect>
+
+ <!-- Canopy -->
+    <animation>
+        <type>select</type>
+        <condition>
+            <not>
+                <property>sim/rendering/rembrandt/enabled</property>
+            </not>
+        </condition>
+    <object-name>canopy-glass.001</object-name>
+    <object-name>wind-shield.001</object-name>
+    </animation>
+
+
+<!-- Uncomment this section for FG 3.5 ALS Glass effects -->
+    <effect>
+        <inherits-from>Effects/glass</inherits-from>
+    <object-name>canopy-glass.001</object-name>
+    <object-name>wind-shield.001</object-name>
+    </effect>
+
+
+  <animation>
+    <type>shader</type>
+    <shader>chrome</shader>
+    <texture>glass_shader.png</texture>
+    <object-name>canopy-glass</object-name>
+    <object-name>wind-shield</object-name>
+    <object-name>mirror</object-name>
+    <object-name>landinglight-lenz</object-name>
+    <object-name>taxinglight-lenz</object-name>
+    <object-name>canopy-mirror</object-name>
+  </animation>
+
+
+<animation>
+<type>material</type>
+<object-name>fuselage</object-name>
+<object-name>fuselage-RR_1</object-name>
+<object-name>v-tail</object-name>
+<object-name>rudder-LH</object-name>
+<object-name>rudder-RH</object-name>
+<object-name>stabilator-LH</object-name>
+<object-name>stabilator-RH</object-name>
+<object-name>flap-RH1</object-name>
+<object-name>flap-LH1</object-name>
+<object-name>flap-RH2</object-name>
+<object-name>flap-LH2</object-name>
+<object-name>aileron-RH1</object-name>
+<object-name>aileron-LH1</object-name>
+<object-name>aileron-RH2</object-name>
+<object-name>aileron-LH2</object-name>
+<object-name>spoiler-RH</object-name>
+<object-name>spoiler-LH</object-name>
+<object-name>gear-pnl-RH-A</object-name>
+<object-name>gear-pnl-LH-A</object-name>
+<object-name>gear-pnl-RH-B</object-name>
+<object-name>gear-pnl-LH-B</object-name>
+<object-name>gear-pnl-RH-C</object-name>
+<object-name>gear-pnl-LH-C</object-name>
+<object-name>slat-middle-RH</object-name>
+<object-name>slat-middle-LH</object-name>
+<object-name>slat-outer-RH</object-name>
+<object-name>slat-outer-LH</object-name>
+<object-name>fold-wing-RH</object-name>
+<object-name>fold-wing-LH</object-name>
+<object-name>canopy-door-FR</object-name>
+<object-name>nose-gear-door-LH</object-name>
+<object-name>nose-gear-door-RH</object-name>
+<object-name>nose-gear-hatch1</object-name>
+<object-name>nose-gear-hatch2</object-name>
+<object-name>air_inlet</object-name>
+<object-name>hook</object-name>
+<texture-prop>texture</texture-prop>
+<texture>texture.png</texture>
+<shininess>70</shininess>
+
+    <specular>
+      <red-prop>specular/red</red-prop>
+      <green-prop>specular/green</green-prop>
+      <blue-prop>specular/blue</blue-prop>
+    </specular>
+
+    <emission>
+      <red-prop>emission/red</red-prop>
+      <green-prop>emission/green</green-prop>
+      <blue-prop>emission/blue</blue-prop>
+    </emission>
+</animation>
+
+
+<!-- CREW -->
+
+  <model>
+    <name>CREW</name>
+    <path>Aircraft/FA-18E_CVW5/Models/crew/crew.xml</path>
+    <offsets>
+      <x-m> -3 </x-m>
+      <y-m> 0 </y-m>
+      <z-m> -0.1 </z-m>>
+      <pitch-deg> 0 </pitch-deg>
+      <heading-deg> 0 </heading-deg>
+    </offsets>
+  </model>
+
+  <animation>
+    <type>select</type>
+    <object-name>CREW</object-name>
+    <condition>
+          <property>controls/electric/external-power</property>
+    </condition>
+  </animation>
+
+
+<!-- Pushback -->
+<model>
+ <name>Pushback</name>
+ <path>Aircraft/FA-18E_CVW5/Models/towing_car/towing_car.xml</path>
+  <condition>
+ <less-than-equals>
+     <property>velocities/airspeed-kt</property>
+     <value>80</value>
+ </less-than-equals>
+  </condition>
+   <offsets>
+            <x-m>-6.40</x-m>
+            <y-m>-0.00</y-m>
+            <z-m>-1.55</z-m>
+ </offsets>
+</model> 
+
+  <animation>
+    <object-name>Pushback</object-name>
+    <nopreview/>
+  </animation>
+
+  <!-- Interior -->
+  <model>
+    <path>Aircraft/FA-18E_CVW5/Models/Interior/interior.xml</path>
+    <offsets>
+      <x-m>  0 </x-m>
+      <y-m>  0 </y-m>
+      <z-m>  0 </z-m>
+      <roll-deg>    0 </roll-deg>
+      <pitch-deg>   0 </pitch-deg>
+      <heading-deg> 0 </heading-deg>
+    </offsets>
+  </model>
+
+
+
+  <!-- engine -->
+  <model>
+    <name>ENG-RH</name>
+    <path>Aircraft/FA-18E_CVW5/Models/engine/engine-RH.xml</path>
+    <offsets>
+      <x-m> 6.45 </x-m>
+      <y-m> 0.62 </y-m>
+      <z-m> 0.13 </z-m>
+      <roll-deg>    0 </roll-deg>
+      <pitch-deg>   0 </pitch-deg>
+      <heading-deg> 0 </heading-deg>
+    </offsets>
+  </model>
+
+  <model>
+    <name>ENG-LH</name>
+    <path>Aircraft/FA-18E_CVW5/Models/engine/engine-LH.xml</path>
+    <offsets>
+      <x-m>  6.45 </x-m>
+      <y-m> -0.62 </y-m>
+      <z-m>  0.13</z-m>
+      <roll-deg>    0 </roll-deg>
+      <pitch-deg>   0 </pitch-deg>
+      <heading-deg> 0 </heading-deg>
+    </offsets>
+  </model>
+
+ <animation>
+  <type>scale</type>
+  <object-name>ENG-LH</object-name>
+  <object-name>ENG-RH</object-name>
+  <x-offset>0.785</x-offset>
+  <y-offset>0.785</y-offset>
+  <z-offset>0.785</z-offset>
+ </animation>
+
+  <!-- EXT-TANK -->
+  
+  <model>
+    <name>EXTTANK-CTR</name>
+    <path>Aircraft/FA-18E_CVW5/Models/ext_Tank/exttank-CTR.xml</path>
+    <offsets>
+      <x-m> 0.0 </x-m>
+      <y-m> 0.0 </y-m>
+      <z-m> 0.0</z-m>
+      <roll-deg>    0 </roll-deg>
+      <pitch-deg>   0 </pitch-deg>
+      <heading-deg> 0 </heading-deg>
+    </offsets>
+  </model>
+
+
+  <model>
+    <name>EXTTANK-WING</name>
+    <path>Aircraft/FA-18E_CVW5/Models/ext_Tank/exttank-WING.xml</path>
+    <offsets>
+      <x-m> 0 </x-m>
+      <y-m> 0 </y-m>
+      <z-m> 0 </z-m>
+      <roll-deg>    0 </roll-deg>
+      <pitch-deg>   0 </pitch-deg>
+      <heading-deg> 0 </heading-deg>
+    </offsets>
+  </model>
+
+  <animation>
+    <type>select</type>
+    <object-name>EXTTANK-CTR</object-name>
+    <condition>
+          <property>consumables/fuel/ext-tank-ctr-selected</property>
+    </condition>
+  </animation> 
+
+  <animation>
+    <type>select</type>
+    <object-name>EXTTANK-WING</object-name>
+    <condition>
+       <property>consumables/fuel/ext-tank-wing-selected</property>
+    </condition>
+  </animation> 
+
+
+  <!--  OSG -->
+  <model>
+    <name>shadowOSG</name>
+    <path>Aircraft/FA-18E_CVW5/Models/shadow.xml</path>
+    <offsets>
+      <x-m> 0 </x-m>
+      <y-m> 0 </y-m>
+      <z-m>-0.15</z-m>
+      <roll-deg>    0 </roll-deg>
+      <pitch-deg>   0 </pitch-deg>
+      <heading-deg> 0 </heading-deg>
+    </offsets>
+  </model>
+
+ <animation>
+    <type>select</type>
+    <object-name>shadowOSG</object-name>
+    <condition>
+	<and>
+		<equals>
+			<property>sim/rendering/rembrandt/enabled</property>
+			<value>false</value>
+		</equals>
+		<equals>
+			<property>sim/replay/replay-state</property>
+				<value>0</value>
+		</equals>
+		<property>gear/gear/ground-is-solid</property>
+		<not>
+			<equals>
+				<property>sim/rendering/default-compositor</property>
+				<value>Compositor/als</value>
+			</equals>
+		</not>
+	</and>
+    </condition>
+  </animation>
+
+
+  <!-- Exzaust Right-->
+  <model>
+    <path>Aircraft/FA-18E_CVW5/Models/effects/smoke/smokeR.xml</path>
+    <offsets>
+      <x-m>  7.0 </x-m>
+      <y-m>  0.6 </y-m>
+      <z-m>  0.0 </z-m>
+    </offsets>
+  </model>
+
+  <!-- Exzaust Left-->
+  <model>
+    <path>Aircraft/FA-18E_CVW5/Models/effects/smoke/smokeL.xml</path>
+    <offsets>
+      <x-m>  7.0 </x-m>
+      <y-m> -0.6 </y-m>
+      <z-m>  0.0 </z-m>
+    </offsets>
+  </model>
+
+  <!-- TipTrail Right-->
+  <model>
+    <name>tiptrail-RH</name>
+    <path>Aircraft/FA-18E_CVW5/Models/effects/tiptrail/tiptrail.xml</path>
+    <offsets>
+      <x-m> 3.900</x-m>
+      <y-m> 5.800 </y-m>
+      <z-m> 0.150</z-m>
+    </offsets>
+  </model>
+
+  <!-- TipTrail left-->
+  <model>
+    <name>tiptrail-LH</name>
+    <path>Aircraft/FA-18E_CVW5/Models/effects/tiptrail/tiptrail.xml</path>
+    <offsets>
+      <x-m>  3.900</x-m>
+      <y-m> -5.800 </y-m>
+      <z-m>  0.150</z-m>
+    </offsets>
+  </model>
+
+
+  <!-- Vapor RH-->
+  <model>
+    <path>Aircraft/FA-18E_CVW5/Models/effects/vapor/vapor.xml</path>
+    <offsets>
+      <x-m> 1.50 </x-m>
+      <y-m> 2.50 </y-m>
+      <z-m> 0.3 </z-m>
+    </offsets>
+  </model>
+
+  <!-- Vapor LH-->
+  <model>
+    <path>Aircraft/FA-18E_CVW5/Models/effects/vapor/vapor.xml</path>
+    <offsets>
+      <x-m> 1.50 </x-m>
+      <y-m>-2.50 </y-m>
+      <z-m> 0.3 </z-m>
+    </offsets>
+  </model>
+
+
+  <!-- CONTRAIL right-->
+  <model>
+    <path>Aircraft/FA-18E_CVW5/Models/effects/contrail/contrailR.xml</path>
+    <offsets>
+      <x-m>  7.0 </x-m>
+      <y-m>  0.6 </y-m>
+      <z-m>  0.0 </z-m>
+    </offsets>
+  </model>
+
+  <!-- CONTRAIL left-->
+  <model>
+    <path>Aircraft/FA-18E_CVW5/Models/effects/contrail/contrailL.xml</path>
+    <offsets>
+      <x-m>  7.0 </x-m>
+      <y-m> -0.6 </y-m>
+      <z-m>  0.0 </z-m>
+    </offsets>
+  </model>
+
+
+
+  <!-- WINGFOLD -->
+
+  <animation>
+    <type>rotate</type>
+    <object-name>fold-wing-LH</object-name>
+    <object-name>slat-outer-LH</object-name>
+    <object-name>aileron-LH1</object-name>
+    <object-name>aileron-LH2</object-name>
+    <object-name>NAV-left_prc</object-name>
+    <object-name>NAV-Red</object-name>
+    <object-name>NAV-left_prc2</object-name>
+    <object-name>NAV-Red2</object-name>
+    <object-name>fomlamp-LH</object-name>
+    <property>surface-positions/wing-fold</property>
+    <interpolation>
+      <entry><ind> 0.0 </ind><dep>  0 </dep></entry>
+      <entry><ind> 1.0 </ind><dep>-90 </dep></entry>
+    </interpolation>
+    <axis>
+      <x1-m>  0.522 </x1-m>
+      <y1-m> -4.716 </y1-m>
+      <z1-m>  0.125 </z1-m>
+      <x2-m>  1.789 </x2-m>
+      <y2-m> -4.716 </y2-m>
+      <z2-m>  0.125 </z2-m>
+    </axis>
+  </animation>
+
+  <animation>
+    <type>rotate</type>
+    <object-name>fold-wing-RH</object-name>
+    <object-name>slat-outer-RH</object-name>
+    <object-name>aileron-RH1</object-name>
+    <object-name>aileron-RH2</object-name>
+    <object-name>NAV-right_prc</object-name>
+    <object-name>NAV-right_prc2</object-name>
+    <object-name>NAV-Green</object-name>
+    <object-name>NAV-Green2</object-name>
+    <object-name>fomlamp-RH</object-name>
+    <property>surface-positions/wing-fold</property>
+    <interpolation>
+      <entry><ind> 0.0 </ind><dep>  0 </dep></entry>
+      <entry><ind> 1.0 </ind><dep> 90 </dep></entry>
+    </interpolation>
+    <axis>
+      <x1-m>  0.522 </x1-m>
+      <y1-m>  4.716 </y1-m>
+      <z1-m>  0.125 </z1-m>
+      <x2-m>  1.789 </x2-m>
+      <y2-m>  4.716 </y2-m>
+      <z2-m>  0.125 </z2-m>
+    </axis>
+  </animation>
+
+
+
+  <!-- stabilator -->
+  <animation>
+    <type>rotate</type>
+    <object-name>stabilator-RH</object-name>
+    <property>surface-positions/elevator-pos-norm</property>
+    <interpolation>
+      <entry><ind> -1.00 </ind><dep>-20.0 </dep></entry>
+      <entry><ind>  0.00 </ind><dep>  0.0 </dep></entry>
+      <entry><ind>  1.00 </ind><dep> 24.0 </dep></entry>
+    </interpolation>
+    <center>
+      <x-m> 4.598 </x-m>
+      <y-m> 1.039 </y-m>
+      <z-m> -0.004 </z-m>
+    </center>
+    <axis>
+      <x> 0 </x>
+      <y> 1 </y>
+      <z> 0 </z>
+    </axis>
+  </animation>
+
+  <animation>
+    <type>rotate</type>
+    <object-name>stabilator-LH</object-name>
+    <property>surface-positions/elevator-pos-norm</property>
+    <interpolation>
+      <entry><ind> -1.00 </ind><dep>-20.0 </dep></entry>
+      <entry><ind>  0.00 </ind><dep>  0.0 </dep></entry>
+      <entry><ind>  1.00 </ind><dep> 24.0 </dep></entry>
+    </interpolation>
+    <center>
+      <x-m> 4.598 </x-m>
+      <y-m> 1.039 </y-m>
+      <z-m> -0.004 </z-m>
+    </center>
+    <axis>
+      <x> 0 </x>
+      <y> 1 </y>
+      <z> 0 </z>
+    </axis>
+  </animation>
+
+  <animation>
+    <type>rotate</type>
+    <object-name>stabilator-RH</object-name>
+    <property>surface-positions/right-aileron-pos-norm</property>
+    <interpolation>
+      <entry><ind> -1.00 </ind><dep>   7.5 </dep></entry>
+      <entry><ind>  0.00 </ind><dep>   0.0 </dep></entry>
+      <entry><ind>  1.00 </ind><dep>  -7.5 </dep></entry>
+    </interpolation>
+    <center>
+      <x-m> 4.598 </x-m>
+      <y-m> 1.039 </y-m>
+      <z-m> -0.004 </z-m>
+    </center>
+    <axis>
+      <x> 0 </x>
+      <y> 1 </y>
+      <z> 0 </z>
+    </axis>
+  </animation>
+
+  <animation>
+    <type>rotate</type>
+    <object-name>stabilator-LH</object-name>
+    <property>surface-positions/left-aileron-pos-norm</property>
+    <interpolation>
+      <entry><ind> -1.00 </ind><dep>  7.5 </dep></entry>
+      <entry><ind>  0.00 </ind><dep>  0.0 </dep></entry>
+      <entry><ind>  1.00 </ind><dep> -7.5 </dep></entry>
+    </interpolation>
+    <center>
+      <x-m> 4.598 </x-m>
+      <y-m> 1.039 </y-m>
+      <z-m> -0.004 </z-m>
+    </center>
+    <axis>
+      <x> 0 </x>
+      <y> 1 </y>
+      <z> 0 </z>
+    </axis>
+  </animation>
+
+
+  <!-- rudder  -->
+  <animation>
+    <type>rotate</type>
+    <object-name>rudder-RH</object-name>
+    <property>surface-positions/rudder-pos-norm</property>
+    <interpolation>
+      <entry><ind>  1.00 </ind><dep> 40.0 </dep></entry>
+      <entry><ind>  0.00 </ind><dep>  0.0 </dep></entry>
+      <entry><ind> -1.00 </ind><dep>-40.0 </dep></entry>
+    </interpolation>
+    <axis>
+      <x1-m>  4.779 </x1-m>
+      <y1-m>  1.621 </y1-m>
+      <z1-m>  2.404 </z1-m>
+      <x2-m>  4.078 </x2-m>
+      <y2-m>  1.000 </y2-m>
+      <z2-m>  0.526 </z2-m>
+    </axis>
+  </animation>
+
+  <animation>
+    <type>rotate</type>
+    <object-name>rudder-LH</object-name>
+    <property>surface-positions/rudder-pos-norm</property>
+    <interpolation>
+      <entry><ind>  1.00 </ind><dep> 40.0 </dep></entry>
+      <entry><ind>  0.00 </ind><dep>  0.0 </dep></entry>
+      <entry><ind> -1.00 </ind><dep>-40.0 </dep></entry>
+    </interpolation>
+    <axis>
+      <x1-m>  4.779 </x1-m>
+      <y1-m> -1.621 </y1-m>
+      <z1-m>  2.404 </z1-m>
+      <x2-m>  4.078 </x2-m>
+      <y2-m> -1.000 </y2-m>
+      <z2-m>  0.526 </z2-m>
+    </axis>
+  </animation>
+
+
+
+  <!-- ailerons -->
+  <animation>
+    <type>rotate</type>
+    <object-name>aileron-LH1</object-name>
+    <object-name>aileron-LH2</object-name>
+    <property>surface-positions/left-aileron-pos-norm</property>
+    <interpolation>
+      <entry><ind> -1.0 </ind><dep> 20.0 </dep></entry>
+      <entry><ind>  0.0 </ind><dep>  0.0 </dep></entry>
+      <entry><ind>  1.0 </ind><dep>-20.0 </dep></entry>
+    </interpolation>
+    <axis>
+      <x1-m>  1.884 </x1-m>
+      <y1-m> -4.488 </y1-m>
+      <z1-m>  0.165 </z1-m>
+      <x2-m>  2.141 </x2-m>
+      <y2-m> -6.392 </y2-m>
+      <z2-m> -0.113 </z2-m>
+    </axis>
+  </animation>
+
+
+
+  <animation>
+    <type>rotate</type>
+    <object-name>aileron-RH1</object-name>
+    <object-name>aileron-RH2</object-name>
+    <property>surface-positions/right-aileron-pos-norm</property>
+    <interpolation>
+      <entry><ind> -1.0 </ind><dep>-20.0 </dep></entry>
+      <entry><ind>  0.0 </ind><dep>  0.0 </dep></entry>
+      <entry><ind>  1.0 </ind><dep> 20.0 </dep></entry>
+    </interpolation>
+    <axis>
+      <x1-m>  1.884 </x1-m>
+      <y1-m>  4.488 </y1-m>
+      <z1-m>  0.165 </z1-m>
+      <x2-m>  2.141 </x2-m>
+      <y2-m>  6.392 </y2-m>
+      <z2-m> -0.113 </z2-m>
+    </axis>
+  </animation>
+
+
+
+  <!-- ailerons-on-flap -->
+  <animation>
+    <type>rotate</type>
+    <object-name>aileron-LH1</object-name>
+    <object-name>aileron-LH2</object-name>
+     <property>surface-positions/flap-pos-norm</property>
+    <interpolation>
+      <entry><ind>  1.0 </ind><dep>-20.0 </dep></entry>
+      <entry><ind>  0.0 </ind><dep>  0.0 </dep></entry>
+    </interpolation>
+    <axis>
+      <x1-m>  1.884 </x1-m>
+      <y1-m> -4.488 </y1-m>
+      <z1-m>  0.165 </z1-m>
+      <x2-m>  2.141 </x2-m>
+      <y2-m> -6.392 </y2-m>
+      <z2-m>  0.113 </z2-m>
+    </axis>
+  </animation>
+
+  <animation>
+    <type>rotate</type>
+    <object-name>aileron-LH2</object-name>
+     <property>surface-positions/flap-pos-norm</property>
+    <interpolation>
+      <entry><ind>  1.0 </ind><dep>-20.0 </dep></entry>
+      <entry><ind>  0.0 </ind><dep>  0.0 </dep></entry>
+    </interpolation>
+    <axis>
+      <x1-m>  2.085 </x1-m>
+      <y1-m> -4.488 </y1-m>
+      <z1-m>  0.182 </z1-m>
+      <x2-m>  2.257 </x2-m>
+      <y2-m> -6.392 </y2-m>
+      <z2-m>  0.128 </z2-m>
+    </axis>
+  </animation>
+
+  <animation>
+    <type>rotate</type>
+    <object-name>aileron-RH1</object-name>
+    <object-name>aileron-RH2</object-name>
+     <property>surface-positions/flap-pos-norm</property>
+    <interpolation>
+      <entry><ind>  1.0 </ind><dep> 20.0 </dep></entry>
+      <entry><ind>  0.0 </ind><dep>  0.0 </dep></entry>
+    </interpolation>
+    <axis>
+      <x1-m>  1.884 </x1-m>
+      <y1-m>  4.488 </y1-m>
+      <z1-m>  0.165 </z1-m>
+      <x2-m>  2.141 </x2-m>
+      <y2-m>  6.392 </y2-m>
+      <z2-m>  0.113 </z2-m>
+    </axis>
+  </animation>
+
+  <animation>
+    <type>rotate</type>
+    <object-name>aileron-RH2</object-name>
+     <property>surface-positions/flap-pos-norm</property>
+    <interpolation>
+      <entry><ind>  1.0 </ind><dep> 20.0 </dep></entry>
+      <entry><ind>  0.0 </ind><dep>  0.0 </dep></entry>
+    </interpolation>
+    <axis>
+      <x1-m>  2.085 </x1-m>
+      <y1-m>  4.488 </y1-m>
+      <z1-m>  0.182 </z1-m>
+      <x2-m>  2.257 </x2-m>
+      <y2-m>  6.392 </y2-m>
+      <z2-m>  0.128 </z2-m>
+    </axis>
+  </animation>
+
+
+  <!-- flaps -->
+  <animation>
+    <type>rotate</type>
+    <object-name>flap-LH1</object-name>
+    <object-name>flap-LH2</object-name>
+  <property>surface-positions/flap-pos-norm</property>
+  <factor>-20</factor>
+    <axis>
+      <x1-m>  1.449 </x1-m>
+      <y1-m> -1.252 </y1-m>
+      <z1-m>  0.515 </z1-m>
+      <x2-m>  1.885 </x2-m>
+      <y2-m> -4.487 </y2-m>
+      <z2-m>  0.164 </z2-m>
+    </axis>
+ </animation>
+
+  <animation>
+    <type>rotate</type>
+    <object-name>flap-LH2</object-name>
+  <property>surface-positions/flap-pos-norm</property>
+  <factor>-20</factor>
+    <axis>
+      <x1-m>  1.778 </x1-m>
+      <y1-m> -1.583 </y1-m>
+      <z1-m>  0.422 </z1-m>
+      <x2-m>  1.985</x2-m>
+      <y2-m> -4.488 </y2-m>
+      <z2-m>  0.187 </z2-m>
+    </axis>
+ </animation>
+
+  <animation>
+    <type>rotate</type>
+    <object-name>flap-RH1</object-name>
+    <object-name>flap-RH2</object-name>
+  <property>surface-positions/flap-pos-norm</property>
+  <factor> 20</factor>
+    <axis>
+      <x1-m>  1.449 </x1-m>
+      <y1-m>  1.252 </y1-m>
+      <z1-m>  0.515 </z1-m>
+      <x2-m>  1.885 </x2-m>
+      <y2-m>  4.487 </y2-m>
+      <z2-m>  0.164 </z2-m>
+    </axis>
+ </animation>
+
+  <animation>
+    <type>rotate</type>
+    <object-name>flap-RH2</object-name>
+  <property>surface-positions/flap-pos-norm</property>
+  <factor> 20</factor>
+    <axis>
+      <x1-m>  1.778 </x1-m>
+      <y1-m>  1.583 </y1-m>
+      <z1-m>  0.422 </z1-m>
+      <x2-m>  1.985</x2-m>
+      <y2-m>  4.488 </y2-m>
+      <z2-m>  0.187 </z2-m>
+    </axis>
+ </animation>
+
+
+  <!-- slat -->
+  <animation>
+    <type>rotate</type>
+    <object-name>slat-middle-LH</object-name>
+  <property>surface-positions/left-slat-pos-norm</property>
+  <factor>20</factor>
+    <axis>
+      <x1-m> -0.561 </x1-m>
+      <y1-m> -1.997 </y1-m>
+      <z1-m>  0.428 </z1-m>
+      <x2-m>  0.497 </x2-m>
+      <y2-m> -4.665 </y2-m>
+      <z2-m>  0.213 </z2-m>
+    </axis>
+ </animation>
+
+  <animation>
+    <type>rotate</type>
+    <object-name>slat-middle-RH</object-name>
+  <property>surface-positions/right-slat-pos-norm</property>
+  <factor>-20</factor>
+    <axis>
+      <x1-m> -0.561 </x1-m>
+      <y1-m>  1.997 </y1-m>
+      <z1-m>  0.428 </z1-m>
+      <x2-m>  0.497 </x2-m>
+      <y2-m>  4.665 </y2-m>
+      <z2-m>  0.213 </z2-m>
+    </axis>
+ </animation>
+
+  <animation>
+    <type>rotate</type>
+    <object-name>slat-outer-LH</object-name>
+  <property>surface-positions/left-slat-pos-norm</property>
+  <interpolation>
+   <entry> <ind>0.0</ind> <dep>0</dep> </entry>
+   <entry> <ind>0.5</ind> <dep>20</dep> </entry>
+   <entry> <ind>1.0</ind> <dep>20</dep> </entry>
+  </interpolation>
+    <axis>
+      <x1-m>  0.507 </x1-m>
+      <y1-m> -4.681 </y1-m>
+      <z1-m>  0.211 </z1-m>
+      <x2-m>  1.174 </x2-m>
+      <y2-m> -6.327 </y2-m>
+      <z2-m>  0.148 </z2-m>
+    </axis>
+ </animation>
+
+  <animation>
+    <type>rotate</type>
+    <object-name>slat-outer-RH</object-name>
+  <property>surface-positions/right-slat-pos-norm</property>
+  <interpolation>
+   <entry> <ind>0.0</ind> <dep>0</dep> </entry>
+   <entry> <ind>0.5</ind> <dep>-20</dep> </entry>
+   <entry> <ind>1.0</ind> <dep>-20</dep> </entry>
+  </interpolation>
+    <axis>
+      <x1-m>  0.507 </x1-m>
+      <y1-m>  4.681 </y1-m>
+      <z1-m>  0.211 </z1-m>
+      <x2-m>  1.174 </x2-m>
+      <y2-m>  6.327 </y2-m>
+      <z2-m>  0.148 </z2-m>
+    </axis>
+ </animation>
+
+
+  <!-- AIR INLET -->
+  <animation>
+    <type>rotate</type>
+    <object-name>air_inlet</object-name>
+	<property>surface-positions/flap-pos-norm</property>
+    <interpolation>
+      <entry><ind>  0.0 </ind><dep>  0 </dep></entry>
+      <entry><ind>  1.0 </ind><dep> 30 </dep></entry>
+    </interpolation>
+    <center>
+      <x-m> 2.014 </x-m>
+      <y-m> 0.000 </y-m>
+      <z-m> 0.664 </z-m>
+    </center>
+    <axis>
+      <x> 0 </x>
+      <y> 1 </y>
+      <z> 0 </z>
+    </axis>
+  </animation>
+
+
+
+ <!-- speedbrake function [spoiler:UP] [TE:DOWN] [aileron:UP] [rudder:OUT] -->
+ <animation>
+  <type>rotate</type>
+  <object-name>spoiler-LH</object-name>
+  <property>surface-positions/speedbrake-pos-norm</property>
+  <factor>50</factor>
+    <axis>
+      <x1-m> -1.393 </x1-m>
+      <y1-m> -0.703 </y1-m>
+      <z1-m>  0.710 </z1-m>
+      <x2-m> -1.674 </x2-m>
+      <y2-m> -1.194</y2-m>
+      <z2-m>  0.648 </z2-m>
+    </axis>
+ </animation>
+
+ <animation>
+  <type>rotate</type>
+  <object-name>spoiler-RH</object-name>
+  <property>surface-positions/speedbrake-pos-norm</property>
+  <factor>-50</factor>
+    <axis>
+      <x1-m> -1.393 </x1-m>
+      <y1-m>  0.703 </y1-m>
+      <z1-m>  0.710 </z1-m>
+      <x2-m> -1.674 </x2-m>
+      <y2-m>  1.194</y2-m>
+      <z2-m>  0.648 </z2-m>
+    </axis>
+ </animation>
+
+  <animation>
+    <type>rotate</type>
+    <object-name>flap-LH1</object-name>
+    <object-name>flap-LH2</object-name>
+  <property>surface-positions/speedbrake-pos-norm</property>
+  <factor>-10</factor>
+    <axis>
+      <x1-m>  1.449 </x1-m>
+      <y1-m> -1.252 </y1-m>
+      <z1-m>  0.515 </z1-m>
+      <x2-m>  1.885 </x2-m>
+      <y2-m> -4.487 </y2-m>
+      <z2-m>  0.164 </z2-m>
+    </axis>
+ </animation>
+
+  <animation>
+    <type>rotate</type>
+    <object-name>flap-RH1</object-name>
+    <object-name>flap-RH2</object-name>
+  <property>surface-positions/speedbrake-pos-norm</property>
+  <factor> 10</factor>
+    <axis>
+      <x1-m>  1.449 </x1-m>
+      <y1-m>  1.252 </y1-m>
+      <z1-m>  0.515 </z1-m>
+      <x2-m>  1.885 </x2-m>
+      <y2-m>  4.487 </y2-m>
+      <z2-m>  0.164 </z2-m>
+    </axis>
+ </animation>
+
+  <animation>
+    <type>rotate</type>
+    <object-name>aileron-LH1</object-name>
+    <object-name>aileron-LH2</object-name>
+  <property>surface-positions/speedbrake-pos-norm</property>
+    <interpolation>
+      <entry><ind>  1.0 </ind><dep> 10.0 </dep></entry>
+      <entry><ind>  0.0 </ind><dep>  0.0 </dep></entry>
+    </interpolation>
+    <axis>
+      <x1-m>  1.884 </x1-m>
+      <y1-m> -4.488 </y1-m>
+      <z1-m>  0.165 </z1-m>
+      <x2-m>  2.141 </x2-m>
+      <y2-m> -6.392 </y2-m>
+      <z2-m>  0.113 </z2-m>
+    </axis>
+  </animation>
+
+  <animation>
+    <type>rotate</type>
+    <object-name>aileron-LH2</object-name>
+  <property>surface-positions/speedbrake-pos-norm</property>
+    <interpolation>
+      <entry><ind>  1.0 </ind><dep> 10.0 </dep></entry>
+      <entry><ind>  0.0 </ind><dep>  0.0 </dep></entry>
+    </interpolation>
+    <axis>
+      <x1-m>  2.085 </x1-m>
+      <y1-m> -4.488 </y1-m>
+      <z1-m>  0.182 </z1-m>
+      <x2-m>  2.257 </x2-m>
+      <y2-m> -6.392 </y2-m>
+      <z2-m>  0.128 </z2-m>
+    </axis>
+  </animation>
+
+  <animation>
+    <type>rotate</type>
+    <object-name>aileron-RH1</object-name>
+    <object-name>aileron-RH2</object-name>
+  <property>surface-positions/speedbrake-pos-norm</property>
+    <interpolation>
+      <entry><ind>  1.0 </ind><dep>-10.0 </dep></entry>
+      <entry><ind>  0.0 </ind><dep>  0.0 </dep></entry>
+    </interpolation>
+    <axis>
+      <x1-m>  1.884 </x1-m>
+      <y1-m>  4.488 </y1-m>
+      <z1-m>  0.165 </z1-m>
+      <x2-m>  2.141 </x2-m>
+      <y2-m>  6.392 </y2-m>
+      <z2-m>  0.113 </z2-m>
+    </axis>
+  </animation>
+
+  <animation>
+    <type>rotate</type>
+    <object-name>aileron-RH2</object-name>
+  <property>surface-positions/speedbrake-pos-norm</property>
+    <interpolation>
+      <entry><ind>  1.0 </ind><dep>-10.0 </dep></entry>
+      <entry><ind>  0.0 </ind><dep>  0.0 </dep></entry>
+    </interpolation>
+    <axis>
+      <x1-m>  2.085 </x1-m>
+      <y1-m>  4.488 </y1-m>
+      <z1-m>  0.182 </z1-m>
+      <x2-m>  2.257 </x2-m>
+      <y2-m>  6.392 </y2-m>
+      <z2-m>  0.128 </z2-m>
+    </axis>
+  </animation>
+
+  <animation>
+    <type>rotate</type>
+    <object-name>rudder-RH</object-name>
+    <property>surface-positions/speedbrake-pos-norm</property>
+    <interpolation>
+      <entry><ind>  1.00 </ind><dep>-15.0 </dep></entry>
+      <entry><ind>  0.00 </ind><dep>  0.0 </dep></entry>
+    </interpolation>
+    <axis>
+      <x1-m>  4.779 </x1-m>
+      <y1-m>  1.621 </y1-m>
+      <z1-m>  2.404 </z1-m>
+      <x2-m>  4.078 </x2-m>
+      <y2-m>  1.000 </y2-m>
+      <z2-m>  0.526 </z2-m>
+    </axis>
+  </animation>
+
+  <animation>
+    <type>rotate</type>
+    <object-name>rudder-LH</object-name>
+    <property>surface-positions/speedbrake-pos-norm</property>
+    <interpolation>
+      <entry><ind>  1.00 </ind><dep> 15.0 </dep></entry>
+      <entry><ind>  0.00 </ind><dep>  0.0 </dep></entry>
+    </interpolation>
+    <axis>
+      <x1-m>  4.779 </x1-m>
+      <y1-m> -1.621 </y1-m>
+      <z1-m>  2.404 </z1-m>
+      <x2-m>  4.078 </x2-m>
+      <y2-m> -1.000 </y2-m>
+      <z2-m>  0.526 </z2-m>
+    </axis>
+  </animation>
+
+<!-- RUDDER TO LDG POSITION -->
+  <animation>
+    <type>rotate</type>
+    <object-name>rudder-RH</object-name>
+	<property>surface-positions/flap-pos-norm</property>
+    <interpolation>
+      <entry><ind>  0.0 </ind><dep>  0 </dep></entry>
+      <entry><ind>  1.0 </ind><dep> 20 </dep></entry>
+    </interpolation>
+    <axis>
+      <x1-m>  4.779 </x1-m>
+      <y1-m>  1.621 </y1-m>
+      <z1-m>  2.404 </z1-m>
+      <x2-m>  4.078 </x2-m>
+      <y2-m>  1.000 </y2-m>
+      <z2-m>  0.526 </z2-m>
+    </axis>
+  </animation>
+
+  <animation>
+    <type>rotate</type>
+    <object-name>rudder-LH</object-name>
+	<property>surface-positions/flap-pos-norm</property>
+    <interpolation>
+      <entry><ind>  0.0 </ind><dep>  0 </dep></entry>
+      <entry><ind>  1.0 </ind><dep>-20 </dep></entry>
+    </interpolation>
+    <axis>
+      <x1-m>  4.779 </x1-m>
+      <y1-m> -1.621 </y1-m>
+      <z1-m>  2.404 </z1-m>
+      <x2-m>  4.078 </x2-m>
+      <y2-m> -1.000 </y2-m>
+      <z2-m>  0.526 </z2-m>
+    </axis>
+  </animation>
+
+
+
+
+<!--   HOOK  -->
+
+ <animation>
+  <type>rotate</type>
+  <object-name>hook</object-name>
+  <property>gear/gear[2]/hook</property>
+  <factor>60</factor>
+  <center>
+   <x-m>4.819</x-m>
+   <y-m> 0 </y-m>
+   <z-m>-0.616</z-m>
+  </center>
+  <axis>
+   <x> 0</x>
+   <y> 1</y>
+   <z> 0</z>
+  </axis>
+ </animation>
+
+
+ <!-- NOSE GEAR -->
+
+
+ <animation>
+  <type>rotate</type>
+  <property>gear/gear[2]/position-norm</property>
+  <object-name>nose-gear-door-LH</object-name>
+  <interpolation>
+   <entry> <ind>0.0</ind> <dep>0</dep> </entry>
+   <entry> <ind>0.1</ind> <dep>-70</dep> </entry>
+   <entry> <ind>1.0</ind> <dep>-70</dep> </entry>
+  </interpolation>
+  <axis>
+   <x> 1 </x>
+   <y> 0 </y>
+   <z> 0 </z>
+  </axis>
+  <center>
+   <x-m>-6.981</x-m>
+   <y-m>-0.409</y-m>
+   <z-m>-0.298</z-m>
+  </center> 
+ </animation>
+
+ <animation>
+  <type>rotate</type>
+  <property>gear/gear[2]/position-norm</property>
+  <object-name>nose-gear-door-RH</object-name>
+  <interpolation>
+   <entry> <ind>0.0</ind> <dep>0</dep> </entry>
+   <entry> <ind>0.1</ind> <dep>80</dep> </entry>
+   <entry> <ind>1.0</ind> <dep>80</dep> </entry>
+  </interpolation>
+  <axis>
+   <x> 1 </x>
+   <y> 0 </y>
+   <z> 0 </z>
+  </axis>
+  <center>
+   <x-m>-6.981</x-m>
+   <y-m> 0.409</y-m>
+   <z-m>-0.298</z-m>
+  </center> 
+ </animation>
+
+ <animation>
+  <type>rotate</type>
+  <property>gear/gear[2]/position-norm</property>
+  <object-name>nose-gear-hatch1</object-name>
+  <interpolation>
+   <entry> <ind>0.0</ind> <dep>  0</dep> </entry>
+   <entry> <ind>0.1</ind> <dep>100</dep> </entry>
+   <entry> <ind>1.0</ind> <dep>100</dep> </entry>
+  </interpolation>
+  <axis>
+   <x> 1.00 </x>
+   <y> 0.00 </y>
+   <z> 0.00 </z>
+  </axis>
+  <center>
+   <x-m>-6.215 </x-m>
+   <y-m> 0.221 </y-m>
+   <z-m>-0.423 </z-m>
+  </center> 
+ </animation>
+
+ <animation>
+  <type>rotate</type>
+  <property>gear/gear[2]/position-norm</property>
+  <object-name>nose-gear-hatch2</object-name>
+  <interpolation>
+   <entry> <ind>0.0</ind> <dep> 0</dep> </entry>
+   <entry> <ind>0.1</ind> <dep> 0</dep> </entry>
+   <entry> <ind>0.8</ind> <dep>-30</dep> </entry>
+   <entry> <ind>1.0</ind> <dep>-30</dep> </entry>
+  </interpolation>
+  <axis>
+   <x> 0.00 </x>
+   <y> 1.00 </y>
+   <z> 0.00 </z>
+  </axis>
+  <center>
+   <x-m>-3.856 </x-m>
+   <y-m> 0.000 </y-m>
+   <z-m>-0.456 </z-m>
+  </center> 
+ </animation>
+
+  <animation>
+	<type>rotate</type>
+	<property>gear/gear[2]/position-norm</property>
+	<object-name>gear_nose_tire</object-name>
+	<object-name>nose_outer</object-name>
+	<object-name>nose_inner</object-name>
+	<object-name>tie_rod</object-name>
+	<object-name>tie_rod_UPR</object-name>
+	<object-name>tie_rod_LWR</object-name>
+	<object-name>nose_outer_ring</object-name>
+	<object-name>nose_gear_act</object-name>
+	<interpolation>
+		<entry> <ind>0.0</ind> <dep>85</dep> </entry>
+		<entry> <ind>0.1</ind> <dep>85</dep> </entry>
+		<entry> <ind>0.8</ind> <dep> 0</dep> </entry>
+		<entry> <ind>1.0</ind> <dep> 0</dep> </entry>
+	</interpolation>
+	<axis>
+		<x> 0.00 </x>
+		<y> 1.00 </y>
+		<z> 0.00 </z>
+	</axis>
+	<center>
+		<x-m> -4.80 </x-m>
+		<y-m>  0.00 </y-m>
+		<z-m> -0.25 </z-m>
+	</center> 
+  </animation>
+
+  <animation>
+	<type>rotate</type>
+	<property>gear/gear[2]/position-norm</property>
+	<object-name>tie_rod</object-name>
+	<interpolation>
+		<entry> <ind>0.0</ind> <dep>-140</dep> </entry>
+		<entry> <ind>0.1</ind> <dep>-140</dep> </entry>
+		<entry> <ind>0.8</ind> <dep>   0</dep> </entry>
+		<entry> <ind>1.0</ind> <dep>   0</dep> </entry>
+	</interpolation>
+	<axis>
+		<x> 0.00 </x>
+		<y> 1.00 </y>
+		<z> 0.00 </z>
+	</axis>
+	<center>
+		<x-m> -5.467 </x-m>
+		<y-m>  0.00 </y-m>
+		<z-m> -1.144 </z-m>
+	</center> 
+  </animation>
+
+  <animation>
+	<type>rotate</type>
+	<property>gear/gear[2]/position-norm</property>
+	<object-name>nose_gear_act</object-name>
+	<interpolation>
+		<entry> <ind>0.0</ind> <dep>-60</dep> </entry>
+		<entry> <ind>0.1</ind> <dep>-60</dep> </entry>
+		<entry> <ind>0.8</ind> <dep>  0</dep> </entry>
+		<entry> <ind>1.0</ind> <dep>  0</dep> </entry>
+	</interpolation>
+	<axis>
+		<x> 0.00 </x>
+		<y> 1.00 </y>
+		<z> 0.00 </z>
+	</axis>
+	<center>
+		<x-m> -4.983 </x-m>
+		<y-m>  0.000 </y-m>
+		<z-m> -0.971 </z-m>
+	</center> 
+  </animation>
+
+
+  <animation>
+	<type>rotate</type>
+	<object-name>gear_nose_tire</object-name>
+	<object-name>nose_inner</object-name>
+	<object-name>tie_rod_UPR</object-name>
+	<object-name>tie_rod_LWR</object-name>
+	<object-name>nose_outer_ring</object-name>
+	<object-name>tie_rod</object-name>
+	<property>surface-positions/rudder-pos-norm</property>
+	<interpolation>
+		<entry><ind> -1.00 </ind><dep>-40.0 </dep></entry>
+		<entry><ind>  0.00 </ind><dep>  0.0 </dep></entry>
+		<entry><ind>  1.00 </ind><dep> 40.0 </dep></entry>
+	</interpolation>
+	<axis>
+		<x> 0.00</x>
+		<y> 0.00</y>
+ 		<z> 1.00</z>
+	</axis>
+	<center>
+		<x-m>-5.179</x-m>
+		<y-m> 0.000</y-m>
+		<z-m>-1.459</z-m>
+	</center>
+  </animation>
+
+ <animation>
+	<type>translate</type>
+	<property>gear/gear[2]/compression-norm</property>
+	<object-name>gear_nose_tire</object-name>
+	<object-name>nose_inner</object-name>
+	<object-name>tie_rod_UPR</object-name>
+	<object-name>tie_rod_LWR</object-name>
+	<interpolation>
+		<entry><ind>0.0</ind><dep>0.00</dep></entry>
+		<entry><ind>0.001</ind><dep>0.48</dep></entry>
+		<entry><ind>0.04</ind><dep>0.50</dep></entry>
+		<entry><ind>0.147</ind><dep>0.53</dep></entry>
+		<entry><ind>0.365</ind><dep>0.62</dep></entry>
+		<entry><ind>1</ind><dep>0.65</dep></entry>
+	</interpolation>
+	<axis>
+		<x> 0.0000</x>
+		<y> 0.0000</y>
+		<z> 1.000</z>
+	</axis>
+	<center>
+		<x-m>-5.179</x-m>
+		<y-m> 0.000</y-m>
+		<z-m>-0.200</z-m>
+	</center>
+ </animation>
+
+ <animation>
+	<type>rotate</type>
+	<property>gear/gear[2]/compression-norm</property>
+	<object-name>tie_rod_UPR</object-name>
+	<object-name>tie_rod_LWR</object-name>
+	<interpolation>
+		<entry><ind>0.0</ind><dep>0</dep></entry>
+		<entry><ind>0.001</ind><dep>69</dep></entry>
+		<entry><ind>0.04</ind><dep>70</dep></entry>
+		<entry><ind>0.147</ind><dep>73</dep></entry>
+		<entry><ind>0.365</ind><dep>76</dep></entry>
+		<entry><ind>1</ind><dep>80</dep></entry>
+	</interpolation>
+	<axis>
+		<x> 0 </x>
+		<y> 1 </y>
+		<z> 0 </z>
+	</axis>
+	<center>
+		<x-m>-5.042</x-m>
+		<y-m> 0.000</y-m>
+		<z-m>-1.971</z-m>
+	</center>
+ </animation>
+
+ <animation>
+	<type>rotate</type>
+	<property>gear/gear[2]/compression-norm</property>
+	<object-name>tie_rod_UPR</object-name>
+	<interpolation>
+		<entry><ind>0.0</ind><dep>0.0</dep></entry>
+		<entry><ind>0.001</ind><dep>-129</dep></entry>
+		<entry><ind>0.04</ind><dep>-132</dep></entry>
+		<entry><ind>0.147</ind><dep>-134</dep></entry>
+		<entry><ind>0.365</ind><dep>-143</dep></entry>
+		<entry><ind>1</ind><dep>-145</dep></entry>
+	</interpolation>
+	<axis>
+		<x> 0 </x>
+		<y> 1 </y>
+		<z> 0 </z>
+	</axis>
+	<center>
+		<x-m>-4.968</x-m>
+		<y-m> 0.043</y-m>
+		<z-m>-1.609</z-m>
+	</center>
+ </animation>
+
+ <animation>
+	<type>select</type>
+	<object-name>tie_rod</object-name>
+	<condition>
+		<equals>
+			<property>gear/launchbar/state</property>
+			<value>Disengaged</value>
+		</equals>
+	</condition>
+ </animation>
+
+ <animation>
+	<type>select</type>
+	<object-name>cathook</object-name>
+	<condition>
+	<or>
+		<equals>
+			<property>gear/launchbar/state</property>
+			<value>Engaged</value>
+		</equals>
+		<equals>
+			<property>gear/launchbar/state</property>
+			<value>Launching</value>
+		</equals>
+	</or>
+	</condition>
+ </animation>
+
+
+ <animation>
+	<type>select</type>
+	<object-name>holdbackbar</object-name>
+	<condition>
+		<equals>
+			<property>gear/launchbar/state</property>
+			<value>Engaged</value>
+		</equals>
+	</condition>
+ </animation>
+
+
+ <!-- LEFT GEAR -->
+
+ <animation>
+  <type>rotate</type>
+  <property>gear/gear[0]/position-norm</property>
+  <object-name>gear-pnl-LH-A</object-name>
+  <interpolation>
+   <entry> <ind>0.0 </ind> <dep> 0</dep> </entry>
+   <entry> <ind>0.1 </ind> <dep>93</dep> </entry>
+   <entry> <ind>1.0 </ind> <dep>93</dep> </entry>
+  </interpolation>
+    <axis>
+      <x1-m> -0.008 </x1-m>
+      <y1-m> -0.398 </y1-m>
+      <z1-m> -0.837 </z1-m>
+      <x2-m>  0.661</x2-m>
+      <y2-m> -0.247 </y2-m>
+      <z2-m> -0.836 </z2-m>
+    </axis>
+ </animation>
+
+ <animation>
+  <type>rotate</type>
+  <property>gear/gear[0]/position-norm</property>
+  <object-name>gear-pnl-LH-C</object-name>
+  <interpolation>
+   <entry> <ind>0.0 </ind> <dep> 0</dep> </entry>
+   <entry> <ind>0.1 </ind> <dep>-93</dep> </entry>
+   <entry> <ind>1.0 </ind> <dep>-93</dep> </entry>
+  </interpolation>
+    <axis>
+      <x1-m>  1.956 </x1-m>
+      <y1-m> -0.237 </y1-m>
+      <z1-m> -0.782 </z1-m>
+      <x2-m>  1.186 </x2-m>
+      <y2-m> -0.240 </y2-m>
+      <z2-m> -0.837 </z2-m>
+    </axis>
+ </animation>
+
+ <animation>
+  <type>rotate</type>
+  <property>gear/gear[0]/position-norm</property>
+  <object-name>gear-pnl-LH-B</object-name>
+  <interpolation>
+   <entry> <ind>0.0 </ind> <dep> 0</dep> </entry>
+   <entry> <ind>0.1 </ind> <dep>-120</dep> </entry>
+   <entry> <ind>1.0 </ind> <dep>-120</dep> </entry>
+  </interpolation>
+    <axis>
+      <x1-m>  1.191 </x1-m>
+      <y1-m> -1.069 </y1-m>
+      <z1-m> -0.844 </z1-m>
+      <x2-m>  1.934 </x2-m>
+      <y2-m> -1.017 </y2-m>
+      <z2-m> -0.774 </z2-m>
+    </axis>
+ </animation>
+
+
+ <animation>
+	<type>rotate</type>
+	<property>gear/gear[0]/position-norm</property>
+	<object-name>gear_left_tire</object-name>
+	<object-name>gear_UPR_LH</object-name>
+	<object-name>gear_LWR_LH</object-name>
+	<object-name>gear_rod_LH</object-name>
+	<object-name>dump_UPR_LH</object-name>
+	<object-name>dump_LWR_LH</object-name>
+	<interpolation>
+		<entry> <ind>0.0</ind> <dep>-100</dep> </entry>
+		<entry> <ind>0.1</ind> <dep>-100</dep> </entry>
+		<entry> <ind>0.8</ind> <dep>  0</dep> </entry>
+		<entry> <ind>1.0</ind> <dep>  0</dep> </entry>
+	</interpolation>
+    <center>
+      <x-m> -0.050 </x-m>
+      <y-m> -0.813 </y-m>
+      <z-m> -0.561 </z-m>
+    </center>
+    <axis>
+      <x> -0.7 </x>
+      <y>  1 </y>
+      <z>  0 </z>
+    </axis>
+ </animation>
+
+ <animation>
+	<type>rotate</type>
+	<property>gear/gear[0]/position-norm</property>
+	<object-name>gear_left_tire</object-name>
+	<object-name>gear_UPR_LH</object-name>
+	<object-name>gear_LWR_LH</object-name>
+	<object-name>dump_UPR_LH</object-name>
+	<object-name>dump_LWR_LH</object-name>
+	<object-name>gear_rod_LH</object-name>
+	<interpolation>
+		<entry> <ind>0.0</ind> <dep> 50</dep> </entry>
+		<entry> <ind>0.1</ind> <dep> 50</dep> </entry>
+		<entry> <ind>0.8</ind> <dep>  0</dep> </entry>
+		<entry> <ind>1.0</ind> <dep>  0</dep> </entry>
+	</interpolation>
+	<axis>
+		<x1-m>  0.050 </x1-m>
+		<y1-m> -0.813 </y1-m>
+		<z1-m> -0.561 </z1-m>
+		<x2-m>  0.190 </x2-m>
+		<y2-m> -0.962 </y2-m>
+		<z2-m> -1.280 </z2-m>
+	</axis>
+ </animation>
+
+ <animation>
+	<type>rotate</type>
+	<property>gear/gear[0]/position-norm</property>
+	<object-name>gear_rod_LH</object-name>
+	<interpolation>
+		<entry> <ind>0.0</ind> <dep> 50</dep> </entry>
+		<entry> <ind>0.1</ind> <dep> 50</dep> </entry>
+		<entry> <ind>0.8</ind> <dep>  0</dep> </entry>
+		<entry> <ind>1.0</ind> <dep>  0</dep> </entry>
+	</interpolation>
+	<axis>
+		<x1-m>  0.060 </x1-m>
+		<y1-m> -0.834 </y1-m>
+		<z1-m> -1.184 </z1-m>
+		<x2-m>  0.111 </x2-m>
+		<y2-m> -0.830 </y2-m>
+		<z2-m> -1.176 </z2-m>
+	</axis>
+ </animation>
+
+
+
+ <animation>
+  <type>rotate</type>
+  <property>gear/gear[0]/compression-norm</property>
+  <object-name>gear_left_tire</object-name>
+  <object-name>gear_LWR_LH</object-name>
+  <object-name>dump_UPR_LH</object-name>
+  <object-name>dump_LWR_LH</object-name>
+  <interpolation>
+   <entry><ind>0.0 </ind>  <dep>  0 </dep></entry>
+   <entry><ind>0.001</ind> <dep>-26</dep></entry>
+   <entry><ind>0.155</ind> <dep>-50</dep></entry>
+   <entry><ind>1.0 </ind>  <dep>-53 </dep></entry>
+  </interpolation>
+    <center>
+      <x-m>  0.205 </x-m>
+      <y-m> -0.876 </y-m>
+      <z-m> -1.424 </z-m>
+    </center>
+    <axis>
+      <x>  0 </x>
+      <y>  1 </y>
+      <z>  0 </z>
+    </axis>
+ </animation>
+
+
+ <animation>
+  <type>rotate</type>
+  <property>gear/gear[0]/compression-norm</property>
+  <object-name>dump_UPR_LH</object-name>
+  <object-name>dump_LWR_LH</object-name>
+  <interpolation>
+   <entry><ind>0.0 </ind>  <dep>  0 </dep></entry>
+   <entry><ind>0.001</ind> <dep> 20</dep></entry>
+   <entry><ind>0.155</ind> <dep> 40</dep></entry>
+   <entry><ind>1.0 </ind>  <dep> 43 </dep></entry>
+  </interpolation>
+    <axis>
+      <x1-m>  0.450 </x1-m>
+      <y1-m> -1.151 </y1-m>
+      <z1-m> -1.539 </z1-m>
+      <x2-m>  0.452 </x2-m>
+      <y2-m> -1.105</y2-m>
+      <z2-m> -1.555 </z2-m>
+    </axis>
+ </animation>
+
+ <animation>
+  <type>rotate</type>
+  <property>gear/gear[0]/compression-norm</property>
+  <object-name>dump_UPR_LH</object-name>
+  <object-name>dump_LWR_LH</object-name>
+  <interpolation>
+   <entry><ind> 0.0 </ind>  <dep>  0 </dep></entry>
+   <entry><ind>0.001</ind> <dep>-5</dep></entry>
+   <entry><ind>0.155</ind> <dep>-10</dep></entry>
+   <entry><ind> 1.0 </ind>  <dep>-15 </dep></entry>
+  </interpolation>
+    <center>
+      <x-m> 0.446 </x-m>
+      <y-m>-1.126 </y-m>
+      <z-m>-1.541 </z-m>
+    </center>
+    <axis>
+      <x> 1 </x>
+      <y> 0 </y>
+      <z> 0 </z>
+    </axis>
+ </animation>
+
+ <animation>
+  <type>translate</type>
+  <property>gear/gear[0]/compression-norm</property>
+  <object-name>dump_UPR_LH</object-name>
+  <interpolation>
+   <entry><ind>0.0 </ind>  <dep> 0.0 </dep></entry>
+   <entry><ind>0.001</ind> <dep> 0.10</dep></entry>
+   <entry><ind>0.155</ind> <dep> 0.20</dep></entry>
+   <entry><ind>1.0 </ind>  <dep> 0.25</dep></entry>
+  </interpolation>
+    <axis>
+      <x1-m>  0.258 </x1-m>
+      <y1-m> -0.867 </y1-m>
+      <z1-m> -0.842 </z1-m>
+      <x2-m>  0.384 </x2-m>
+      <y2-m> -1.041</y2-m>
+      <z2-m> -1.311 </z2-m>
+    </axis>
+ </animation>
+
+
+
+
+
+ <!-- right gear -->
+
+ <animation>
+  <type>rotate</type>
+  <property>gear/gear[1]/position-norm</property>
+  <object-name>gear-pnl-RH-A</object-name>
+  <interpolation>
+   <entry> <ind>0.0 </ind> <dep> 0</dep> </entry>
+   <entry> <ind>0.1 </ind> <dep>-93</dep> </entry>
+   <entry> <ind>1.0 </ind> <dep>-93</dep> </entry>
+  </interpolation>
+    <axis>
+      <x1-m> -0.008 </x1-m>
+      <y1-m>  0.398 </y1-m>
+      <z1-m> -0.837 </z1-m>
+      <x2-m>  0.661</x2-m>
+      <y2-m>  0.247 </y2-m>
+      <z2-m> -0.836 </z2-m>
+    </axis>
+ </animation>
+
+ <animation>
+  <type>rotate</type>
+  <property>gear/gear[1]/position-norm</property>
+  <object-name>gear-pnl-RH-C</object-name>
+  <interpolation>
+   <entry> <ind>0.0 </ind> <dep> 0</dep> </entry>
+   <entry> <ind>0.1 </ind> <dep>93</dep> </entry>
+   <entry> <ind>1.0 </ind> <dep>93</dep> </entry>
+  </interpolation>
+    <axis>
+      <x1-m>  1.956 </x1-m>
+      <y1-m>  0.237 </y1-m>
+      <z1-m> -0.782 </z1-m>
+      <x2-m>  1.186 </x2-m>
+      <y2-m>  0.240 </y2-m>
+      <z2-m> -0.837 </z2-m>
+    </axis>
+ </animation>
+
+ <animation>
+  <type>rotate</type>
+  <property>gear/gear[1]/position-norm</property>
+  <object-name>gear-pnl-RH-B</object-name>
+  <interpolation>
+   <entry> <ind>0.0 </ind> <dep> 0</dep> </entry>
+   <entry> <ind>0.1 </ind> <dep>120</dep> </entry>
+   <entry> <ind>1.0 </ind> <dep>120</dep> </entry>
+  </interpolation>
+    <axis>
+      <x1-m>  1.191 </x1-m>
+      <y1-m>  1.069 </y1-m>
+      <z1-m> -0.844 </z1-m>
+      <x2-m>  1.934 </x2-m>
+      <y2-m>  1.017 </y2-m>
+      <z2-m> -0.774 </z2-m>
+    </axis>
+ </animation>
+
+
+ <animation>
+	<type>rotate</type>
+	<property>gear/gear[1]/position-norm</property>
+	<object-name>gear_right_tire</object-name>
+	<object-name>gear_UPR_RH</object-name>
+	<object-name>gear_LWR_RH</object-name>
+	<object-name>gear_rod_RH</object-name>
+	<object-name>dump_UPR_RH</object-name>
+	<object-name>dump_LWR_RH</object-name>
+	<interpolation>
+		<entry> <ind>0.0</ind> <dep>-100</dep> </entry>
+		<entry> <ind>0.1</ind> <dep>-100</dep> </entry>
+		<entry> <ind>0.8</ind> <dep>  0</dep> </entry>
+		<entry> <ind>1.0</ind> <dep>  0</dep> </entry>
+	</interpolation>
+    <center>
+      <x-m> -0.050 </x-m>
+      <y-m>  0.813 </y-m>
+      <z-m> -0.561 </z-m>
+    </center>
+    <axis>
+      <x>  0.7 </x>
+      <y>  1 </y>
+      <z>  0 </z>
+    </axis>
+ </animation>
+
+ <animation>
+	<type>rotate</type>
+	<property>gear/gear[1]/position-norm</property>
+	<object-name>gear_right_tire</object-name>
+	<object-name>gear_UPR_RH</object-name>
+	<object-name>gear_LWR_RH</object-name>
+	<object-name>dump_UPR_RH</object-name>
+	<object-name>dump_LWR_RH</object-name>
+	<object-name>gear_rod_RH</object-name>
+	<interpolation>
+		<entry> <ind>0.0</ind> <dep>-50</dep> </entry>
+		<entry> <ind>0.1</ind> <dep>-50</dep> </entry>
+		<entry> <ind>0.8</ind> <dep>  0</dep> </entry>
+		<entry> <ind>1.0</ind> <dep>  0</dep> </entry>
+	</interpolation>
+	<axis>
+		<x1-m>  0.050 </x1-m>
+		<y1-m>  0.813 </y1-m>
+		<z1-m> -0.561 </z1-m>
+		<x2-m>  0.190 </x2-m>
+		<y2-m>  0.962 </y2-m>
+		<z2-m> -1.280 </z2-m>
+	</axis>
+ </animation>
+
+ <animation>
+	<type>rotate</type>
+	<property>gear/gear[1]/position-norm</property>
+	<object-name>gear_rod_RH</object-name>
+	<interpolation>
+		<entry> <ind>0.0</ind> <dep>-50</dep> </entry>
+		<entry> <ind>0.1</ind> <dep>-50</dep> </entry>
+		<entry> <ind>0.8</ind> <dep>  0</dep> </entry>
+		<entry> <ind>1.0</ind> <dep>  0</dep> </entry>
+	</interpolation>
+	<axis>
+		<x1-m>  0.060 </x1-m>
+		<y1-m>  0.834 </y1-m>
+		<z1-m> -1.184 </z1-m>
+		<x2-m>  0.111 </x2-m>
+		<y2-m>  0.830 </y2-m>
+		<z2-m> -1.176 </z2-m>
+	</axis>
+ </animation>
+
+
+
+ <animation>
+  <type>rotate</type>
+  <property>gear/gear[1]/compression-norm</property>
+  <object-name>gear_right_tire</object-name>
+  <object-name>gear_LWR_RH</object-name>
+  <object-name>dump_UPR_RH</object-name>
+  <object-name>dump_LWR_RH</object-name>
+  <interpolation>
+   <entry><ind>0.0 </ind>  <dep>  0 </dep></entry>
+   <entry><ind>0.001</ind> <dep>-26</dep></entry>
+   <entry><ind>0.155</ind> <dep>-50</dep></entry>
+   <entry><ind>1.0 </ind>  <dep>-53 </dep></entry>
+  </interpolation>
+    <center>
+      <x-m>  0.205 </x-m>
+      <y-m>  0.876 </y-m>
+      <z-m> -1.424 </z-m>
+    </center>
+    <axis>
+      <x>  0 </x>
+      <y>  1 </y>
+      <z>  0 </z>
+    </axis>
+ </animation>
+
+ <animation>
+  <type>rotate</type>
+  <property>gear/gear[1]/compression-norm</property>
+  <object-name>dump_UPR_RH</object-name>
+  <object-name>dump_LWR_RH</object-name>
+  <interpolation>
+   <entry><ind>0.0 </ind>  <dep>  0 </dep></entry>
+   <entry><ind>0.001</ind> <dep>-20</dep></entry>
+   <entry><ind>0.155</ind> <dep>-40</dep></entry>
+   <entry><ind>1.0 </ind>  <dep>-43 </dep></entry>
+  </interpolation>
+    <axis>
+      <x1-m>  0.450 </x1-m>
+      <y1-m>  1.151 </y1-m>
+      <z1-m> -1.539 </z1-m>
+      <x2-m>  0.452 </x2-m>
+      <y2-m>  1.105</y2-m>
+      <z2-m> -1.555 </z2-m>
+    </axis>
+ </animation>
+
+ <animation>
+  <type>rotate</type>
+  <property>gear/gear[1]/compression-norm</property>
+  <object-name>dump_UPR_RH</object-name>
+  <object-name>dump_LWR_RH</object-name>
+  <interpolation>
+   <entry><ind> 0.0 </ind>  <dep>  0 </dep></entry>
+   <entry><ind> 0.001</ind> <dep>  5</dep></entry>
+   <entry><ind> 0.155</ind> <dep> 10</dep></entry>
+   <entry><ind> 1.0 </ind>  <dep> 15 </dep></entry>
+  </interpolation>
+    <center>
+      <x-m> 0.446 </x-m>
+      <y-m> 1.126 </y-m>
+      <z-m>-1.541 </z-m>
+    </center>
+    <axis>
+      <x> 1 </x>
+      <y> 0 </y>
+      <z> 0 </z>
+    </axis>
+ </animation>
+
+ <animation>
+  <type>translate</type>
+  <property>gear/gear[1]/compression-norm</property>
+  <object-name>dump_UPR_RH</object-name>
+  <interpolation>
+   <entry><ind>0.0 </ind>  <dep> 0.0 </dep></entry>
+   <entry><ind>0.001</ind> <dep> 0.1</dep></entry>
+   <entry><ind>0.155</ind> <dep> 0.20</dep></entry>
+   <entry><ind>1.0 </ind>  <dep> 0.25</dep></entry>
+  </interpolation>
+    <axis>
+      <x1-m>  0.258 </x1-m>
+      <y1-m>  0.867 </y1-m>
+      <z1-m> -0.842 </z1-m>
+      <x2-m>  0.384 </x2-m>
+      <y2-m>  1.041</y2-m>
+      <z2-m> -1.311 </z2-m>
+    </axis>
+ </animation>
+
+  <!-- Rotation TIRES -->
+  <animation>
+    <type>spin</type>
+    <object-name>gear_left_tire</object-name>
+    <property>gear/gear[0]/rollspeed-ms</property>
+    <factor> -30 </factor>
+    <center>
+      <x-m>  0.613 </x-m>
+      <y-m> -1.550 </y-m>
+      <z-m> -1.961 </z-m>
+    </center>
+    <axis>
+      <x>  0 </x>
+      <y>  1 </y>
+      <z>  0 </z>
+    </axis>
+  </animation>
+
+  <animation>
+    <type>spin</type>
+      <object-name>gear_right_tire</object-name>
+    <property>gear/gear[1]/rollspeed-ms</property>
+    <factor>-30 </factor>
+    <center>
+      <x-m>  0.613 </x-m>
+      <y-m>  1.550 </y-m>
+      <z-m> -1.961 </z-m>
+    </center>
+    <axis>
+      <x>  0 </x>
+      <y>  1 </y>
+      <z>  0 </z>
+    </axis>
+  </animation>
+
+  <animation>
+    <type>spin</type>
+     <object-name>gear_nose_tire</object-name>
+    <property>gear/gear[2]/rollspeed-ms</property>
+    <factor> 30 </factor>
+    <center>
+      <x-m> -5.179 </x-m>
+      <y-m>  0.000 </y-m>
+      <z-m> -2.005 </z-m>
+    </center>
+    <axis>
+      <x>  0 </x>
+      <y> -1 </y>
+      <z>  0 </z>
+    </axis>
+  </animation>
+
+
+
+<!-- effect -->
+   <model>
+    <path>Aircraft/FA-18E_CVW5/Models/Effects/splash/right-splash.xml</path>
+    <offsets>
+      <x-m>  0.970 </x-m>
+      <y-m>  1.602 </y-m>
+      <z-m> -1.813 </z-m>
+    </offsets>
+  </model>
+
+   <model>
+    <path>Aircraft/FA-18E_CVW5/Models/Effects/splash/left-splash.xml</path>
+    <offsets>
+      <x-m>  0.970 </x-m>
+      <y-m> -1.602 </y-m>
+      <z-m> -1.813 </z-m>
+    </offsets>
+  </model>
+
+   <model>
+    <path>Aircraft/FA-18E_CVW5/Models/Effects/splash/front-splash.xml</path>
+    <offsets>
+      <x-m> -4.964</x-m>
+      <y-m>  0.000 </y-m>
+      <z-m> -1.790 </z-m>
+    </offsets>
+  </model>
+
+
+
+
+   <model>
+    <name>TireSmokeRight</name>
+    <path>Aircraft/FA-18E_CVW5/Models/effects/tiresmoke/tiresmoke.xml</path>
+    <offsets>
+      <x-m>  0.970 </x-m>
+      <y-m>  1.602 </y-m>
+      <z-m> -1.813 </z-m>
+    </offsets>
+  </model>
+
+  <animation>
+    <type>select</type>
+    <object-name>TireSmokeRight</object-name>
+      <condition>
+	<greater-than>
+          <property>/gear/gear[1]/compression-m</property>
+	  <value>0.4</value>
+	</greater-than>
+      </condition>
+  </animation>
+
+   <model>
+    <name>TireSmokeLeft</name>
+    <path>Aircraft/FA-18E_CVW5/Models/effects/tiresmoke/tiresmoke.xml</path>
+    <offsets>
+      <x-m>  0.970 </x-m>
+      <y-m> -1.602 </y-m>
+      <z-m> -1.813 </z-m>
+    </offsets>
+  </model>
+
+  <animation>
+    <type>select</type>
+    <object-name>TireSmokeLeft</object-name>
+      <condition>
+	<greater-than>
+          <property>/gear/gear[0]/compression-m</property>
+	  <value>0.4</value>
+	</greater-than>
+      </condition>
+  </animation>
+
+
+
+  <!-- Canopy -->
+  <animation>
+    <name>CanopyTotaleFR</name>
+        <object-name>canopy-door-FR</object-name>
+	<object-name>canopy-glass</object-name>
+  </animation>
+
+  <animation>
+    <type>rotate</type>
+    <object-name>CanopyTotaleFR</object-name>
+    <property>instrumentation/doors/crew/position-norm</property>
+    <interpolation>
+      <entry><ind> 0.0 </ind><dep> 0.0 </dep></entry>
+      <entry><ind> 1.00 </ind><dep> -40 </dep></entry>
+    </interpolation>
+    <center>
+      <x-m> -3.921 </x-m>
+      <y-m>  0.000 </y-m>
+      <z-m>  1.301 </z-m>
+    </center>
+    <axis>
+      <x>  0 </x>
+      <y> -1 </y>
+      <z>  0 </z>
+    </axis>
+  </animation>
+
+  <!-- LADDER -->
+
+  <animation>
+    <type>rotate</type>
+    <object-name>ladder</object-name>
+    <property>instrumentation/doors/crew/position-norm</property>
+    <interpolation>
+      <entry><ind> 0.7 </ind><dep> 0.0 </dep></entry>
+      <entry><ind> 0.9 </ind><dep> -90 </dep></entry>
+    </interpolation>
+    <center>
+      <x-m> -5.075 </x-m>
+      <y-m> -0.831 </y-m>
+      <z-m>  0.407 </z-m>
+    </center>
+    <axis>
+      <x>  0 </x>
+      <y> -1 </y>
+      <z>  0 </z>
+    </axis>
+  </animation>
+
+
+
+  <!-- Lighting -->
+
+  <model>
+    <name>NAV-Red</name>
+    <path>Aircraft/FA-18E_CVW5/Models/light/RedLight.xml</path>
+    <offsets>
+      <x-m> 0.944 </x-m>
+      <y-m>-6.376 </y-m>
+      <z-m> 0.173 </z-m>
+    </offsets>
+  </model>
+
+  <model>
+    <name>NAV-Red2</name>
+    <path>Aircraft/FA-18E_CVW5/Models/light/RedLight.xml</path>
+    <offsets>
+      <x-m> 1.382 </x-m>
+      <y-m>-4.988 </y-m>
+      <z-m> 0.000 </z-m>
+    </offsets>
+  </model>
+
+  <model>
+  <name>NAV-left_prc</name>
+    <path>Aircraft/FA-18E_CVW5/Models/Effects/lights/procedural_light_nav_left.xml</path>
+    <offsets>
+      <x-m> 0.944 </x-m>
+      <y-m>-6.376 </y-m>
+      <z-m> 0.173 </z-m>
+    </offsets>
+  </model>
+
+  <model>
+  <name>NAV-left_prc2</name>
+    <path>Aircraft/FA-18E_CVW5/Models/Effects/lights/procedural_light_nav_left.xml</path>
+    <offsets>
+      <x-m> 1.382 </x-m>
+      <y-m>-4.988 </y-m>
+      <z-m> 0.000 </z-m>
+    </offsets>
+  </model>
+
+  <model>
+    <name>NAV-Green</name>
+    <path>Aircraft/FA-18E_CVW5/Models/light/GreenLight.xml</path>
+    <offsets>
+      <x-m> 0.944 </x-m>
+      <y-m> 6.376 </y-m>
+      <z-m> 0.173 </z-m>
+    </offsets>
+  </model>
+
+  <model>
+    <name>NAV-Green2</name>
+    <path>Aircraft/FA-18E_CVW5/Models/light/GreenLight.xml</path>
+    <offsets>
+      <x-m> 1.382 </x-m>
+      <y-m> 4.988 </y-m>
+      <z-m> 0.000 </z-m>
+    </offsets>
+  </model>
+
+  <model>
+  <name>NAV-right_prc</name>
+    <path>Aircraft/FA-18E_CVW5/Models/Effects/lights/procedural_light_nav_right.xml</path>
+    <offsets>
+      <x-m> 0.944 </x-m>
+      <y-m> 6.376 </y-m>
+      <z-m> 0.173 </z-m>
+    </offsets>
+  </model>
+
+  <model>
+  <name>NAV-right_prc2</name>
+    <path>Aircraft/FA-18E_CVW5/Models/Effects/lights/procedural_light_nav_right.xml</path>
+    <offsets>
+      <x-m> 1.382 </x-m>
+      <y-m> 4.988 </y-m>
+      <z-m> 0.000 </z-m>
+    </offsets>
+  </model>
+
+
+
+  <model>
+  <name>Tail-Light</name>
+    <path>Aircraft/FA-18E_CVW5/Models/light/TailLight.xml</path>
+    <offsets>
+      <x-m> 5.331 </x-m>
+      <y-m> 1.785 </y-m>
+      <z-m> 2.872 </z-m>
+    </offsets>
+  </model>
+
+  <model>
+  <name>Tail-Light_prc</name>
+<path>Aircraft/FA-18E_CVW5/Models/Effects/lights/procedural_light_nav_tail.xml</path>
+    <offsets>
+      <x-m> 5.331 </x-m>
+      <y-m> 1.785 </y-m>
+      <z-m> 2.872 </z-m>
+	<heading-deg> 180 </heading-deg>
+    </offsets>
+  </model>
+
+  <animation>
+	<type>select</type>
+	<object-name>NAV-right_prc</object-name>
+	<object-name>NAV-left_prc</object-name>
+	<object-name>NAV-right_prc2</object-name>
+	<object-name>NAV-left_prc2</object-name>
+	<object-name>Tail-Light</object-name>
+	<object-name>Tail-Light_prc</object-name>
+	<object-name>LED-LH</object-name>
+	<object-name>LED-RH</object-name>
+	<condition>
+		<property>controls/lighting/nav-lights</property>
+	</condition>
+  </animation>
+
+  <animation>
+	<type>material</type>
+	<object-name>LED-LH</object-name>
+	<emission>
+		<red>1</red>
+		<green>0</green>
+		<blue>0</blue>
+	</emission>
+  </animation>
+
+  <animation>
+	<type>material</type>
+	<object-name>LED-RH</object-name>
+	<emission>
+		<red>0</red>
+		<green>1</green>
+		<blue>0</blue>
+	</emission>
+  </animation>
+
+
+<!-- ANTICOLLISION LIGHT -->
+
+  <model>
+  <name>anticollision_beacon_tail-LH</name>
+    <path>Aircraft/FA-18E_CVW5/Models/light/anticollision_beacon.xml</path>
+    <offsets>
+      <x-m> 4.229 </x-m>
+      <y-m>-1.767 </y-m>
+      <z-m> 2.608 </z-m>
+    </offsets>
+  </model> 
+
+  <model>
+  <name>anticollision_beacon_tail2-LH</name>
+    <path>Aircraft/FA-18E_CVW5/Models/light/anticollision_beacon2.xml</path>
+    <offsets>
+      <x-m> 4.229 </x-m>
+      <y-m>-1.767 </y-m>
+      <z-m> 2.608 </z-m>
+    </offsets>
+  </model> 
+
+  <model>
+  <name>anticollision_cone_tail-LH</name>
+    <path>Aircraft/FA-18E_CVW5/Models/light/anticollision-cone.xml</path>
+    <offsets>
+      <x-m> 4.229 </x-m>
+      <y-m>-1.767 </y-m>
+      <z-m> 2.608 </z-m>
+    </offsets>
+  </model>
+
+  <model>
+  <name>anticollision_beacon_tail-RH</name>
+    <path>Aircraft/FA-18E_CVW5/Models/light/anticollision_beacon.xml</path>
+    <offsets>
+      <x-m> 4.229 </x-m>
+      <y-m> 1.767 </y-m>
+      <z-m> 2.608 </z-m>
+    </offsets>
+  </model> 
+
+  <model>
+  <name>anticollision_beacon_tail2-RH</name>
+    <path>Aircraft/FA-18E_CVW5/Models/light/anticollision_beacon2.xml</path>
+    <offsets>
+      <x-m> 4.229 </x-m>
+      <y-m> 1.767 </y-m>
+      <z-m> 2.608 </z-m>
+    </offsets>
+  </model> 
+
+  <model>
+  <name>anticollision_cone_tail-RH</name>
+    <path>Aircraft/FA-18E_CVW5/Models/light/anticollision-cone.xml</path>
+    <offsets>
+      <x-m> 4.229 </x-m>
+      <y-m> 1.767 </y-m>
+      <z-m> 2.608 </z-m>
+    </offsets>
+  </model>
+
+   <animation>
+    <type>select</type>
+    <object-name>anticollision_beacon_tail-LH</object-name>
+    <object-name>anticollision_beacon_tail2-LH</object-name>
+    <object-name>anticollision_cone_tail-LH</object-name>
+    <object-name>anticollision_beacon_tail-RH</object-name>
+    <object-name>anticollision_beacon_tail2-RH</object-name>
+    <object-name>anticollision_cone_tail-RH</object-name>
+    <condition>
+       <property>controls/lighting/beacon</property>
+    </condition>
+  </animation> 
+
+  <!-- LANDING light cone -->
+  <model>
+    <name>Landing-Light</name>
+    <path>Aircraft/FA-18E_CVW5/Models/light/light-cone.xml</path>
+    <offsets>
+      <x-m> -6.600 </x-m>
+      <y-m>  0.0 </y-m>
+      <z-m>  -0.850 </z-m>
+      <pitch-deg> -10 </pitch-deg>
+      <heading-deg> 0 </heading-deg>
+    </offsets>
+  </model>
+
+  <animation>
+    <type>select</type>
+    <object-name>Landing-Light</object-name>
+    <condition>
+        <and>
+        <equals>
+          <property>gear/gear[0]/position-norm</property>
+          <value> 1 </value>
+        </equals>
+        <equals>
+          <property>controls/switches/landing-light</property>
+          <value> 1 </value>
+        </equals>
+       </and>
+    </condition>
+  </animation> 
+
+  <!-- TAXING light cone -->
+  <model>
+    <name>Taxing-Light</name>
+    <path>Aircraft/FA-18E_CVW5/Models/light/light-cone.xml</path>
+    <offsets>
+      <x-m> -6.600 </x-m>
+      <y-m>  0.0 </y-m>
+      <z-m>  -0.700 </z-m>
+      <pitch-deg> 0 </pitch-deg>
+      <heading-deg> 0 </heading-deg>
+    </offsets>
+  </model>
+
+
+  <animation>
+    <type>select</type>
+    <object-name>Taxing-Light</object-name>
+    <condition>
+        <and>
+        <equals>
+          <property>gear/gear[0]/position-norm</property>
+          <value> 1 </value>
+        </equals>
+        <equals>
+          <property>controls/switches/taxi-lights</property>
+          <value> 1 </value>
+        </equals>
+       </and>
+    </condition>
+  </animation> 
+
+<!-- Landing light-->
+
+  <model>
+    <name>LAND_Light</name>
+    <path>Aircraft/FA-18E_CVW5/Models/light/Landinglight.xml</path>
+    <offsets>
+      <x-m> -6.650 </x-m>
+      <y-m>  0.0 </y-m>
+      <z-m>  -0.850 </z-m>
+      <pitch-deg> -10 </pitch-deg>
+      <heading-deg> 0 </heading-deg>
+    </offsets>
+  </model>
+
+  <model>
+    <name>LAND_Light_prc</name>
+    <path>Aircraft/FA-18E_CVW5/Models/Effects/lights/procedural_light_nav_tail.xml</path>
+    <offsets>
+      <x-m> -6.650 </x-m>
+      <y-m>  0.0 </y-m>
+      <z-m>  -0.850 </z-m>
+    </offsets>
+  </model>
+
+  <animation>
+    <type>select</type>
+    <object-name>LAND_Light</object-name>
+    <object-name>LAND_Light_prc</object-name>
+    <condition>
+        <and>
+        <equals>
+          <property>gear/gear[0]/position-norm</property>
+          <value> 1 </value>
+        </equals>
+        <equals>
+          <property>controls/switches/landing-light</property>
+          <value> 1 </value>
+        </equals>
+       </and>
+    </condition>
+  </animation>
+
+
+<!-- Taxing light-->
+
+  <model>
+    <name>TAXI_Light</name>
+    <path>Aircraft/FA-18E_CVW5/Models/light/Landinglight.xml</path>
+    <offsets>
+      <x-m> -6.750 </x-m>
+      <y-m>  0.0 </y-m>
+      <z-m>  -0.700 </z-m>
+      <pitch-deg> 0 </pitch-deg>
+      <heading-deg> 0 </heading-deg>
+    </offsets>
+  </model>
+
+  <model>
+    <name>TAXI_Light_prc</name>
+    <path>Aircraft/FA-18E_CVW5/Models/Effects/lights/procedural_light_nav_tail.xml</path>
+    <offsets>
+      <x-m> -6.750 </x-m>
+      <y-m>  0.0 </y-m>
+      <z-m>  -0.700 </z-m>
+      <pitch-deg> 0 </pitch-deg>
+      <heading-deg> 0 </heading-deg>
+    </offsets>
+  </model>
+
+  <animation>
+    <type>select</type>
+    <object-name>TAXI_Light</object-name>
+    <object-name>TAXI_Light_prc</object-name>
+    <condition>
+        <and>
+        <equals>
+          <property>gear/gear[0]/position-norm</property>
+          <value> 1 </value>
+        </equals>
+        <equals>
+          <property>controls/switches/taxi-lights</property>
+          <value> 1 </value>
+        </equals>
+       </and>
+    </condition>
+  </animation>
+
+<!-- FORMATION LAMP -->
+  <animation> 
+    <type>textranslate</type> 
+    <object-name>fomlamp</object-name>
+    <object-name>fomlamp-LH</object-name>
+    <object-name>fomlamp-RH</object-name>
+    <property>controls/lighting/formation-lamp</property>
+    <step> 0.5 </step>
+    <factor>0.5</factor>
+    <center>
+     <x-m> 0 </x-m>
+     <y-m> 0 </y-m>
+     <z-m> 0 </z-m>
+    </center>
+    <axis> 
+      <x> 0 </x> 
+      <y>  -1 </y> 
+      <z>  0 </z> 
+    </axis> 
+  </animation>
+
+  <animation>
+    <type>material</type>
+    <object-name>fomlamp</object-name> 
+    <object-name>fomlamp-LH</object-name>
+    <object-name>fomlamp-RH</object-name>
+    <condition>
+       <equals>
+        <property>controls/lighting/formation-lamp</property>
+        <value>true</value>
+       </equals>
+    </condition>
+    <emission>
+      <red>   1.0 </red>
+      <green> 1.0 </green>
+      <blue>  1.0 </blue>
+    </emission>
+  </animation>
+
+  <animation>
+    <type>material</type>
+    <object-name>fomlamp</object-name> 
+    <object-name>fomlamp-LH</object-name>
+    <object-name>fomlamp-RH</object-name>
+    <condition>
+       <equals>
+        <property>controls/lighting/formation-lamp</property>
+        <value>false</value>
+       </equals>
+    </condition>
+    <emission>
+      <red>   0.0 </red>
+      <green> 0.0 </green>
+      <blue>  0.0 </blue>
+    </emission>
+  </animation>
+
+  <!-- NOSE GEAR AOA LAMP-->
+
+  <animation>
+    <type>material</type>
+	<object-name>GR</object-name>
+    <emission>
+      <red>   0 </red>
+      <green> 1 </green>
+      <blue>  0 </blue>
+    </emission>
+  </animation>
+
+  <animation>
+	<type>select</type>
+	<object-name>GR</object-name>
+		<condition>
+			<and>
+			<greater-than>
+				<property>/orientation/alpha-deg</property>
+				<value>9.3</value>
+			</greater-than>
+            			<property>controls/gear/gear-down</property>
+         		<greater-than>
+            			<property>systems/electrical/volts</property>
+            			<value>16</value>
+         		</greater-than>
+			</and>
+		</condition>
+  </animation>
+
+  <animation>
+    <type>material</type>
+	<object-name>YL</object-name>
+    <emission>
+      <red>   1 </red>
+      <green> 0.8 </green>
+      <blue>  0 </blue>
+    </emission>
+  </animation>
+
+  <animation>
+	<type>select</type>
+	<object-name>YL</object-name>
+		<condition>
+			<and>
+			<less-than>
+				<property>/orientation/alpha-deg</property>
+				<value>9.3</value>
+			</less-than>
+			<greater-than>
+				<property>/orientation/alpha-deg</property>
+				<value>6.9</value>
+			</greater-than>
+            			<property>controls/gear/gear-down</property>
+         		<greater-than>
+            			<property>systems/electrical/volts</property>
+            			<value>16</value>
+         		</greater-than>
+			</and>
+		</condition>
+  </animation>
+
+  <animation>
+    <type>material</type>
+	<object-name>RD</object-name>
+    <emission>
+      <red>   1 </red>
+      <green> 0 </green>
+      <blue>  0 </blue>
+    </emission>
+  </animation>
+
+  <animation>
+	<type>select</type>
+	<object-name>RD</object-name>
+		<condition>
+			<and>
+			<less-than>
+				<property>/orientation/alpha-deg</property>
+				<value>6.9</value>
+			</less-than>
+            			<property>controls/gear/gear-down</property>
+         		<greater-than>
+            			<property>systems/electrical/volts</property>
+            			<value>16</value>
+         		</greater-than>
+			</and>
+		</condition>
+  </animation>
+
+  <!-- GUN VENT LID-->
+
+  <animation>
+    <type>rotate</type>
+    <object-name>LID</object-name>
+        <property>controls/engines/engine[1]/starter-position-norm</property>
+        <interpolation>
+            <entry><ind>0</ind>  <dep>  0 </dep></entry>
+            <entry><ind>0.9</ind><dep>  0 </dep></entry>
+            <entry><ind>1</ind>  <dep>-25 </dep></entry>
+        </interpolation>
+    <axis>
+      <x1-m>-7.972 </x1-m>
+      <y1-m> 0.280 </y1-m>
+      <z1-m> 0.585 </z1-m>
+      <x2-m>-7.972 </x2-m>
+      <y2-m> 0.369 </y2-m>
+      <z2-m> 0.537 </z2-m>
+    </axis>
+  </animation>
+
+ <!-- REFUEL HATCH -->
+
+  <animation>
+    <type>rotate</type>
+    <object-name>refuel-hatch1</object-name>
+    <property>consumables/fuel/refuel-hatch-pos</property>
+    <interpolation>
+      <entry><ind> 0 </ind><dep> 0.0 </dep></entry>
+      <entry><ind> 1 </ind><dep> -45 </dep></entry>
+    </interpolation>
+    <axis>
+      <x1-m> -2.011 </x1-m>
+      <y1-m> -1.485 </y1-m>
+      <z1-m>  0.729 </z1-m>
+      <x2-m> -2.011 </x2-m>
+      <y2-m> -1.796 </y2-m>
+      <z2-m>  0.634 </z2-m>
+    </axis>
+  </animation>
+
+  <animation>
+    <type>translate</type>
+    <object-name>refuel-hatch2</object-name>
+    <property>consumables/fuel/refuel-hatch-pos</property>
+    <interpolation>
+      <entry><ind> 0</ind><dep> 0.0 </dep></entry>
+      <entry><ind> 0.5 </ind><dep> 0.3 </dep></entry>
+    </interpolation>
+    <axis>
+      <x1-m> -1.761 </x1-m>
+      <y1-m> -1.485 </y1-m>
+      <z1-m>  0.729 </z1-m>
+      <x2-m> -2.011 </x2-m>
+      <y2-m> -1.485 </y2-m>
+      <z2-m>  0.634 </z2-m>
+    </axis>
+  </animation>
+
+  <!-- REFUEL light  -->
+  <model>
+    <name>REFUEL-LT</name>
+    <path>Aircraft/FA-18E_CVW5/Models/light/refuel-light-cone.xml</path>
+    <offsets>
+      <x-m> -1.4 </x-m>
+      <y-m> -1.5 </y-m>
+      <z-m> 0.2</z-m>
+      <pitch-deg> 0</pitch-deg>
+      <heading-deg>-90</heading-deg>
+    </offsets>
+  </model>
+
+
+  <animation>
+    <type>select</type>
+    <object-name>REFUEL-LT</object-name>
+    <condition>
+      <property>consumables/fuel/refuel-hatch-pos</property>
+    </condition>
+  </animation>
+
+
+  <animation>
+    <type>select</type>
+    <object-name>refuel-lamp-on</object-name>
+    <condition>
+          <property>consumables/fuel/refuel-hatch-pos</property>
+    </condition>
+  </animation> 
+
+  <animation>
+     <type>material</type>
+     <object-name>refuel-lamp-on</object-name>
+     <emission> 
+        <red>1</red>
+        <green>1</green>
+        <blue>1</blue>
+      </emission>
+  </animation> 
+
+
+
+
+</PropertyList>
+
+
+

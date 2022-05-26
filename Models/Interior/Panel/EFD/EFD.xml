@@ -1,0 +1,1411 @@
+<?xml version="1.0"?>
+
+<PropertyList>
+
+<path>EFD.ac</path>
+
+<!-- lighting -->
+
+  <animation> 
+   <type>material</type>
+   <object-name>base</object-name>
+   <object-name>bingo</object-name>
+   <object-name>mode</object-name>
+   <object-name>brt</object-name>
+    <emission> 
+      <factor-prop>systems/electrical/outputs/instrument-lights-norm</factor-prop>
+        <red>0.2</red>
+        <green>0.5</green>
+        <blue>0.2</blue>
+      </emission>
+  </animation>
+
+
+  <animation> 
+	<type>material</type>
+	<object-name>total</object-name>
+	<object-name>inter</object-name>
+  	<object-name>rpmdigiR1</object-name>
+  	<object-name>rpmdigiR2</object-name>
+  	<object-name>rpmdigiR1.001</object-name>
+  	<object-name>rpmdigiR2.001</object-name>
+  	<object-name>rpmdigiR3</object-name>
+  	<object-name>rpmdigiL1</object-name>
+  	<object-name>rpmdigiL2</object-name>
+  	<object-name>rpmdigiL1.001</object-name>
+  	<object-name>rpmdigiL2.001</object-name>
+  	<object-name>rpmdigiL3</object-name>
+  	<object-name>tempdigiR1</object-name>
+  	<object-name>tempdigiR2</object-name>
+  	<object-name>tempdigiR3</object-name>
+  	<object-name>tempdigiL1</object-name>
+  	<object-name>tempdigiL2</object-name>
+  	<object-name>tempdigiL3</object-name>
+  	<object-name>ffdigiR1</object-name>
+  	<object-name>ffdigiR2</object-name>
+  	<object-name>ffdigiR3</object-name>
+  	<object-name>ffdigiL1</object-name>
+  	<object-name>ffdigiL2</object-name>
+  	<object-name>ffdigiL3</object-name>
+  	<object-name>oildigiR1</object-name>
+  	<object-name>oildigiR2</object-name>
+  	<object-name>oildigiR3</object-name>
+  	<object-name>oildigiL1</object-name>
+  	<object-name>oildigiL2</object-name>
+  	<object-name>oildigiL3</object-name>
+  	<object-name>nozdigiR1</object-name>
+  	<object-name>nozdigiR2</object-name>
+  	<object-name>nozdigiR3</object-name>
+  	<object-name>nozdigiL1</object-name>
+  	<object-name>nozdigiL2</object-name>
+  	<object-name>nozdigiL3</object-name>
+  	<object-name>fueldigiext-CTR1</object-name>
+  	<object-name>fueldigiext-CTR2</object-name>
+  	<object-name>fueldigiext-RH1</object-name>
+  	<object-name>fueldigiext-RH2</object-name>
+  	<object-name>fueldigiext-LH1</object-name>
+  	<object-name>fueldigiext-LH2</object-name>
+  	<object-name>fuelbarext-RH</object-name>
+  	<object-name>fuelbarext-CTR</object-name>
+  	<object-name>fuelbarext-LH</object-name>
+  	<object-name>fuelbarinter</object-name>
+  	<object-name>bingoline</object-name>
+  	<object-name>bingodigi1</object-name>
+  	<object-name>bingodigi2</object-name>
+  	<object-name>bingodigi3</object-name>
+  	<object-name>fuelintdigi1</object-name>
+  	<object-name>fuelintdigi2</object-name>
+  	<object-name>fuelintdigi3</object-name>
+  	<object-name>fueltotaldigi1</object-name>
+  	<object-name>fueltotaldigi2</object-name>
+  	<object-name>fueltotaldigi3</object-name>
+	<emission> 
+        	<red>   0.5 </red>
+        	<green> 0.5 </green>
+        	<blue>  0.5 </blue>
+	</emission>
+  </animation>
+
+
+  <animation> 
+	<type>select</type>
+  	<object-name>ffdigiR1</object-name>
+  	<object-name>ffdigiR2</object-name>
+  	<object-name>ffdigiR3</object-name>
+  	<object-name>ffdigiL1</object-name>
+  	<object-name>ffdigiL2</object-name>
+  	<object-name>ffdigiL3</object-name>
+  	<object-name>oildigiR1</object-name>
+  	<object-name>oildigiR2</object-name>
+  	<object-name>oildigiR3</object-name>
+  	<object-name>oildigiL1</object-name>
+  	<object-name>oildigiL2</object-name>
+  	<object-name>oildigiL3</object-name>
+  	<object-name>nozdigiR1</object-name>
+  	<object-name>nozdigiR2</object-name>
+  	<object-name>nozdigiR3</object-name>
+  	<object-name>nozdigiL1</object-name>
+  	<object-name>nozdigiL2</object-name>
+  	<object-name>nozdigiL3</object-name>
+  	<object-name>fueldigiext-CTR1</object-name>
+  	<object-name>fueldigiext-CTR2</object-name>
+  	<object-name>fueldigiext-RH1</object-name>
+  	<object-name>fueldigiext-RH2</object-name>
+  	<object-name>fueldigiext-LH1</object-name>
+  	<object-name>fueldigiext-LH2</object-name>
+  	<object-name>fuelbarext-RH</object-name>
+  	<object-name>fuelbarext-CTR</object-name>
+  	<object-name>fuelbarext-LH</object-name>
+  	<object-name>fuelbarinter</object-name>
+  	<object-name>bingoline</object-name>
+  	<object-name>bingodigi1</object-name>
+  	<object-name>bingodigi2</object-name>
+  	<object-name>bingodigi3</object-name>
+  	<object-name>fuelintdigi1</object-name>
+  	<object-name>fuelintdigi2</object-name>
+  	<object-name>fuelintdigi3</object-name>
+  	<object-name>fueltotaldigi1</object-name>
+  	<object-name>fueltotaldigi2</object-name>
+  	<object-name>fueltotaldigi3</object-name>
+        <condition>
+         <and>
+         <or>
+            <property>controls/electric/engine/generator</property>
+            <property>controls/electric/engine[1]/generator</property>
+         </or>
+         <greater-than>
+            <property>systems/electrical/volts</property>
+            <value>16</value>
+         </greater-than>
+         </and>
+        </condition>
+  </animation>
+
+  <animation> 
+	<type>select</type>
+	<object-name>total</object-name>
+	<object-name>inter</object-name>
+  	<object-name>rpmdigiR1</object-name>
+  	<object-name>rpmdigiR2</object-name>
+  	<object-name>rpmdigiR1.001</object-name>
+  	<object-name>rpmdigiR2.001</object-name>
+  	<object-name>rpmdigiR3</object-name>
+  	<object-name>rpmdigiL1</object-name>
+  	<object-name>rpmdigiL2</object-name>
+  	<object-name>rpmdigiL1.001</object-name>
+  	<object-name>rpmdigiL2.001</object-name>
+  	<object-name>rpmdigiL3</object-name>
+  	<object-name>tempdigiR1</object-name>
+  	<object-name>tempdigiR2</object-name>
+  	<object-name>tempdigiR3</object-name>
+  	<object-name>tempdigiL1</object-name>
+  	<object-name>tempdigiL2</object-name>
+  	<object-name>tempdigiL3</object-name>
+         <condition>
+         <greater-than>
+            <property>systems/electrical/volts</property>
+            <value>16</value>
+         </greater-than>
+        </condition>
+  </animation>
+
+
+<!-- FUEL Total Digi -->
+
+  <animation>
+  	<type>textranslate</type>
+  	<object-name>fueltotaldigi1</object-name>
+	<property>/consumables/fuel/total-fuel-lbs</property>
+    	<factor>0.001</factor>
+    	<offset>0</offset>
+    	<step>100</step>
+    	<scroll>0</scroll>
+  	<axis>
+   		<x> 0 </x>
+   		<y>-1 </y>
+   		<z> 0 </z>
+  	</axis>
+  </animation>
+
+  <animation>
+  	<type>textranslate</type>
+  	<object-name>fueltotaldigi2</object-name>
+	<property>/consumables/fuel/total-fuel-lbs</property>
+    	<factor>0.0001</factor>
+    	<offset>0</offset>
+    	<step>1000</step>
+    	<scroll>0</scroll>
+  	<axis>
+   		<x> 0 </x>
+   		<y>-1 </y>
+   		<z> 0 </z>
+  	</axis>
+  </animation>
+
+  <animation>
+  	<type>textranslate</type>
+  	<object-name>fueltotaldigi3</object-name>
+	<property>/consumables/fuel/total-fuel-lbs</property>
+    	<factor>0.00001</factor>
+    	<offset>0</offset>
+    	<step>10000</step>
+    	<scroll>0</scroll>
+  	<axis>
+   		<x> 0 </x>
+   		<y>-1 </y>
+   		<z> 0 </z>
+  	</axis>
+  </animation>
+
+  <animation>
+  	<type>select</type>
+  	<object-name>fueltotaldigi3</object-name>
+	<condition>
+		<greater-than>
+  			<property>/consumables/fuel/total-fuel-lbs</property>
+			<value>9999</value>
+		</greater-than>
+	</condition>
+  </animation>
+
+<!-- FUEL EXT TANK Digi -->
+
+  <animation>
+  	<type>textranslate</type>
+  	<object-name>fueldigiext-CTR1</object-name>
+  	<property>/consumables/fuel/tank[5]/level-lbs</property>
+    	<factor>0.001</factor>
+    	<offset>0</offset>
+    	<step>100</step>
+    	<scroll>0</scroll>
+  	<axis>
+   		<x> 0 </x>
+   		<y>-1 </y>
+   		<z> 0 </z>
+  	</axis>
+ </animation>
+
+  <animation>
+  	<type>textranslate</type>
+  	<object-name>fueldigiext-CTR2</object-name>
+  	<property>/consumables/fuel/tank[5]/level-lbs</property>
+    	<factor>0.0001</factor>
+    	<offset>0</offset>
+    	<step>1000</step>
+    	<scroll>0</scroll>
+  	<axis>
+   		<x> 0 </x>
+   		<y>-1 </y>
+   		<z> 0 </z>
+  	</axis>
+ </animation>
+
+  <animation>
+  	<type>textranslate</type>
+  	<object-name>fueldigiext-RH1</object-name>
+  	<property>/consumables/fuel/tank[6]/level-lbs</property>
+    	<factor>0.001</factor>
+    	<offset>0</offset>
+    	<step>100</step>
+    	<scroll>0</scroll>
+  	<axis>
+   		<x> 0 </x>
+   		<y>-1 </y>
+   		<z> 0 </z>
+  	</axis>
+ </animation>
+
+  <animation>
+  	<type>textranslate</type>
+  	<object-name>fueldigiext-RH2</object-name>
+  	<property>/consumables/fuel/tank[6]/level-lbs</property>
+    	<factor>0.0001</factor>
+    	<offset>0</offset>
+    	<step>1000</step>
+    	<scroll>0</scroll>
+  	<axis>
+   		<x> 0 </x>
+   		<y>-1 </y>
+   		<z> 0 </z>
+  	</axis>
+ </animation>
+
+  <animation>
+  	<type>textranslate</type>
+  	<object-name>fueldigiext-LH1</object-name>
+  	<property>/consumables/fuel/tank[7]/level-lbs</property>
+    	<factor>0.001</factor>
+    	<offset>0</offset>
+    	<step>100</step>
+    	<scroll>0</scroll>
+  	<axis>
+   		<x> 0 </x>
+   		<y>-1 </y>
+   		<z> 0 </z>
+  	</axis>
+ </animation>
+
+  <animation>
+  	<type>textranslate</type>
+  	<object-name>fueldigiext-LH2</object-name>
+  	<property>/consumables/fuel/tank[7]/level-lbs</property>
+    	<factor>0.0001</factor>
+    	<offset>0</offset>
+    	<step>1000</step>
+    	<scroll>0</scroll>
+  	<axis>
+   		<x> 0 </x>
+   		<y>-1 </y>
+   		<z> 0 </z>
+  	</axis>
+ </animation>
+
+<!-- BINGO Digi -->
+
+  <animation>
+  	<type>textranslate</type>
+  	<object-name>bingodigi2</object-name>
+	<property>/consumables/fuel/bingo-lbs</property>
+    	<factor>0.0001</factor>
+    	<offset>0</offset>
+    	<step>1000</step>
+    	<scroll>0</scroll>
+  	<axis>
+   		<x> 0 </x>
+   		<y>-1 </y>
+   		<z> 0 </z>
+  	</axis>
+  </animation>
+
+  <animation>
+  	<type>select</type>
+  	<object-name>bingodigi3</object-name>
+	<condition>
+		<greater-than>
+  			<property>/consumables/fuel/bingo-lbs</property>
+			<value>9999</value>
+		</greater-than>
+	</condition>
+  </animation>
+
+<!-- bingo line -->
+
+  <animation>
+  	<type>translate</type>
+  	<object-name>bingoline</object-name>
+	<property>/consumables/fuel/bingo-lbs</property>
+	<interpolation>
+  		<entry><ind>0  </ind><dep>0</dep></entry>
+   		<entry><ind>13700</ind><dep>0.018</dep></entry>
+  	</interpolation>
+  	<axis>
+   		<x> 0 </x>
+   		<y> 0 </y>
+   		<z> 1 </z>
+  	</axis>
+ </animation>
+
+
+<!--  bingo setting -->
+
+  <animation>
+    <type>pick</type>
+    <object-name>bingo</object-name>
+    <action>
+      <button>0</button>
+      <repeatable>true</repeatable>
+      <interval-sec>0.1</interval-sec>
+      <binding>
+        <command>property-adjust</command>
+        <property>/consumables/fuel/bingo-lbs</property>
+        <step>  1000 </step>
+        <min>  0 </min>
+        <max>  14000 </max>
+      </binding>
+    </action>
+  </animation>
+
+  <animation>
+    <type>pick</type>
+    <object-name>bingo</object-name>
+    <action>
+      <button>1</button>
+      <repeatable>true</repeatable>
+      <interval-sec>0.1</interval-sec>
+      <binding>
+        <command>property-adjust</command>
+        <property>/consumables/fuel/bingo-lbs</property>
+        <step>  -1000 </step>
+        <min>  0 </min>
+        <max>  14000 </max>
+      </binding>
+    </action>
+  </animation>
+
+  <animation>
+    <type>pick</type>
+    <object-name>bingo</object-name>
+    <action>
+      <button>3</button>
+      <binding>
+        <command>property-adjust</command>
+        <property>/consumables/fuel/bingo-lbs</property>
+        <step>  1000 </step>
+        <min>  0 </min>
+        <max>  14000 </max>
+      </binding>
+    </action>
+  </animation>
+
+  <animation>
+    <type>pick</type>
+    <object-name>bingo</object-name>
+    <action>
+      <button>4</button>
+      <binding>
+        <command>property-adjust</command>
+        <property>/consumables/fuel/bingo-lbs</property>
+        <step>  -1000 </step>
+        <min>  0 </min>
+        <max>  14000 </max>
+      </binding>
+    </action>
+  </animation>
+
+<animation>
+  <type>rotate</type>
+  <object-name>bingo</object-name>
+  <property>/consumables/fuel/bingo-lbs</property>
+  <factor>0.02</factor>
+  <center>
+   <x-m>0.016</x-m>
+   <y-m>-0.083</y-m>
+   <z-m>0.023</z-m>
+  </center>
+  <axis>
+   <x>-1</x>
+   <y>0</y>
+   <z>0</z>
+  </axis>
+ </animation>
+
+
+<!-- FUEL INT Digi -->
+
+  <animation>
+  	<type>textranslate</type>
+  	<object-name>fuelintdigi1</object-name>
+	<property>/consumables/fuel/total-internal-fuel-lbs</property>
+    	<factor>0.001</factor>
+    	<offset>0</offset>
+    	<step>100</step>
+    	<scroll>0</scroll>
+  	<axis>
+   		<x> 0 </x>
+   		<y>-1 </y>
+   		<z> 0 </z>
+  	</axis>
+  </animation>
+
+  <animation>
+  	<type>textranslate</type>
+  	<object-name>fuelintdigi2</object-name>
+	<property>/consumables/fuel/total-internal-fuel-lbs</property>
+    	<factor>0.0001</factor>
+    	<offset>0</offset>
+    	<step>1000</step>
+    	<scroll>0</scroll>
+  	<axis>
+   		<x> 0 </x>
+   		<y>-1 </y>
+   		<z> 0 </z>
+  	</axis>
+  </animation>
+
+  <animation>
+  	<type>select</type>
+  	<object-name>fuelintdigi3</object-name>
+	<condition>
+		<greater-than>
+  			<property>/consumables/fuel/total-internal-fuel-lbs</property>
+			<value>9999</value>
+		</greater-than>
+	</condition>
+  </animation>
+
+
+<!-- FUEL QTY -->
+
+  <animation>
+  	<type>textranslate</type>
+  	<object-name>fuelbarinter</object-name>
+  	<property>/consumables/fuel/total-internal-fuel-lbs</property>
+	<interpolation>
+  		<entry><ind>0  </ind><dep>0</dep></entry>
+   		<entry><ind>13700</ind><dep>0.5</dep></entry>
+  	</interpolation>
+    	<factor>1</factor>
+    	<offset>0</offset>
+    	<step>0.01</step>
+    	<scroll>0</scroll>
+  	<axis>
+   		<x> 0 </x>
+   		<y>-1 </y>
+   		<z> 0 </z>
+  	</axis>
+ </animation>
+  <animation>
+  	<type>textranslate</type>
+  	<object-name>fuelbarext-CTR</object-name>
+  	<property>/consumables/fuel/tank[5]/level-norm</property>
+    	<factor>0.5</factor>
+    	<offset>0</offset>
+    	<step>0.01</step>
+    	<scroll>0</scroll>
+  	<axis>
+   		<x> 0 </x>
+   		<y>-1 </y>
+   		<z> 0 </z>
+  	</axis>
+ </animation>
+
+  <animation>
+  	<type>textranslate</type>
+  	<object-name>fuelbarext-RH</object-name>
+  	<property>/consumables/fuel/tank[6]/level-norm</property>
+    	<factor>0.5</factor>
+    	<offset>0</offset>
+    	<step>0.01</step>
+    	<scroll>0</scroll>
+  	<axis>
+   		<x> 0 </x>
+   		<y>-1 </y>
+   		<z> 0 </z>
+  	</axis>
+ </animation>
+
+  <animation>
+  	<type>textranslate</type>
+  	<object-name>fuelbarext-LH</object-name>
+  	<property>/consumables/fuel/tank[7]/level-norm</property>
+    	<factor>0.5</factor>
+    	<offset>0</offset>
+    	<step>0.01</step>
+    	<scroll>0</scroll>
+  	<axis>
+   		<x> 0 </x>
+   		<y>-1 </y>
+   		<z> 0 </z>
+  	</axis>
+ </animation>
+
+
+<!-- NOZZLE-POS digit -->
+
+<!-- RH -->
+  <animation>
+  	<type>textranslate</type>
+  	<object-name>nozdigiR2</object-name>
+  	<property>/controls/engines/engine[0]/throttle</property>
+	<interpolation>
+  		<entry><ind>0  </ind><dep>0.85</dep></entry>
+   		<entry><ind>0.6</ind><dep>0.15</dep></entry>
+   		<entry><ind>1  </ind><dep>1.0</dep></entry>
+  	</interpolation>
+    	<factor>1</factor>
+    	<offset>0</offset>
+    	<step>0.1</step>
+    	<scroll>0</scroll>
+  	<axis>
+   		<x> 0 </x>
+   		<y>-1 </y>
+   		<z> 0 </z>
+  	</axis>
+ </animation>
+
+  <animation>
+  	<type>textranslate</type>
+  	<object-name>nozdigiR3</object-name>
+  	<property>/controls/engines/engine[0]/throttle</property>
+    	<factor>0.1</factor>
+    	<offset>0</offset>
+    	<step>1</step>
+    	<scroll>-1</scroll>
+  	<axis>
+   		<x> 0 </x>
+   		<y>-1 </y>
+   		<z> 0 </z>
+  	</axis>
+ </animation>
+
+  <animation>
+  	<type>select</type>
+  	<object-name>nozdigiR3</object-name>
+	<condition>
+		<equals>
+  			<property>/controls/engines/engine[0]/throttle</property>
+			<value>1</value>
+		</equals>
+	</condition>
+ </animation>
+
+
+<!-- LH -->
+
+  <animation>
+  	<type>textranslate</type>
+  	<object-name>nozdigiL2</object-name>
+  	<property>/controls/engines/engine[1]/throttle</property>
+  	<interpolation>
+  		<entry><ind>0  </ind><dep>0.85</dep></entry>
+   		<entry><ind>0.6</ind><dep>0.15</dep></entry>
+   		<entry><ind>1  </ind><dep>1.0</dep></entry>
+  	</interpolation>
+    	<factor>1</factor>
+    	<offset>0</offset>
+    	<step>0.1</step>
+    	<scroll>0</scroll>
+  	<axis>
+   		<x> 0 </x>
+   		<y>-1 </y>
+   		<z> 0 </z>
+  	</axis>
+ </animation>
+
+  <animation>
+  	<type>textranslate</type>
+  	<object-name>nozdigiL3</object-name>
+  	<property>/controls/engines/engine[1]/throttle</property>
+    	<factor>0.1</factor>
+    	<offset>0</offset>
+    	<step>1</step>
+    	<scroll>-1</scroll>
+  	<axis>
+   		<x> 0 </x>
+   		<y>-1 </y>
+   		<z> 0 </z>
+  	</axis>
+ </animation>
+
+  <animation>
+  	<type>select</type>
+  	<object-name>nozdigiL3</object-name>
+	<condition>
+		<equals>
+  			<property>/controls/engines/engine[1]/throttle</property>
+			<value>1</value>
+		</equals>
+	</condition>
+ </animation>
+
+<!-- NOZZLE-POS CIRCLE -->
+<!-- RH -->
+  <animation>
+  	<type>scale</type>
+  	<object-name>nozpos_RH</object-name>
+  	<property>/controls/engines/engine[0]/throttle</property>
+  	<interpolation>
+  		<entry><ind>0  </ind><dep>0.85</dep></entry>
+   		<entry><ind>0.6</ind><dep>0.15</dep></entry>
+   		<entry><ind>1  </ind><dep>1.0</dep></entry>
+  	</interpolation>
+  	<center>
+   		<x-m> 0.003 </x-m>
+   		<y-m> 0.055 </y-m>
+   		<z-m>-0.024 </z-m>
+  	</center>
+ </animation>
+
+<!-- LH -->
+  <animation>
+  	<type>scale</type>
+  	<object-name>nozpos_LH</object-name>
+  	<property>/controls/engines/engine[1]/throttle</property>
+  	<interpolation>
+  		<entry><ind>0  </ind><dep>0.85</dep></entry>
+   		<entry><ind>0.6</ind><dep>0.15</dep></entry>
+   		<entry><ind>1  </ind><dep>1.0</dep></entry>
+  	</interpolation>
+  	<center>
+   		<x-m> 0.003 </x-m>
+   		<y-m> 0.032 </y-m>
+   		<z-m>-0.024 </z-m>
+  	</center>
+ </animation>
+
+<!-- rpm digit -->
+<!-- RH -->
+  <animation>
+  	<type>select</type>
+  	<object-name>rpmdigiR1</object-name>
+  	<object-name>rpmdigiR2</object-name>
+	<condition>
+		<equals>
+  			<property>/controls/engines/engine[0]/starter-position-norm</property>
+			<value>1</value>
+		</equals>
+	</condition>
+ </animation>
+
+  <animation>
+  	<type>select</type>
+  	<object-name>rpmdigiR1.001</object-name>
+  	<object-name>rpmdigiR2.001</object-name>
+	<condition>
+		<less-than>
+  			<property>/controls/engines/engine[0]/starter-position-norm</property>
+			<value>1</value>
+		</less-than>
+	</condition>
+ </animation>
+
+  <animation>
+  	<type>textranslate</type>
+  	<object-name>rpmdigiR1</object-name>
+  	<property>/instrumentation/rpm/engine-rh</property>
+    	<factor>0.1</factor>
+    	<offset>0</offset>
+    	<step>1</step>
+    	<scroll>-1</scroll>
+  	<center>
+   		<x-m> 0 </x-m>
+   		<y-m> 0 </y-m>
+   		<z-m> 0 </z-m>
+  	</center>
+  	<axis>
+   		<x> 0 </x>
+   		<y>-1 </y>
+   		<z> 0 </z>
+  	</axis>
+ </animation>
+
+  <animation>
+	<type>textranslate</type>
+	<object-name>rpmdigiR2</object-name>
+	<property>/instrumentation/rpm/engine-rh</property>
+	<factor> 0.01 </factor>
+	<offset> 0  </offset>
+	<step>  10 </step>
+	<scroll>-10  </scroll>
+	<center>
+		<x-m> 0 </x-m>
+		<y-m> 0 </y-m>
+		<z-m> 0 </z-m>
+	</center>
+	<axis>
+		<x> 0 </x>
+		<y>-1 </y>
+		<z> 0 </z>
+	</axis>
+ </animation>
+
+  <animation>
+  	<type>textranslate</type>
+  	<object-name>rpmdigiR1.001</object-name>
+  	<property>/controls/engines/engine[0]/starter-position-norm</property>
+    	<factor> 5 </factor>
+    	<offset> 0 </offset>
+    	<step> 0.01</step>
+    	<scroll>1</scroll>
+  	<center>
+   		<x-m> 0 </x-m>
+   		<y-m> 0 </y-m>
+   		<z-m> 0 </z-m>
+  	</center>
+  	<axis>
+   		<x> 0 </x>
+   		<y>-1 </y>
+   		<z> 0 </z>
+  	</axis>
+ </animation>
+
+  <animation>
+	<type>textranslate</type>
+	<object-name>rpmdigiR2.001</object-name>
+	<property>/controls/engines/engine[0]/starter-position-norm</property>
+    	<factor> 0.5 </factor>
+    	<offset> 0 </offset>
+    	<step> 0.2 </step>
+    	<scroll> 0 </scroll>
+	<center>
+		<x-m> 0 </x-m>
+		<y-m> 0 </y-m>
+		<z-m> 0 </z-m>
+	</center>
+	<axis>
+		<x> 0 </x>
+		<y>-1 </y>
+		<z> 0 </z>
+	</axis>
+ </animation>
+
+  <animation>
+	<type>textranslate</type>
+	<object-name>rpmdigiR3</object-name>
+	<property>/instrumentation/rpm/engine-rh</property>
+	<factor> 0.001 </factor>
+	<offset> 0  </offset>
+	<step>  100 </step>
+	<scroll> 0  </scroll>
+	<center>
+		<x-m> 0 </x-m>
+		<y-m> 0 </y-m>
+		<z-m> 0 </z-m>
+	</center>
+	<axis>
+		<x> 0 </x>
+		<y>-1 </y>
+		<z> 0 </z>
+	</axis>
+ </animation>
+
+  <animation>
+  	<type>select</type>
+	<object-name>rpmdigiR3</object-name>
+	<condition>
+		<and>
+			<greater-than>
+				<property>/instrumentation/rpm/engine-rh</property>
+				<value>100</value>
+			</greater-than>
+			<property>/controls/engines/engine[0]/starter-position-norm</property>
+		</and>
+	</condition>
+ </animation>
+
+<!-- LH -->
+  <animation>
+  	<type>select</type>
+  	<object-name>rpmdigiL1</object-name>
+  	<object-name>rpmdigiL2</object-name>
+	<condition>
+		<equals>
+  			<property>/controls/engines/engine[1]/starter-position-norm</property>
+			<value>1</value>
+		</equals>
+	</condition>
+ </animation>
+
+  <animation>
+  	<type>select</type>
+  	<object-name>rpmdigiL1.001</object-name>
+  	<object-name>rpmdigiL2.001</object-name>
+	<condition>
+		<less-than>
+  			<property>/controls/engines/engine[1]/starter-position-norm</property>
+			<value>1</value>
+		</less-than>
+	</condition>
+ </animation>
+
+  <animation>
+	<type>textranslate</type>
+	<object-name>rpmdigiL1</object-name>
+	<property>/instrumentation/rpm/engine-lh</property>
+	<factor>0.1</factor>
+	<offset>0</offset>
+	<step>1</step>
+	<scroll>-1</scroll>
+	<center>
+		<x-m> 0 </x-m>
+		<y-m> 0 </y-m>
+		<z-m> 0 </z-m>
+	</center>
+	<axis>
+		<x> 0 </x>
+		<y>-1 </y>
+		<z> 0 </z>
+	</axis>
+ </animation>
+
+  <animation>
+	<type>textranslate</type>
+	<object-name>rpmdigiL2</object-name>
+	<property>/instrumentation/rpm/engine-lh</property>
+	<factor> 0.01 </factor>
+	<offset> 0  </offset>
+	<step>  10 </step>
+	<scroll>-10  </scroll>
+	<center>
+		<x-m> 0 </x-m>
+		<y-m> 0 </y-m>
+		<z-m> 0 </z-m>
+	</center>
+	<axis>
+		<x> 0 </x>
+		<y>-1 </y>
+		<z> 0 </z>
+	</axis>
+ </animation>
+
+  <animation>
+  	<type>textranslate</type>
+  	<object-name>rpmdigiL1.001</object-name>
+  	<property>/controls/engines/engine[1]/starter-position-norm</property>
+    	<factor> 5 </factor>
+    	<offset> 0 </offset>
+    	<step> 0.01</step>
+    	<scroll>1</scroll>
+  	<center>
+   		<x-m> 0 </x-m>
+   		<y-m> 0 </y-m>
+   		<z-m> 0 </z-m>
+  	</center>
+  	<axis>
+   		<x> 0 </x>
+   		<y>-1 </y>
+   		<z> 0 </z>
+  	</axis>
+ </animation>
+
+  <animation>
+	<type>textranslate</type>
+	<object-name>rpmdigiL2.001</object-name>
+	<property>/controls/engines/engine[1]/starter-position-norm</property>
+    	<factor> 0.5 </factor>
+    	<offset> 0 </offset>
+    	<step> 0.2 </step>
+    	<scroll> 0 </scroll>
+	<center>
+		<x-m> 0 </x-m>
+		<y-m> 0 </y-m>
+		<z-m> 0 </z-m>
+	</center>
+	<axis>
+		<x> 0 </x>
+		<y>-1 </y>
+		<z> 0 </z>
+	</axis>
+ </animation>
+
+
+  <animation>
+	<type>textranslate</type>
+	<object-name>rpmdigiL3</object-name>
+	<property>/instrumentation/rpm/engine-lh</property>
+	<factor> 0.001 </factor>
+	<offset> 0  </offset>
+	<step> 100 </step>
+	<scroll> 0  </scroll>
+	<center>
+		<x-m> 0 </x-m>
+		<y-m> 0 </y-m>
+		<z-m> 0 </z-m>
+	</center>
+	<axis>
+		<x> 0 </x>
+		<y>-1 </y>
+		<z> 0 </z>
+	</axis>
+ </animation>
+
+  <animation>
+  	<type>select</type>
+	<object-name>rpmdigiL3</object-name>
+	<condition>
+		<and>
+			<greater-than>
+				<property>/instrumentation/rpm/engine-lh</property>
+				<value>100</value>
+			</greater-than>
+			<property>/controls/engines/engine[1]/starter-position-norm</property>
+		</and>
+	</condition>
+ </animation>
+
+<!-- EXST temp digit -->
+<!-- RH -->
+
+  <animation>
+  	<type>textranslate</type>
+  	<object-name>tempdigiR1</object-name>
+  	<property>/engines/engine[0]/egt-degc</property>
+    	<factor>0.1</factor>
+    	<offset>0</offset>
+    	<step>1</step>
+    	<scroll>-1</scroll>
+  	<center>
+   		<x-m> 0 </x-m>
+   		<y-m> 0 </y-m>
+   		<z-m> 0 </z-m>
+  	</center>
+  	<axis>
+   		<x> 0 </x>
+   		<y>-1 </y>
+   		<z> 0 </z>
+  	</axis>
+ </animation>
+
+  <animation>
+	<type>textranslate</type>
+	<object-name>tempdigiR2</object-name>
+  	<property>/engines/engine[0]/egt-degc</property>
+	<factor> 0.01 </factor>
+	<offset> 0  </offset>
+	<step>  10 </step>
+	<scroll>-10  </scroll>
+	<center>
+		<x-m> 0 </x-m>
+		<y-m> 0 </y-m>
+		<z-m> 0 </z-m>
+	</center>
+	<axis>
+		<x> 0 </x>
+		<y>-1 </y>
+		<z> 0 </z>
+	</axis>
+ </animation>
+
+  <animation>
+  	<type>select</type>
+	<object-name>tempdigiR2</object-name>
+	<condition>
+			<greater-than>
+  				<property>/engines/engine[0]/egt-degc</property>
+				<value>10</value>
+			</greater-than>
+	</condition>
+ </animation>
+
+
+  <animation>
+	<type>textranslate</type>
+	<object-name>tempdigiR3</object-name>
+  	<property>/engines/engine[0]/egt-degc</property>
+	<factor> 0.001 </factor>
+	<offset> 0  </offset>
+	<step>  100 </step>
+	<scroll> 0  </scroll>
+	<center>
+		<x-m> 0 </x-m>
+		<y-m> 0 </y-m>
+		<z-m> 0 </z-m>
+	</center>
+	<axis>
+		<x> 0 </x>
+		<y>-1 </y>
+		<z> 0 </z>
+	</axis>
+ </animation>
+
+  <animation>
+  	<type>select</type>
+	<object-name>tempdigiR3</object-name>
+	<condition>
+			<greater-than>
+  				<property>/engines/engine[0]/egt-degc</property>
+				<value>100</value>
+			</greater-than>
+	</condition>
+ </animation>
+
+<!-- LH -->
+
+  <animation>
+	<type>textranslate</type>
+	<object-name>tempdigiL1</object-name>
+  	<property>/engines/engine[1]/egt-degc</property>
+	<factor>0.1</factor>
+	<offset>0</offset>
+	<step>1</step>
+	<scroll>-1</scroll>
+	<center>
+		<x-m> 0 </x-m>
+		<y-m> 0 </y-m>
+		<z-m> 0 </z-m>
+	</center>
+	<axis>
+		<x> 0 </x>
+		<y>-1 </y>
+		<z> 0 </z>
+	</axis>
+ </animation>
+
+  <animation>
+	<type>textranslate</type>
+	<object-name>tempdigiL2</object-name>
+  	<property>/engines/engine[1]/egt-degc</property>
+	<factor> 0.01 </factor>
+	<offset> 0  </offset>
+	<step>  10 </step>
+	<scroll>-10  </scroll>
+	<center>
+		<x-m> 0 </x-m>
+		<y-m> 0 </y-m>
+		<z-m> 0 </z-m>
+	</center>
+	<axis>
+		<x> 0 </x>
+		<y>-1 </y>
+		<z> 0 </z>
+	</axis>
+ </animation>
+
+  <animation>
+  	<type>select</type>
+	<object-name>tempdigiL2</object-name>
+	<condition>
+			<greater-than>
+  				<property>/engines/engine[1]/egt-degc</property>
+				<value>10</value>
+			</greater-than>
+	</condition>
+ </animation>
+
+  <animation>
+	<type>textranslate</type>
+	<object-name>tempdigiL3</object-name>
+  	<property>/engines/engine[1]/egt-degc</property>
+	<factor> 0.001 </factor>
+	<offset> 0  </offset>
+	<step> 100 </step>
+	<scroll> 0  </scroll>
+	<center>
+		<x-m> 0 </x-m>
+		<y-m> 0 </y-m>
+		<z-m> 0 </z-m>
+	</center>
+	<axis>
+		<x> 0 </x>
+		<y>-1 </y>
+		<z> 0 </z>
+	</axis>
+ </animation>
+
+  <animation>
+  	<type>select</type>
+	<object-name>tempdigiL3</object-name>
+	<condition>
+			<greater-than>
+  				<property>/engines/engine[1]/egt-degc</property>
+				<value>100</value>
+			</greater-than>
+	</condition>
+ </animation>
+
+<!-- FuelFlow digit -->
+<!-- RH -->
+
+  <animation>
+  	<type>textranslate</type>
+  	<object-name>ffdigiR1</object-name>
+  	<property>/engines/engine[0]/fuel-flow-gph</property>
+	<factor>0.01</factor>
+	<offset>0</offset>
+	<step>10</step>
+	<scroll>0</scroll>
+  	<center>
+   		<x-m> 0 </x-m>
+   		<y-m> 0 </y-m>
+   		<z-m> 0 </z-m>
+  	</center>
+  	<axis>
+   		<x> 0 </x>
+   		<y>-1 </y>
+   		<z> 0 </z>
+  	</axis>
+ </animation>
+
+  <animation>
+	<type>textranslate</type>
+	<object-name>ffdigiR2</object-name>
+  	<property>/engines/engine[0]/fuel-flow-gph</property>
+	<factor> 0.001 </factor>
+	<offset> 0  </offset>
+	<step>  100 </step>
+	<scroll> 0  </scroll>
+	<center>
+		<x-m> 0 </x-m>
+		<y-m> 0 </y-m>
+		<z-m> 0 </z-m>
+	</center>
+	<axis>
+		<x> 0 </x>
+		<y>-1 </y>
+		<z> 0 </z>
+	</axis>
+ </animation>
+
+
+  <animation>
+	<type>textranslate</type>
+	<object-name>ffdigiR3</object-name>
+  	<property>/engines/engine[0]/fuel-flow-gph</property>
+	<factor> 0.0001 </factor>
+	<offset> 0  </offset>
+	<step> 1000 </step>
+	<scroll> 0  </scroll>
+	<center>
+		<x-m> 0 </x-m>
+		<y-m> 0 </y-m>
+		<z-m> 0 </z-m>
+	</center>
+	<axis>
+		<x> 0 </x>
+		<y>-1 </y>
+		<z> 0 </z>
+	</axis>
+ </animation>
+
+<!-- LH -->
+
+  <animation>
+	<type>textranslate</type>
+	<object-name>ffdigiL1</object-name>
+  	<property>/engines/engine[1]/fuel-flow-gph</property>
+	<factor>0.01</factor>
+	<offset>0</offset>
+	<step>10</step>
+	<scroll>0</scroll>
+	<center>
+		<x-m> 0 </x-m>
+		<y-m> 0 </y-m>
+		<z-m> 0 </z-m>
+	</center>
+	<axis>
+		<x> 0 </x>
+		<y>-1 </y>
+		<z> 0 </z>
+	</axis>
+ </animation>
+
+  <animation>
+	<type>textranslate</type>
+	<object-name>ffdigiL2</object-name>
+  	<property>/engines/engine[1]/fuel-flow-gph</property>
+	<factor> 0.001 </factor>
+	<offset> 0  </offset>
+	<step>  100 </step>
+	<scroll> 0  </scroll>
+	<center>
+		<x-m> 0 </x-m>
+		<y-m> 0 </y-m>
+		<z-m> 0 </z-m>
+	</center>
+	<axis>
+		<x> 0 </x>
+		<y>-1 </y>
+		<z> 0 </z>
+	</axis>
+ </animation>
+
+  <animation>
+	<type>textranslate</type>
+	<object-name>ffdigiL3</object-name>
+  	<property>/engines/engine[1]/fuel-flow-gph</property>
+	<factor> 0.0001 </factor>
+	<offset> 0  </offset>
+	<step> 1000 </step>
+	<scroll> 0  </scroll>
+	<center>
+		<x-m> 0 </x-m>
+		<y-m> 0 </y-m>
+		<z-m> 0 </z-m>
+	</center>
+	<axis>
+		<x> 0 </x>
+		<y>-1 </y>
+		<z> 0 </z>
+	</axis>
+ </animation>
+
+<!-- OILtemp digit -->
+<!-- RH -->
+
+  <animation>
+  	<type>textranslate</type>
+  	<object-name>oildigiR1</object-name>
+  	<property>/engines/engine[0]/oilp-norm</property>
+    	<factor>20</factor>
+    	<offset>0</offset>
+    	<step>0.005</step>
+    	<scroll>0</scroll>
+  	<center>
+   		<x-m> 0 </x-m>
+   		<y-m> 0 </y-m>
+   		<z-m> 0 </z-m>
+  	</center>
+  	<axis>
+   		<x> 0 </x>
+   		<y>-1 </y>
+   		<z> 0 </z>
+  	</axis>
+ </animation>
+
+  <animation>
+	<type>textranslate</type>
+	<object-name>oildigiR2</object-name>
+  	<property>/engines/engine[0]/oilp-norm</property>
+    	<factor> 2 </factor>
+    	<offset> 0 </offset>
+    	<step> 0.05 </step>
+    	<scroll> 0 </scroll>
+	<center>
+		<x-m> 0 </x-m>
+		<y-m> 0 </y-m>
+		<z-m> 0 </z-m>
+	</center>
+	<axis>
+		<x> 0 </x>
+		<y>-1 </y>
+		<z> 0 </z>
+	</axis>
+ </animation>
+
+
+  <animation>
+	<type>textranslate</type>
+	<object-name>oildigiR3</object-name>
+  	<property>/engines/engine[0]/oilp-norm</property>
+    	<factor> 0.2 </factor>
+    	<offset> 0 </offset>
+    	<step> 0.5 </step>
+    	<scroll> 0 </scroll>
+	<center>
+		<x-m> 0 </x-m>
+		<y-m> 0 </y-m>
+		<z-m> 0 </z-m>
+	</center>
+	<axis>
+		<x> 0 </x>
+		<y>-1 </y>
+		<z> 0 </z>
+	</axis>
+ </animation>
+
+<!-- LH -->
+
+  <animation>
+	<type>textranslate</type>
+	<object-name>oildigiL1</object-name>
+  	<property>/engines/engine[1]/oilp-norm</property>
+    	<factor>20</factor>
+    	<offset>0</offset>
+    	<step>0.005</step>
+    	<scroll>0</scroll>
+	<center>
+		<x-m> 0 </x-m>
+		<y-m> 0 </y-m>
+		<z-m> 0 </z-m>
+	</center>
+	<axis>
+		<x> 0 </x>
+		<y>-1 </y>
+		<z> 0 </z>
+	</axis>
+ </animation>
+
+  <animation>
+	<type>textranslate</type>
+	<object-name>oildigiL2</object-name>
+  	<property>/engines/engine[1]/oilp-norm</property>
+    	<factor> 2 </factor>
+    	<offset> 0 </offset>
+    	<step> 0.05 </step>
+    	<scroll> 0 </scroll>
+	<center>
+		<x-m> 0 </x-m>
+		<y-m> 0 </y-m>
+		<z-m> 0 </z-m>
+	</center>
+	<axis>
+		<x> 0 </x>
+		<y>-1 </y>
+		<z> 0 </z>
+	</axis>
+ </animation>
+
+  <animation>
+	<type>textranslate</type>
+	<object-name>oildigiL3</object-name>
+  	<property>/engines/engine[1]/oilp-norm</property>
+    	<factor> 0.2 </factor>
+    	<offset> 0 </offset>
+    	<step> 0.5 </step>
+    	<scroll> 0 </scroll>
+	<center>
+		<x-m> 0 </x-m>
+		<y-m> 0 </y-m>
+		<z-m> 0 </z-m>
+	</center>
+	<axis>
+		<x> 0 </x>
+		<y>-1 </y>
+		<z> 0 </z>
+	</axis>
+ </animation>
+
+
+
+
+
+
+<!-- LOD -->
+
+ <animation>
+  <type>range</type>
+  <min-m>0</min-m>
+  <max-m>5</max-m>
+ </animation>
+
+</PropertyList>

@@ -1,0 +1,89 @@
+<?xml version="1.0"?>
+
+
+<PropertyList>
+
+	<path>aoa.ac</path>
+
+	<animation>
+		<type>rotate</type>
+		<object-name>needle</object-name>
+		<property>/orientation/alpha-deg</property>
+		<interpolation>
+			<entry><ind>-16</ind><dep>-98.64</dep></entry><!--0unit-->
+			<entry><ind>-9</ind><dep>-55.1</dep></entry><!--5unit-->
+			<entry><ind>-3</ind><dep>-10.43</dep></entry><!--10unit-->
+			<entry><ind>0</ind><dep>0</dep></entry><!--12.2unit-->
+			<entry><ind>3</ind><dep>33.65</dep></entry><!--15unit-->
+			<entry><ind>10</ind><dep>76.63</dep></entry><!--20unit-->
+			<entry><ind>17</ind><dep>124.7</dep></entry><!--25unit-->
+			<entry><ind>23</ind><dep>169.55</dep></entry><!--30unit-->
+		</interpolation>
+		<center>
+			<x-m>0</x-m>
+			<y-m>0</y-m>
+			<z-m>0</z-m>
+		</center> 
+		<axis>
+			<x>1</x>
+			<y>0</y>
+			<z>0</z>
+		</axis>
+	</animation>
+
+
+	<animation>
+		<object-name>mount</object-name>
+		<type>material</type>
+		<emission> 
+			<factor-prop>systems/electrical/outputs/instrument-lights-norm</factor-prop>
+			<red>0.5</red>
+			<green>0.2</green>
+			<blue>0.2</blue>
+		</emission>
+	</animation>
+
+	<animation>
+                <object-name>face</object-name>
+                <object-name>needle</object-name>
+                <object-name>off-flag</object-name> 
+		<type>material</type>
+		<emission> 
+			<factor-prop>systems/electrical/outputs/instrument-lights-norm</factor-prop>
+			<red>0.5</red>
+			<green>0.5</green>
+			<blue>0.0</blue>
+		</emission>
+	</animation>
+
+	<animation>
+		<type>select</type>
+		<object-name>off-flag</object-name>
+		<condition>
+			<less-than>
+				<property>systems/electrical/volts</property>
+				<value>24</value>
+			</less-than>
+		</condition>
+	</animation>
+
+
+	<animation>
+		<object-name>accel</object-name>
+		<type>noshadow</type>
+	</animation>
+
+
+	<!-- *** LoD *** -->
+	<animation>
+		<type>range</type>
+		<min-m>0</min-m>
+		<max-m>10</max-m>
+	</animation>
+
+</PropertyList>
+
+
+
+
+

@@ -1,0 +1,87 @@
+<?xml version="1.0"?>
+
+<PropertyList>
+
+ <path>flap-switch.ac</path>
+
+  <animation>
+    <type>noshadow</type>
+    <object-name>plate</object-name>
+  </animation>
+
+
+ <animation>
+  <type>rotate</type>
+  <object-name>switch</object-name>
+  <property>controls/flight/flaps</property>
+  <interpolation>
+   <entry><ind>0</ind><dep> -25 </dep></entry>
+   <entry><ind>0.5</ind><dep> 0 </dep></entry>
+   <entry><ind>1</ind><dep> 25 </dep></entry>
+  </interpolation>
+  <center>
+   <x-m> 0 </x-m>
+   <y-m> 0 </y-m>
+   <z-m> 0 </z-m>
+  </center>
+  <axis>
+   <x> 0 </x>
+   <y> 1 </y>
+   <z> 0</z>
+  </axis>
+ </animation>
+
+    <animation>
+        <type>pick</type>
+        <object-name>switch</object-name>
+        <action>
+            <button>0</button>
+            <repeatable>true</repeatable>
+            <binding>
+                <command>property-adjust</command>
+                <property>controls/flight/flaps</property>
+                <step>0.5</step>
+                <min>0</min>
+                <max>1</max>
+            </binding>
+        </action>
+    </animation>
+
+    <animation>
+        <type>pick</type>
+        <object-name>switch</object-name>
+        <action>
+            <button>1</button>
+            <repeatable>true</repeatable>
+            <binding>
+                <command>property-adjust</command>
+                <property>controls/flight/flaps</property>
+                <step>-0.5</step>
+                <min>0</min>
+                <max>1</max>
+            </binding>
+        </action>
+    </animation>
+
+  <animation>
+  <object-name>switch</object-name>
+  <object-name>plate</object-name>
+   <type>material</type>
+     <emission> 
+      <factor-prop>systems/electrical/outputs/instrument-lights-norm</factor-prop>
+        <red>0.50</red>
+        <green>0.5</green>
+        <blue>0.5</blue>
+      </emission>
+  </animation> 
+
+</PropertyList>
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,57 @@
+<?xml version="1.0"?>
+<PropertyList>
+    <path>TailLight.ac</path>
+
+   <effect>
+     <inherits-from>Effects/model-transparent</inherits-from>
+     <object-name>Light</object-name>
+   </effect>
+
+ <animation>
+   <type>noshadow</type>
+   <object-name>Light</object-name>
+ </animation>
+
+ <animation>
+   <type>flash</type>
+   <object-name>Light</object-name>
+   <center>
+     <x-m>0</x-m>
+     <y-m>0</y-m>
+     <z-m>0</z-m>
+   </center>
+   <axis>
+     <x>1</x>
+     <y>1</y>
+     <z>1</z>
+   </axis>
+   <power>0.01</power>
+   <factor>1</factor>
+   <offset>0</offset>
+   <two-sides type="bool">true</two-sides>
+  <min>0.1</min>
+   <max>1</max>
+ </animation>
+
+    <animation>
+        <type>dist-scale</type>
+        <object-name>Light</object-name>
+        <interpolation>
+            <entry>
+                <ind>0</ind>
+                <dep>0.15</dep>
+            </entry>
+            <entry>
+                <ind>20</ind>
+                <dep>1</dep>
+            </entry>
+            <entry>
+                <ind>1500</ind>
+                <dep>10</dep>
+            </entry>
+        </interpolation>
+    </animation>
+</PropertyList>
+
+
+

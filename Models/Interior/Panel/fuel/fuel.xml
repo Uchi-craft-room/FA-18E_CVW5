@@ -1,0 +1,118 @@
+<?xml version="1.0"?>
+
+<PropertyList>
+
+    <path>fuel.ac</path>
+
+    <animation>
+	<type>range</type>
+	<min-m>0</min-m>
+	<max-m>10</max-m>
+    </animation>
+ 
+  <animation>
+     <object-name>base</object-name>
+     <type>material</type>
+     <emission> 
+      <factor-prop>systems/electrical/outputs/instrument-lights-norm</factor-prop>
+        <red>  0.5 </red>
+        <green>0.2 </green>
+        <blue> 0.2 </blue>
+      </emission>
+  </animation> 
+
+ <animation>
+    <type>pick</type>
+    <visible>true</visible>
+    <object-name>slip-way-door</object-name>
+    <action>
+      <button>0</button>
+      <repeatable>false</repeatable>
+      <binding>
+        <command>property-toggle</command>
+        <property>consumables/fuel/slip-way-door</property>
+      </binding>
+      <binding>
+        <command>property-assign</command>
+        <property>consumables/fuel/tank[1]/level-norm</property>
+        <value> 1 </value>
+      </binding>
+      <binding>
+        <command>property-assign</command>
+        <property>consumables/fuel/tank[2]/level-norm</property>
+        <value> 1 </value>
+      </binding>
+      <binding>
+        <command>property-assign</command>
+        <property>consumables/fuel/tank[1]/selected</property>
+        <value> 0 </value>
+      </binding>
+      <binding>
+        <command>property-assign</command>
+        <property>consumables/fuel/tank[2]/selected</property>
+        <value> 0 </value>
+      </binding>
+      <binding>
+        <command>property-adjust</command>
+        <property>consumables/fuel/tank[0]/level-norm</property>
+         <step>0.1</step>
+         <min>0</min>
+         <max>1</max>
+         <wrap>false</wrap>
+      </binding>
+      <binding>
+        <command>property-adjust</command>
+        <property>consumables/fuel/tank[3]/level-norm</property>
+         <step>0.1</step>
+         <min>0</min>
+         <max>1</max>
+         <wrap>false</wrap>
+      </binding>
+      <binding>
+        <command>property-adjust</command>
+        <property>consumables/fuel/tank[4]/level-norm</property>
+         <step>0.1</step>
+         <min>0</min>
+         <max>1</max>
+         <wrap>false</wrap>
+      </binding>
+      <binding>
+        <command>property-assign</command>
+        <property>consumables/fuel/tank[0]/selected</property>
+        <value> 1 </value>
+      </binding>
+      <binding>
+        <command>property-assign</command>
+        <property>consumables/fuel/tank[3]/selected</property>
+        <value> 1 </value>
+      </binding>
+      <binding>
+        <command>property-assign</command>
+        <property>consumables/fuel/tank[4]/selected</property>
+        <value> 1 </value>
+      </binding>
+      <binding>
+        <command>property-toggle</command>
+        <property>sim/sound/click</property>
+      </binding>
+    </action>
+  </animation>
+
+  <animation>
+    <type>rotate</type>
+    <object-name>slip-way-door</object-name>
+    <property>consumables/fuel/slip-way-door</property>
+    <factor>40</factor>
+    <axis>
+      <x>  0 </x>
+      <y> -1 </y>
+      <z>  0 </z>
+    </axis>
+    <center>
+      <x-m> 0.003 </x-m>
+      <y-m> 0.054 </y-m>
+      <z-m> -0.009 </z-m>
+    </center>
+  </animation>
+ 
+</PropertyList>

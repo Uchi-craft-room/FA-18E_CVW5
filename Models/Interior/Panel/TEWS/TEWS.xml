@@ -1,0 +1,224 @@
+<?xml version="1.0"?>
+
+
+<PropertyList>
+<path>TEWS.ac</path>
+
+
+   <animation>
+     <type>select</type>
+	<object-name>display</object-name>
+        <condition>
+         <and>
+         <or>
+            <property>controls/electric/engine/generator</property>
+            <property>controls/electric/engine[1]/generator</property>
+         </or>
+         <greater-than>
+            <property>systems/electrical/volts</property>
+            <value>24</value>
+         </greater-than>
+         </and>
+        </condition>
+  </animation>
+
+   <animation>
+     <type>select</type>
+	<object-name>5</object-name>
+        <condition>
+         <and>
+         <or>
+            <property>controls/electric/engine/generator</property>
+            <property>controls/electric/engine[1]/generator</property>
+         </or>
+         <greater-than>
+            <property>systems/electrical/volts</property>
+            <value>24</value>
+         </greater-than>
+         <equals>
+           <property>instrumentation/radar/range-control</property>
+           <value>0</value>
+         </equals>
+         </and>
+        </condition>
+  </animation>
+
+   <animation>
+     <type>select</type>
+	<object-name>10</object-name>
+        <condition>
+         <and>
+         <or>
+            <property>controls/electric/engine/generator</property>
+            <property>controls/electric/engine[1]/generator</property>
+         </or>
+         <greater-than>
+            <property>systems/electrical/volts</property>
+            <value>24</value>
+         </greater-than>
+         <equals>
+           <property>instrumentation/radar/range-control</property>
+           <value>1</value>
+         </equals>
+         </and>
+        </condition>
+  </animation>
+
+   <animation>
+     <type>select</type>
+	<object-name>20</object-name>
+        <condition>
+         <and>
+         <or>
+            <property>controls/electric/engine/generator</property>
+            <property>controls/electric/engine[1]/generator</property>
+         </or>
+         <greater-than>
+            <property>systems/electrical/volts</property>
+            <value>24</value>
+         </greater-than>
+         <equals>
+           <property>instrumentation/radar/range-control</property>
+           <value>2</value>
+         </equals>
+         </and>
+        </condition>
+  </animation>
+
+   <animation>
+     <type>select</type>
+	<object-name>40</object-name>
+        <condition>
+         <and>
+         <or>
+            <property>controls/electric/engine/generator</property>
+            <property>controls/electric/engine[1]/generator</property>
+         </or>
+         <greater-than>
+            <property>systems/electrical/volts</property>
+            <value>24</value>
+         </greater-than>
+         <equals>
+           <property>instrumentation/radar/range-control</property>
+           <value>3</value>
+         </equals>
+         </and>
+        </condition>
+  </animation>
+
+   <animation>
+     <type>select</type>
+	<object-name>80</object-name>
+        <condition>
+         <and>
+         <or>
+            <property>controls/electric/engine/generator</property>
+            <property>controls/electric/engine[1]/generator</property>
+         </or>
+         <greater-than>
+            <property>systems/electrical/volts</property>
+            <value>24</value>
+         </greater-than>
+         <equals>
+           <property>instrumentation/radar/range-control</property>
+           <value>4</value>
+         </equals>
+         </and>
+        </condition>
+  </animation>
+
+   <animation>
+     <type>select</type>
+	<object-name>160</object-name>
+        <condition>
+         <and>
+         <or>
+            <property>controls/electric/engine/generator</property>
+            <property>controls/electric/engine[1]/generator</property>
+         </or>
+         <greater-than>
+            <property>systems/electrical/volts</property>
+            <value>24</value>
+         </greater-than>
+         <equals>
+           <property>instrumentation/radar/range-control</property>
+           <value>5</value>
+         </equals>
+         </and>
+        </condition>
+  </animation>
+
+
+  <animation> 
+   <object-name>display</object-name>
+   <object-name>5</object-name>
+   <object-name>10</object-name>
+   <object-name>20</object-name>
+   <object-name>40</object-name>
+   <object-name>80</object-name>
+   <object-name>160</object-name>
+   <type>material</type>
+    <emission> 
+        <red>0.7</red>
+        <green>0.7</green>
+        <blue>0.7</blue>
+    </emission>
+  </animation>
+
+
+<!--display  symbol -->
+
+<model>
+   <name>symbols</name>
+   <path>Aircraft/F-4EJ_ADTW/Models/Interior/Panel/TEWS/symbol.xml</path>
+    <offsets>
+      <x-m>  0.000 </x-m>
+      <y-m>  0.000 </y-m>
+      <z-m>  0.000 </z-m>
+    </offsets>
+  </model>
+
+
+
+  <animation>
+    <type>rotate</type>
+     <object-name>symbols</object-name>
+     <property>orientation/heading-deg</property>
+      <factor> 1 </factor>
+        <axis>
+            <x>1.0</x>
+            <y>0.0</y>
+            <z>0.0</z>
+        </axis>
+        <center>
+            <x-m>0.0</x-m>
+            <y-m>0.0</y-m>
+            <z-m>0.0</z-m>
+        </center>
+  </animation>
+
+
+
+<!-- lighting -->
+
+  <animation> 
+   <object-name>base</object-name>
+   <type>material</type>
+    <emission> 
+      <factor-prop>systems/electrical/outputs/instrument-lights-norm</factor-prop>
+        <red>0.5</red>
+        <green>0.2</green>
+        <blue>0.2</blue>
+      </emission>
+  </animation>
+
+
+<!-- LOD -->
+
+ <animation>
+  <type>range</type>
+  <min-m>0</min-m>
+  <max-m>5</max-m>
+ </animation>
+
+</PropertyList>

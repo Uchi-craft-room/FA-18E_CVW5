@@ -1,0 +1,50 @@
+<?xml version="1.0"?>
+
+<PropertyList>
+
+    <path>drag-chute-lever.ac</path>
+
+ <animation>
+    <type>rotate</type>
+    <object-name>base</object-name>
+    <property>sim/model/dragchute/position-norm</property>
+    <interpolation>
+      <entry><ind> 0.0 </ind><dep>  0 </dep></entry>
+      <entry><ind> 0.2 </ind><dep> 60 </dep></entry>
+      <entry><ind> 1.0 </ind><dep> 60 </dep></entry>
+    </interpolation>
+    <center>
+      <x-m> 0.054 </x-m>
+      <y-m>-0.004 </y-m>
+      <z-m>-0.006 </z-m>
+    </center>
+    <axis>
+      <x> 0 </x>
+      <y> 1 </y>
+      <z> 0 </z>
+    </axis>
+  </animation>
+    
+
+ <animation>
+    <type>pick</type>
+    <object-name>base</object-name>
+        <action>
+            <button>0</button>
+            <repeatable>false</repeatable>
+      		<binding>
+      		<command>property-toggle</command>
+      		<property>/sim/model/dragchute/enable</property>
+      		</binding>
+        </action>
+  </animation>
+
+    <animation>
+       <type>range</type>
+       <min-m>0</min-m>
+       <max-m>5</max-m>
+    </animation>
+ 
+</PropertyList>
+
+

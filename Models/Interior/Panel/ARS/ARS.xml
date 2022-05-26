@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<PropertyList>
+
+ <path>ARS.ac</path>
+
+  <animation>
+    <type>material</type>
+    <object-name>base</object-name>
+    <object-name>pitot</object-name>
+    <object-name>ENG</object-name>
+    <object-name>anti-fog</object-name>
+    <emission>
+      <red>   0.2 </red>
+      <green> 0.5 </green>
+      <blue>  0.2 </blue>
+      <factor-prop>systems/electrical/outputs/instrument-lights-norm</factor-prop>
+    </emission>
+  </animation>
+
+
+<!--   PITOT HEAT   -->
+
+  <animation>
+    <type>pick</type>
+    <visible>true</visible>
+    <object-name>pitot</object-name>
+    <action>
+      <button>0</button>
+      <repeatable>false</repeatable>
+      <binding>
+        <command>property-toggle</command>
+        <property>controls/anti-ice/pitot-heat</property>
+      </binding>
+      <binding>
+        <command>property-toggle</command>
+        <property>sim/sound/click</property>
+      </binding>
+    </action>
+  </animation>
+
+  <animation>
+    <type>rotate</type>
+    <object-name>pitot</object-name>
+    <property>controls/anti-ice/pitot-heat</property>
+    <factor>60</factor>
+    <axis>
+      <x>  0 </x>
+      <y> -1 </y>
+      <z>  0 </z>
+    </axis>
+    <center>
+      <x-m> 0.003 </x-m>
+      <y-m>-0.029 </y-m>
+      <z-m>-0.025 </z-m>
+    </center>
+  </animation>
+
+<!--  ENG HEAT   -->
+
+  <animation>
+    <type>pick</type>
+    <visible>true</visible>
+    <object-name>ENG</object-name>
+    <action>
+      <button>0</button>
+      <repeatable>false</repeatable>
+      <binding>
+        <command>property-toggle</command>
+        <property>controls/anti-ice/engine[0]/inlet-heat</property>
+      </binding>
+      <binding>
+        <command>property-toggle</command>
+        <property>controls/anti-ice/engine[1]/inlet-heat</property>
+      </binding>
+      <binding>
+        <command>property-toggle</command>
+        <property>sim/sound/click</property>
+      </binding>
+    </action>
+  </animation>
+
+  <animation>
+    <type>rotate</type>
+    <object-name>ENG</object-name>
+    <property>controls/anti-ice/engine[0]/inlet-heat</property>
+    <factor>40</factor>
+    <axis>
+      <x>  0 </x>
+      <y> -1 </y>
+      <z>  0 </z>
+    </axis>
+    <center>
+      <x-m> 0.003 </x-m>
+      <y-m>-0.029 </y-m>
+      <z-m>-0.025 </z-m>
+    </center>
+  </animation>
+
+
+
+<!--   ANTI FOG   -->
+
+  <animation>
+    <type>pick</type>
+    <visible>true</visible>
+    <object-name>anti-fog</object-name>
+    <action>
+      <button>0</button>
+      <repeatable>false</repeatable>
+      <binding>
+        <command>property-toggle</command>
+        <property>controls/anti-ice/window-heat</property>
+      </binding>
+      <binding>
+        <command>property-toggle</command>
+        <property>sim/sound/click</property>
+      </binding>
+    </action>
+  </animation>
+
+  <animation>
+    <type>rotate</type>
+    <object-name>anti-fog</object-name>
+    <property>controls/anti-ice/window-heat</property>
+    <factor>40</factor>
+    <axis>
+      <x>  0 </x>
+      <y> -1 </y>
+      <z>  0 </z>
+    </axis>
+    <center>
+      <x-m> 0.003 </x-m>
+      <y-m>-0.029 </y-m>
+      <z-m> 0.017 </z-m>
+    </center>
+  </animation>
+
+</PropertyList>
+

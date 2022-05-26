@@ -1,0 +1,169 @@
+<?xml version="1.0"?>
+
+<PropertyList>
+
+    <path>rader.ac</path>
+    
+    <animation>
+       <type>range</type>
+       <min-m>0</min-m>
+       <max-m>10</max-m>
+    </animation>
+ 
+  <animation>
+ <object-name>base</object-name>
+<object-name>range</object-name>
+   <type>material</type>
+     <emission> 
+      <factor-prop>systems/electrical/outputs/instrument-lights-norm</factor-prop>
+        <red>0.5</red>
+        <green>0.2</green>
+        <blue>0.2</blue>
+      </emission>
+  </animation>
+
+<!--	radar range adj	-->
+<animation>
+  <type>pick</type>
+  <object-name>range0</object-name>
+  <action>
+     <button>0</button>
+     <repeatable>true</repeatable>
+     <interval-sec>0.2</interval-sec>
+     <binding>
+        <command>property-assign</command>
+	<property>instrumentation/radar/range-control</property>
+	<value>0</value>
+     </binding>
+     <binding>
+        <command>property-assign</command>
+	<property>instrumentation/radar/range-ratio</property>
+        <value>0.0204</value>
+     </binding>
+  </action>
+</animation>
+
+<animation>
+  <type>pick</type>
+  <object-name>range1</object-name>
+  <action>
+     <button>0</button>
+     <repeatable>true</repeatable>
+     <interval-sec>0.2</interval-sec>
+     <binding>
+        <command>property-assign</command>
+	<property>instrumentation/radar/range-control</property>
+	<value>1</value>
+     </binding>
+     <binding>
+        <command>property-assign</command>
+	<property>instrumentation/radar/range-ratio</property>
+        <value>0.0102</value>
+     </binding>
+  </action>
+</animation>
+
+<animation>
+  <type>pick</type>
+  <object-name>range2</object-name>
+  <action>
+     <button>0</button>
+     <repeatable>true</repeatable>
+     <interval-sec>0.2</interval-sec>
+     <binding>
+        <command>property-assign</command>
+	<property>instrumentation/radar/range-control</property>
+	<value>2</value>
+     </binding>
+     <binding>
+        <command>property-assign</command>
+	<property>instrumentation/radar/range-ratio</property>
+        <value>0.0051</value>
+     </binding>
+  </action>
+</animation>
+
+<animation>
+  <type>pick</type>
+  <object-name>range3</object-name>
+  <action>
+     <button>0</button>
+     <repeatable>true</repeatable>
+     <interval-sec>0.2</interval-sec>
+     <binding>
+        <command>property-assign</command>
+	<property>instrumentation/radar/range-control</property>
+	<value>3</value>
+     </binding>
+     <binding>
+        <command>property-assign</command>
+	<property>instrumentation/radar/range-ratio</property>
+        <value>0.00255</value>
+     </binding>
+  </action>
+</animation>
+
+<animation>
+  <type>pick</type>
+  <object-name>range4</object-name>
+  <action>
+     <button>0</button>
+     <repeatable>true</repeatable>
+     <interval-sec>0.2</interval-sec>
+     <binding>
+        <command>property-assign</command>
+	<property>instrumentation/radar/range-control</property>
+	<value>4</value>
+     </binding>
+     <binding>
+        <command>property-assign</command>
+	<property>instrumentation/radar/range-ratio</property>
+        <value>0.001275</value>
+     </binding>
+  </action>
+</animation>
+
+
+<animation>
+  <type>pick</type>
+  <object-name>range5</object-name>
+  <action>
+     <button>0</button>
+     <repeatable>true</repeatable>
+     <interval-sec>0.2</interval-sec>
+     <binding>
+        <command>property-assign</command>
+	<property>instrumentation/radar/range-control</property>
+	<value>5</value>
+     </binding>
+     <binding>
+        <command>property-assign</command>
+	<property>instrumentation/radar/range-ratio</property>
+        <value>0.000638</value>
+     </binding>
+  </action>
+</animation>
+
+
+
+
+  <animation>
+    <type>rotate</type>
+     <object-name>range</object-name>
+     <property>instrumentation/radar/range-control</property>
+      <factor> 45 </factor>
+        <axis>
+            <x>-1.0</x>
+            <y>0.0</y>
+            <z>0.0</z>
+        </axis>
+        <center>
+            <x-m>0.006</x-m>
+            <y-m>0.034</y-m>
+            <z-m>-0.048</z-m>
+        </center>
+  </animation>
+   
+</PropertyList>
+
+

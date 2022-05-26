@@ -1,0 +1,197 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<PropertyList>
+
+ <path>UFCD.ac</path>
+
+
+  <animation>
+    <type>material</type>
+    <object-name>UFCD</object-name>
+    <emission>
+      <red>   0.2 </red>
+      <green> 0.5 </green>
+      <blue>  0.2 </blue>
+      <factor-prop>systems/electrical/outputs/instrument-lights-norm</factor-prop>
+    </emission>
+  </animation>
+
+  <animation>
+    <type>material</type>
+    <object-name>CNI</object-name>
+    <object-name>DDI</object-name>
+    <emission>
+      <red>   0.5 </red>
+      <green> 0.5 </green>
+      <blue>  0.5 </blue>
+    </emission>
+  </animation>
+
+
+<!-- ************************ HUD SET ********************* -->
+
+
+  <animation>
+    <type>material</type>
+    <object-name>ON-sw</object-name>
+    <object-name>hud-switch</object-name>
+    <object-name>control-knob</object-name>
+    <emission>
+      <red>   0.2 </red>
+      <green> 0.5 </green>
+      <blue>  0.2 </blue>
+      <factor-prop>systems/electrical/outputs/instrument-lights-norm</factor-prop>
+    </emission>
+  </animation>
+
+
+
+<!--   hud brightness   -->
+
+  <animation>
+    <type>pick</type>
+    <visible>true</visible>
+    <object-name>ON-sw</object-name>
+    <action>
+      <button>3</button>
+      <repeatable>false</repeatable>
+      <binding>
+        <command>property-adjust</command>
+        <property>sim/hud/color/brightness</property>
+         <step>-0.1</step>
+         <min>0</min>
+         <max>1.0</max>
+         <wrap>false</wrap>
+      </binding>
+    </action>
+  </animation>
+
+  <animation>
+    <type>pick</type>
+    <visible>true</visible>
+    <object-name>ON-sw</object-name>
+    <action>
+      <button>4</button>
+      <repeatable>false</repeatable>
+      <binding>
+        <command>property-adjust</command>
+        <property>sim/hud/color/brightness</property>
+         <step>0.1</step>
+         <min>0</min>
+         <max>1.0</max>
+         <wrap>false</wrap>
+      </binding>
+    </action>
+  </animation>
+
+
+  <animation>
+    <type>rotate</type>
+    <object-name>ON-sw</object-name>
+    <property>sim/hud/color/brightness</property>
+    <factor>270</factor>
+    <axis>
+      <x>  -1 </x>
+      <y>  0 </y>
+      <z>  0 </z>
+    </axis>
+    <center>
+      <x-m> 0.014 </x-m>
+      <y-m> -0.053 </y-m>
+      <z-m> -0.060 </z-m>
+    </center>
+  </animation>
+
+<!-- hud RED/GREEN -->
+
+  <animation>
+    <type>pick</type>
+    <visible>true</visible>
+    <object-name>REDGRN</object-name>
+    <action>
+      <button>0</button>
+      <repeatable>false</repeatable>
+      <binding>
+        <command>property-toggle</command>
+        <property>sim/hud/current-color</property>
+      </binding>
+      <binding>
+        <command>property-toggle</command>
+        <property>sim/sound/click</property>
+      </binding>
+    </action>
+  </animation>
+
+  <animation>
+    <type>rotate</type>
+    <object-name>REDGRN</object-name>
+    <property>sim/hud/current-color</property>
+    <factor>270</factor>
+    <axis>
+      <x> -1 </x>
+      <y>  0 </y>
+      <z>  0 </z>
+    </axis>
+    <center>
+      <x-m> 0.015 </x-m>
+      <y-m> 0.079 </y-m>
+      <z-m>-0.060 </z-m>
+    </center>
+  </animation>
+
+
+
+<!--   hud DAY/NIGHT  -->
+
+  <animation>
+    <type>pick</type>
+    <visible>false</visible>
+    <object-name>day</object-name>
+    <action>
+      <button>0</button>
+      <repeatable>false</repeatable>
+      <binding>
+        <command>property-assign</command>
+        <property>sim/hud/color/alpha</property>
+         <value>1.0</value>
+      </binding>
+    </action>
+  </animation>
+
+  <animation>
+    <type>pick</type>
+    <visible>false</visible>
+    <object-name>night</object-name>
+    <action>
+      <button>0</button>
+      <repeatable>false</repeatable>
+      <binding>
+        <command>property-assign</command>
+        <property>sim/hud/color/alpha</property>
+         <value>0.6</value>
+      </binding>
+    </action>
+  </animation>
+
+
+  <animation>
+    <type>rotate</type>
+    <object-name>day-night</object-name>
+    <property>sim/hud/color/alpha</property>
+    <factor>80</factor>
+    <axis>
+      <x>  0 </x>
+      <y> -1 </y>
+      <z>  0 </z>
+    </axis>
+    <center>
+      <x-m> 0.009 </x-m>
+      <y-m>-0.022 </y-m>
+      <z-m>-0.060 </z-m>
+    </center>
+  </animation>
+
+</PropertyList>
+
+
+

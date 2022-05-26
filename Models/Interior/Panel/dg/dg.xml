@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<PropertyList>
+
+  <path>dg.ac</path>
+
+  <animation>
+    <object-name>fond</object-name>
+    <object-name>button</object-name>
+    <object-name>face</object-name>
+    <object-name>compass</object-name>
+  </animation>
+
+  <animation>
+    <type>material</type>
+    <object-name>face</object-name>
+    <object-name>compass</object-name>
+    <emission>
+      <factor-prop>systems/electrical/outputs/instrument-lights-norm</factor-prop>
+      <red>   0.2 </red>
+      <green> 0.5 </green>
+      <blue>  0.2 </blue>
+    </emission> 
+  </animation>    
+
+  <animation>
+    <type>rotate</type>
+    <object-name>compass</object-name>
+    <property>orientation/heading-magnetic-deg</property>
+    <interpolation>
+      <entry><ind>   0 </ind><dep>   0 </dep></entry>
+      <entry><ind>  90 </ind><dep>  90 </dep></entry>
+      <entry><ind> 180 </ind><dep> 180 </dep></entry>
+      <entry><ind> 270 </ind><dep> 270 </dep></entry>
+      <entry><ind> 360 </ind><dep> 360 </dep></entry>
+    </interpolation>
+    <center>
+      <x-m> -0.023 </x-m>
+      <y-m>  0.000 </y-m>
+      <z-m>  0.010 </z-m>
+    </center>
+    <axis>
+      <x> 0 </x>
+      <y> 0 </y>
+      <z> 1 </z>
+    </axis>
+  </animation>
+ 
+</PropertyList>
+
+
+
+

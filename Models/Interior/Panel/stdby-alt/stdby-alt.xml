@@ -1,0 +1,101 @@
+<?xml version="1.0"?>
+
+
+<PropertyList>
+
+	<path>stdby-alt.ac</path>
+
+<animation>
+  <type>rotate</type>
+  <object-name>needle-L</object-name>
+  <property>instrumentation/altimeter/indicated-altitude-ft</property>
+  <factor>0.36</factor>
+  <center>
+   <x-m>0</x-m>
+   <y-m>0</y-m>
+   <z-m>0</z-m>
+  </center>
+  <axis>
+   <x>-1</x>
+   <y>0</y>
+   <z>0</z>
+  </axis>
+ </animation>
+
+<animation>
+  <type>rotate</type>
+  <object-name>needle-S</object-name>
+  <property>instrumentation/altimeter/indicated-altitude-ft</property>
+  <factor>0.036</factor>
+  <center>
+   <x-m>0</x-m>
+   <y-m>0</y-m>
+   <z-m>0</z-m>
+  </center>
+  <axis>
+   <x>-1</x>
+   <y>0</y>
+   <z>0</z>
+  </axis>
+ </animation>
+
+<animation>
+  <type>rotate</type>
+  <object-name>needle-N</object-name>
+  <property>instrumentation/altimeter/indicated-altitude-ft</property>
+  <factor>0.0036</factor>
+  <center>
+   <x-m>0</x-m>
+   <y-m>0</y-m>
+   <z-m>0</z-m>
+  </center>
+  <axis>
+   <x>-1</x>
+   <y>0</y>
+   <z>0</z>
+  </axis>
+ </animation>
+
+
+	<animation>
+		<object-name>mount</object-name>
+		<type>material</type>
+		<emission> 
+			<factor-prop>systems/electrical/outputs/instrument-lights-norm</factor-prop>
+			<red>0.5</red>
+			<green>0.2</green>
+			<blue>0.2</blue>
+		</emission>
+	</animation>
+
+
+	<animation>
+                <object-name>face</object-name>
+                <object-name>needle-L</object-name>
+                <object-name>needle-S</object-name>
+                <object-name>needle-N</object-name>
+		<type>material</type>
+		<emission> 
+			<factor-prop>systems/electrical/outputs/instrument-lights-norm</factor-prop>
+			<red>0.5</red>
+			<green>0.5</green>
+			<blue>0.0</blue>
+		</emission>
+	</animation>
+
+
+
+
+	<!-- *** LoD *** -->
+	<animation>
+		<type>range</type>
+		<min-m>0</min-m>
+		<max-m>10</max-m>
+	</animation>
+
+</PropertyList>
+
+
+
+
+

@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<PropertyList>
+
+ <path>flap-down.ac</path>
+
+  <animation>
+    <type>noshadow</type>
+    <object-name>caution</object-name>
+  </animation>
+
+  <animation>
+    <type>select</type>
+    <object-name>caution</object-name>
+  <condition>
+   <and>
+     <greater-than>
+	   <property>systems/electrical/volts</property>
+	   <value>24</value>
+     </greater-than>
+        <equals>
+            <property>surface-positions/flap-pos-norm</property>
+            <value>1</value>
+        </equals>
+    </and>
+   </condition>
+  </animation>
+
+  <animation>
+    <type>material</type>
+    <object-name>caution</object-name>
+    <emission>
+      <red>   1 </red>
+      <green> 1 </green>
+      <blue>  1 </blue>
+    </emission> 
+  </animation> 
+
+  <animation>
+    <type>material</type>
+    <object-name>case</object-name>
+    <emission>
+      <factor-prop>systems/electrical/outputs/instrument-lights-norm</factor-prop>
+      <red> 0.5 </red>
+      <green> 0.2 </green>
+      <blue>  0.2 </blue>
+    </emission> 
+  </animation> 
+</PropertyList>
+
+
+

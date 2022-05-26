@@ -1,0 +1,30 @@
+<?xml version="1.0"?>
+
+
+<PropertyList>
+<path>cam-unit.ac</path>
+
+
+   <animation>
+     <type>select</type>
+   <object-name>glass</object-name>
+        <condition>
+         <greater-than>
+            <property>systems/electrical/volts</property>
+            <value>24</value>
+         </greater-than>
+        </condition>
+  </animation>
+
+  <animation> 
+   <object-name>glass</object-name>
+   <type>material</type>
+    <emission> 
+        <red>1</red>
+        <green>1</green>
+        <blue>1</blue>
+    </emission>
+  </animation>
+
+
+</PropertyList>

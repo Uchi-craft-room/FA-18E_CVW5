@@ -1,0 +1,127 @@
+<?xml version="1.0"?>
+
+<PropertyList>
+
+    <path>mode-select.ac</path>
+
+
+  <animation>
+    <object-name>base</object-name>
+    <object-name>sw-1</object-name>
+    <object-name>sw-2</object-name>
+    <object-name>sw-3</object-name>
+   <type>material</type>
+     <emission> 
+      <factor-prop>systems/electrical/outputs/instrument-lights-norm</factor-prop>
+        <red>0.5</red>
+        <green>0.2</green>
+        <blue>0.2</blue>
+      </emission>
+  </animation>
+
+  <animation>
+    <object-name>sw-2-on</object-name>
+    <object-name>sw-3-on</object-name>
+   <type>material</type>
+     <emission> 
+        <red>   0.7 </red>
+        <green> 0.7 </green>
+        <blue>  0.7 </blue>
+      </emission>
+  </animation>
+
+
+    <animation>
+        <type>pick</type>
+        <object-name>sw-2</object-name>
+        <action>
+            <button>0</button>
+            <repeatable>false</repeatable>
+            <binding>
+               <command>property-assign</command>
+               <property>sim/hud/current-path</property>
+               <value>1</value>
+            </binding>
+            <binding>
+              <command>property-toggle</command>
+              <property>sim/sound/click</property>
+            </binding>
+        </action>
+    </animation>
+
+
+    <animation>
+    <type>select</type>
+    <object-name>sw-2-on</object-name>
+    <condition>
+     <and>
+         <or>
+            <property>controls/electric/engine/generator</property>
+            <property>controls/electric/engine[1]/generator</property>
+         </or>
+         <greater-than>
+            <property>systems/electrical/volts</property>
+            <value>24</value>
+         </greater-than>
+       <equals>
+          <property>sim/hud/current-path</property>
+           <value>1</value>
+        </equals>
+    </and>
+    </condition>
+    </animation>
+
+
+    <animation>
+        <type>pick</type>
+        <object-name>sw-3</object-name>
+        <action>
+            <button>0</button>
+            <repeatable>false</repeatable>
+            <binding>
+               <command>property-assign</command>
+               <property>sim/hud/current-path</property>
+               <value>2</value>
+            </binding>
+            <binding>
+              <command>property-toggle</command>
+              <property>sim/sound/click</property>
+            </binding>
+        </action>
+    </animation>
+
+
+    <animation>
+    <type>select</type>
+    <object-name>sw-3-on</object-name>
+    <condition>
+         <and>
+         <or>
+            <property>controls/electric/engine/generator</property>
+            <property>controls/electric/engine[1]/generator</property>
+         </or>
+         <greater-than>
+            <property>systems/electrical/volts</property>
+            <value>24</value>
+         </greater-than>
+         <equals>
+           <property>sim/hud/current-path</property>
+           <value>2</value>
+         </equals>
+         </and>
+    </condition>
+    </animation>
+
+
+    <animation>
+       <type>range</type>
+       <min-m>0</min-m>
+       <max-m>10</max-m>
+    </animation>
+
+
+
+
+</PropertyList>
+
+

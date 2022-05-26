@@ -1,0 +1,56 @@
+<?xml version="1.0"?>
+
+<PropertyList>
+
+<path>hook-sw.ac</path>
+
+  <animation>
+	  <type>material</type>
+	  <object-name>base</object-name>
+	  <object-name>hook-sw</object-name>
+	  <emission>
+		  <red>   0.5 </red>
+		  <green> 0.2 </green>
+		  <blue>  0.2 </blue>
+		  <factor-prop>systems/electrical/outputs/instrument-lights-norm</factor-prop>
+	  </emission>
+  </animation>
+
+
+  <animation>
+    <type>pick</type>
+    <visible>true</visible>
+    <object-name>hook-sw</object-name>
+    <action>
+      <button>0</button>
+      <repeatable>false</repeatable>
+      <binding>
+        <command>property-toggle</command>
+        <property>controls/gear/tailhook</property>
+      </binding>
+    <binding>
+        <command>property-toggle</command>
+        <property>sim/sound/click</property>
+      </binding>
+    </action>
+  </animation>
+
+<animation>
+ <type>rotate</type>
+  <object-name>hook-sw</object-name>
+  <property>controls/gear/tailhook</property>
+  <factor>20</factor>
+  <offset-deg>0</offset-deg>
+  <center>
+  <x-m> 0 </x-m>
+  <y-m> 0 </y-m>
+  <z-m> 0 </z-m>
+  </center>
+  <axis>
+  <x>0</x>
+  <y>1</y>
+  <z>0</z>
+  </axis>
+  </animation>
+
+</PropertyList>

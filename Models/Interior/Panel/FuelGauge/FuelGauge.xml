@@ -1,0 +1,1433 @@
+<?xml version="1.0"?>
+
+
+<PropertyList>
+<path>FuelGauge.ac</path>
+
+
+	<animation>
+		<type>select</type>
+		<object-name>off-flag</object-name>
+		<condition>
+			<less-than>
+				<property>systems/electrical/volts</property>
+				<value>24</value>
+			</less-than>
+		</condition>
+	</animation>
+
+<!-- QTY BAR GAUGE -->
+
+	<animation>
+		<type>select</type>
+		<object-name>10</object-name>
+		
+		<condition>
+			<greater-than>
+				<property>/consumables/fuel/total-internal-fuel-lbs</property>
+				<value>1000</value>
+			</greater-than>
+		</condition>
+	</animation>
+
+	<animation>
+		<type>select</type>
+		<object-name>20</object-name>
+		
+		<condition>
+			<greater-than>
+				<property>/consumables/fuel/total-internal-fuel-lbs</property>
+				<value>2000</value>
+			</greater-than>
+		</condition>
+	</animation>
+
+	<animation>
+		<type>select</type>
+		<object-name>30</object-name>
+		
+		<condition>
+			<greater-than>
+				<property>/consumables/fuel/total-internal-fuel-lbs</property>
+				<value>3000</value>
+			</greater-than>
+		</condition>
+	</animation>
+
+	<animation>
+		<type>select</type>
+		<object-name>40</object-name>
+		
+		<condition>
+			<greater-than>
+				<property>/consumables/fuel/total-internal-fuel-lbs</property>
+				<value>4000</value>
+			</greater-than>
+		</condition>
+	</animation>
+
+	<animation>
+		<type>select</type>
+		<object-name>50</object-name>
+		
+		<condition>
+			<greater-than>
+				<property>/consumables/fuel/total-internal-fuel-lbs</property>
+				<value>5000</value>
+			</greater-than>
+		</condition>
+	</animation>
+
+	<animation>
+		<type>select</type>
+		<object-name>60</object-name>
+		
+		<condition>
+			<greater-than>
+				<property>/consumables/fuel/total-internal-fuel-lbs</property>
+				<value>6000</value>
+			</greater-than>
+		</condition>
+	</animation>
+
+	<animation>
+		<type>select</type>
+		<object-name>70</object-name>
+		
+		<condition>
+			<greater-than>
+				<property>/consumables/fuel/total-internal-fuel-lbs</property>
+				<value>7000</value>
+			</greater-than>
+		</condition>
+	</animation>
+
+	<animation>
+		<type>select</type>
+		<object-name>80</object-name>
+		
+		<condition>
+			<greater-than>
+				<property>/consumables/fuel/total-internal-fuel-lbs</property>
+				<value>8000</value>
+			</greater-than>
+		</condition>
+	</animation>
+
+	<animation>
+		<type>select</type>
+		<object-name>90</object-name>
+		
+		<condition>
+			<greater-than>
+				<property>/consumables/fuel/total-internal-fuel-lbs</property>
+				<value>9000</value>
+			</greater-than>
+		</condition>
+	</animation>
+
+	<animation>
+		<type>select</type>
+		<object-name>100</object-name>
+		
+		<condition>
+			<greater-than>
+				<property>/consumables/fuel/total-internal-fuel-lbs</property>
+				<value>10000</value>
+			</greater-than>
+		</condition>
+	</animation>
+
+	<animation>
+		<type>select</type>
+		<object-name>110</object-name>
+		
+		<condition>
+			<greater-than>
+				<property>/consumables/fuel/total-internal-fuel-lbs</property>
+				<value>11000</value>
+			</greater-than>
+		</condition>
+	</animation>
+
+	<animation>
+		<type>select</type>
+		<object-name>120</object-name>
+		
+		<condition>
+			<greater-than>
+				<property>/consumables/fuel/total-internal-fuel-lbs</property>
+				<value>12000</value>
+			</greater-than>
+		</condition>
+	</animation>
+
+	<animation>
+		<type>select</type>
+		<object-name>130</object-name>
+		
+		<condition>
+			<greater-than>
+				<property>/consumables/fuel/total-internal-fuel-lbs</property>
+				<value>13000</value>
+			</greater-than>
+		</condition>
+	</animation>
+
+
+	<animation>
+		<type>select</type>
+		<object-name>140</object-name>
+		
+		<condition>
+			<greater-than>
+				<property>/consumables/fuel/total-internal-fuel-lbs</property>
+				<value>14000</value>
+			</greater-than>
+		</condition>
+	</animation>
+
+	<animation>
+		<type>select</type>
+		<object-name>150</object-name>
+		
+		<condition>
+			<greater-than>
+				<property>/consumables/fuel/total-internal-fuel-lbs</property>
+				<value>14900</value>
+			</greater-than>
+		</condition>
+	</animation>
+
+<!--  bingo setting -->
+
+  <animation>
+    <type>pick</type>
+    <object-name>bingo-knob</object-name>
+    <action>
+      <button>0</button>
+      <repeatable>true</repeatable>
+      <interval-sec>0.1</interval-sec>
+      <binding>
+        <command>property-adjust</command>
+        <property>/consumables/fuel/bingo-lbs</property>
+        <step>  1000 </step>
+        <min>  0 </min>
+        <max>  14000 </max>
+      </binding>
+    </action>
+  </animation>
+
+  <animation>
+    <type>pick</type>
+    <object-name>bingo-knob</object-name>
+    <action>
+      <button>1</button>
+      <repeatable>true</repeatable>
+      <interval-sec>0.1</interval-sec>
+      <binding>
+        <command>property-adjust</command>
+        <property>/consumables/fuel/bingo-lbs</property>
+        <step>  -1000 </step>
+        <min>  0 </min>
+        <max>  14000 </max>
+      </binding>
+    </action>
+  </animation>
+
+  <animation>
+    <type>pick</type>
+    <object-name>bingo-knob</object-name>
+    <action>
+      <button>3</button>
+      <binding>
+        <command>property-adjust</command>
+        <property>/consumables/fuel/bingo-lbs</property>
+        <step>  1000 </step>
+        <min>  0 </min>
+        <max>  14000 </max>
+      </binding>
+    </action>
+  </animation>
+
+  <animation>
+    <type>pick</type>
+    <object-name>bingo-knob</object-name>
+    <action>
+      <button>4</button>
+      <binding>
+        <command>property-adjust</command>
+        <property>/consumables/fuel/bingo-lbs</property>
+        <step>  -1000 </step>
+        <min>  0 </min>
+        <max>  14000 </max>
+      </binding>
+    </action>
+  </animation>
+
+<animation>
+  <type>rotate</type>
+  <object-name>bingo-knob</object-name>
+  <property>/consumables/fuel/bingo-lbs</property>
+  <factor>0.01</factor>
+  <center>
+   <x-m>0.006</x-m>
+   <y-m>-0.025</y-m>
+   <z-m>0.026</z-m>
+  </center>
+  <axis>
+   <x>-1</x>
+   <y>0</y>
+   <z>0</z>
+  </axis>
+ </animation>
+
+<animation>
+  <type>rotate</type>
+  <object-name>bingo</object-name>
+  <property>/consumables/fuel/bingo-lbs</property>
+    <interpolation>
+   <entry><ind>0</ind><dep>0</dep></entry>
+   <entry><ind>14000</ind><dep>200</dep></entry>
+  </interpolation>
+  <center>
+   <x-m>0</x-m>
+   <y-m>0</y-m>
+   <z-m>0</z-m>
+  </center>
+  <axis>
+   <x>-1</x>
+   <y>0</y>
+   <z>0</z>
+  </axis>
+ </animation>
+
+
+<!-- total drum counter -->
+
+ <animation>
+  <type>textranslate</type>
+  <object-name>drum-0</object-name>
+  <property>consumables/fuel/total-internal-fuel-lbs</property>
+  <factor>0.1</factor>
+  <offset>-1</offset>
+  <scroll>0.01</scroll>
+  <center>
+   <x-m>0</x-m>
+   <y-m>0</y-m>
+   <z-m>0</z-m>
+  </center>
+  <axis>
+   <x>0</x>
+   <y>-1</y>
+   <z>0</z>
+  </axis>
+ </animation>
+
+
+ <animation>
+  <type>textranslate</type>
+  <object-name>drum-1</object-name>
+  <property>consumables/fuel/total-internal-fuel-lbs</property>
+  <factor>0.01</factor>
+  <offset>-10</offset>
+  <step>10</step>
+  <scroll>0.01</scroll>
+  <center>
+   <x-m>0</x-m>
+   <y-m>0</y-m>
+   <z-m>0</z-m>
+  </center>
+  <axis>
+   <x>0</x>
+   <y>-1</y>
+   <z>0</z>
+  </axis>
+ </animation>
+
+
+ <animation>
+  <type>textranslate</type>
+  <object-name>drum-2</object-name>
+  <property>consumables/fuel/total-internal-fuel-lbs</property>
+  <factor>0.001</factor>
+  <offset>-100</offset>
+  <step>100</step>
+  <scroll>0.01</scroll>
+  <center>
+   <x-m>0</x-m>
+   <y-m>0</y-m>
+   <z-m>0</z-m>
+  </center>
+  <axis>
+   <x>0</x>
+   <y>-1</y>
+   <z>0</z>
+  </axis>
+ </animation>
+
+ <animation>
+  <type>textranslate</type>
+  <object-name>drum-3</object-name>
+  <property>consumables/fuel/total-internal-fuel-lbs</property>
+  <factor>0.0001</factor>
+  <offset>-1000</offset>
+  <step>1000</step>
+  <scroll>0.01</scroll>
+  <center>
+   <x-m>0</x-m>
+   <y-m>0</y-m>
+   <z-m>0</z-m>
+  </center>
+  <axis>
+   <x>0</x>
+   <y>-1</y>
+   <z>0</z>
+  </axis>
+ </animation>
+
+ <animation>
+  <type>textranslate</type>
+  <object-name>drum-4</object-name>
+  <property>consumables/fuel/total-internal-fuel-lbs</property>
+  <factor>0.00001</factor>
+  <offset>-10000</offset>
+  <step>10000</step>
+  <scroll>0.01</scroll>
+  <center>
+   <x-m>0</x-m>
+   <y-m>0</y-m>
+   <z-m>0</z-m>
+  </center>
+  <axis>
+   <x>0</x>
+   <y>-1</y>
+   <z>0</z>
+  </axis>
+ </animation>
+
+
+<!-- wing-inter-left drum counter -->
+
+
+	<animation>
+		<type>select</type>
+		<object-name>drum-1-left</object-name>
+                <object-name>drum-2-left</object-name>
+                <object-name>drum-3-left</object-name>
+                <object-name>drum-4-left</object-name>
+		<condition>
+			<equals>
+				<property>instrumentation/fuelgauge/selector</property>
+				<value>1</value>
+			</equals>
+		</condition>
+	</animation>
+
+ <animation>
+  <type>textranslate</type>
+  <object-name>drum-1-left</object-name>
+  <property>consumables/fuel/tank[3]/level-lbs</property>
+  <factor>0.1</factor>
+  <offset>-1</offset>
+  <scroll>0.01</scroll>
+  <center>
+   <x-m>0</x-m>
+   <y-m>0</y-m>
+   <z-m>0</z-m>
+  </center>
+  <axis>
+   <x>0</x>
+   <y>-1</y>
+   <z>0</z>
+  </axis>
+ </animation>
+
+
+ <animation>
+  <type>textranslate</type>
+  <object-name>drum-2-left</object-name>
+  <property>consumables/fuel/tank[3]/level-lbs</property>
+  <factor>0.01</factor>
+  <offset>-10</offset>
+  <step>10</step>
+  <scroll>0.01</scroll>
+  <center>
+   <x-m>0</x-m>
+   <y-m>0</y-m>
+   <z-m>0</z-m>
+  </center>
+  <axis>
+   <x>0</x>
+   <y>-1</y>
+   <z>0</z>
+  </axis>
+ </animation>
+
+
+ <animation>
+  <type>textranslate</type>
+  <object-name>drum-3-left</object-name>
+  <property>consumables/fuel/tank[3]/level-lbs</property>
+  <factor>0.001</factor>
+  <offset>-100</offset>
+  <step>100</step>
+  <scroll>0.01</scroll>
+  <center>
+   <x-m>0</x-m>
+   <y-m>0</y-m>
+   <z-m>0</z-m>
+  </center>
+  <axis>
+   <x>0</x>
+   <y>-1</y>
+   <z>0</z>
+  </axis>
+ </animation>
+
+ <animation>
+  <type>textranslate</type>
+  <object-name>drum-4-left</object-name>
+  <property>consumables/fuel/tank[3]/level-lbs</property>
+  <factor>0.0001</factor>
+  <offset>-1000</offset>
+  <step>1000</step>
+  <scroll>0.01</scroll>
+  <center>
+   <x-m>0</x-m>
+   <y-m>0</y-m>
+   <z-m>0</z-m>
+  </center>
+  <axis>
+   <x>0</x>
+   <y>-1</y>
+   <z>0</z>
+  </axis>
+ </animation>
+
+
+
+<!-- wing-inter-right drum counter -->
+
+	<animation>
+		<type>select</type>
+		<object-name>drum-1-right</object-name>
+                <object-name>drum-2-right</object-name>
+                <object-name>drum-3-right</object-name>
+                <object-name>drum-4-right</object-name>
+		<condition>
+			<equals>
+				<property>instrumentation/fuelgauge/selector</property>
+				<value>1</value>
+			</equals>
+		</condition>
+	</animation>
+
+
+ <animation>
+  <type>textranslate</type>
+  <object-name>drum-1-right</object-name>
+  <property>consumables/fuel/tank[4]/level-lbs</property>
+  <factor>0.1</factor>
+  <offset>-1</offset>
+  <scroll>0.01</scroll>
+  <center>
+   <x-m>0</x-m>
+   <y-m>0</y-m>
+   <z-m>0</z-m>
+  </center>
+  <axis>
+   <x>0</x>
+   <y>-1</y>
+   <z>0</z>
+  </axis>
+ </animation>
+
+
+ <animation>
+  <type>textranslate</type>
+  <object-name>drum-2-right</object-name>
+  <property>consumables/fuel/tank[4]/level-lbs</property>
+  <factor>0.01</factor>
+  <offset>-10</offset>
+  <step>10</step>
+  <scroll>0.01</scroll>
+  <center>
+   <x-m>0</x-m>
+   <y-m>0</y-m>
+   <z-m>0</z-m>
+  </center>
+  <axis>
+   <x>0</x>
+   <y>-1</y>
+   <z>0</z>
+  </axis>
+ </animation>
+
+
+ <animation>
+  <type>textranslate</type>
+  <object-name>drum-3-right</object-name>
+  <property>consumables/fuel/tank[4]/level-lbs</property>
+  <factor>0.001</factor>
+  <offset>-100</offset>
+  <step>100</step>
+  <scroll>0.01</scroll>
+  <center>
+   <x-m>0</x-m>
+   <y-m>0</y-m>
+   <z-m>0</z-m>
+  </center>
+  <axis>
+   <x>0</x>
+   <y>-1</y>
+   <z>0</z>
+  </axis>
+ </animation>
+
+ <animation>
+  <type>textranslate</type>
+  <object-name>drum-4-right</object-name>
+  <property>consumables/fuel/tank[4]/level-lbs</property>
+  <factor>0.0001</factor>
+  <offset>-1000</offset>
+  <step>1000</step>
+  <scroll>0.01</scroll>
+  <center>
+   <x-m>0</x-m>
+   <y-m>0</y-m>
+   <z-m>0</z-m>
+  </center>
+  <axis>
+   <x>0</x>
+   <y>-1</y>
+   <z>0</z>
+  </axis>
+ </animation>
+
+<!-- feed-left drum counter -->
+
+
+	<animation>
+		<type>select</type>
+		<object-name>drum-1-left.001</object-name>
+                <object-name>drum-2-left.001</object-name>
+                <object-name>drum-3-left.001</object-name>
+                <object-name>drum-4-left.001</object-name>
+		<condition>
+			<equals>
+				<property>instrumentation/fuelgauge/selector</property>
+				<value>0</value>
+			</equals>
+		</condition>
+	</animation>
+
+ <animation>
+  <type>textranslate</type>
+  <object-name>drum-1-left.001</object-name>
+  <property>consumables/fuel/tank[1]/level-lbs</property>
+  <factor>0.1</factor>
+  <offset>-1</offset>
+  <scroll>0.01</scroll>
+  <center>
+   <x-m>0</x-m>
+   <y-m>0</y-m>
+   <z-m>0</z-m>
+  </center>
+  <axis>
+   <x>0</x>
+   <y>-1</y>
+   <z>0</z>
+  </axis>
+ </animation>
+
+
+ <animation>
+  <type>textranslate</type>
+  <object-name>drum-2-left.001</object-name>
+  <property>consumables/fuel/tank[1]/level-lbs</property>
+  <factor>0.01</factor>
+  <offset>-10</offset>
+  <step>10</step>
+  <scroll>0.01</scroll>
+  <center>
+   <x-m>0</x-m>
+   <y-m>0</y-m>
+   <z-m>0</z-m>
+  </center>
+  <axis>
+   <x>0</x>
+   <y>-1</y>
+   <z>0</z>
+  </axis>
+ </animation>
+
+
+ <animation>
+  <type>textranslate</type>
+  <object-name>drum-3-left.001</object-name>
+  <property>consumables/fuel/tank[1]/level-lbs</property>
+  <factor>0.001</factor>
+  <offset>-100</offset>
+  <step>100</step>
+  <scroll>0.01</scroll>
+  <center>
+   <x-m>0</x-m>
+   <y-m>0</y-m>
+   <z-m>0</z-m>
+  </center>
+  <axis>
+   <x>0</x>
+   <y>-1</y>
+   <z>0</z>
+  </axis>
+ </animation>
+
+ <animation>
+  <type>textranslate</type>
+  <object-name>drum-4-left.001</object-name>
+  <property>consumables/fuel/tank[1]/level-lbs</property>
+  <factor>0.0001</factor>
+  <offset>-1000</offset>
+  <step>1000</step>
+  <scroll>0.01</scroll>
+  <center>
+   <x-m>0</x-m>
+   <y-m>0</y-m>
+   <z-m>0</z-m>
+  </center>
+  <axis>
+   <x>0</x>
+   <y>-1</y>
+   <z>0</z>
+  </axis>
+ </animation>
+
+
+
+<!-- feed-right drum counter -->
+
+	<animation>
+		<type>select</type>
+		<object-name>drum-1-right.001</object-name>
+                <object-name>drum-2-right.001</object-name>
+                <object-name>drum-3-right.001</object-name>
+                <object-name>drum-4-right.001</object-name>
+		<condition>
+			<equals>
+				<property>instrumentation/fuelgauge/selector</property>
+				<value>0</value>
+			</equals>
+		</condition>
+	</animation>
+
+
+ <animation>
+  <type>textranslate</type>
+  <object-name>drum-1-right.001</object-name>
+  <property>consumables/fuel/tank[2]/level-lbs</property>
+  <factor>0.1</factor>
+  <offset>-1</offset>
+  <scroll>0.01</scroll>
+  <center>
+   <x-m>0</x-m>
+   <y-m>0</y-m>
+   <z-m>0</z-m>
+  </center>
+  <axis>
+   <x>0</x>
+   <y>-1</y>
+   <z>0</z>
+  </axis>
+ </animation>
+
+
+ <animation>
+  <type>textranslate</type>
+  <object-name>drum-2-right.001</object-name>
+  <property>consumables/fuel/tank[2]/level-lbs</property>
+  <factor>0.01</factor>
+  <offset>-10</offset>
+  <step>10</step>
+  <scroll>0.01</scroll>
+  <center>
+   <x-m>0</x-m>
+   <y-m>0</y-m>
+   <z-m>0</z-m>
+  </center>
+  <axis>
+   <x>0</x>
+   <y>-1</y>
+   <z>0</z>
+  </axis>
+ </animation>
+
+
+ <animation>
+  <type>textranslate</type>
+  <object-name>drum-3-right.001</object-name>
+  <property>consumables/fuel/tank[2]/level-lbs</property>
+  <factor>0.001</factor>
+  <offset>-100</offset>
+  <step>100</step>
+  <scroll>0.01</scroll>
+  <center>
+   <x-m>0</x-m>
+   <y-m>0</y-m>
+   <z-m>0</z-m>
+  </center>
+  <axis>
+   <x>0</x>
+   <y>-1</y>
+   <z>0</z>
+  </axis>
+ </animation>
+
+ <animation>
+  <type>textranslate</type>
+  <object-name>drum-4-right.001</object-name>
+  <property>consumables/fuel/tank[2]/level-lbs</property>
+  <factor>0.0001</factor>
+  <offset>-1000</offset>
+  <step>1000</step>
+  <scroll>0.01</scroll>
+  <center>
+   <x-m>0</x-m>
+   <y-m>0</y-m>
+   <z-m>0</z-m>
+  </center>
+  <axis>
+   <x>0</x>
+   <y>-1</y>
+   <z>0</z>
+  </axis>
+ </animation>
+
+
+<!-- tank1-left drum counter -->
+
+
+	<animation>
+		<type>select</type>
+		<object-name>drum-1-left.002</object-name>
+                <object-name>drum-2-left.002</object-name>
+                <object-name>drum-3-left.002</object-name>
+                <object-name>drum-4-left.002</object-name>
+		<condition>
+			<equals>
+				<property>instrumentation/fuelgauge/selector</property>
+				<value>2</value>
+			</equals>
+		</condition>
+	</animation>
+
+ <animation>
+  <type>textranslate</type>
+  <object-name>drum-1-left.002</object-name>
+  <property>consumables/fuel/tank[0]/level-lbs</property>
+  <factor>0.1</factor>
+  <offset>-1</offset>
+  <scroll>0.01</scroll>
+  <center>
+   <x-m>0</x-m>
+   <y-m>0</y-m>
+   <z-m>0</z-m>
+  </center>
+  <axis>
+   <x>0</x>
+   <y>-1</y>
+   <z>0</z>
+  </axis>
+ </animation>
+
+
+ <animation>
+  <type>textranslate</type>
+  <object-name>drum-2-left.002</object-name>
+  <property>consumables/fuel/tank[0]/level-lbs</property>
+  <factor>0.01</factor>
+  <offset>-10</offset>
+  <step>10</step>
+  <scroll>0.01</scroll>
+  <center>
+   <x-m>0</x-m>
+   <y-m>0</y-m>
+   <z-m>0</z-m>
+  </center>
+  <axis>
+   <x>0</x>
+   <y>-1</y>
+   <z>0</z>
+  </axis>
+ </animation>
+
+
+ <animation>
+  <type>textranslate</type>
+  <object-name>drum-3-left.002</object-name>
+  <property>consumables/fuel/tank[0]/level-lbs</property>
+  <factor>0.001</factor>
+  <offset>-100</offset>
+  <step>100</step>
+  <scroll>0.01</scroll>
+  <center>
+   <x-m>0</x-m>
+   <y-m>0</y-m>
+   <z-m>0</z-m>
+  </center>
+  <axis>
+   <x>0</x>
+   <y>-1</y>
+   <z>0</z>
+  </axis>
+ </animation>
+
+ <animation>
+  <type>textranslate</type>
+  <object-name>drum-4-left.002</object-name>
+  <property>consumables/fuel/tank[0]/level-lbs</property>
+  <factor>0.0001</factor>
+  <offset>-1000</offset>
+  <step>1000</step>
+  <scroll>0.01</scroll>
+  <center>
+   <x-m>0</x-m>
+   <y-m>0</y-m>
+   <z-m>0</z-m>
+  </center>
+  <axis>
+   <x>0</x>
+   <y>-1</y>
+   <z>0</z>
+  </axis>
+ </animation>
+
+
+
+<!-- tank1-right drum counter -->
+
+	<animation>
+		<type>select</type>
+		<object-name>drum-1-right.002</object-name>
+                <object-name>drum-2-right.002</object-name>
+                <object-name>drum-3-right.002</object-name>
+                <object-name>drum-4-right.002</object-name>
+		<condition>
+			<equals>
+				<property>instrumentation/fuelgauge/selector</property>
+				<value>2</value>
+			</equals>
+		</condition>
+	</animation>
+
+
+
+
+<!-- ext-wing-left drum counter -->
+
+
+	<animation>
+		<type>select</type>
+		<object-name>drum-1-left.003</object-name>
+                <object-name>drum-2-left.003</object-name>
+                <object-name>drum-3-left.003</object-name>
+                <object-name>drum-4-left.003</object-name>
+		<condition>
+			<equals>
+				<property>instrumentation/fuelgauge/selector</property>
+				<value>3</value>
+			</equals>
+		</condition>
+	</animation>
+
+ <animation>
+  <type>textranslate</type>
+  <object-name>drum-1-left.003</object-name>
+  <property>consumables/fuel/tank[7]/level-lbs</property>
+  <factor>0.1</factor>
+  <offset>-1</offset>
+  <scroll>0.01</scroll>
+  <center>
+   <x-m>0</x-m>
+   <y-m>0</y-m>
+   <z-m>0</z-m>
+  </center>
+  <axis>
+   <x>0</x>
+   <y>-1</y>
+   <z>0</z>
+  </axis>
+ </animation>
+
+
+ <animation>
+  <type>textranslate</type>
+  <object-name>drum-2-left.003</object-name>
+  <property>consumables/fuel/tank[7]/level-lbs</property>
+  <factor>0.01</factor>
+  <offset>-10</offset>
+  <step>10</step>
+  <scroll>0.01</scroll>
+  <center>
+   <x-m>0</x-m>
+   <y-m>0</y-m>
+   <z-m>0</z-m>
+  </center>
+  <axis>
+   <x>0</x>
+   <y>-1</y>
+   <z>0</z>
+  </axis>
+ </animation>
+
+
+ <animation>
+  <type>textranslate</type>
+  <object-name>drum-3-left.003</object-name>
+  <property>consumables/fuel/tank[7]/level-lbs</property>
+  <factor>0.001</factor>
+  <offset>-100</offset>
+  <step>100</step>
+  <scroll>0.01</scroll>
+  <center>
+   <x-m>0</x-m>
+   <y-m>0</y-m>
+   <z-m>0</z-m>
+  </center>
+  <axis>
+   <x>0</x>
+   <y>-1</y>
+   <z>0</z>
+  </axis>
+ </animation>
+
+ <animation>
+  <type>textranslate</type>
+  <object-name>drum-4-left.003</object-name>
+  <property>consumables/fuel/tank[7]/level-lbs</property>
+  <factor>0.0001</factor>
+  <offset>-1000</offset>
+  <step>1000</step>
+  <scroll>0.01</scroll>
+  <center>
+   <x-m>0</x-m>
+   <y-m>0</y-m>
+   <z-m>0</z-m>
+  </center>
+  <axis>
+   <x>0</x>
+   <y>-1</y>
+   <z>0</z>
+  </axis>
+ </animation>
+
+
+
+<!-- ext-wing-right drum counter -->
+
+	<animation>
+		<type>select</type>
+		<object-name>drum-1-right.003</object-name>
+                <object-name>drum-2-right.003</object-name>
+                <object-name>drum-3-right.003</object-name>
+                <object-name>drum-4-right.003</object-name>
+		<condition>
+			<equals>
+				<property>instrumentation/fuelgauge/selector</property>
+				<value>3</value>
+			</equals>
+		</condition>
+	</animation>
+
+
+ <animation>
+  <type>textranslate</type>
+  <object-name>drum-1-right.003</object-name>
+  <property>consumables/fuel/tank[6]/level-lbs</property>
+  <factor>0.1</factor>
+  <offset>-1</offset>
+  <scroll>0.01</scroll>
+  <center>
+   <x-m>0</x-m>
+   <y-m>0</y-m>
+   <z-m>0</z-m>
+  </center>
+  <axis>
+   <x>0</x>
+   <y>-1</y>
+   <z>0</z>
+  </axis>
+ </animation>
+
+
+ <animation>
+  <type>textranslate</type>
+  <object-name>drum-2-right.003</object-name>
+  <property>consumables/fuel/tank[6]/level-lbs</property>
+  <factor>0.01</factor>
+  <offset>-10</offset>
+  <step>10</step>
+  <scroll>0.01</scroll>
+  <center>
+   <x-m>0</x-m>
+   <y-m>0</y-m>
+   <z-m>0</z-m>
+  </center>
+  <axis>
+   <x>0</x>
+   <y>-1</y>
+   <z>0</z>
+  </axis>
+ </animation>
+
+
+ <animation>
+  <type>textranslate</type>
+  <object-name>drum-3-right.003</object-name>
+  <property>consumables/fuel/tank[6]/level-lbs</property>
+  <factor>0.001</factor>
+  <offset>-100</offset>
+  <step>100</step>
+  <scroll>0.01</scroll>
+  <center>
+   <x-m>0</x-m>
+   <y-m>0</y-m>
+   <z-m>0</z-m>
+  </center>
+  <axis>
+   <x>0</x>
+   <y>-1</y>
+   <z>0</z>
+  </axis>
+ </animation>
+
+ <animation>
+  <type>textranslate</type>
+  <object-name>drum-4-right.003</object-name>
+  <property>consumables/fuel/tank[6]/level-lbs</property>
+  <factor>0.0001</factor>
+  <offset>-1000</offset>
+  <step>1000</step>
+  <scroll>0.01</scroll>
+  <center>
+   <x-m>0</x-m>
+   <y-m>0</y-m>
+   <z-m>0</z-m>
+  </center>
+  <axis>
+   <x>0</x>
+   <y>-1</y>
+   <z>0</z>
+  </axis>
+ </animation>
+
+
+<!-- ext-ctr-left drum counter -->
+
+
+	<animation>
+		<type>select</type>
+		<object-name>drum-1-left.004</object-name>
+                <object-name>drum-2-left.004</object-name>
+                <object-name>drum-3-left.004</object-name>
+                <object-name>drum-4-left.004</object-name>
+		<condition>
+			<equals>
+				<property>instrumentation/fuelgauge/selector</property>
+				<value>4</value>
+			</equals>
+		</condition>
+	</animation>
+
+ <animation>
+  <type>textranslate</type>
+  <object-name>drum-1-left.004</object-name>
+  <property>consumables/fuel/tank[5]/level-lbs</property>
+  <factor>0.1</factor>
+  <offset>-1</offset>
+  <scroll>0.01</scroll>
+  <center>
+   <x-m>0</x-m>
+   <y-m>0</y-m>
+   <z-m>0</z-m>
+  </center>
+  <axis>
+   <x>0</x>
+   <y>-1</y>
+   <z>0</z>
+  </axis>
+ </animation>
+
+
+ <animation>
+  <type>textranslate</type>
+  <object-name>drum-2-left.004</object-name>
+  <property>consumables/fuel/tank[5]/level-lbs</property>
+  <factor>0.01</factor>
+  <offset>-10</offset>
+  <step>10</step>
+  <scroll>0.01</scroll>
+  <center>
+   <x-m>0</x-m>
+   <y-m>0</y-m>
+   <z-m>0</z-m>
+  </center>
+  <axis>
+   <x>0</x>
+   <y>-1</y>
+   <z>0</z>
+  </axis>
+ </animation>
+
+
+ <animation>
+  <type>textranslate</type>
+  <object-name>drum-3-left.004</object-name>
+  <property>consumables/fuel/tank[5]/level-lbs</property>
+  <factor>0.001</factor>
+  <offset>-100</offset>
+  <step>100</step>
+  <scroll>0.01</scroll>
+  <center>
+   <x-m>0</x-m>
+   <y-m>0</y-m>
+   <z-m>0</z-m>
+  </center>
+  <axis>
+   <x>0</x>
+   <y>-1</y>
+   <z>0</z>
+  </axis>
+ </animation>
+
+ <animation>
+  <type>textranslate</type>
+  <object-name>drum-4-left.004</object-name>
+  <property>consumables/fuel/tank[5]/level-lbs</property>
+  <factor>0.0001</factor>
+  <offset>-1000</offset>
+  <step>1000</step>
+  <scroll>0.01</scroll>
+  <center>
+   <x-m>0</x-m>
+   <y-m>0</y-m>
+   <z-m>0</z-m>
+  </center>
+  <axis>
+   <x>0</x>
+   <y>-1</y>
+   <z>0</z>
+  </axis>
+ </animation>
+
+
+
+
+
+<!-- lighting -->
+
+  <animation> 
+   <object-name>mount</object-name>
+   <object-name>both</object-name>
+    <object-name>bingo-knob</object-name>
+   <type>material</type>
+    <emission> 
+      <factor-prop>systems/electrical/outputs/instrument-lights-norm</factor-prop>
+        <red>0.5</red>
+        <green>0.2</green>
+        <blue>0.2</blue>
+      </emission>
+  </animation>
+
+  <animation> 
+   <object-name>face</object-name>
+   <object-name>drum-0</object-name>
+   <object-name>drum-1</object-name>
+   <object-name>drum-2</object-name>
+   <object-name>drum-3</object-name>
+   <object-name>drum-4</object-name>
+   <object-name>drum-1-right</object-name>
+   <object-name>drum-2-right</object-name>
+   <object-name>drum-3-right</object-name>
+   <object-name>drum-4-right</object-name>
+   <object-name>drum-1-left</object-name>
+   <object-name>drum-2-left</object-name>
+   <object-name>drum-3-left</object-name>
+   <object-name>drum-4-left</object-name>
+   <object-name>drum-1-right.001</object-name>
+   <object-name>drum-2-right.001</object-name>
+   <object-name>drum-3-right.001</object-name>
+   <object-name>drum-4-right.001</object-name>
+   <object-name>drum-1-left.001</object-name>
+   <object-name>drum-2-left.001</object-name>
+   <object-name>drum-3-left.001</object-name>
+   <object-name>drum-4-left.001</object-name>
+   <object-name>drum-1-right.002</object-name>
+   <object-name>drum-2-right.002</object-name>
+   <object-name>drum-3-right.002</object-name>
+   <object-name>drum-4-right.002</object-name>
+   <object-name>drum-1-left.002</object-name>
+   <object-name>drum-2-left.002</object-name>
+   <object-name>drum-3-left.002</object-name>
+   <object-name>drum-4-left.002</object-name>
+   <object-name>drum-1-right.003</object-name>
+   <object-name>drum-2-right.003</object-name>
+   <object-name>drum-3-right.003</object-name>
+   <object-name>drum-4-right.003</object-name>
+   <object-name>drum-1-left.003</object-name>
+   <object-name>drum-2-left.003</object-name>
+   <object-name>drum-3-left.003</object-name>
+   <object-name>drum-4-left.003</object-name>
+   <object-name>drum-1-right.004</object-name>
+   <object-name>drum-2-right.004</object-name>
+   <object-name>drum-3-right.004</object-name>
+   <object-name>drum-4-right.004</object-name>
+   <object-name>drum-1-left.004</object-name>
+   <object-name>drum-2-left.004</object-name>
+   <object-name>drum-3-left.004</object-name>
+   <object-name>drum-4-left.004</object-name>
+   <object-name>bingo</object-name>
+   <object-name>10</object-name>
+   <object-name>20</object-name>
+   <object-name>30</object-name>
+   <object-name>40</object-name>
+   <object-name>50</object-name>
+   <object-name>60</object-name>
+   <object-name>70</object-name>
+   <object-name>80</object-name>
+   <object-name>90</object-name>
+   <object-name>100</object-name>
+   <object-name>110</object-name>
+   <object-name>120</object-name>
+   <object-name>130</object-name>
+   <object-name>140</object-name>
+   <object-name>150</object-name>
+   <type>material</type>
+    <emission> 
+      <factor-prop>systems/electrical/outputs/instrument-lights-norm</factor-prop>
+        <red>0.5</red>
+        <green>0.5</green>
+        <blue>0.0</blue>
+      </emission>
+  </animation>
+
+<!-- SELECTOR KNOB -->
+
+    <animation>
+      <type>pick</type>
+      <visible>true</visible>
+      <object-name>both</object-name>
+      <action>
+        <button>1</button>
+        <repeatable>false</repeatable>
+      <binding>
+         <command>property-toggle</command>
+         <property>sim/sound/click</property>
+      </binding>
+      <binding>
+        <command>property-adjust</command>
+        <property>instrumentation/fuelgauge/selector</property>
+         <step>-1</step>
+         <min>0</min>
+         <max>4</max>
+         <wrap>false</wrap>
+      </binding>
+    </action>
+  </animation>
+
+
+    <animation>
+      <type>pick</type>
+      <visible>true</visible>
+      <object-name>both</object-name>
+      <action>
+        <button>0</button>
+        <repeatable>false</repeatable>
+      <binding>
+         <command>property-toggle</command>
+         <property>sim/sound/click</property>
+      </binding>
+      <binding>
+        <command>property-adjust</command>
+        <property>instrumentation/fuelgauge/selector</property>
+         <step>1</step>
+         <min>0</min>
+         <max>4</max>
+         <wrap>false</wrap>
+      </binding>
+    </action>
+  </animation>
+
+
+    <animation>
+      <type>pick</type>
+      <visible>true</visible>
+      <object-name>both</object-name>
+      <action>
+        <button>4</button>
+        <repeatable>false</repeatable>
+      <binding>
+         <command>property-toggle</command>
+         <property>sim/sound/click</property>
+      </binding>
+      <binding>
+        <command>property-adjust</command>
+        <property>instrumentation/fuelgauge/selector</property>
+         <step>-1</step>
+         <min>0</min>
+         <max>4</max>
+         <wrap>false</wrap>
+      </binding>
+    </action>
+  </animation>
+
+ 
+    <animation>
+      <type>pick</type>
+      <visible>true</visible>
+      <object-name>both</object-name>
+      <action>
+        <button>3</button>
+        <repeatable>false</repeatable>
+      <binding>
+         <command>property-toggle</command>
+         <property>sim/sound/click</property>
+      </binding>
+      <binding>
+        <command>property-adjust</command>
+        <property>instrumentation/fuelgauge/selector</property>
+         <step>1</step>
+         <min>0</min>
+         <max>4</max>
+         <wrap>false</wrap>
+      </binding>
+    </action>
+  </animation>
+
+<animation>
+  <type>rotate</type>
+  <object-name>both</object-name>
+  <property>instrumentation/fuelgauge/selector</property>
+  <factor>45</factor>
+  <center>
+   <x-m>0.01</x-m>
+   <y-m>0.000</y-m>
+   <z-m>-0.064</z-m>
+  </center>
+  <axis>
+   <x>-1</x>
+   <y>0</y>
+   <z>0</z>
+  </axis>
+ </animation>
+
+
+<!-- LOD -->
+
+ <animation>
+  <type>range</type>
+  <min-m>0</min-m>
+  <max-m>10</max-m>
+ </animation>
+
+</PropertyList>

@@ -1,0 +1,63 @@
+<?xml version="1.0"?>
+
+<PropertyList>
+
+    <path>low-alt.ac</path>
+    
+ 
+  <animation>
+ <object-name>base</object-name>
+   <type>material</type>
+     <emission> 
+      <factor-prop>systems/electrical/outputs/instrument-lights-norm</factor-prop>
+        <red>0.5</red>
+        <green>0.2</green>
+        <blue>0.2</blue>
+      </emission>
+  </animation>
+
+
+ <animation>
+<type>material</type>
+ <object-name>lens.001</object-name>
+     <emission> 
+        <red>1</red>
+        <green>1</green>
+        <blue>1</blue>
+      </emission>
+ </animation>
+
+  <animation>
+    <type>select</type>
+    <object-name>lens.001</object-name>
+    <condition>
+    <and>
+      <and>
+        <equals>
+           <property>/gear/gear[0]/position-norm</property>
+           <value>0</value>
+        </equals>
+        <equals>
+          <property>/surface-positions/flap-pos-norm</property>
+          <value>0</value>
+        </equals>
+     </and>
+     <and>
+       <less-than>
+         <property>/position/gear-agl-ft</property>
+         <property>instrumentation/altimeter/setting-low-alert</property>
+       </less-than>
+       <not>
+         <property>gear/gear[0]/wow</property>
+         <property>gear/gear[1]/wow</property>
+         <property>gear/gear[2]/wow</property>
+       </not>
+     </and>
+   </and>
+    </condition>
+  </animation>
+
+
+</PropertyList>
+
+

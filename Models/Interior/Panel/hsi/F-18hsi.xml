@@ -1,0 +1,1102 @@
+<?xml version="1.0"?>
+
+<PropertyList>
+
+  <path>F-18hsi.ac</path>
+HSI-base
+  <animation>
+    <type>select</type>
+    <object-name>HSI-base</object-name>
+    <object-name>lubber-line</object-name>
+    <object-name>bearing-needle-1</object-name>
+    <object-name>bearing-needle-2</object-name>
+    <object-name>heading-marker</object-name>
+    <object-name>HSI-course-card</object-name>
+    <object-name>HSI-course-card1</object-name>
+    <object-name>course-deviation-indi</object-name>
+    <object-name>miles-flag</object-name>
+    <object-name>miles-drum-1</object-name>
+    <object-name>miles-drum-2</object-name>
+    <object-name>miles-drum-3</object-name>
+    <object-name>course-drum-1</object-name>
+    <object-name>course-drum-2</object-name>
+    <object-name>course-drum-3</object-name>
+    <object-name>heading-drum-1</object-name>
+    <object-name>heading-drum-2</object-name>
+    <object-name>heading-drum-3</object-name>
+    <object-name>tacan-drum-1</object-name>
+    <object-name>tacan-drum-2</object-name>
+    <object-name>tacan-drum-3</object-name>
+    <object-name>compass</object-name>
+    <object-name>com-N</object-name>
+    <object-name>com-3</object-name>
+    <object-name>com-6</object-name>
+    <object-name>com-E</object-name>
+    <object-name>com-12</object-name>
+    <object-name>com-15</object-name>
+    <object-name>com-S</object-name>
+    <object-name>com-21</object-name>
+    <object-name>com-24</object-name>
+    <object-name>com-W</object-name>
+    <object-name>com-30</object-name>
+    <object-name>com-33</object-name>
+    <object-name>off-flag</object-name>
+    <object-name>llz-flag</object-name>
+    <object-name>miles-flag</object-name>
+    <object-name>ILS</object-name>
+    <object-name>TAC</object-name>
+    <object-name>NAV</object-name>
+    <object-name>TS-drum-1</object-name>
+    <object-name>TS-drum-2</object-name>
+    <object-name>TS-drum-3</object-name>
+    <object-name>GS-drum-1</object-name>
+    <object-name>GS-drum-2</object-name>
+    <object-name>GS-drum-3</object-name>
+    <condition>
+         <and>
+         <or>
+            <property>controls/electric/engine/generator</property>
+            <property>controls/electric/engine[1]/generator</property>
+         </or>
+         <greater-than>
+            <property>systems/electrical/volts</property>
+            <value>16</value>
+         </greater-than>
+         </and>
+     </condition>
+  </animation> 
+
+  <animation>
+    <type>rotate</type>
+    <object-name>compass</object-name>
+    <object-name>bearing-needle-1</object-name>
+    <object-name>bearing-needle-2</object-name>
+    <object-name>course-deviation-indi</object-name>
+    <object-name>to-from-to</object-name>
+    <object-name>to-from-from</object-name>
+    <object-name>heading-marker</object-name>
+    <object-name>llz-flag</object-name>
+    <object-name>com-N</object-name>
+    <object-name>com-3</object-name>
+    <object-name>com-6</object-name>
+    <object-name>com-E</object-name>
+    <object-name>com-12</object-name>
+    <object-name>com-15</object-name>
+    <object-name>com-S</object-name>
+    <object-name>com-21</object-name>
+    <object-name>com-24</object-name>
+    <object-name>com-W</object-name>
+    <object-name>com-30</object-name>
+    <object-name>com-33</object-name>
+    <property>orientation/heading-deg</property>
+    <center>
+      <x-m>0.0</x-m>
+      <y-m>0.0</y-m>
+      <z-m>0.0</z-m>
+    </center>
+    <axis>
+      <x>1</x>
+      <y>0</y>
+      <z>0</z>
+    </axis>
+  </animation> 
+
+  <animation>
+    <type>rotate</type>
+    <object-name>com-N</object-name>
+    <property>orientation/heading-deg</property>
+    <center>
+      <x-m>0.003</x-m>
+      <y-m>0.000</y-m>
+      <z-m>0.069</z-m>
+    </center>
+    <axis>
+      <x>-1</x>
+      <y>0</y>
+      <z>0</z>
+    </axis>
+  </animation> 
+
+  <animation>
+    <type>rotate</type>
+    <object-name>com-3</object-name>
+    <property>orientation/heading-deg</property>
+    <center>
+      <x-m>0.003</x-m>
+      <y-m>0.035</y-m>
+      <z-m>0.060</z-m>
+    </center>
+    <axis>
+      <x>-1</x>
+      <y>0</y>
+      <z>0</z>
+    </axis>
+  </animation> 
+
+  <animation>
+    <type>rotate</type>
+    <object-name>com-6</object-name>
+    <property>orientation/heading-deg</property>
+    <center>
+      <x-m>0.003</x-m>
+      <y-m>0.059</y-m>
+      <z-m>0.034</z-m>
+    </center>
+    <axis>
+      <x>-1</x>
+      <y>0</y>
+      <z>0</z>
+    </axis>
+  </animation> 
+
+  <animation>
+    <type>rotate</type>
+    <object-name>com-E</object-name>
+    <property>orientation/heading-deg</property>
+    <center>
+      <x-m>0.003</x-m>
+      <y-m>0.069</y-m>
+      <z-m>0.001</z-m>
+    </center>
+    <axis>
+      <x>-1</x>
+      <y>0</y>
+      <z>0</z>
+    </axis>
+  </animation> 
+
+  <animation>
+    <type>rotate</type>
+    <object-name>com-12</object-name>
+    <property>orientation/heading-deg</property>
+    <center>
+      <x-m>0.003</x-m>
+      <y-m>0.060</y-m>
+      <z-m>-0.034</z-m>
+    </center>
+    <axis>
+      <x>-1</x>
+      <y>0</y>
+      <z>0</z>
+    </axis>
+  </animation> 
+
+  <animation>
+    <type>rotate</type>
+    <object-name>com-15</object-name>
+    <property>orientation/heading-deg</property>
+    <center>
+      <x-m>0.003</x-m>
+      <y-m>0.034</y-m>
+      <z-m>-0.060</z-m>
+    </center>
+    <axis>
+      <x>-1</x>
+      <y>0</y>
+      <z>0</z>
+    </axis>
+  </animation> 
+
+  <animation>
+    <type>rotate</type>
+    <object-name>com-S</object-name>
+    <property>orientation/heading-deg</property>
+    <center>
+      <x-m>0.003</x-m>
+      <y-m>0.000</y-m>
+      <z-m>-0.069</z-m>
+    </center>
+    <axis>
+      <x>-1</x>
+      <y>0</y>
+      <z>0</z>
+    </axis>
+  </animation> 
+
+  <animation>
+    <type>rotate</type>
+    <object-name>com-21</object-name>
+    <property>orientation/heading-deg</property>
+    <center>
+      <x-m>0.003</x-m>
+      <y-m>-0.034</y-m>
+      <z-m>-0.060</z-m>
+    </center>
+    <axis>
+      <x>-1</x>
+      <y>0</y>
+      <z>0</z>
+    </axis>
+  </animation> 
+
+  <animation>
+    <type>rotate</type>
+    <object-name>com-24</object-name>
+    <property>orientation/heading-deg</property>
+    <center>
+      <x-m>0.003</x-m>
+      <y-m>-0.059</y-m>
+      <z-m>-0.036</z-m>
+    </center>
+    <axis>
+      <x>-1</x>
+      <y>0</y>
+      <z>0</z>
+    </axis>
+  </animation> 
+
+  <animation>
+    <type>rotate</type>
+    <object-name>com-W</object-name>
+    <property>orientation/heading-deg</property>
+    <center>
+      <x-m>0.003</x-m>
+      <y-m>-0.069</y-m>
+      <z-m>0.000</z-m>
+    </center>
+    <axis>
+      <x>-1</x>
+      <y>0</y>
+      <z>0</z>
+    </axis>
+  </animation> 
+
+  <animation>
+    <type>rotate</type>
+    <object-name>com-30</object-name>
+    <property>orientation/heading-deg</property>
+    <center>
+      <x-m>0.003</x-m>
+      <y-m>-0.059</y-m>
+      <z-m>0.035</z-m>
+    </center>
+    <axis>
+      <x>-1</x>
+      <y>0</y>
+      <z>0</z>
+    </axis>
+  </animation> 
+
+  <animation>
+    <type>rotate</type>
+    <object-name>com-33</object-name>
+    <property>orientation/heading-deg</property>
+    <center>
+      <x-m>0.003</x-m>
+      <y-m>-0.033</y-m>
+      <z-m>0.060</z-m>
+    </center>
+    <axis>
+      <x>-1</x>
+      <y>0</y>
+      <z>0</z>
+    </axis>
+  </animation> 
+
+<!--BEARING NEEDLE 2      HDG bug-->
+  <animation>
+    <type>rotate</type>
+    <object-name>bearing-needle-2</object-name>
+    <condition>
+      <greater-than>
+        <property>systems/electrical/outputs/hsi</property>
+        <value>24</value>
+      </greater-than>
+    </condition>
+   
+   <property>instrumentation/nav/heading-deg</property >
+    <center>
+      <x-m>0.0</x-m>
+      <y-m>0.0</y-m>
+      <z-m>0.0</z-m>
+    </center>
+    <axis>
+      <x>-1</x>
+      <y>0</y>
+      <z>0</z>
+    </axis>
+  </animation>
+
+<!--BEARING NEEDLE 1      HDG bug-->
+  <animation>
+    <type>rotate</type>
+    <object-name>bearing-needle-1</object-name>
+    <condition>
+      <greater-than>
+        <property>systems/electrical/outputs/hsi</property>
+        <value>24</value>
+      </greater-than>
+    </condition>
+   
+   <property>instrumentation/tacan/indicated-bearing-true-deg</property >
+    <center>
+      <x-m>0.0</x-m>
+      <y-m>0.0</y-m>
+      <z-m>0.0</z-m>
+    </center>
+    <axis>
+      <x>-1</x>
+      <y>0</y>
+      <z>0</z>
+    </axis>
+  </animation>
+
+<!-- heading digital display -->
+  <animation>
+    <type>textranslate</type>
+    <object-name>heading-drum-1</object-name> 
+    <property>autopilot/settings/heading-bug-deg</property>
+    
+    <factor>0.1</factor>
+    <offset>0</offset>
+    <center>
+      <x-m>0</x-m>
+      <y-m>0</y-m>
+      <z-m>0</z-m>
+    </center>
+    <axis>
+      <x>0</x>
+      <y>-1</y>
+      <z>0</z>
+    </axis>
+  </animation>
+
+
+  <animation>
+    <type>textranslate</type>
+    <object-name>heading-drum-2</object-name>
+    <property>autopilot/settings/heading-bug-deg</property>  
+    <factor>0.01</factor>
+    <offset>0</offset>
+    <step>10</step>
+    <scroll>0.1</scroll>
+    <center>
+      <x-m>0</x-m>
+      <y-m>0</y-m>
+      <z-m>0</z-m>
+    </center>
+    <axis>
+      <x>0</x>
+      <y>-1</y>
+      <z>0</z>
+    </axis>
+  </animation>
+
+
+  <animation>
+    <type>textranslate</type>
+    <object-name>heading-drum-3</object-name>
+       <property>autopilot/settings/heading-bug-deg</property>
+     <factor>0.001</factor>
+    <offset>0</offset>
+    <step>100</step>
+    <scroll>0.1</scroll>
+    <center>
+      <x-m>0</x-m>
+      <y-m>0</y-m>
+      <z-m>0</z-m>
+    </center>
+    <axis>
+      <x>0</x>
+      <y>-1</y>
+      <z>0</z>
+    </axis>
+  </animation>
+
+
+
+
+<!--HEADING MARKER -->
+  <animation>
+    <type>rotate</type>
+    <object-name>heading-marker</object-name>
+    <condition>
+      <greater-than>
+        <property>systems/electrical/outputs/hsi</property>
+        <value>24</value>
+      </greater-than>
+    </condition>
+   
+   <property>autopilot/settings/heading-bug-deg</property >
+    <center>
+      <x-m>0.0</x-m>
+      <y-m>0.0</y-m>
+      <z-m>0.0</z-m>
+    </center>
+    <axis>
+      <x>-1</x>
+      <y>0</y>
+      <z>0</z>
+    </axis>
+  </animation>
+  
+  <!--COURSE-->
+    <animation>
+    <type>rotate</type>
+   <object-name>course-needle</object-name>
+   <object-name>HSI-course-card</object-name>
+   <object-name>HSI-course-card1</object-name>
+    <object-name>course-deviation-indi</object-name>
+    <object-name>to-from-to</object-name>
+    <object-name>to-from-from</object-name>
+    <object-name>llz-flag</object-name>
+    <condition>
+      <greater-than>
+        <property>systems/electrical/outputs/hsi</property>
+        <value>24</value>
+      </greater-than>
+    </condition>
+   
+   <property>instrumentation/nav/radials/selected-deg</property >
+    <center>
+      <x-m>0.0</x-m>
+      <y-m>0.0</y-m>
+      <z-m>0.0</z-m>
+    </center>
+    <axis>
+      <x>-1</x>
+      <y>0</y>
+      <z>0</z>
+    </axis>
+  </animation>
+  
+  <animation>
+    <type>translate</type>
+     <object-name>course-deviation-indi</object-name>
+     <property>instrumentation/nav/heading-needle-deflection</property>
+        <interpolation>
+            <entry><ind>-10.0</ind><dep>-0.0172</dep></entry>
+            <entry><ind>0.0</ind><dep>0.0</dep></entry>
+            <entry><ind>10.0</ind><dep>0.0172</dep></entry>
+        </interpolation>
+        <axis>
+            <x>0</x>
+            <y>1.0</y>
+            <z>0.0</z>
+        </axis>
+        <center>
+            <x-m>0.0</x-m>
+            <y-m>0.0</y-m>
+            <z-m>0.0</z-m>
+        </center>
+  </animation>
+  
+  <animation>
+        <type>select</type>
+        <object-name>to-from-to</object-name>
+        <condition>
+            <property>instrumentation/nav/to-flag</property>
+        </condition>
+    </animation>
+    
+    <animation>
+        <type>select</type>
+        <object-name>to-from-from</object-name>
+        <condition>
+            <property>instrumentation/nav/from-flag</property>
+        </condition>
+    </animation>
+
+
+<!--Dme miles Flag-->
+  <animation>
+    <type>select</type>
+    <object-name>miles-flag</object-name>
+    <condition>
+       <and>
+        <not>
+        <property>instrumentation/tacan/in-range</property>
+        </not>
+        <not>        
+          <property>instrumentation/nav/in-range</property>
+        </not>
+        <not>        
+          <property>instrumentation/gs/in-range</property>
+        </not>
+       </and>        
+    </condition>
+  </animation>
+  
+
+<!--NAV Flag-->
+  <animation>
+    <type>select</type>
+    <object-name>NAV</object-name>
+    <condition>
+       <equals>
+        <property>instrumentation/steer-mode</property>
+        <value>3</value>
+       </equals>
+    </condition>
+  </animation>
+
+<!--TCN Flag-->
+  <animation>
+    <type>select</type>
+    <object-name>TAC</object-name>
+    <condition>
+       <equals>
+        <property>instrumentation/steer-mode</property>
+        <value>2</value>
+       </equals>
+    </condition>
+  </animation>
+
+
+
+<!--llz Flag-->
+  <animation>
+    <type>select</type>
+    <object-name>ILS</object-name>
+    <condition>
+       <less-than>
+        <property>instrumentation/steer-mode</property>
+        <value>1.1</value>
+       </less-than>
+    </condition>
+  </animation>
+
+
+
+<!-- dme distance digital display -->
+  <animation>
+    <type>textranslate</type>
+    <object-name>miles-drum-1</object-name>
+    <property>instrumentation/dme/indicated-distance-nm</property>
+    <factor>0.1</factor>
+    <offset>0</offset>
+    <center>
+      <x-m>0</x-m>
+      <y-m>0</y-m>
+      <z-m>0</z-m>
+    </center>
+    <axis>
+      <x>0</x>
+      <y>-1</y>
+      <z>0</z>
+    </axis>
+  </animation>
+
+
+  <animation>
+    <type>textranslate</type>
+    <object-name>miles-drum-2</object-name>
+    <property>instrumentation/dme/indicated-distance-nm</property>
+    <factor>0.01</factor>
+    <offset>0</offset>
+    <step>10</step>
+    <scroll>0.5</scroll>
+    <center>
+      <x-m>0</x-m>
+      <y-m>0</y-m>
+      <z-m>0</z-m>
+    </center>
+    <axis>
+      <x>0</x>
+      <y>-1</y>
+      <z>0</z>
+    </axis>
+  </animation>
+
+
+  <animation>
+    <type>textranslate</type>
+    <object-name>miles-drum-3</object-name>
+    <property>instrumentation/dme/indicated-distance-nm</property>
+    <factor>0.001</factor>
+    <offset>0</offset>
+    <step>100</step>
+    <scroll>0.5</scroll>
+    <center>
+      <x-m>0</x-m>
+      <y-m>0</y-m>
+      <z-m>0</z-m>
+    </center>
+    <axis>
+      <x>0</x>
+      <y>-1</y>
+      <z>0</z>
+    </axis>
+  </animation>
+
+<!-- course digital display -->
+  <animation>
+    <type>textranslate</type>
+    <object-name>course-drum-1</object-name>
+ 
+    <property>instrumentation/nav/radials/selected-deg</property>
+    
+    <factor>0.1</factor>
+    <offset>0</offset>
+    <center>
+      <x-m>0</x-m>
+      <y-m>0</y-m>
+      <z-m>0</z-m>
+    </center>
+    <axis>
+      <x>0</x>
+      <y>-1</y>
+      <z>0</z>
+    </axis>
+  </animation>
+
+
+  <animation>
+    <type>textranslate</type>
+    <object-name>course-drum-2</object-name>
+    <property>instrumentation/nav/radials/selected-deg</property>  
+    <factor>0.01</factor>
+    <offset>0</offset>
+    <step>10</step>
+    <scroll>0.1</scroll>
+    <center>
+      <x-m>0</x-m>
+      <y-m>0</y-m>
+      <z-m>0</z-m>
+    </center>
+    <axis>
+      <x>0</x>
+      <y>-1</y>
+      <z>0</z>
+    </axis>
+  </animation>
+
+
+  <animation>
+    <type>textranslate</type>
+    <object-name>course-drum-3</object-name>
+       <property>instrumentation/nav/radials/selected-deg</property>
+     <factor>0.001</factor>
+    <offset>0</offset>
+    <step>100</step>
+    <scroll>0.1</scroll>
+    <center>
+      <x-m>0</x-m>
+      <y-m>0</y-m>
+      <z-m>0</z-m>
+    </center>
+    <axis>
+      <x>0</x>
+      <y>-1</y>
+      <z>0</z>
+    </axis>
+  </animation>
+  
+
+<!--		COURSE KNOB          -->
+
+<!--	CW	-->
+<animation>
+	<type>pick</type>
+		<object-name>course.cw</object-name>
+			<action>
+				<button>0</button>
+				<repeatable>true</repeatable>
+				<interval-sec>0.2</interval-sec>
+				<binding>
+					<command>property-adjust</command>
+					<property>instrumentation/nav/radials/selected-deg</property>
+					<step>1</step>
+					<min>0</min>
+					<max>360</max>
+					<wrap>true</wrap>
+				</binding>
+			</action>
+</animation>
+
+<animation>
+	<type>pick</type>
+	<object-name>course.cw</object-name>
+	<action>
+		<button>1</button>
+		<repeatable>true</repeatable>
+		<interval-sec>0.2</interval-sec>
+			<binding>
+			<command>property-adjust</command>
+			<property>instrumentation/nav/radials/selected-deg</property>
+			<step>10</step>
+			<min>0</min>
+			<max>360</max>
+			<wrap>true</wrap>
+		</binding>
+	</action>
+</animation>
+
+<!--	CCW	-->
+
+<animation>
+
+	<type>pick</type>
+	<object-name>course.ccw</object-name>
+	<action>
+		<button>0</button>
+		<repeatable>true</repeatable>
+		<interval-sec>0.2</interval-sec>
+		<binding>
+			<command>property-adjust</command>
+			<property>instrumentation/nav/radials/selected-deg</property>
+			<step>-1</step>
+			<min>0</min>
+			<max>360</max>
+			<wrap>true</wrap>
+		</binding>
+	</action>
+</animation>
+
+<animation>
+	<type>pick</type>
+	<object-name>course.ccw</object-name>
+	<action>
+		<button>1</button>
+		<repeatable>true</repeatable>
+		<interval-sec>0.2</interval-sec>
+			<binding>
+			<command>property-adjust</command>
+			<property>instrumentation/nav/radials/selected-deg</property>
+			<step>-10</step>
+			<min>0</min>
+			<max>360</max>
+			<wrap>true</wrap>
+		</binding>
+	</action>
+</animation>
+
+<animation>
+  <type>rotate</type>
+  <object-name>course-knob</object-name>
+  <property>instrumentation/nav/radials/selected-deg</property>
+  <center>
+    <x-m>0.009</x-m>
+    <y-m>0.047</y-m>
+    <z-m>-0.055</z-m>
+  </center>
+  <axis>
+    <x>-1</x>
+    <y>0</y>
+    <z>0</z>
+  </axis>
+</animation>
+
+
+<!-- HEADING SET KNOB -->
+
+<!--	CW	-->
+<animation>
+	<type>pick</type>
+		<object-name>hdg.cw</object-name>
+			<action>
+				<button>0</button>
+		
+				<repeatable>true</repeatable>
+				<interval-sec>0.2</interval-sec>
+				<binding>
+					<command>property-adjust</command>					
+					<property>autopilot/settings/heading-bug-deg</property >
+					<step>1</step>
+					<min>0</min>
+					<max>360</max>
+					<wrap>true</wrap>
+				</binding>
+			</action>
+</animation>
+
+<animation>
+	<type>pick</type>
+	<object-name>hdg.cw</object-name>
+	<action>
+		<button>1</button>
+		<repeatable>true</repeatable>
+		<interval-sec>0.2</interval-sec>
+
+		<binding>
+			<command>property-adjust</command>
+			
+			<property>autopilot/settings/heading-bug-deg</property >
+			<step>10</step>
+			<min>0</min>
+
+			<max>360</max>
+			<wrap>true</wrap>
+		</binding>
+	</action>
+</animation>
+
+<!--	CCW	-->
+
+<animation>
+
+	<type>pick</type>
+	<object-name>hdg.ccw</object-name>
+	<action>
+		<button>0</button>
+		<repeatable>true</repeatable>
+		<interval-sec>0.2</interval-sec>
+		<binding>
+			<command>property-adjust</command>
+			
+			<property>autopilot/settings/heading-bug-deg</property >
+
+			<step>-1</step>
+			<min>0</min>
+			<max>360</max>
+			<wrap>true</wrap>
+		</binding>
+	</action>
+</animation>
+
+<animation>
+	<type>pick</type>
+	<object-name>hdg.ccw</object-name>
+	<action>
+		<button>1</button>
+		<repeatable>true</repeatable>
+		<interval-sec>0.2</interval-sec>
+			<binding>
+			<command>property-adjust</command>
+			
+			<property>autopilot/settings/heading-bug-deg</property >
+
+			<step>-10</step>
+			<min>0</min>
+			<max>360</max>
+			<wrap>true</wrap>
+		</binding>
+	</action>
+</animation>
+
+
+ <animation>
+  <type>rotate</type>
+  <object-name>heading-set-knob</object-name>
+   <property>autopilot/settings/heading-bug-deg</property >
+  <center>
+    <x-m>0.009</x-m>
+    <y-m>-0.046</y-m>
+    <z-m>-0.055</z-m>
+  </center>
+  <axis>
+    <x>-1</x>
+    <y>0</y>
+    <z>0</z>
+  </axis>
+ </animation>
+
+
+
+<!-- TS digital display -->
+  <animation>
+    <type>textranslate</type>
+    <object-name>TS-drum-1</object-name>
+ 
+  <property>instrumentation/airspeed-indicator/true-speed-kt</property>
+    
+    <factor>0.1</factor>
+    <offset>0</offset>
+    <center>
+      <x-m>0</x-m>
+      <y-m>0</y-m>
+      <z-m>0</z-m>
+    </center>
+    <axis>
+      <x>0</x>
+      <y>-1</y>
+      <z>0</z>
+    </axis>
+  </animation>
+
+
+  <animation>
+    <type>textranslate</type>
+    <object-name>TS-drum-2</object-name>
+  <property>instrumentation/airspeed-indicator/true-speed-kt</property>
+  <factor> 0.01 </factor>
+  <offset> 0 </offset>
+  <step> 10 </step>
+  <scroll> 1 </scroll>
+    <center>
+      <x-m>0</x-m>
+      <y-m>0</y-m>
+      <z-m>0</z-m>
+    </center>
+    <axis>
+      <x>0</x>
+      <y>-1</y>
+      <z>0</z>
+    </axis>
+  </animation>
+
+
+  <animation>
+    <type>textranslate</type>
+    <object-name>TS-drum-3</object-name>
+  <property>instrumentation/airspeed-indicator/true-speed-kt</property>
+  <factor>0.001</factor>
+  <offset>0</offset>
+  <step>100</step>
+  <scroll>1</scroll>
+    <center>
+      <x-m>0</x-m>
+      <y-m>0</y-m>
+      <z-m>0</z-m>
+    </center>
+    <axis>
+      <x>0</x>
+      <y>-1</y>
+      <z>0</z>
+    </axis>
+  </animation>
+
+
+<!-- GS digital display -->
+  <animation>
+    <type>textranslate</type>
+    <object-name>GS-drum-1</object-name>
+  <property>velocities/groundspeed-kt</property>
+    
+    <factor>0.1</factor>
+    <offset>0</offset>
+    <center>
+      <x-m>0</x-m>
+      <y-m>0</y-m>
+      <z-m>0</z-m>
+    </center>
+    <axis>
+      <x>0</x>
+      <y>-1</y>
+      <z>0</z>
+    </axis>
+  </animation>
+
+
+  <animation>
+    <type>textranslate</type>
+    <object-name>GS-drum-2</object-name>
+  <property>velocities/groundspeed-kt</property>
+  <factor> 0.01 </factor>
+  <offset> 0  </offset>
+  <step>  10 </step>
+  <scroll> 1  </scroll>
+    <center>
+      <x-m>0</x-m>
+      <y-m>0</y-m>
+      <z-m>0</z-m>
+    </center>
+    <axis>
+      <x>0</x>
+      <y>-1</y>
+      <z>0</z>
+    </axis>
+  </animation>
+
+
+  <animation>
+    <type>textranslate</type>
+    <object-name>GS-drum-3</object-name>
+  <property>velocities/groundspeed-kt</property>
+  <factor> 0.001</factor>
+  <offset> 0</offset>
+  <step> 100</step>
+  <scroll> 1</scroll>
+    <center>
+      <x-m>0</x-m>
+      <y-m>0</y-m>
+      <z-m>0</z-m>
+    </center>
+    <axis>
+      <x>0</x>
+      <y>-1</y>
+      <z>0</z>
+    </axis>
+  </animation>
+
+
+
+<!-- lighting -->
+
+  <animation>
+   <object-name>heading-set-knob</object-name>
+   <object-name>course-knob</object-name>
+   <type>material</type>
+     <emission> 
+      <factor-prop>systems/electrical/outputs/instrument-lights-norm</factor-prop>
+        <red>0.5</red>
+        <green>0.2</green>
+        <blue>0.2</blue>
+      </emission>
+  </animation> 
+
+  <animation>
+    <type>material</type>
+    <object-name>HSI-base</object-name>
+    <object-name>lubber-line</object-name>
+    <object-name>bearing-needle-1</object-name>
+    <object-name>bearing-needle-2</object-name>
+    <object-name>heading-marker</object-name>
+    <object-name>HSI-course-card</object-name>
+    <object-name>HSI-course-card1</object-name>
+    <object-name>course-deviation-indi</object-name>
+     <object-name>miles-flag</object-name>
+     <object-name>miles-drum-1</object-name>
+     <object-name>miles-drum-2</object-name>
+     <object-name>miles-drum-3</object-name>
+     <object-name>course-drum-1</object-name>
+     <object-name>course-drum-2</object-name>
+     <object-name>course-drum-3</object-name>
+    <object-name>heading-drum-1</object-name>
+    <object-name>heading-drum-2</object-name>
+    <object-name>heading-drum-3</object-name>
+    <object-name>tacan-drum-1</object-name>
+    <object-name>tacan-drum-2</object-name>
+    <object-name>tacan-drum-3</object-name>
+    <object-name>compass</object-name>
+    <object-name>com-N</object-name>
+    <object-name>com-3</object-name>
+    <object-name>com-6</object-name>
+    <object-name>com-E</object-name>
+    <object-name>com-12</object-name>
+    <object-name>com-15</object-name>
+    <object-name>com-S</object-name>
+    <object-name>com-21</object-name>
+    <object-name>com-24</object-name>
+    <object-name>com-W</object-name>
+    <object-name>com-30</object-name>
+    <object-name>com-33</object-name>
+    <object-name>off-flag</object-name>
+    <object-name>llz-flag</object-name>
+    <object-name>miles-flag</object-name>
+    <object-name>TS-drum-1</object-name>
+    <object-name>TS-drum-2</object-name>
+    <object-name>TS-drum-3</object-name>
+    <object-name>GS-drum-1</object-name>
+    <object-name>GS-drum-2</object-name>
+    <object-name>GS-drum-3</object-name>
+    <emission> 
+      <red>0.5</red>
+      <green>0.5</green>
+      <blue>0.5</blue>
+    </emission>
+  </animation> 
+
+  <animation>
+    <type>range</type>
+    <min-m>0</min-m>
+    <max-m>10</max-m>
+  </animation>
+
+</PropertyList>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

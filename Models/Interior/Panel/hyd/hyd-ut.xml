@@ -1,0 +1,43 @@
+<?xml version="1.0"?>
+
+<PropertyList>
+
+ <path>hyd-ut.ac</path>
+
+ <animation>
+  <type>material</type>
+  <object-name>Face</object-name>
+  <object-name>PointerTip</object-name>
+<object-name>PointerCentre</object-name>
+    <emission>
+      <factor-prop>systems/electrical/outputs/instrument-lights-norm</factor-prop>
+      <red>   0.5 </red>
+      <green> 0.5 </green>
+      <blue>  0.0 </blue>
+    </emission>
+ </animation>
+
+
+ <animation> 
+  <type>rotate</type>
+  <object-name>PointerTip</object-name>
+  <property>engines/engine[0]/oilp-norm</property>
+  <interpolation>
+   <entry><ind>0</ind><dep>0</dep></entry>
+   <entry><ind>0.1</ind><dep>160</dep></entry>
+   <entry><ind>0.5</ind><dep>180</dep></entry>
+  </interpolation>
+  <axis> 
+   <x>-1</x>
+   <y>0</y>
+   <z>0</z>
+  </axis>
+  <center>
+   <x-m>0</x-m>
+   <y-m>0</y-m>
+   <z-m>0</z-m>
+  </center>
+ </animation>
+ 
+</PropertyList>
+

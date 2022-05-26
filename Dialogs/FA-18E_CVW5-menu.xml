@@ -1,0 +1,38 @@
+<?xml version="1.0"?>
+
+<PropertyList>
+
+  <default>
+    <menu n="10">
+      <label>FA-18E_CVW5</label>
+      <enabled type="bool">true</enabled>
+      <item>
+        <label>Select Livery</label>
+        <binding>
+          <command>nasal</command>
+          <script>aircraft.livery.dialog.toggle()</script>
+        </binding>
+      </item>
+      <item>
+        <label>Immatriculation</label>
+        <binding>
+          <command>nasal</command>
+          <script>FA-18E_CVW5.immat_dialog.toggle()</script>
+        </binding>
+      </item>
+      <item>
+    	<label>Pushback</label>
+    	<name>pushback</name>
+    	<binding>
+     	<command>dialog-show</command>
+     	<dialog-name>pushback</dialog-name>
+    	</binding>
+      </item>
+      </menu>
+  </default>
+
+</PropertyList>
+
+
+
+

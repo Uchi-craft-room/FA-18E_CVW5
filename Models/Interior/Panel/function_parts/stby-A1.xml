@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+
+<PropertyList>
+
+    <path>stby-A1.ac</path>
+    
+    <animation>
+       <type>range</type>
+       <min-m>0</min-m>
+       <max-m>5</max-m>
+    </animation>
+ 
+</PropertyList>
+
+

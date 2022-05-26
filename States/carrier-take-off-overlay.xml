@@ -1,0 +1,27 @@
+<PropertyList>
+  <name type="string" n="0">carrier-take-off</name>
+  <overlay>
+    <controls>
+      <flight>
+        <elevator>-0.5</elevator>
+        <flaps>1.0</flaps>
+        <speedbrake>0.0</speedbrake>
+        <wing-fold>0.0</wing-fold>
+      </flight>
+      <gear>
+        <tailhook>false</tailhook>
+        <gear-down>true</gear-down>
+        <brake-parking>0.0</brake-parking>
+	<launchbar>true</launchbar>
+      </gear>
+      <lighting>
+        <beacon>true</beacon>
+        <strobe>true</strobe>
+        <nav-lights>true</nav-lights>
+      </lighting>
+    </controls>
+    <canopy>
+      <position-norm>0.0</position-norm>
+    </canopy>
+  </overlay>
+</PropertyList>

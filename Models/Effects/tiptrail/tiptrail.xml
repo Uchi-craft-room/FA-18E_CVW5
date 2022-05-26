@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<PropertyList>
+
+  <particlesystem>
+    <texture>continous_smoke.png</texture>
+    <emissive>false</emissive>
+    <lighting>false</lighting>
+    <pass>false</pass>
+
+    <condition>
+      <and>
+        <greater-than>
+          <property>orientation/alpha-deg</property>
+          <value>13</value>
+        </greater-than>
+        <greater-than>
+          <property>velocities/airspeed-kt</property>
+          <value>250</value>
+        </greater-than>
+        <or>
+          <or>
+            <less-than>
+              <property>surface-positions/left-aileron-pos-norm</property>
+              <value>-0.01</value>
+            </less-than>
+            <greater-than>
+              <property>surface-positions/left-aileron-pos-norm</property>
+              <value>0.01</value>
+            </greater-than>
+          </or>
+          <or>
+            <less-than>
+              <property>surface-positions/left-elevator-pos-norm</property>
+              <value>-0.01</value>
+            </less-than>
+            <greater-than>
+              <property>surface-positions/left-elevator-pos-norm</property>
+              <value>0.01</value>
+            </greater-than>
+          </or>
+        </or>
+      </and>
+    </condition>
+
+    <attach>world</attach>
+
+    <placer>
+      <type>point</type>
+    </placer>
+
+    <shooter>
+      <speed-mps>
+        <value>1</value>
+        <spread>0</spread>
+      </speed-mps>
+    </shooter>
+
+    <counter>
+      <particles-per-sec>
+        <property>velocities/airspeed-kt</property>
+        <factor>5</factor>
+        <offset>75</offset>
+      </particles-per-sec>
+    </counter>
+
+    <align>fixed</align>
+
+    <particle>
+      <start>
+        <color>
+          <red><value>   1.0 </value></red>
+          <green><value> 1.0 </value></green>
+          <blue><value>  1.0 </value></blue>
+          <alpha><value> 0.1 </value></alpha>
+        </color>
+        <size>
+          <value>0.10</value>
+        </size>
+      </start>
+
+      <end>
+       <color>
+         <red><value>   1.00 </value></red>
+         <green><value> 1.00 </value></green>
+         <blue><value>  1.00 </value></blue>
+         <alpha><value> 0.01 </value></alpha>
+       </color>
+       <size>
+         <value>1.0</value>
+       </size>
+      </end>
+
+      <life-sec>
+        <value>1</value>
+      </life-sec>
+
+      <mass-kg>0.01</mass-kg>
+      <radius-m>0.1</radius-m>
+    </particle>
+
+    <program>
+      <fluid>   air  </fluid>
+      <gravity> true </gravity>
+      <wind>    true </wind>
+    </program>
+
+  </particlesystem>
+
+</PropertyList>

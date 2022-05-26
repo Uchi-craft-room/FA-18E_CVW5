@@ -1,0 +1,134 @@
+<?xml version="1.0"?>
+
+<PropertyList>
+
+  <path>nozzle.ac</path>
+
+  <animation>
+    <type>rotate</type>
+    <object-name>nozzle-A1</object-name>
+    <object-name>nozzle-B1</object-name>
+    <property>controls/engines/engine[1]/throttle</property>
+    <interpolation>
+      <entry><ind>  0.0 </ind><dep>  5.0 </dep></entry>
+      <entry><ind>  0.6 </ind><dep> 25.0 </dep></entry>
+    </interpolation>
+    <center>
+      <x-m> 1.094 </x-m>
+      <y-m> 0 </y-m>
+      <z-m> 0.522 </z-m>
+    </center>
+    <axis>
+      <x> 0 </x>
+      <y> 1 </y>
+      <z> 0 </z>
+    </axis>
+  </animation>
+
+  <animation>
+    <type>rotate</type>
+    <object-name>nozzle-A1</object-name>
+    <object-name>nozzle-B1</object-name>
+    <property>engines/engine[1]/afterburner</property>
+    <interpolation>
+      <entry><ind>  0.0 </ind><dep>  0.0 </dep></entry>
+      <entry><ind>  1.0 </ind><dep> -25.0 </dep></entry>
+    </interpolation>
+    <center>
+      <x-m> 1.094 </x-m>
+      <y-m> 0 </y-m>
+      <z-m> 0.522 </z-m>
+    </center>
+    <axis>
+      <x> 0 </x>
+      <y> 1 </y>
+      <z> 0 </z>
+    </axis>
+  </animation>
+
+  <animation>
+    <type>rotate</type>
+    <object-name>nozzle-B1</object-name>
+    <property>controls/engines/engine[1]/throttle</property>
+    <interpolation>
+      <entry><ind>  0.0 </ind><dep>  2.0 </dep></entry>
+      <entry><ind>  0.6 </ind><dep> 22.0 </dep></entry>
+    </interpolation>
+    <center>
+      <x-m> 1.480 </x-m>
+      <y-m> 0     </y-m>
+      <z-m> 0.465 </z-m>
+    </center>
+    <axis>
+      <x> 0 </x>
+      <y> -1 </y>
+      <z> 0 </z>
+    </axis>
+  </animation>
+
+  <animation>
+    <type>rotate</type>
+    <object-name>nozzle-B1</object-name>
+    <property>engines/engine[1]/afterburner</property>
+    <interpolation>
+      <entry><ind>  0.0 </ind><dep>  0.0 </dep></entry>
+      <entry><ind>  1.0 </ind><dep> -22.0 </dep></entry>
+    </interpolation>
+    <center>
+      <x-m> 1.480 </x-m>
+      <y-m> 0 </y-m>
+      <z-m> 0.465 </z-m>
+    </center>
+    <axis>
+      <x> 0 </x>
+      <y> -1 </y>
+      <z> 0 </z>
+    </axis>
+  </animation>
+
+
+  <animation>
+    <type>rotate</type>
+    <object-name>nozzle-C1</object-name>
+    <property>controls/engines/engine[1]/throttle</property>
+    <interpolation>
+      <entry><ind>  0.0 </ind><dep>  4.7 </dep></entry>
+      <entry><ind>  0.6 </ind><dep> 13.0 </dep></entry>
+    </interpolation>
+    <center>
+      <x-m> 1.094 </x-m>
+      <y-m> 0 </y-m>
+      <z-m> 0.522 </z-m>
+    </center>
+    <axis>
+      <x> 0 </x>
+      <y> 1 </y>
+      <z> 0 </z>
+    </axis>
+  </animation>
+
+  <animation>
+    <type>rotate</type>
+    <object-name>nozzle-C1</object-name>
+    <property>engines/engine[1]/afterburner</property>
+    <interpolation>
+      <entry><ind>  0.0 </ind><dep>   0.0 </dep></entry>
+      <entry><ind>  1.0 </ind><dep> -13.0 </dep></entry>
+    </interpolation>
+    <center>
+      <x-m> 1.094 </x-m>
+      <y-m> 0 </y-m>
+      <z-m> 0.522 </z-m>
+    </center>
+    <axis>
+      <x> 0 </x>
+      <y> 1 </y>
+      <z> 0 </z>
+    </axis>
+  </animation>
+
+ 
+</PropertyList>
+
+
+

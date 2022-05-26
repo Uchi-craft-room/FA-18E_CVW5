@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<PropertyList>
+
+  <path>canopy-function.ac</path>
+
+  <animation>
+    <object-name>face</object-name>
+    <object-name>compass</object-name>
+    <object-name>needle</object-name>
+  </animation>
+
+  <animation>
+    <type>material</type>
+    <object-name>face</object-name>
+    <object-name>compass</object-name>
+    <object-name>needle</object-name>
+    <emission>
+      <factor-prop>systems/electrical/outputs/instrument-lights-norm</factor-prop>
+      <red>   0.5 </red>
+      <green> 0.5 </green>
+      <blue>  0.0 </blue>
+    </emission> 
+  </animation>    
+
+  <animation>
+    <type>rotate</type>
+    <object-name>compass</object-name>
+    <property>orientation/heading-magnetic-deg</property>
+    <interpolation>
+      <entry><ind>   0 </ind><dep>   0 </dep></entry>
+      <entry><ind>  90 </ind><dep>  90 </dep></entry>
+      <entry><ind> 180 </ind><dep> 180 </dep></entry>
+      <entry><ind> 270 </ind><dep> 270 </dep></entry>
+      <entry><ind> 360 </ind><dep> 360 </dep></entry>
+    </interpolation>
+    <center>
+      <x-m> -6.583 </x-m>
+      <y-m>  0.155 </y-m>
+      <z-m>  1.340 </z-m>
+    </center>
+    <axis>
+      <x> 0 </x>
+      <y> 0 </y>
+      <z> 1 </z>
+    </axis>
+  </animation>
+
+  <animation>
+    <type>noshadow</type>
+    <object-name>engage</object-name>
+  </animation>
+
+  <animation>
+    <type>select</type>
+    <object-name>engage</object-name>
+  <condition>
+     <property>systems/refuel/contact</property>
+   </condition>
+  </animation>
+
+  <animation>
+    <type>material</type>
+    <object-name>engage</object-name>
+    <emission>
+      <red>   0.4 </red>
+      <green> 0.4</green>
+      <blue>  0.4 </blue>
+    </emission> 
+  </animation> 
+
+
+  <animation>
+    <type>shader</type>
+    <shader>chrome</shader>
+    <texture>glass_shader.png</texture>
+    <object-name>mirror</object-name>
+  </animation>
+
+  <animation>
+    <type>material</type>
+    <object-name>mirror</object-name>
+     <shininess>1000</shininess>
+     <specular>
+         <r>1</r>
+         <g>1</g>
+         <b>1</b>
+     </specular>
+     <ambient>
+         <r>1</r>
+         <g>1</g>
+         <b>1</b>
+     </ambient>
+  </animation>
+
+  <animation>
+    <type>noshadow</type>
+    <object-name>mirror</object-name>
+  </animation>
+
+</PropertyList>
+
+
+
+

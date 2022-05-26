@@ -1,0 +1,306 @@
+<?xml version="1.0"?>
+
+<PropertyList>
+
+  <path>J79-IHI-17.ac</path>
+
+
+  <animation>
+    <object-name>afterburner</object-name>
+    <object-name>augmentor</object-name>
+    <nopreview/>
+  </animation>
+
+  <animation>
+    <type>spin</type>
+    <object-name>fun</object-name>
+    <object-name>augmentor</object-name>
+    <property>controls/engines/engine[1]/starter-position-norm</property>
+    <factor> 800 </factor>
+    <center>
+      <x-m> 0 </x-m>
+      <y-m> 0 </y-m>
+      <z-m> 0 </z-m>
+    </center>
+    <axis>
+      <x> 1 </x>
+      <y> 0 </y>
+      <z> 0 </z>
+    </axis>
+  </animation>
+
+  <animation>
+    <type>translate</type>
+    <object-name>afterburner</object-name>
+     <property>engines/engine[1]/afterburner</property>
+  <interpolation>
+   <entry><ind>0</ind><dep>-1</dep></entry>
+   <entry><ind>0.8</ind><dep>0</dep></entry>
+  </interpolation>
+    <axis>
+      <x> 1 </x>
+      <y> 0 </y>
+      <z> 0 </z>
+    </axis>
+  </animation>
+
+  <animation>
+    <type>material</type>
+    <object-name>afterburner</object-name>
+    <object-name>augmentor</object-name>
+    <emission>
+      <red>   1 </red>
+      <green> 1 </green>
+      <blue>  1 </blue>
+    </emission> 
+  </animation>
+
+  <effect>
+    <inherits-from>Effects/model-transparent</inherits-from>
+    <object-name>augmentor</object-name>
+  </effect>
+
+  <animation>
+    <type>select</type>
+    <object-name>augmentor</object-name>
+    <object-name>afterburner</object-name>
+    <condition>
+     <and>
+     <not>
+     <property>engines/engine[1]/out-of-fuel</property>
+     </not>
+     <greater-than>
+     <property>engines/engine[1]/afterburner</property>
+     <value> 0.1 </value>
+     </greater-than>
+     </and>
+     </condition>
+  </animation>
+  
+
+    <animation>
+        <type>scale</type>
+        <object-name>augmentor</object-name>
+        <property>engines/engine[1]/afterburner</property>
+        <interpolation>
+            <entry><ind>0.00</ind> <dep>0.5</dep></entry>
+            <entry><ind>1.00</ind><dep>0.8</dep></entry>
+        </interpolation>
+    </animation>
+
+ <animation> 
+    <type>textranslate</type> 
+    <object-name>augmentor</object-name>
+    <property>/sim/time/sun-angle-rad</property>
+    <step> 1.57 </step>
+    <factor>0.318471338</factor>
+    <center>
+     <x-m> 0 </x-m>
+     <y-m> 0 </y-m>
+     <z-m> 0 </z-m>
+    </center>
+    <axis> 
+      <x>  0 </x> 
+      <y>  1 </y> 
+      <z>  0 </z> 
+    </axis> 
+  </animation>
+
+<!-- nozzle -->
+
+  <model>
+    <path>Aircraft/FA-18E_CVW5/Models/engine/nozzle-LH.xml</path>
+    <offsets>
+      <x-m>  0   </x-m>
+      <y-m>  0   </y-m>
+      <z-m>  0   </z-m>
+      <roll-deg>    0 </roll-deg>
+      <pitch-deg>   0 </pitch-deg>
+      <heading-deg> 0 </heading-deg>
+    </offsets>
+  </model>
+
+  <model>
+    <path>Aircraft/FA-18E_CVW5/Models/engine/nozzle-LH.xml</path>
+    <offsets>
+      <x-m>  0   </x-m>
+      <y-m>  0   </y-m>
+      <z-m>  0   </z-m>
+      <roll-deg>    22.5 </roll-deg>
+      <pitch-deg>   0 </pitch-deg>
+      <heading-deg> 0 </heading-deg>
+    </offsets>
+  </model>
+
+  <model>
+    <path>Aircraft/FA-18E_CVW5/Models/engine/nozzle-LH.xml</path>
+    <offsets>
+      <x-m>  0   </x-m>
+      <y-m>  0   </y-m>
+      <z-m>  0   </z-m>
+      <roll-deg>    45 </roll-deg>
+      <pitch-deg>   0 </pitch-deg>
+      <heading-deg> 0 </heading-deg>
+    </offsets>
+  </model>
+
+  <model>
+    <path>Aircraft/FA-18E_CVW5/Models/engine/nozzle-LH.xml</path>
+    <offsets>
+      <x-m>  0   </x-m>
+      <y-m>  0   </y-m>
+      <z-m>  0   </z-m>
+      <roll-deg>    67.5 </roll-deg>
+      <pitch-deg>   0 </pitch-deg>
+      <heading-deg> 0 </heading-deg>
+    </offsets>
+  </model>
+
+  <model>
+    <path>Aircraft/FA-18E_CVW5/Models/engine/nozzle-LH.xml</path>
+    <offsets>
+      <x-m>  0   </x-m>
+      <y-m>  0   </y-m>
+      <z-m>  0   </z-m>
+      <roll-deg>    90 </roll-deg>
+      <pitch-deg>   0 </pitch-deg>
+      <heading-deg> 0 </heading-deg>
+    </offsets>
+  </model>
+
+  <model>
+    <path>Aircraft/FA-18E_CVW5/Models/engine/nozzle-LH.xml</path>
+    <offsets>
+      <x-m>  0   </x-m>
+      <y-m>  0   </y-m>
+      <z-m>  0   </z-m>
+      <roll-deg>    112.5 </roll-deg>
+      <pitch-deg>   0 </pitch-deg>
+      <heading-deg> 0 </heading-deg>
+    </offsets>
+  </model>
+
+  <model>
+    <path>Aircraft/FA-18E_CVW5/Models/engine/nozzle-LH.xml</path>
+    <offsets>
+      <x-m>  0   </x-m>
+      <y-m>  0   </y-m>
+      <z-m>  0   </z-m>
+      <roll-deg>    135 </roll-deg>
+      <pitch-deg>   0 </pitch-deg>
+      <heading-deg> 0 </heading-deg>
+    </offsets>
+  </model>
+
+  <model>
+    <path>Aircraft/FA-18E_CVW5/Models/engine/nozzle-LH.xml</path>
+    <offsets>
+      <x-m>  0   </x-m>
+      <y-m>  0   </y-m>
+      <z-m>  0   </z-m>
+      <roll-deg>    157.5 </roll-deg>
+      <pitch-deg>   0 </pitch-deg>
+      <heading-deg> 0 </heading-deg>
+    </offsets>
+  </model>
+
+  <model>
+    <path>Aircraft/FA-18E_CVW5/Models/engine/nozzle-LH.xml</path>
+    <offsets>
+      <x-m>  0   </x-m>
+      <y-m>  0   </y-m>
+      <z-m>  0   </z-m>
+      <roll-deg>    180 </roll-deg>
+      <pitch-deg>   0 </pitch-deg>
+      <heading-deg> 0 </heading-deg>
+    </offsets>
+  </model>
+
+  <model>
+    <path>Aircraft/FA-18E_CVW5/Models/engine/nozzle-LH.xml</path>
+    <offsets>
+      <x-m>  0   </x-m>
+      <y-m>  0   </y-m>
+      <z-m>  0   </z-m>
+      <roll-deg>    202.5 </roll-deg>
+      <pitch-deg>   0 </pitch-deg>
+      <heading-deg> 0 </heading-deg>
+    </offsets>
+  </model>
+
+  <model>
+    <path>Aircraft/FA-18E_CVW5/Models/engine/nozzle-LH.xml</path>
+    <offsets>
+      <x-m>  0   </x-m>
+      <y-m>  0   </y-m>
+      <z-m>  0   </z-m>
+      <roll-deg>    225 </roll-deg>
+      <pitch-deg>   0 </pitch-deg>
+      <heading-deg> 0 </heading-deg>
+    </offsets>
+  </model>
+
+  <model>
+    <path>Aircraft/FA-18E_CVW5/Models/engine/nozzle-LH.xml</path>
+    <offsets>
+      <x-m>  0   </x-m>
+      <y-m>  0   </y-m>
+      <z-m>  0   </z-m>
+      <roll-deg>    247.5</roll-deg>
+      <pitch-deg>   0 </pitch-deg>
+      <heading-deg> 0 </heading-deg>
+    </offsets>
+  </model>
+
+  <model>
+    <path>Aircraft/FA-18E_CVW5/Models/engine/nozzle-LH.xml</path>
+    <offsets>
+      <x-m>  0   </x-m>
+      <y-m>  0   </y-m>
+      <z-m>  0   </z-m>
+      <roll-deg>    270 </roll-deg>
+      <pitch-deg>   0 </pitch-deg>
+      <heading-deg> 0 </heading-deg>
+    </offsets>
+  </model>
+
+  <model>
+    <path>Aircraft/FA-18E_CVW5/Models/engine/nozzle-LH.xml</path>
+    <offsets>
+      <x-m>  0   </x-m>
+      <y-m>  0   </y-m>
+      <z-m>  0   </z-m>
+      <roll-deg>    292.5 </roll-deg>
+      <pitch-deg>   0 </pitch-deg>
+      <heading-deg> 0 </heading-deg>
+    </offsets>
+  </model>
+
+  <model>
+    <path>Aircraft/FA-18E_CVW5/Models/engine/nozzle-LH.xml</path>
+    <offsets>
+      <x-m>  0   </x-m>
+      <y-m>  0   </y-m>
+      <z-m>  0   </z-m>
+      <roll-deg>    315.0 </roll-deg>
+      <pitch-deg>   0 </pitch-deg>
+      <heading-deg> 0 </heading-deg>
+    </offsets>
+  </model>
+
+  <model>
+    <path>Aircraft/FA-18E_CVW5/Models/engine/nozzle-LH.xml</path>
+    <offsets>
+      <x-m>  0   </x-m>
+      <y-m>  0   </y-m>
+      <z-m>  0   </z-m>
+      <roll-deg>    337.5.0 </roll-deg>
+      <pitch-deg>   0 </pitch-deg>
+      <heading-deg> 0 </heading-deg>
+    </offsets>
+  </model>
+
+</PropertyList>
+
+
+

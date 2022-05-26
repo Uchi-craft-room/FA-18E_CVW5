@@ -1,0 +1,393 @@
+<?xml version="1.0"?>
+
+<PropertyList>
+
+ <path>power.ac</path>
+
+<!-- lighting -->
+
+  <animation>
+	<type>material</type>
+	<object-name>base</object-name>
+	<object-name>base.001</object-name>
+	<object-name>lever0</object-name>
+	<object-name>lever1</object-name>
+	<object-name>finger-lift</object-name>
+	<object-name>finger-lift1</object-name>
+	<object-name>spbk-switch</object-name>
+	<object-name>fric</object-name>
+	<object-name>switch</object-name>
+	<object-name>formation</object-name>
+	<object-name>position</object-name>
+	<object-name>flash</object-name>
+	<object-name>IDENT</object-name>
+	<emission> 
+		<factor-prop>systems/electrical/outputs/instrument-lights-norm</factor-prop>
+		<red>0.5</red>
+		<green>0.2</green>
+		<blue>0.2</blue>
+	</emission>
+  </animation>
+
+
+ <animation>
+  <type>translate</type>
+  <object-name>lever0</object-name>
+  <object-name>spbk-switch</object-name>
+  <object-name>spbk-opn</object-name>
+  <object-name>spbk-cls</object-name>
+  <object-name>finger-lift</object-name>
+  <property>controls/engines/engine/throttle</property>
+  <interpolation>
+   <entry><ind> 0 </ind><dep>0</dep></entry>
+   <entry><ind> 0.5 </ind><dep>0.07</dep></entry>
+   <entry><ind> 1 </ind><dep>0.14</dep></entry>
+  </interpolation>
+  <axis>
+   <x> -1 </x>
+   <y> 0 </y>
+   <z> 0</z>
+  </axis>
+ </animation>
+
+ <animation>
+  <type>translate</type>
+  <object-name>lever1</object-name>
+  <object-name>finger-lift1</object-name>
+  <property>controls/engines/engine[1]/throttle</property>
+  <interpolation>
+   <entry><ind> 0 </ind><dep>0</dep></entry>
+   <entry><ind> 0.5 </ind><dep>0.07</dep></entry>
+   <entry><ind> 1 </ind><dep>0.14</dep></entry>
+  </interpolation>
+  <axis>
+   <x> -1 </x>
+   <y> 0 </y>
+   <z> 0</z>
+  </axis>
+ </animation>
+
+<!-- SPEED BRAKE SWITCH -->
+
+ <animation>
+  <type>translate</type>
+  <object-name>spbk-switch</object-name>
+  <property>controls/flight/speedbrake</property>
+  <interpolation>
+   <entry><ind> 0 </ind><dep>-0.01</dep></entry>
+   <entry><ind> 0.5 </ind><dep>0.0</dep></entry>
+   <entry><ind> 1 </ind><dep>0.01</dep></entry>
+  </interpolation>
+  <axis>
+   <x> 1 </x>
+   <y> 0 </y>
+   <z> 0 </z>
+  </axis>
+ </animation>
+
+    <animation>
+        <type>pick</type>
+        <object-name>spbk-opn</object-name>
+        <visible>false</visible>
+        <action>
+            <button>0</button>
+            <repeatable>true</repeatable>
+            <binding>
+                <command>property-adjust</command>
+                <property>controls/flight/speedbrake</property>
+                <step>0.25</step>
+                <min>0</min>
+                <max>1</max>
+            </binding>
+        </action>
+    </animation>
+
+    <animation>
+        <type>pick</type>
+        <object-name>spbk-cls</object-name>
+        <visible>false</visible>
+        <action>
+            <button>0</button>
+            <repeatable>true</repeatable>
+            <binding>
+                <command>property-adjust</command>
+                <property>controls/flight/speedbrake</property>
+                <step>-0.25</step>
+                <min>0</min>
+                <max>1</max>
+            </binding>
+        </action>
+    </animation>
+
+    <animation>
+        <type>pick</type>
+        <object-name>lever0</object-name>
+        <action>
+            <button>3</button>
+            <repeatable>true</repeatable>
+            <binding>
+                <command>property-adjust</command>
+                <property>controls/engines/engine/throttle</property>
+                <step>0.1</step>
+                <min>0</min>
+                <max>1</max>
+            </binding>
+        </action>
+    </animation>
+
+    <animation>
+        <type>pick</type>
+        <object-name>lever0</object-name>
+        <action>
+            <button>4</button>
+            <repeatable>true</repeatable>
+            <binding>
+                <command>property-adjust</command>
+                <property>controls/engines/engine/throttle</property>
+                <step>-0.1</step>
+                <min>0</min>
+                <max>1</max>
+            </binding>
+        </action>
+    </animation>
+
+    <animation>
+        <type>pick</type>
+        <object-name>lever1</object-name>
+        <action>
+            <button>3</button>
+            <repeatable>true</repeatable>
+            <binding>
+                <command>property-adjust</command>
+                <property>controls/engines/engine[1]/throttle</property>
+                <step>0.1</step>
+                <min>0</min>
+                <max>1</max>
+            </binding>
+        </action>
+    </animation>
+
+    <animation>
+        <type>pick</type>
+        <object-name>lever1</object-name>
+        <action>
+            <button>4</button>
+            <repeatable>true</repeatable>
+            <binding>
+                <command>property-adjust</command>
+                <property>controls/engines/engine[1]/throttle</property>
+                <step>-0.1</step>
+                <min>0</min>
+                <max>1</max>
+            </binding>
+        </action>
+    </animation>
+
+
+<!--  engine[0] starter -->
+
+
+  <animation>
+    <type>translate</type>
+    <object-name>finger-lift</object-name>
+    <property>controls/engines/engine/starter</property>
+    <factor>0.02</factor>
+    <axis>
+      <x>  0 </x>
+      <y>  0 </y>
+      <z>  1 </z>
+    </axis>
+    <center>
+      <x-m> 0 </x-m>
+      <y-m> 0 </y-m>
+      <z-m> 0 </z-m>
+    </center>
+  </animation>
+
+<!--  engine[1] starter -->
+
+
+  <animation>
+    <type>translate</type>
+    <object-name>finger-lift1</object-name>
+    <property>controls/engines/engine[1]/starter</property>
+    <factor>0.02</factor>
+    <axis>
+      <x>  0 </x>
+      <y>  0 </y>
+      <z>  1 </z>
+    </axis>
+    <center>
+      <x-m> 0 </x-m>
+      <y-m> 0 </y-m>
+      <z-m> 0 </z-m>
+    </center>
+  </animation>
+
+<!-- friction -->
+ <animation>
+  <type>translate</type>
+  <object-name>fric</object-name>
+  <property>instrumentation/fric-knob</property>
+  <interpolation>
+   <entry><ind>0.01</ind><dep>0.12</dep></entry>
+   <entry><ind>0.05</ind><dep>0.06</dep></entry>
+   <entry><ind>0.1</ind><dep>0.0</dep></entry>
+  </interpolation>
+  <axis>
+   <x> -1 </x>
+   <y> 0 </y>
+   <z> 0</z>
+  </axis>
+ </animation>
+
+
+    <animation>
+        <type>pick</type>
+        <object-name>fric</object-name>
+        <action>
+            <button>4</button>
+            <repeatable>true</repeatable>
+            <binding>
+                <command>property-adjust</command>
+                <property>instrumentation/fric-knob</property>
+                <step>0.01</step>
+                <min>0.01</min>
+                <max>0.1</max>
+            </binding>
+        </action>
+    </animation>
+
+    <animation>
+        <type>pick</type>
+        <object-name>fric</object-name>
+        <action>
+            <button>3</button>
+            <repeatable>true</repeatable>
+            <binding>
+                <command>property-adjust</command>
+                <property>instrumentation/fric-knob</property>
+                <step>-0.01</step>
+                <min>0.01</min>
+                <max>0.1</max>
+            </binding>
+        </action>
+    </animation>
+
+<!--  Switch  FORMATION lamp -->
+
+    <animation>
+        <type>pick</type>
+        <object-name>formation</object-name>
+	<action>
+		<button>0</button>
+		<repeatable>true</repeatable>
+            <binding>
+                <command>property-toggle</command>
+                <property>controls/lighting/formation-lamp</property>
+            </binding>
+        <binding>
+        <command>property-toggle</command>
+        <property>sim/sound/click</property>
+         </binding>
+        </action>
+    </animation>
+
+
+    <animation>
+    <type>rotate</type>
+    <object-name>formation</object-name>
+    <property>controls/lighting/formation-lamp</property>
+    <factor>95</factor>
+    <axis>
+      <x> 0 </x>
+      <y> 0 </y>
+      <z>-1 </z>
+    </axis>
+    <center>
+      <x-m> -0.008 </x-m>
+      <y-m> -0.061 </y-m>
+      <z-m>  0.010 </z-m>
+    </center>
+    </animation>
+
+
+<!--  Switch  ANTI COLLISION -->
+
+  <animation>
+    <type>pick</type>
+    <visible>true</visible>
+    <object-name>flash</object-name>
+    <action>
+      <button>0</button>
+      <repeatable>false</repeatable>
+      <binding>
+        <command>property-toggle</command>
+	<property>controls/lighting/beacon</property>
+      </binding>
+      <binding>
+        <command>property-toggle</command>
+        <property>sim/sound/click</property>
+      </binding>
+    </action>
+  </animation>
+
+  <animation>
+    <type>rotate</type>
+    <object-name>flash</object-name>
+      <property>controls/lighting/beacon</property>
+    <factor>30</factor>
+    <axis>
+      <x>  0 </x>
+      <y> -1 </y>
+      <z>  0 </z>
+    </axis>
+    <center>
+      <x-m> 0.027 </x-m>
+      <y-m>-0.065 </y-m>
+      <z-m> 0.008 </z-m>
+    </center>
+  </animation>
+
+
+<!--  Switch  POSITION-LAMP -->
+
+  <animation>
+    <type>pick</type>
+    <visible>true</visible>
+    <object-name>position</object-name>
+    <action>
+	<button>0</button>
+	<repeatable>false</repeatable>
+	<binding>
+		<command>property-toggle</command>
+		<property>controls/lighting/nav-lights</property>
+	</binding>
+	<binding>
+		<command>property-toggle</command>
+		<property>sim/sound/click</property>
+	</binding>
+    </action>
+  </animation>
+
+
+
+  <animation>
+    <type>rotate</type>
+    <object-name>position</object-name>
+    <property>controls/lighting/nav-lights</property>
+    <factor>95</factor>
+    <axis>
+      <x>  0 </x>
+      <y>  0 </y>
+      <z> -1 </z>
+    </axis>
+    <center>
+      <x-m> 0.016 </x-m>
+      <y-m>-0.088 </y-m>
+      <z-m> 0.022 </z-m>
+    </center>
+  </animation>
+
+</PropertyList>
+

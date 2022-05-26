@@ -1,0 +1,132 @@
+<PropertyList>
+
+  <model>
+    <name>CHUTE1</name>
+    <path>Aircraft/FA-18E_CVW5/Models/dragchute/dragchute_part.xml</path>
+    <offsets>
+      <x-m> 0 </x-m>
+      <y-m> 0 </y-m>
+      <z-m> 0 </z-m>>
+      <pitch-deg> 0 </pitch-deg>
+      <heading-deg> 0 </heading-deg>
+    </offsets>
+  </model>
+
+  <model>
+    <name>CHUTE2</name>
+    <path>Aircraft/FA-18E_CVW5/Models/dragchute/dragchute_part.xml</path>
+    <offsets>
+      <x-m> 0 </x-m>
+      <y-m> 0 </y-m>
+      <z-m> 0 </z-m>>
+      <pitch-deg> 0 </pitch-deg>
+      <heading-deg> 0 </heading-deg>
+      <roll-deg> 36 </roll-deg>
+    </offsets>
+  </model>
+
+  <model>
+    <name>CHUTE3</name>
+    <path>Aircraft/FA-18E_CVW5/Models/dragchute/dragchute_part.xml</path>
+    <offsets>
+      <x-m> 0 </x-m>
+      <y-m> 0 </y-m>
+      <z-m> 0 </z-m>>
+      <pitch-deg> 0 </pitch-deg>
+      <heading-deg> 0 </heading-deg>
+      <roll-deg> 72 </roll-deg>
+    </offsets>
+  </model>
+
+  <model>
+    <name>CHUTE4</name>
+    <path>Aircraft/FA-18E_CVW5/Models/dragchute/dragchute_part.xml</path>
+    <offsets>
+      <x-m> 0 </x-m>
+      <y-m> 0 </y-m>
+      <z-m> 0 </z-m>>
+      <pitch-deg> 0 </pitch-deg>
+      <heading-deg> 0 </heading-deg>
+      <roll-deg> 108 </roll-deg>
+    </offsets>
+  </model>
+
+  <model>
+    <name>CHUTE5</name>
+    <path>Aircraft/FA-18E_CVW5/Models/dragchute/dragchute_part.xml</path>
+    <offsets>
+      <x-m> 0 </x-m>
+      <y-m> 0 </y-m>
+      <z-m> 0 </z-m>>
+      <pitch-deg> 0 </pitch-deg>
+      <heading-deg> 0 </heading-deg>
+      <roll-deg> 144 </roll-deg>
+    </offsets>
+  </model>
+
+  <model>
+    <name>CHUTE6</name>
+    <path>Aircraft/FA-18E_CVW5/Models/dragchute/dragchute_part.xml</path>
+    <offsets>
+      <x-m> 0 </x-m>
+      <y-m> 0 </y-m>
+      <z-m> 0 </z-m>>
+      <pitch-deg> 0 </pitch-deg>
+      <heading-deg> 0 </heading-deg>
+      <roll-deg> 180 </roll-deg>
+    </offsets>
+  </model>
+
+  <model>
+    <name>CHUTE7</name>
+    <path>Aircraft/FA-18E_CVW5/Models/dragchute/dragchute_part.xml</path>
+    <offsets>
+      <x-m> 0 </x-m>
+      <y-m> 0 </y-m>
+      <z-m> 0 </z-m>>
+      <pitch-deg> 0 </pitch-deg>
+      <heading-deg> 0 </heading-deg>
+      <roll-deg> 216 </roll-deg>
+    </offsets>
+  </model>
+
+  <model>
+    <name>CHUTE8</name>
+    <path>Aircraft/FA-18E_CVW5/Models/dragchute/dragchute_part.xml</path>
+    <offsets>
+      <x-m> 0 </x-m>
+      <y-m> 0 </y-m>
+      <z-m> 0 </z-m>>
+      <pitch-deg> 0 </pitch-deg>
+      <heading-deg> 0 </heading-deg>
+      <roll-deg> 252 </roll-deg>
+    </offsets>
+  </model>
+
+  <model>
+    <name>CHUTE9</name>
+    <path>Aircraft/FA-18E_CVW5/Models/dragchute/dragchute_part.xml</path>
+    <offsets>
+      <x-m> 0 </x-m>
+      <y-m> 0 </y-m>
+      <z-m> 0 </z-m>>
+      <pitch-deg> 0 </pitch-deg>
+      <heading-deg> 0 </heading-deg>
+      <roll-deg> 288 </roll-deg>
+    </offsets>
+  </model>
+
+  <model>
+    <name>CHUTE10</name>
+    <path>Aircraft/FA-18E_CVW5/Models/dragchute/dragchute_part.xml</path>
+    <offsets>
+      <x-m> 0 </x-m>
+      <y-m> 0 </y-m>
+      <z-m> 0 </z-m>>
+      <pitch-deg> 0 </pitch-deg>
+      <heading-deg> 0 </heading-deg>
+      <roll-deg> 324 </roll-deg>
+    </offsets>
+  </model>
+
+</PropertyList>

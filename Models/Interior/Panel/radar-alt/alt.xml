@@ -1,0 +1,79 @@
+<?xml version="1.0"?>
+
+<PropertyList>
+
+  <path>alt.ac</path>
+
+
+  <animation>
+    <type>material</type>
+    <object-name>InhgKnob</object-name>
+    <emission>
+     <factor-prop>systems/electrical/outputs/instrument-lights-norm</factor-prop>
+      <red>   0.5 </red>
+      <green> 0.2 </green>
+      <blue>  0.2 </blue>
+    </emission>
+  </animation>
+
+  <animation>
+    <type>material</type>
+    <object-name>needle</object-name>
+    <object-name>ALTface</object-name>
+    <emission>
+     <factor-prop>systems/electrical/outputs/instrument-lights-norm</factor-prop>
+      <red>   0.5 </red>
+      <green> 0.5 </green>
+      <blue>  0.0 </blue>
+    </emission>
+  </animation>
+
+
+  <animation>
+    <type>rotate</type>
+    <object-name>needle</object-name>
+    <property>position/gear-agl-ft</property>
+    <interpolation>
+      <entry><ind> 0 </ind><dep>   0 </dep></entry>
+      <entry><ind> 50 </ind><dep> 40 </dep></entry>
+      <entry><ind> 100 </ind><dep> 80 </dep></entry>
+      <entry><ind> 200 </ind><dep> 120 </dep></entry>
+      <entry><ind> 1000</ind><dep> 280 </dep></entry>
+      <entry><ind> 2500</ind><dep> 340 </dep></entry>
+    </interpolation>
+    <axis>
+      <x> -1 </x>
+      <y>  0 </y>
+      <z>  0 </z>
+    </axis>
+  </animation>
+
+  <animation>
+    <type>rotate</type>
+    <object-name>bug</object-name>
+    <property>autopilot/settings/target-agl-ft</property>
+    <interpolation>
+      <entry><ind> 0 </ind><dep>   0 </dep></entry>
+      <entry><ind> 50 </ind><dep> 40 </dep></entry>
+      <entry><ind> 100 </ind><dep> 80 </dep></entry>
+      <entry><ind> 200 </ind><dep> 120 </dep></entry>
+      <entry><ind> 1000</ind><dep> 280 </dep></entry>
+      <entry><ind> 2500</ind><dep> 340 </dep></entry>
+    </interpolation>
+    <axis>
+      <x> -1 </x>
+      <y>  0 </y>
+      <z>  0 </z>
+    </axis>
+  </animation>
+
+ <animation>
+  <type>range</type>
+  <min-m>0</min-m>
+  <max-m>10</max-m>
+ </animation>
+
+</PropertyList>
+
+
+

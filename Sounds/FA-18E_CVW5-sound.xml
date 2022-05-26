@@ -1,0 +1,1031 @@
+<?xml version="1.0" encoding="UTF-8"?>
+ 
+<PropertyList>
+
+  <fx>
+   <!--  JSF start -->
+    <engine>
+      <name>JFS-lever-pull</name>
+      <path>Aircraft/FA-18E_CVW5/Sounds/starter.wav</path>
+      <property>controls/electric/battery-switch</property>
+    </engine>
+
+
+<!-- ::::::::::::::::::  engine RH sound  :::::::::::::::::::::::::    -->
+
+<!--engine RH connect Cockpit-view Canopy open-->
+    <engine>
+      <name>engine-RH-connect</name>
+      <path>Aircraft/FA-18E_CVW5/Sounds/jfs-connect.wav</path>
+      <condition>
+        <property>controls/engines/engine[0]/starter</property>
+      </condition>
+    </engine>
+
+
+<!-- engine RH looping Cockpit-view Canopy open-->
+    <engine>
+      <name>engine loop RH Open</name>
+      <mode>looped</mode>
+      <path>Aircraft/FA-18E_CVW5/Sounds/turbojet_fan.wav</path>
+      <condition>
+       <and>
+        <property>sim/current-view/internal</property>
+        <greater-than>
+        <property>instrumentation/doors/crew/position-norm</property>
+        <value> 0.1 </value>
+        </greater-than>
+       </and>
+      </condition>
+     <volume>
+      <property>controls/engines/engine[0]/starter-position-norm</property>
+       <factor>1</factor>
+      </volume>
+      <pitch>
+        <property>controls/engines/engine[0]/starter-position-norm</property>
+        <factor>1</factor>
+      </pitch>
+    </engine>
+
+<!-- engine RH looping Cockpit-view Canopy close-->
+    <engine>
+      <name>engine loop RH Close</name>
+      <mode>looped</mode>
+      <path>Aircraft/FA-18E_CVW5/Sounds/turbojet_fan_sirent.wav</path>
+      <condition>
+       <and>
+        <property>sim/current-view/internal</property>
+        <less-than>
+        <property>instrumentation/doors/crew/position-norm</property>
+        <value> 0.1 </value>
+        </less-than>
+       </and>
+      </condition>
+     <volume>
+      <property>controls/engines/engine[0]/starter-position-norm</property>
+       <factor>1</factor>
+      </volume>
+      <pitch>
+        <property>controls/engines/engine[0]/starter-position-norm</property>
+        <factor>1</factor>
+      </pitch>
+    </engine>
+
+
+<!-- JFS-RH-cutoff  -->
+    <engine>
+      <name>JFS-RH CUTOFF</name>
+      <path>Aircraft/FA-18E_CVW5/Sounds/jfs-cutoff.wav</path>
+      <condition>
+        <greater-than>
+        <property>controls/engines/engine[0]/starter-position-norm</property>
+        <value> 0.97 </value>
+        </greater-than>
+      </condition>
+    </engine>
+
+<!-- engine RH looping around-view-->
+    <engine>
+      <name>engine loop RH around</name>
+      <mode>looped</mode>
+      <path>Aircraft/FA-18E_CVW5/Sounds/turbojet_fan.wav</path>
+      <condition>
+       <equals>
+        <property>sim/current-view/internal</property>
+        <value> false </value>
+       </equals>
+      </condition>
+     <volume>
+      <property>controls/engines/engine[0]/starter-position-norm</property>
+       <factor>1</factor>
+      </volume>
+      <pitch>
+        <property>controls/engines/engine[0]/starter-position-norm</property>
+        <factor>1</factor>
+      </pitch>
+    </engine>
+
+<!-- engine RH thrust around-view -->
+    <engine>
+      <name>engine loop RH thrust</name>
+      <mode>looped</mode>
+      <path>Aircraft/FA-18E_CVW5/Sounds/exhaust_loop.wav</path>
+     <condition>
+      <or>
+       <and>
+        <not>
+          <property>sim/current-view/internal</property>
+        </not>
+       </and>
+       <and>
+        <property>sim/current-view/internal</property>
+        <greater-than>
+        <property>instrumentation/doors/crew/position-norm</property>
+        <value> 0 </value>
+        </greater-than>
+       </and>
+      </or>
+      </condition>
+      <volume>
+        <property>engines/engine[0]/n2</property>h
+        <factor type="double">0.01</factor>
+      </volume>
+      <pitch>
+        <property>/engines/engine[0]/n2</property>
+        <factor>1</factor>
+      </pitch>
+    </engine>
+
+
+<!-- engine RH augmenter around-view -->
+    <engine>
+      <name>engine loop RH augmenter</name>
+      <mode>looped</mode>
+      <path>Aircraft/FA-18E_CVW5/Sounds/exhaust_start.wav</path>
+     <condition>
+      <or>
+       <and>
+        <not>
+          <property>sim/current-view/internal</property>
+        </not>
+       </and>
+       <and>
+        <property>sim/current-view/internal</property>
+        <greater-than>
+        <property>instrumentation/doors/crew/position-norm</property>
+        <value> 0 </value>
+        </greater-than>
+       </and>
+      </or>
+      </condition>
+      <volume>
+        <property>engines/engine[0]/afterburner</property>
+        <factor type="double">1</factor>
+      </volume>
+      <pitch>
+        <property>engines/engine[0]/afterburner</property>
+        <factor>1</factor>
+      </pitch>
+      <reference-dist>100</reference-dist>
+      <max-dist>1000</max-dist>
+    </engine>
+
+<!-- engine RH augmenter internal-view -->
+    <engine>
+      <name>engine loop RH augmenter internal</name>
+      <mode>looped</mode>
+      <path>Aircraft/FA-18E_CVW5/Sounds/exhaust_start.wav</path>
+     <condition>
+        <property>sim/current-view/internal</property>
+        <equals>
+        <property>instrumentation/doors/crew/position-norm</property>
+        <value> 0 </value>
+        </equals>
+      </condition>
+      <volume>
+        <property>engines/engine[0]/afterburner</property>
+        <factor type="double">0.1</factor>
+      </volume>
+      <pitch>
+        <property>engines/engine[0]/afterburner</property>
+        <factor>5</factor>
+      </pitch>
+      <reference-dist>100</reference-dist>
+      <max-dist>1000</max-dist>
+    </engine>
+
+
+
+<!-- engine RH nozzle around-view -->
+    <engine>
+      <name>nozzle-RH0</name>
+      <path>Aircraft/FA-18E_CVW5/Sounds/nozzle.wav</path>
+      <condition>
+       <and>
+        <not>
+          <property>sim/current-view/internal</property>
+        </not>
+        <greater-than>
+        <property>controls/engines/engine[0]/throttle</property>
+        <value> 0.1 </value>
+        </greater-than>
+        <less-than>
+        <property>controls/engines/engine[0]/throttle</property>
+        <value> 0.4 </value>
+        </less-than>
+       </and>
+      </condition>
+      <volume> 
+        <factor>1.0</factor>
+      </volume>
+    </engine>
+
+<!-- ::::::::::::::::::  engine LH sound  :::::::::::::::::::::::::    -->
+
+
+
+<!--engine LH connect Cockpit-view Canopy open-->
+    <engine>
+      <name>engine-LH-connect</name>
+      <path>Aircraft/FA-18E_CVW5/Sounds/jfs-connect.wav</path>
+     <condition>
+        <property>controls/engines/engine[1]/starter</property>
+      </condition>
+    </engine>
+
+
+<!-- engine LH looping Cockpit-view Canopy open-->
+    <engine>
+      <name>engine loop LH Open</name>
+      <mode>looped</mode>
+      <path>Aircraft/FA-18E_CVW5/Sounds/turbojet_fan.wav</path>
+      <condition>
+       <and>
+        <property>sim/current-view/internal</property>
+        <greater-than>
+        <property>instrumentation/doors/crew/position-norm</property>
+        <value> 0.1 </value>
+        </greater-than>
+       </and>
+      </condition>
+     <volume>
+      <property>controls/engines/engine[1]/starter-position-norm</property>
+       <factor>1</factor>
+      </volume>
+      <pitch>
+        <property>controls/engines/engine[1]/starter-position-norm</property>
+        <factor>1</factor>
+      </pitch>
+    </engine>
+
+
+<!-- engine LH looping Cockpit-view Canopy close-->
+    <engine>
+      <name>engine loop LH Close</name>
+      <mode>looped</mode>
+      <path>Aircraft/FA-18E_CVW5/Sounds/turbojet_fan_sirent.wav</path>
+      <condition>
+       <and>
+        <property>sim/current-view/internal</property>
+        <less-than>
+        <property>instrumentation/doors/crew/position-norm</property>
+        <value> 0.1 </value>
+        </less-than>
+       </and>
+      </condition>
+     <volume>
+      <property>controls/engines/engine[1]/starter-position-norm</property>
+       <factor>1</factor>
+      </volume>
+      <pitch>
+        <property>controls/engines/engine[1]/starter-position-norm</property>
+        <factor>1</factor>
+      </pitch>
+    </engine>
+
+
+<!-- JFS-LH-cutoff -->
+    <engine>
+      <name>JFS-LH CUTOFF</name>
+      <path>Aircraft/FA-18E_CVW5/Sounds/jfs-cutoff.wav</path>
+      <condition>
+        <greater-than>
+        <property>controls/engines/engine[1]/starter-position-norm</property>
+        <value> 0.97 </value>
+        </greater-than>
+      </condition>
+    </engine>
+
+<!-- engine LH looping around-view-->
+    <engine>
+      <name>engine loop LH around</name>
+      <mode>looped</mode>
+      <path>Aircraft/FA-18E_CVW5/Sounds/turbojet_fan.wav</path>
+      <condition>
+       <equals>
+        <property>sim/current-view/internal</property>
+        <value> false </value>
+       </equals>
+      </condition>
+     <volume>
+      <property>controls/engines/engine[1]/starter-position-norm</property>
+       <factor>1</factor>
+      </volume>
+      <pitch>
+        <property>/controls/engines/engine[1]/starter-position-norm</property>
+        <factor>1</factor>
+      </pitch>
+    </engine>
+
+
+<!-- engine LH thrust around-view -->
+    <engine>
+      <name>engine loop LH thrust</name>
+      <mode>looped</mode>
+      <path>Aircraft/FA-18E_CVW5/Sounds/exhaust_loop.wav</path>
+     <condition>
+      <or>
+       <and>
+        <not>
+          <property>sim/current-view/internal</property>
+        </not>
+       </and>
+       <and>
+        <property>sim/current-view/internal</property>
+        <greater-than>
+        <property>instrumentation/doors/crew/position-norm</property>
+        <value> 0 </value>
+        </greater-than>
+       </and>
+      </or>
+      </condition>
+      <volume>
+        <property>engines/engine[1]/n2</property>
+        <factor type="double">0.01</factor>
+      </volume>
+      <pitch>
+        <property>engines/engine[1]/n2</property>
+        <factor>1</factor>
+      </pitch>
+    </engine>
+
+
+<!-- engine LH augmenter around-view -->
+    <engine>
+      <name>engine loop LH augmenter</name>
+      <mode>looped</mode>
+      <path>Aircraft/FA-18E_CVW5/Sounds/exhaust_start.wav</path>
+     <condition>
+      <or>
+       <and>
+        <not>
+          <property>sim/current-view/internal</property>
+        </not>
+       </and>
+       <and>
+        <property>sim/current-view/internal</property>
+        <greater-than>
+        <property>instrumentation/doors/crew/position-norm</property>
+        <value> 0 </value>
+        </greater-than>
+       </and>
+      </or>
+      </condition>
+      <volume>
+        <property>engines/engine[1]/afterburner</property>
+        <factor type="double">1</factor>
+      </volume>
+      <pitch>
+        <property>engines/engine[1]/afterburner</property>
+        <factor>1</factor>
+      </pitch>
+      <reference-dist>100</reference-dist>
+      <max-dist>1000</max-dist>
+    </engine>
+
+
+<!-- engine LH augmenter internal-view -->
+    <engine>
+      <name>engine loop LH augmenter internal</name>
+      <mode>looped</mode>
+      <path>Aircraft/FA-18E_CVW5/Sounds/exhaust_start.wav</path>
+     <condition>
+        <property>sim/current-view/internal</property>
+        <equals>
+        <property>instrumentation/doors/crew/position-norm</property>
+        <value> 0 </value>
+        </equals>
+      </condition>
+      <volume>
+        <property>engines/engine[1]/afterburner</property>
+        <factor type="double">0.1</factor>
+      </volume>
+      <pitch>
+        <property>engines/engine[1]/afterburner</property>
+        <factor>5</factor>
+      </pitch>
+      <reference-dist>100</reference-dist>
+      <max-dist>1000</max-dist>
+    </engine>
+
+
+<!-- engine LH nozzle around-view -->
+    <engine>
+      <name>nozzle-LH0</name>
+      <path>Aircraft/FA-18E_CVW5/Sounds/nozzle.wav</path>
+      <condition>
+       <and>
+        <not>
+          <property>sim/current-view/internal</property>
+        </not>
+        <greater-than>
+        <property>controls/engines/engine[1]/throttle</property>
+        <value> 0.1 </value>
+        </greater-than>
+        <less-than>
+        <property>controls/engines/engine[1]/throttle</property>
+        <value> 0.4 </value>
+        </less-than>
+       </and>
+      </condition>
+      <volume> 
+        <factor>1.0</factor>
+      </volume>
+    </engine>
+
+
+<!--     ::::::::::::::::::::: GEAR Sound ::::::::::::::::::::: -->
+
+<!--   rumble -->
+    <rumble>
+      <name>rumble</name>
+      <mode>looped</mode>
+      <path>Aircraft/FA-18E_CVW5/Sounds/rumble.wav</path>
+      <condition>
+        <or>
+          <property>gear/gear[0]/wow</property>
+          <property>gear/gear[1]/wow</property>
+          <property>gear/gear[2]/wow</property>
+        </or>
+        <!-- <property>sim/current-view/internal</property> -->
+      </condition>
+      <volume>
+        <property>/velocities/groundspeed-kt</property>
+        <!--type>log</type-->
+        <factor>0.025</factor>
+        <offset> -0.01</offset>
+        <max>1.01</max>
+        <min>0.01</min>
+      </volume>
+      <pitch>
+        <property>velocities/groundspeed-kt</property>
+        <factor>0.01</factor>
+        <offset>0.85</offset>
+      </pitch>
+      <reference-dist>100</reference-dist>
+      <max-dist>1000</max-dist>
+    </rumble>
+
+
+<!--   spueal -->
+    <squeal>
+      <name>squeal</name>
+      <path>Aircraft/FA-18E_CVW5/Sounds/wow.wav</path>
+      <condition>
+        <or>
+          <property>gear/gear[0]/wow</property>
+          <property>gear/gear[1]/wow</property>
+          <property>gear/gear[2]/wow</property>
+        </or>
+      </condition>
+      <volume>
+        <property>velocities/speed-down-fps</property>
+        <factor>0.5</factor>
+        <max>1.0</max>
+      </volume>
+      <volume>
+        <property>velocities/airspeed-kt</property>
+        <factor>0.1</factor>
+        <max>1.0</max>
+      </volume>
+      <volume>
+        <internal>dt_stop</internal>
+        <factor>0.05</factor>
+        <max>1.0</max>
+      </volume>
+      <pitch>
+        <property>velocities/airspeed-kt</property>
+        <factor>0.0025</factor>
+        <offset>1.0</offset>
+      </pitch>
+      <reference-dist>100</reference-dist>
+      <max-dist>1000</max-dist>
+    </squeal>
+
+     <gear>
+      <name>gear0</name>
+      <mode>in-transit</mode>
+      <path>Aircraft/FA-18E_CVW5/Sounds/gear.wav</path>
+      <property>gear/gear[0]/position-norm</property>
+      <volume> 
+        <factor>1.0</factor>
+      </volume>
+      <pitch>
+        <internal>dt_play</internal>
+        <offset>1.0</offset>
+        <factor>-0.001</factor>
+      </pitch>
+      <reference-dist>100</reference-dist>
+      <max-dist>1000</max-dist>
+    </gear>
+
+     <gear>
+      <name>gear2</name>
+      <mode>in-transit</mode>
+      <path>Aircraft/FA-18E_CVW5/Sounds/gear.wav</path>
+      <property>gear/gear[2]/position-norm</property>
+      <volume> 
+        <factor>1.0</factor>
+      </volume>
+      <pitch>
+        <internal>dt_play</internal>
+        <offset>1.0</offset>
+        <factor>-0.001</factor>
+      </pitch>
+      <reference-dist>100</reference-dist>
+      <max-dist>1000</max-dist>
+    </gear>
+
+    <gear>
+      <name>gear-lock0</name>
+      <path>Aircraft/FA-18E_CVW5/Sounds/gear_hatch.wav</path>
+      <condition>
+        <equals>
+          <property>gear/gear[0]/position-norm</property>
+          <value>0</value>
+        </equals>
+      </condition>
+      <volume> 
+        <factor>0.1</factor>
+      </volume>
+      <reference-dist>100</reference-dist>
+      <max-dist>1000</max-dist>
+    </gear>
+
+    <gear>
+      <name>gear-lock2</name>
+      <path>Aircraft/FA-18E_CVW5/Sounds/gear_hatch.wav</path>
+      <condition>
+        <or>
+        <equals>
+          <property>gear/gear[2]/position-norm</property>
+          <value>0</value>
+        </equals>
+        <equals>
+          <property>gear/gear[2]/position-norm</property>
+          <value>1</value>
+        </equals>
+        </or>
+      </condition>
+      <volume> 
+        <factor>0.1</factor>
+      </volume>
+      <reference-dist>100</reference-dist>
+      <max-dist>1000</max-dist>
+    </gear>
+
+    <flap>
+      <name>flaps</name>
+      <mode>in-transit</mode>
+      <path>Aircraft/FA-18E_CVW5/Sounds/gear.wav</path>
+      <property>surface-positions/flap-pos-norm</property>
+      <volume> 
+        <factor>1.0</factor>
+      </volume>
+      <reference-dist>100</reference-dist>
+      <max-dist>1000</max-dist>
+    </flap>
+
+    <speedbrake>
+      <name>speedbrake</name>
+      <mode>in-transit</mode>
+      <path>Aircraft/FA-18E_CVW5/Sounds/gear.wav</path>
+      <property>surface-positions/speedbrake-pos-norm</property>
+      <volume> 
+        <factor>1.0</factor>
+      </volume>
+      <reference-dist>100</reference-dist>
+      <max-dist>1000</max-dist>
+    </speedbrake>
+
+    <wind>
+      <name>wind</name>
+      <mode>looped</mode>
+      <path>Sounds/wind.wav</path>
+      <property>velocities/airspeed-kt</property>
+      <volume>
+        <property>/position/altitude-ft</property>
+        <factor>-0.000015</factor>
+        <offset>1.0</offset>
+        <min>0.0</min>
+        <max>1.0</max>
+      </volume>
+      <volume>
+        <property>velocities/airspeed-kt</property>
+        <factor>0.0015</factor>
+        <min>0.0</min>
+        <max>0.4</max>
+      </volume>
+      <pitch>
+        <property>velocities/airspeed-kt</property>
+        <factor>0.0035</factor>
+        <offset>1.25</offset>
+      </pitch>
+    </wind>
+
+    <!--                  Toggle Switches                  -->     
+    <click> 
+      <name>Battery on</name>
+      <path>Sounds/click.wav</path>
+      <condition> 
+        <property>controls/electric/battery-switch</property>
+      </condition>
+      <volume> 
+        <factor>1.0</factor>
+      </volume>
+    </click>
+
+    <click> 
+      <name>Battery off</name>
+      <path>Sounds/click.wav</path>
+      <condition> 
+        <not> 
+          <property>controls/electric/battery-switch</property>
+        </not>
+      </condition>
+      <volume> 
+        <factor>1.0</factor>
+      </volume>
+    </click>
+
+    <click> 
+      <name>Fuel Pump on</name>
+      <path>Sounds/click.wav</path>
+      <condition> 
+        <property>controls/engines/engine/fuel-pump</property>
+      </condition>
+      <volume> 
+        <factor>1.0</factor>
+      </volume>
+    </click>
+
+    <click> 
+      <name>Fuel Pump off</name>
+      <path>Sounds/click.wav</path>
+      <condition> 
+        <not> 
+          <property>controls/engines/engine/fuel-pump</property>
+        </not>
+      </condition>
+      <volume> 
+        <factor>1.0</factor>
+      </volume>
+    </click>
+ 
+    <click>
+      <name>Landing Light On</name>
+      <path>Sounds/click.wav</path>
+      <condition>
+        <property>controls/switches/landing-light</property>
+      </condition>
+      <volume>
+        <factor>1.0</factor>
+      </volume>
+    </click>
+      
+    <click>
+      <name>Landing Light Off</name>
+      <path>Sounds/click.wav</path>
+      <condition>
+        <not>
+          <property>controls/switches/landing-light</property>
+        </not>
+      </condition>
+      <volume>
+        <factor>1.0</factor>
+      </volume>
+    </click>
+
+    <click> 
+      <name>Magnetos-off</name>
+      <path>Sounds/click.wav</path>
+      <condition>
+        <not>
+          <property>controls/engines/engine/magnetos</property>
+        </not>
+      </condition>
+      <volume> 
+        <factor>1.0</factor>
+      </volume>
+    </click>
+
+    <click> 
+      <name>Strobe Lights White</name>
+      <path>Sounds/click.wav</path>
+      <condition>
+        <equals>
+          <property>controls/switches/strobes</property>
+          <value>1</value>
+        </equals>
+      </condition>
+      <volume> 
+        <factor>1.0</factor>
+      </volume>
+    </click>
+
+    <click> 
+      <name>Strobe Lights Off</name>
+      <path>Sounds/click.wav</path>
+      <condition>
+        <not> 
+          <property>controls/switches/strobes</property>
+        </not>
+      </condition>
+      <volume> 
+        <factor>1.0</factor>
+      </volume>
+    </click>
+
+    <click> 
+      <name>Avionics Master On</name>
+      <path>Sounds/click.wav</path>
+      <condition>
+        <property>controls/switches/avionic-master</property>
+      </condition>
+      <volume> 
+        <factor>1.0</factor>
+      </volume>
+    </click>
+ 
+    <click> 
+      <name>Avionics Master Off</name>
+      <path>Sounds/click.wav</path>
+      <condition>
+        <not>
+          <property>controls/switches/avionic-master</property>
+        </not>
+      </condition>
+      <volume> 
+        <factor>1.0</factor>
+      </volume>
+    </click>
+
+    <!--                  Toggle Switches                  -->     
+    <click> 
+      <name>click on</name>
+      <path>Sounds/click.wav</path>
+      <condition> 
+        <property>sim/sound/click</property>
+      </condition>
+      <volume> 
+        <factor>1.0</factor>
+      </volume>
+    </click>
+
+    <click> 
+      <name>click off</name>
+      <path>Sounds/click.wav</path>
+      <condition>
+        <not>
+          <property>sim/sound/click</property>
+        </not>
+      </condition>
+      <volume> 
+        <factor>1.0</factor>
+      </volume>
+    </click>
+
+  <stall>
+   <name>stall</name>
+   <mode>looped</mode>
+   <type>avionics</type>
+   <path>Aircraft/FA-18E_CVW5/Sounds/stall-600-chopped.wav</path>
+   <condition>
+    <and>
+     <greater-than>
+       <property>orientation/alpha-deg</property>
+       <value>30</value>
+     </greater-than>
+     <less-than>
+       <property>orientation/alpha-deg</property>
+       <value>40</value>
+     </less-than>
+    <not>
+       <property>gear/gear[0]/wow</property>
+       <property>gear/gear[1]/wow</property>
+       <property>gear/gear[2]/wow</property>
+     </not>
+   </and>
+   </condition>
+   <volume>
+    <factor>1.0</factor>
+   </volume>
+   <pitch>
+    <factor>0.2</factor>
+   </pitch>
+  </stall>
+
+  <stall>
+   <name>stall-fall</name>
+   <mode>looped</mode>
+   <type>avionics</type>
+   <path>Aircraft/FA-18E_CVW5/Sounds/stall-600-continue.wav</path>
+   <condition>
+    <and>
+     <greater-than>
+       <property>orientation/alpha-deg</property>
+       <value>40</value>
+     </greater-than>
+    <not>
+       <property>gear/gear[0]/wow</property>
+       <property>gear/gear[1]/wow</property>
+       <property>gear/gear[2]/wow</property>
+     </not>
+   </and>
+   </condition>
+   <volume>
+    <factor>1.0</factor>
+   </volume>
+   <pitch>
+    <factor>0.2</factor>
+   </pitch>
+  </stall>
+
+
+  <alart>
+   <name>low-alart</name>
+   <mode>looped</mode>
+   <type>avionics</type>
+   <path>Aircraft/FA-18E_CVW5/Sounds/record-signal.wav</path>
+   <condition>
+    <and>
+       <less-than>
+         <property>position/gear-agl-ft</property>
+         <property>instrumentation/altimeter/setting-low-alert</property>
+       </less-than>
+
+       <not>
+         <property>gear/gear[0]/wow</property>
+         <property>gear/gear[1]/wow</property>
+         <property>gear/gear[2]/wow</property>
+       </not>
+
+       <or>
+        <equals>
+          <property>gear/gear[0]/position-norm</property>
+          <value>0</value>
+        </equals>
+
+        <equals>
+          <property>surface-positions/flap-pos-norm</property>
+          <value>0</value>
+        </equals>
+       </or>
+
+   </and>
+   </condition>
+   <volume>
+    <factor>1.0</factor>
+   </volume>
+   <pitch>
+    <factor>0</factor>
+   </pitch>
+  </alart>
+
+  <alart>
+   <name>PULL_UP</name>
+   <mode>looped</mode>
+   <type>avionics</type>
+   <path>Aircraft/FA-18E_CVW5/Sounds/pull-up.wav</path>
+   <condition>
+    <and>
+       <less-than>
+         <property>position/gear-agl-ft</property>
+         <value>1300</value>
+       </less-than>
+
+       <less-than>
+         <property>velocities/vertical-speed-fps</property>
+         <value>-60</value>
+       </less-than>
+   </and>
+   </condition>
+   <volume>
+    <factor>3.0</factor>
+   </volume>
+   <pitch>
+    <factor>0</factor>
+   </pitch>
+  </alart>
+
+
+  <alart>
+   <name>BINGOFUEL</name>
+   <mode>looped</mode>
+   <type>avionics</type>
+   <path>Aircraft/FA-18E_CVW5/Sounds/bingo_fuel.wav</path>
+   <condition>
+    <and>
+       <less-than>
+         <property>consumables/fuel/total-internal-fuel-lbs</property>
+         <property>consumables/fuel/bingo-lbs</property>
+       </less-than>
+       <greater-than>
+         <property>consumables/fuel/total-internal-fuel-lbs</property>
+         <value>3000</value>
+       </greater-than>
+   </and>
+   </condition>
+   <volume>
+    <factor>3.0</factor>
+   </volume>
+   <pitch>
+    <factor>0</factor>
+   </pitch>
+  </alart>
+
+
+  <alart>
+   <name>mastercoution</name>
+   <mode>looped</mode>
+   <type>avionics</type>
+   <path>Aircraft/FA-18E_CVW5/Sounds/caution.wav</path>
+  <condition>
+   <and>
+     <not>
+     <property>gear/gear[0]/wow</property>
+     </not>
+     <less-than>
+	   <property>systems/electrical/volts</property>
+	   <value>16</value>
+     </less-than>
+    </and>
+   </condition>
+  </alart>
+
+
+  <alart>
+   <name>warnigAMAD</name>
+   <type>avionics</type>
+   <path>Aircraft/FA-18E_CVW5/Sounds/warning_amad_fire.wav</path>
+        <condition>
+         <and>
+         <property>controls/switches/fire-warning-test</property>
+         <equals>
+             <property>controls/APU/ready</property>
+             <value>1</value>
+          </equals>
+         </and>
+        </condition>
+  </alart>
+
+
+  <alart>
+   <name>LOW-FUEL</name>
+   <mode>looped</mode>
+   <type>avionics</type>
+   <path>Aircraft/FA-18E_CVW5/Sounds/low-fuel.wav</path>
+   <condition>
+       <less-than>
+         <property>consumables/fuel/total-internal-fuel-lbs</property>
+         <value>3000</value>
+       </less-than>>
+   </condition>
+   <volume>
+    <factor>3.0</factor>
+   </volume>
+   <pitch>
+    <factor>0</factor>
+   </pitch>
+  </alart>
+
+  <alart>
+   <name>CANOPY-OPEN</name>
+   <mode>looped</mode>
+   <path>Aircraft/FA-18E_CVW5/Sounds/canopy_loop.wav</path>
+   <condition>
+      <and>
+       <less-than>
+         <property>instrumentation/doors/crew/position-norm</property>
+         <value>0.95</value>
+       </less-than>
+       <greater-than>
+         <property>instrumentation/doors/crew/position-norm</property>
+         <value>0.1</value>
+       </greater-than>
+      </and>
+   </condition>
+   <volume>
+    <factor>3.0</factor>
+   </volume>
+   <pitch>
+    <factor>0</factor>
+   </pitch>
+  </alart>
+
+    <tailhook>
+      <name>TAILHOOK</name>
+      <mode>in-transit</mode>
+      <path>Aircraft/FA-18E_CVW5/Sounds/gear.wav</path>
+      <property>gear/tailhook/position-norm</property>
+      <volume> 
+        <factor>1.0</factor>
+      </volume>
+      <reference-dist>100</reference-dist>
+      <max-dist>1000</max-dist>
+    </tailhook>
+
+
+  </fx>
+
+</PropertyList>

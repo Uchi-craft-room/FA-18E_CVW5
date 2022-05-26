@@ -1,0 +1,60 @@
+<?xml version="1.0"?>
+
+
+<PropertyList>
+<path>pai.ac</path>
+
+
+<!-- fix misc.rgb -->
+<animation>
+ <type>rotate</type>
+ <object-name>needle</object-name>
+ <property>/systems/static/pressure-inhg</property>
+ <interpolation>
+	 <entry><ind>0</ind><dep>0</dep></entry>
+	 <entry><ind>13</ind><dep>173</dep></entry>
+	 <entry><ind>33</ind><dep>208</dep></entry>
+  </interpolation>
+  <axis>
+   <x>-1</x>
+   <y>0</y>
+   <z>0</z>
+  </axis>
+ </animation>
+
+<!-- lighting -->
+
+  <animation> 
+   <object-name>mount</object-name>
+   <type>material</type>
+    <emission> 
+      <factor-prop>systems/electrical/outputs/instrument-lights-norm</factor-prop>
+        <red>0.5</red>
+        <green>0.2</green>
+        <blue>0.2</blue>
+      </emission>
+  </animation>
+
+  <animation> 
+   <object-name>face</object-name>
+   <object-name>needle-w</object-name>
+   <type>material</type>
+    <emission> 
+      <factor-prop>systems/electrical/outputs/instrument-lights-norm</factor-prop>
+        <red>0.5</red>
+        <green>0.5</green>
+        <blue>0.0</blue>
+      </emission>
+  </animation>
+
+
+ <animation>
+  <type>range</type>
+  <min-m>0</min-m>
+  <max-m>10</max-m>
+ </animation>
+
+</PropertyList>
+
+
+

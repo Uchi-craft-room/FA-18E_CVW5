@@ -1,0 +1,80 @@
+<?xml version="1.0"?>
+
+
+<PropertyList>
+<path>ivsi.ac</path>
+
+
+<!-- fix misc.rgb -->
+<animation>
+ <type>rotate</type>
+ <object-name>needle</object-name>
+ <property>/velocities/vertical-speed-fps</property>
+ <interpolation>
+	 <entry><ind>-100.0</ind><dep>-165.0</dep></entry>
+	 <entry><ind>-66.6</ind><dep>-124.8</dep></entry>
+	 <entry><ind>-33.3</ind><dep>-80.0</dep></entry>
+	 <entry><ind>-16.6</ind><dep>-45.0</dep></entry>
+	 <entry><ind>-8.3</ind><dep>-22.4</dep></entry>
+	 <entry><ind>0.0</ind><dep>0.0</dep></entry>
+	 <entry><ind>8.3</ind><dep>22.4</dep></entry>
+	 <entry><ind>16.6</ind><dep>45.0</dep></entry>
+	 <entry><ind>33.3</ind><dep>80.0</dep></entry>
+	 <entry><ind>66.6</ind><dep>124.8</dep></entry>
+	 <entry><ind>100</ind><dep>165.0</dep></entry>
+  </interpolation>
+  <axis>
+   <x>-1</x>
+   <y>0</y>
+   <z>0</z>
+  </axis>
+ </animation>
+
+
+	<animation>
+		<type>select</type>
+		<object-name>off-flag</object-name>
+		<condition>
+			<less-than>
+				<property>systems/electrical/volts</property>
+				<value>24</value>
+			</less-than>
+		</condition>
+	</animation>
+
+<!-- lighting -->
+
+  <animation> 
+   <object-name>mount</object-name>
+   <type>material</type>
+    <emission> 
+      <factor-prop>systems/electrical/outputs/instrument-lights-norm</factor-prop>
+        <red>0.2</red>
+        <green>0.5</green>
+        <blue>0.2</blue>
+      </emission>
+  </animation>
+
+  <animation> 
+  <object-name>face</object-name>
+  <object-name>needle-w</object-name>
+   <type>material</type>
+    <emission> 
+      <factor-prop>systems/electrical/outputs/instrument-lights-norm</factor-prop>
+        <red>0.2</red>
+        <green>0.5</green>
+        <blue>0.2</blue>
+      </emission>
+  </animation>
+
+
+ <animation>
+  <type>range</type>
+  <min-m>0</min-m>
+  <max-m>10</max-m>
+ </animation>
+
+</PropertyList>
+
+
+

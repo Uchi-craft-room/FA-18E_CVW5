@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<PropertyList>
+
+  <path>ext-tank-ind.ac</path>
+
+
+  <animation>
+    <type>select</type>
+    <object-name>ready</object-name>
+  <condition>
+     <property>systems/refuel/contact</property>
+   </condition>
+  </animation>
+
+  <animation>
+    <type>select</type>
+    <object-name>CTR</object-name>
+  <condition>
+      <and>
+        <greater-than>
+	<property>consumables/fuel/tank[5]/level-norm</property>
+          <value>0.9</value>
+        </greater-than>
+        <greater-than>
+	  <property>systems/electrical/volts</property>
+          <value>16</value>
+        </greater-than>
+      </and>
+   </condition>
+  </animation>
+
+  <animation>
+    <type>select</type>
+    <object-name>LH</object-name>
+  <condition>
+      <and>
+        <greater-than>
+	<property>consumables/fuel/tank[6]/level-norm</property>
+          <value>0.9</value>
+        </greater-than>
+        <greater-than>
+	  <property>systems/electrical/volts</property>
+          <value>16</value>
+        </greater-than>
+      </and>
+   </condition>
+  </animation>
+
+  <animation>
+    <type>select</type>
+    <object-name>RH</object-name>
+  <condition>
+      <and>
+        <greater-than>
+	<property>consumables/fuel/tank[7]/level-norm</property>
+          <value>0.9</value>
+        </greater-than>
+        <greater-than>
+	  <property>systems/electrical/volts</property>
+          <value>16</value>
+        </greater-than>
+      </and>
+   </condition>
+  </animation>
+
+  <animation>
+    <type>material</type>
+        <object-name>LH</object-name>
+        <object-name>CTR</object-name>
+        <object-name>RH</object-name>
+        <object-name>ready</object-name>
+    <emission>
+      <red>   0.4 </red>
+      <green> 0.4 </green>
+      <blue>  0.4 </blue>
+    </emission> 
+  </animation> 
+
+
+</PropertyList>
+
+
+
+

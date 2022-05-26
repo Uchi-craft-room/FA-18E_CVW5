@@ -1,0 +1,159 @@
+<?xml version="1.0"?>
+
+<PropertyList>
+
+    <path>LT.ac</path>
+    
+  <animation>
+ <object-name>base</object-name>
+  <object-name>WARN</object-name>
+  <object-name>CHART</object-name>
+  <object-name>SW1</object-name>
+  <object-name>SW2</object-name>
+  <type>material</type>
+     <emission> 
+	<factor-prop>systems/electrical/outputs/instrument-lights-norm</factor-prop>
+        <red>   0.2 </red>
+        <green> 0.5 </green>
+        <blue>  0.2 </blue>
+      </emission>
+  </animation>
+
+    <animation>
+        <type>pick</type>
+  	<object-name>INST</object-name>
+  	<object-name>CONSOLE</object-name>
+	<object-name>FLOOD</object-name>
+        <action>
+            <button>4</button>
+            <repeatable>true</repeatable>
+            <binding>
+                <command>property-adjust</command>
+                <property>controls/lighting/instrument-lights-norm</property>
+                <step>0.1</step>
+                <min>0</min>
+                <max>1</max>
+            </binding>
+        </action>
+    </animation>
+
+    <animation>
+        <type>pick</type>
+  	<object-name>INST</object-name>
+  	<object-name>CONSOLE</object-name>
+	<object-name>FLOOD</object-name>
+        <action>
+            <button>3</button>
+            <repeatable>true</repeatable>
+            <binding>
+                <command>property-adjust</command>
+                <property>controls/lighting/instrument-lights-norm</property>
+                <step>-0.1</step>
+                <min>0</min>
+                <max>1</max>
+            </binding>
+        </action>
+    </animation>
+
+ 
+
+
+
+  <animation>
+	<type>rotate</type>
+	<object-name>INST</object-name>
+	<property>controls/lighting/instrument-lights-norm</property>
+	<factor>315</factor>
+	<axis>
+		<x> -1 </x>
+		<y> 0 </y>
+		<z> 0 </z>
+	</axis>
+	<center>
+		<x-m> 0.006 </x-m>
+		<y-m> 0.006 </y-m>
+		<z-m> 0.018 </z-m>
+	</center>
+  </animation>
+
+  <animation>
+	<type>rotate</type>
+	<object-name>CONSOLE</object-name>
+	<property>controls/lighting/instrument-lights-norm</property>
+	<factor>315</factor>
+	<axis>
+		<x> -1 </x>
+		<y> 0 </y>
+		<z> 0 </z>
+	</axis>
+	<center>
+		<x-m> 0.006 </x-m>
+		<y-m>-0.027 </y-m>
+		<z-m> 0.018 </z-m>
+	</center>
+  </animation>
+
+  <animation>
+	<type>rotate</type>
+	<object-name>FLOOD</object-name>
+	<property>controls/lighting/instrument-lights-norm</property>
+	<factor>315</factor>
+	<axis>
+		<x> -1 </x>
+		<y> 0 </y>
+		<z> 0 </z>
+	</axis>
+	<center>
+		<x-m> 0.006 </x-m>
+		<y-m> 0.043 </y-m>
+		<z-m> 0.018 </z-m>
+	</center>
+  </animation>
+
+
+<!--  Switch  -->
+
+ <animation>
+	<type>material</type>
+	<object-name>INST</object-name>
+  	<object-name>CONSOLE</object-name>
+	<object-name>FLOOD</object-name>
+	<emission>
+		<red>   0.3 </red>
+		<green> 0.3 </green>
+		<blue>  0.3 </blue>
+	</emission>
+  </animation>
+
+  <animation>
+    <type>pick</type>
+    <visible>true</visible>
+	<object-name>INST</object-name>
+  	<object-name>CONSOLE</object-name>
+	<object-name>FLOOD</object-name>
+    <action>
+      <button>0</button>
+      <repeatable>false</repeatable>
+      <binding>
+	<command>property-toggle</command>
+	<property>controls/lighting/panel-norm</property>
+      </binding>
+      <binding>
+        <command>property-toggle</command>
+        <property>controls/lighting/instruments-norm</property>
+      </binding>
+      <binding>
+        <command>property-toggle</command>
+        <property>controls/lighting/instrument-lights</property>
+      </binding>
+      <binding>
+        <command>property-toggle</command>
+        <property>sim/sound/click</property>
+      </binding>
+    </action>
+  </animation>
+
+
+</PropertyList>
+
+

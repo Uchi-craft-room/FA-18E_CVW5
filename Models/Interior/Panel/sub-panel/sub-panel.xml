@@ -1,0 +1,596 @@
+<?xml version="1.0"?>
+
+<PropertyList>
+
+    <path>sub-panel.ac</path>
+
+
+  <animation>
+   <type>material</type>
+    <object-name>base-RH</object-name>
+    <object-name>base-LH</object-name>
+    <object-name>LDG_LT</object-name>
+    <object-name>anti_skid</object-name>
+    <object-name>L_BAR</object-name>
+    <object-name>hook_bypass</object-name>
+    <object-name>FLAP</object-name>
+    <object-name>wing_fold</object-name>
+     <emission>
+      <factor-prop>systems/electrical/outputs/instrument-lights-norm</factor-prop>
+        <red>0.2</red>
+        <green>0.5</green>
+        <blue>0.2</blue>
+      </emission>
+  </animation>
+
+  <animation>
+   <type>material</type>
+    <object-name>c1</object-name>
+    <object-name>c2</object-name>
+    <object-name>c3</object-name>
+    <object-name>c4</object-name>
+    <object-name>c5</object-name>
+    <object-name>c6</object-name>
+    <object-name>c7</object-name>
+    <object-name>c8</object-name>
+    <object-name>c9</object-name>
+    <object-name>c10</object-name>
+    <object-name>c11</object-name>
+    <emission>
+        <red>1</red>
+        <green>1</green>
+        <blue>1</blue>
+     </emission>
+  </animation>
+
+
+<!-- ANTI SKID SW -->
+
+    <animation>
+        <type>pick</type>
+        <object-name>anti_skid</object-name>
+        <visible>true</visible>
+	<action>
+		<button>0</button>
+		<repeatable>true</repeatable>
+		<binding>
+			<command>property-toggle</command>
+			<property>controls/gear/antiskid</property>
+		</binding>
+ 		<binding>
+			<command>property-toggle</command>
+			<property>sim/sound/click</property>
+		</binding>
+	</action>
+    </animation>
+
+    <animation>
+	<type>rotate</type>
+	<object-name>anti_skid</object-name>
+	<property>controls/gear/antiskid</property>
+	<factor>-60 </factor>
+	<axis>
+		<x1-m>-0.126 </x1-m>
+		<y1-m>-0.417 </y1-m>
+		<z1-m> 0.467 </z1-m>
+		<x2-m>-0.128 </x2-m>
+		<y2-m>-0.411 </y2-m>
+		<z2-m> 0.467 </z2-m>
+	</axis>
+     </animation>
+
+
+<!-- LDG LIGHT SW -->
+
+    <animation>
+        <type>pick</type>
+        <object-name>LDG_LT</object-name>
+        <visible>true</visible>
+	<action>
+		<button>0</button>
+		<repeatable>true</repeatable>
+		<binding>
+			<command>property-toggle</command>
+			<property>controls/switches/taxi-lights</property>
+		</binding>
+		<binding>
+			<command>property-toggle</command>
+			<property>controls/switches/landing-light</property>
+		</binding>
+ 		<binding>
+			<command>property-toggle</command>
+			<property>sim/sound/click</property>
+		</binding>
+	</action>
+    </animation>
+
+    <animation>
+	<type>rotate</type>
+	<object-name>LDG_LT</object-name>
+	<property>controls/switches/landing-light</property>
+	<factor>-60 </factor>
+	<axis>
+		<x1-m>-0.112 </x1-m>
+		<y1-m>-0.453 </y1-m>
+		<z1-m> 0.460 </z1-m>
+		<x2-m>-0.114 </x2-m>
+		<y2-m>-0.447 </y2-m>
+		<z2-m> 0.460 </z2-m>
+	</axis>
+     </animation>
+
+
+<!-- LAUNCH BAR SW -->
+
+    <animation>
+        <type>pick</type>
+        <object-name>L_BAR</object-name>
+        <visible>true</visible>
+    <action>
+      <button>0</button>
+      <repeatable>true</repeatable>
+      <binding>
+		<command>property-toggle</command>
+		<property>/controls/gear/launchbar</property>
+		<value>true</value>
+      </binding>
+      <binding>
+		<command>property-toggle</command>
+		<property>sim/sound/click</property>
+      </binding>
+    </action>
+    </animation>
+
+  <animation>
+    <type>rotate</type>
+	<object-name>L_BAR</object-name>
+	<property>/controls/gear/launchbar</property>
+	<factor> 40 </factor>
+	<axis>
+		<x1-m>-0.140 </x1-m>
+		<y1-m>-0.458 </y1-m>
+		<z1-m> 0.502 </z1-m>
+		<x2-m>-0.142 </x2-m>
+		<y2-m>-0.452 </y2-m>
+		<z2-m> 0.502 </z2-m>
+	</axis>
+  </animation>
+
+<!-- FLAP SW -->
+
+    <animation>
+        <type>pick</type>
+        <object-name>FLAP</object-name>
+        <action>
+            <button>0</button>
+            <repeatable>true</repeatable>
+            <binding>
+                <command>property-adjust</command>
+                <property>controls/flight/flaps</property>
+                <step>0.5</step>
+                <min>0</min>
+                <max>1</max>
+            </binding>
+        </action>
+    </animation>
+
+    <animation>
+        <type>pick</type>
+        <object-name>FLAP</object-name>
+        <action>
+            <button>1</button>
+            <repeatable>true</repeatable>
+            <binding>
+                <command>property-adjust</command>
+                <property>controls/flight/flaps</property>
+                <step>-0.5</step>
+                <min>0</min>
+                <max>1</max>
+            </binding>
+        </action>
+    </animation>
+
+ <animation>
+  <type>rotate</type>
+  <object-name>FLAP</object-name>
+  <property>controls/flight/flaps</property>
+  <interpolation>
+   <entry><ind>0</ind><dep> 0 </dep></entry>
+   <entry><ind>0.5</ind><dep>30 </dep></entry>
+   <entry><ind>1</ind><dep> 60 </dep></entry>
+  </interpolation>
+	<axis>
+		<x1-m>-0.149 </x1-m>
+		<y1-m>-0.417 </y1-m>
+		<z1-m> 0.502 </z1-m>
+		<x2-m>-0.151 </x2-m>
+		<y2-m>-0.411 </y2-m>
+		<z2-m> 0.502 </z2-m>
+	</axis>
+ </animation>
+
+ <!-- EMERG BRAKE -->
+
+  <animation>
+	  <type>material</type>
+	  <object-name>emerg_park</object-name>
+	  <emission>
+	        <red>   0.2 </red>
+		<green> 0.5 </green>
+		<blue>  0.2 </blue>
+		<factor-prop>systems/electrical/outputs/instrument-lights-norm</factor-prop>
+	  </emission>
+  </animation>
+
+  <animation>
+      <type>translate</type>
+      <object-name>emerg_park</object-name>
+      <property>controls/gear/brake-parking</property>
+         <factor> 0.03 </factor>
+        <axis>
+            <x1-m>-0.164 </x1-m>
+            <y1-m>-0.385 </y1-m>
+            <z1-m> 0.415 </z1-m>
+            <x2-m>-0.106 </x2-m>
+            <y2-m>-0.368 </y2-m>
+            <z2-m> 0.456 </z2-m>
+        </axis>
+  </animation>
+
+  <animation>
+      <type>rotate</type>
+      <object-name>emerg_park</object-name>
+      <property>controls/gear/brake-parking</property>
+         <factor> 90 </factor>
+        <axis>
+            <x1-m>-0.164 </x1-m>
+            <y1-m>-0.385 </y1-m>
+            <z1-m> 0.415 </z1-m>
+            <x2-m>-0.106 </x2-m>
+            <y2-m>-0.368 </y2-m>
+            <z2-m> 0.456 </z2-m>
+        </axis>
+  </animation>
+
+
+  <animation>
+    <type>pick</type>
+    <visible>true</visible>
+    <object-name>emerg_park</object-name>
+    <action>
+      <button>0</button>
+      <repeatable>false</repeatable>
+      <binding>
+        <command>property-toggle</command>
+        <property>controls/gear/brake-parking</property>
+      </binding>
+    <binding>
+        <command>property-toggle</command>
+        <property>sim/sound/click</property>
+      </binding>
+    </action>
+  </animation>
+
+
+
+
+<!-- INDICATE PANEL -->
+    <animation>
+        <type>material</type>
+        <object-name>canopy</object-name>
+        <object-name>LH-eng-out</object-name>
+        <object-name>RH-eng-out</object-name>
+    	<object-name>gear-brake</object-name>
+   	<object-name>spd-brake</object-name>
+ 	<object-name>AP-pitch</object-name>
+  	<object-name>AP-rud</object-name>
+	<object-name>LH-fuel</object-name>
+	<object-name>CTR-fuel</object-name>
+    	<object-name>RH-fuel</object-name>
+    	<object-name>fuel-empty</object-name>
+   	<object-name>fuel-low</object-name>
+    	<object-name>anti-ice</object-name>
+    	<object-name>ws-temp-high</object-name>
+     <emission>
+      <red>   1 </red>
+      <green> 1 </green>
+      <blue>  1 </blue>
+    </emission>
+  </animation>
+
+
+  <animation>
+    <type>select</type>
+ 	<object-name>AP-pitch</object-name>
+  <condition>
+   <and>
+	<greater-than>
+		<property>systems/electrical/volts</property>
+		<value>16</value>
+	</greater-than>
+        <not>
+            <equals>
+            <property>controls/flight/elevator-trim</property>
+		<value>0</value>
+            </equals>
+        </not>
+    </and>
+   </condition>
+  </animation>
+
+  <animation>
+    <type>select</type>
+ 	<object-name>AP-rud</object-name>
+  <condition>
+   <and>
+	<greater-than>
+		<property>systems/electrical/volts</property>
+		<value>16</value>
+	</greater-than>
+        <not>
+            <equals>
+            <property>controls/flight/rudder-trim</property>
+		<value>0</value>
+            </equals>
+        </not>
+    </and>
+   </condition>
+  </animation>
+
+
+
+  <animation>
+    <type>select</type>
+    <object-name>spd-brake</object-name>
+  <condition>
+   <and>
+	<greater-than>
+		<property>systems/electrical/volts</property>
+		<value>16</value>
+	</greater-than>
+            <property>controls/flight/speedbrake</property>
+    </and>
+   </condition>
+  </animation>
+
+  <animation>
+    <type>select</type>
+    <object-name>LH-eng-out</object-name>
+  <condition>
+   <and>
+	<greater-than>
+		<property>systems/electrical/volts</property>
+		<value>16</value>
+	</greater-than>
+       <property>engines/engine/out-of-fuel</property>
+    </and>
+   </condition>
+  </animation>
+
+  <animation>
+    <type>select</type>
+    <object-name>RH-eng-out</object-name>
+    <condition>
+     <and>
+       <property>engines/engine[1]/out-of-fuel</property>
+	<greater-than>
+           <property>systems/electrical/volts</property>
+	   <value>16</value>
+	</greater-than>
+       </and>
+    </condition>
+  </animation>
+
+
+
+  <animation>
+    <type>select</type>
+    <object-name>gear-brake</object-name>
+  <condition>
+   <and>
+     <greater-than>
+	<property>systems/electrical/volts</property>
+	<value>16</value>
+     </greater-than>
+     <or>
+      <property>controls/gear/brake-parking</property>
+      <property>controls/gear/brake-right</property>
+      <property>controls/gear/brake-left</property>
+     </or>
+   </and>
+   </condition>
+  </animation>
+
+
+  <animation>
+    <type>select</type>
+    <object-name>canopy</object-name>
+  <condition>
+   <and>
+		<greater-than>
+			<property>systems/electrical/volts</property>
+			<value>16</value>
+		</greater-than>
+     <greater-than>
+       <property>instrumentation/doors/crew/position-norm</property>
+       <value>0.05</value>
+     </greater-than>
+    </and>
+   </condition>
+  </animation>
+
+
+  <animation>
+    <type>select</type>
+    <object-name>fuel-empty</object-name>
+  <condition>
+      <and>
+        <greater-than>
+	  <property>systems/electrical/volts</property>
+          <value>16</value>
+        </greater-than>
+        <less-than>
+	<property>consumables/fuel/total-fuel-norm</property>
+          <value>0.1</value>
+        </less-than>
+      </and>
+   </condition>
+  </animation>
+
+
+
+
+
+  <animation>
+    <type>select</type>
+    <object-name>fuel-low</object-name>
+  <condition>
+      <and>
+        <greater-than>
+	  <property>systems/electrical/volts</property>
+          <value>16</value>
+        </greater-than>
+        <less-than>
+	<property>consumables/fuel/total-fuel-norm</property>
+          <value>0.2</value>
+        </less-than>
+      </and>
+   </condition>
+  </animation>
+
+  <animation>
+    <type>select</type>
+	<object-name>LH-fuel</object-name>
+  <condition>
+      <and>
+        <greater-than>
+	<property>consumables/fuel/tank[3]/level-norm</property>
+          <value>0.9</value>
+        </greater-than>
+        <greater-than>
+	  <property>systems/electrical/volts</property>
+          <value>16</value>
+        </greater-than>
+      </and>
+   </condition>
+  </animation>
+
+  <animation>
+    <type>select</type>
+    	<object-name>RH-fuel</object-name>
+  <condition>
+      <and>
+        <greater-than>
+	<property>consumables/fuel/tank[4]/level-norm</property>
+          <value>0.9</value>
+        </greater-than>
+        <greater-than>
+	  <property>systems/electrical/volts</property>
+          <value>16</value>
+        </greater-than>
+      </and>
+   </condition>
+  </animation>
+
+  <animation>
+    <type>select</type>
+	<object-name>CTR-fuel</object-name>
+  <condition>
+      <and>
+        <greater-than>
+	<property>consumables/fuel/tank[0]/level-norm</property>
+          <value>0.9</value>
+        </greater-than>
+        <greater-than>
+	  <property>systems/electrical/volts</property>
+          <value>16</value>
+        </greater-than>
+      </and>
+   </condition>
+  </animation>
+
+  <animation>
+    <type>select</type>
+    <object-name>anti-ice</object-name>
+  <condition>
+      <and>
+        <less-than>
+		<property>environment/total-air-temperature-degc</property>
+          <value>0</value>
+        </less-than>
+        <not>
+        <property>controls/anti-ice/window-heat</property>
+        </not>
+        <greater-than>
+	  <property>systems/electrical/volts</property>
+          <value>16</value>
+        </greater-than>
+      </and>
+   </condition>
+  </animation>
+
+  <animation>
+    <type>select</type>
+    <object-name>ws-temp-high</object-name>
+  <condition>
+      <and>
+        <greater-than>
+		<property>environment/total-air-temperature-degc</property>
+          <value>25</value>
+        </greater-than>
+        <property>controls/anti-ice/window-heat</property>
+        <greater-than>
+	  <property>systems/electrical/volts</property>
+          <value>16</value>
+        </greater-than>
+      </and>
+   </condition>
+  </animation>
+
+<!-- WING FOLD SW -->
+
+    <animation>
+        <type>pick</type>
+        <object-name>wing_fold</object-name>
+        <visible>true</visible>
+    <action>
+      <button>0</button>
+      <repeatable>true</repeatable>
+      <binding>
+		<command>property-toggle</command>
+		<property>/controls/flight/wing-fold</property>
+      </binding>
+      <binding>
+		<command>property-toggle</command>
+		<property>sim/sound/click</property>
+      </binding>
+    </action>
+    </animation>
+
+  <animation>
+    <type>rotate</type>
+	<object-name>wing_fold</object-name>
+	<property>/controls/flight/wing-fold</property>
+	<factor>-60 </factor>
+	<axis>
+		<x1-m>-0.157 </x1-m>
+		<y1-m> 0.363 </y1-m>
+		<z1-m> 0.489 </z1-m>
+		<x2-m>-0.155 </x2-m>
+		<y2-m> 0.371 </y2-m>
+		<z2-m> 0.488 </z2-m>
+	</axis>
+  </animation>
+
+
+
+
+    <animation>
+       <type>range</type>
+       <min-m>0</min-m>
+       <max-m>5</max-m>
+    </animation>
+
+</PropertyList>
+
+

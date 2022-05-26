@@ -1,0 +1,204 @@
+<?xml version="1.0"?>
+
+<PropertyList>
+
+    <path>misc.ac</path>
+
+    <animation>
+	<type>range</type>
+	<min-m>0</min-m>
+	<max-m>10</max-m>
+    </animation>
+ 
+  <animation>
+         <object-name>base</object-name>
+         <object-name>SW</object-name>
+         <object-name>SW-base</object-name>
+         <object-name>SW.001</object-name>
+         <object-name>SW-base.001</object-name>
+         <object-name>SW.002</object-name>
+         <object-name>SW.002-on</object-name>
+         <object-name>SW-base.002</object-name>
+         <object-name>SW.003</object-name>
+         <object-name>SW-base.003</object-name>
+         <object-name>SW.004</object-name>
+         <object-name>SW-base.004</object-name>
+     <type>material</type>
+     <emission> 
+      <factor-prop>systems/electrical/outputs/instrument-lights-norm</factor-prop>
+        <red>0.5</red>
+        <green>0.2</green>
+        <blue>0.2</blue>
+      </emission>
+  </animation> 
+
+
+
+<!-- ANTI SKID -->
+
+    <animation>
+        <type>pick</type>
+        <object-name>SW.002</object-name>
+    <action>
+      <button>0</button>
+      <repeatable>false</repeatable>
+      <binding>
+        <command>property-toggle</command>
+        <property>controls/gear/antiskid</property>
+      </binding>
+      <binding>
+        <command>property-toggle</command>
+        <property>sim/sound/click</property>
+      </binding>
+    </action>
+    </animation>
+
+  <animation>
+    <type>rotate</type>
+     <object-name>SW.002</object-name>
+    <property>controls/gear/antiskid</property>
+    <factor> 60 </factor>
+    <center>
+      <x-m> 0.005 </x-m>
+      <y-m> 0.049 </y-m>
+      <z-m> 0.039 </z-m>
+    </center>
+    <axis>
+      <x>  0 </x>
+      <y> -1 </y>
+      <z>  0 </z>
+    </axis>
+  </animation>
+
+
+
+
+<!-- LDG LIGHT -->
+
+    <animation>
+        <type>pick</type>
+        <object-name>ldg-on</object-name>
+    <action>
+      <button>0</button>
+      <repeatable>false</repeatable>
+      <binding>
+        <command>property-assign</command>
+        <property>controls/switches/taxi-lights</property>
+        <value>false</value>
+      </binding>
+      <binding>
+        <command>property-assign</command>
+        <property>controls/switches/landing-light</property>
+        <value>true</value>
+      </binding>
+      <binding>
+        <command>property-toggle</command>
+        <property>sim/sound/click</property>
+      </binding>
+    </action>
+    </animation>
+
+  <animation>
+    <type>rotate</type>
+     <object-name>SW.004</object-name>
+    <property>controls/switches/landing-light</property>
+    <factor> 35 </factor>
+    <center>
+      <x-m> 0.005 </x-m>
+      <y-m> 0.048 </y-m>
+      <z-m> -0.017 </z-m>
+    </center>
+    <axis>
+      <x>  0 </x>
+      <y> -1 </y>
+      <z>  0 </z>
+    </axis>
+  </animation>
+
+
+<!-- TAXI LIGHT -->
+
+    <animation>
+        <type>pick</type>
+        <object-name>taxi-on</object-name>
+    <action>
+      <button>0</button>
+      <repeatable>false</repeatable>
+      <binding>
+        <command>property-assign</command>
+        <property>controls/switches/taxi-lights</property>
+        <value>true</value>
+      </binding>
+      <binding>
+        <command>property-assign</command>
+        <property>controls/switches/landing-light</property>
+        <value>false</value>
+      </binding>
+      <binding>
+        <command>property-toggle</command>
+        <property>sim/sound/click</property>
+      </binding>
+    </action>
+    </animation>
+
+  <animation>
+    <type>rotate</type>
+     <object-name>SW.004</object-name>
+    <property>controls/switches/taxi-lights</property>
+    <factor> -35 </factor>
+    <center>
+      <x-m> 0.005 </x-m>
+      <y-m> 0.048 </y-m>
+      <z-m> -0.017 </z-m>
+    </center>
+    <axis>
+      <x>  0 </x>
+      <y> -1 </y>
+      <z>  0 </z>
+    </axis>
+  </animation>
+
+<!-- LIGHT OFF -->
+
+    <animation>
+        <type>pick</type>
+        <object-name>off</object-name>
+    <action>
+      <button>0</button>
+      <repeatable>false</repeatable>
+      <binding>
+        <command>property-assign</command>
+        <property>controls/switches/taxi-lights</property>
+        <value>false</value>
+      </binding>
+      <binding>
+        <command>property-assign</command>
+        <property>controls/switches/landing-light</property>
+        <value>false</value>
+      </binding>
+      <binding>
+        <command>property-toggle</command>
+        <property>sim/sound/click</property>
+      </binding>
+    </action>
+    </animation>
+
+  <animation>
+    <type>rotate</type>
+     <object-name>SW.004</object-name>
+    <property>controls/switches/taxi-lights</property>
+    <factor> -35 </factor>
+    <center>
+      <x-m> 0.005 </x-m>
+      <y-m> 0.048 </y-m>
+      <z-m> -0.017 </z-m>
+    </center>
+    <axis>
+      <x>  0 </x>
+      <y> -1 </y>
+      <z>  0 </z>
+    </axis>
+  </animation>
+
+   
+</PropertyList>

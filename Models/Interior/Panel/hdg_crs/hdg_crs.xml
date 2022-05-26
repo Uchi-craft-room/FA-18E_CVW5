@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+
+
+<PropertyList>
+<path>hdg_crs.ac</path>
+
+<!-- lighting -->
+
+  <animation> 
+   <type>material</type>
+   <object-name>base</object-name>
+   <object-name>HDG</object-name>
+   <object-name>CRS</object-name>
+    <emission> 
+      <factor-prop>systems/electrical/outputs/instrument-lights-norm</factor-prop>
+        <red>0.2</red>
+        <green>0.5</green>
+        <blue>0.2</blue>
+      </emission>
+  </animation>
+
+
+
+</PropertyList>

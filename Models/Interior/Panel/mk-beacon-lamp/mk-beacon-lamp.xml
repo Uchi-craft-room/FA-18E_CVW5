@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<PropertyList>
+
+ <path>mk-beacon-lamp.ac</path>
+
+
+<!-- marker becon lamp-->
+  <animation>
+    <type>select</type>
+    <object-name>light</object-name>
+    <condition>
+     <and>
+        <or>
+        <property>instrumentation/marker-beacon/inner</property>
+        <property>instrumentation/marker-beacon/middle</property>
+        <property>instrumentation/marker-beacon/outer</property>
+        </or>
+        <greater-than>
+	   <property>systems/electrical/volts</property>
+	   <value>24</value>
+        </greater-than>
+       </and>
+    </condition>
+  </animation>
+
+</PropertyList>
+
+
+
+

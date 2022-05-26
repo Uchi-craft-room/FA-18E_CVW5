@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<PropertyList>
+
+  <path>rud_trim.ac</path>
+
+    <animation>
+        <type>pick</type>
+        <object-name>RH</object-name>
+        <visible>false</visible>
+        <action>
+            <button>0</button>
+            <repeatable>false</repeatable>
+            <binding>
+                <command>property-adjust</command>
+                <property>controls/flight/rudder-trim</property>
+                <step>-0.05</step>
+                <min>-0.1</min>
+                <max>0.1</max>
+            </binding>
+        </action>
+    </animation>
+
+    <animation>
+        <type>pick</type>
+        <object-name>LH</object-name>
+        <visible>false</visible>
+        <action>
+            <button>0</button>
+            <repeatable>false</repeatable>
+            <binding>
+                <command>property-adjust</command>
+                <property>controls/flight/rudder-trim</property>
+                <step>0.05</step>
+                <min>-0.1</min>
+                <max>0.1</max>
+            </binding>
+        </action>
+    </animation>
+
+ <animation>
+  <type>rotate</type>
+  <object-name>Switch</object-name>
+  <object-name>gage</object-name>
+  <property>controls/flight/rudder-trim</property>
+  <interpolation>
+   <entry><ind>0.1</ind><dep>-45</dep></entry>
+   <entry><ind>0</ind><dep>0</dep></entry>
+   <entry><ind>-0.1</ind><dep>45</dep></entry>
+  </interpolation>
+  <center>
+   <x-m> 0 </x-m>
+   <y-m> 0 </y-m>
+   <z-m> 0 </z-m>
+  </center>
+  <axis>
+   <x> 0 </x>
+   <y> 1 </y>
+   <z> 0 </z>
+  </axis>
+ </animation>
+
+  <animation>
+    <type>material</type>
+    <object-name>Switch</object-name>
+    <object-name>Circle</object-name>
+    <object-name>SwitchNut</object-name>
+    <object-name>SwitchRot</object-name>
+    <emission>
+      <red>   0.50 </red>
+      <green> 0.25 </green>
+      <blue>  0.25 </blue>
+      <factor-prop>systems/electrical/outputs/instrument-lights-norm</factor-prop>
+    </emission>
+  </animation>
+
+</PropertyList>
+
+
+
+
+
+
+
+
+
+
+
+

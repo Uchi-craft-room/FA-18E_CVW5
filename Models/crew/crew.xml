@@ -1,0 +1,162 @@
+<?xml version="1.0"?>
+
+<PropertyList>
+
+  <path>crew.ac</path>
+
+
+<!--             arm RH               -->
+  <animation>
+    <type>select</type>
+    <object-name>fing2-RH</object-name>
+    <condition>
+    <or>
+      <and>
+       <equals>
+           <property>controls/engines/engine[1]/starter</property>
+           <value>false</value>
+       </equals>
+      <greater-than>
+      <property>/controls/engines/engine/starter-position-norm</property>
+      <value>0.4</value>
+      </greater-than>
+     </and>
+      <and>
+       <equals>
+           <property>controls/engines/engine[1]/starter</property>
+           <value>true</value>
+       </equals>
+      <greater-than>
+      <property>/controls/engines/engine[1]/starter-position-norm</property>
+      <value>0.4</value>
+      </greater-than>
+     </and>
+    </or>
+    </condition>
+  </animation>
+
+  <animation>
+    <type>select</type>
+    <object-name>fing5-RH</object-name>
+    <condition>
+    <or>
+      <and>
+       <equals>
+           <property>controls/engines/engine[1]/starter</property>
+           <value>false</value>
+       </equals>
+      <greater-than>
+      <property>/controls/engines/engine/starter-position-norm</property>
+      <value>0.6</value>
+      </greater-than>
+     </and>
+      <and>
+       <equals>
+           <property>controls/engines/engine[1]/starter</property>
+           <value>true</value>
+       </equals>
+      <greater-than>
+      <property>/controls/engines/engine[1]/starter-position-norm</property>
+      <value>0.6</value>
+      </greater-than>
+     </and>
+    </or>
+    </condition>
+  </animation>
+
+  <animation>
+    <type>select</type>
+    <object-name>fing4-RH</object-name>
+    <condition>
+    <or>
+      <and>
+       <equals>
+           <property>controls/engines/engine[1]/starter</property>
+           <value>false</value>
+       </equals>
+       <greater-than>
+          <property>/controls/engines/engine/starter-position-norm</property>
+          <value>0.8</value>
+       </greater-than>
+      </and>
+      <and>
+       <equals>
+           <property>controls/engines/engine[1]/starter</property>
+           <value>true</value>
+       </equals>
+       <greater-than>
+          <property>/controls/engines/engine[1]/starter-position-norm</property>
+          <value>0.8</value>
+       </greater-than>
+      </and>
+    </or>
+    </condition>
+  </animation>
+
+  <animation>
+    <type>select</type>
+    <object-name>fing1-RH</object-name>
+    <condition>
+    <or>
+      <and>
+        <equals>
+           <property>controls/engines/engine[1]/starter</property>
+           <value>false</value>
+        </equals>
+        <equals>
+         <property>/controls/engines/engine/starter-position-norm</property>
+         <value>1.0</value>
+        </equals>
+     </and>
+      <and>
+        <equals>
+           <property>controls/engines/engine[1]/starter</property>
+           <value>true</value>
+        </equals>
+        <equals>
+         <property>/controls/engines/engine[1]/starter-position-norm</property>
+         <value>1.0</value>
+        </equals>
+     </and>
+    </or>
+    </condition>
+  </animation>
+
+<!-- starter crew -->
+  <animation>
+    <type>select</type>
+    <object-name>starter-RH</object-name>
+    <condition>
+      <and>
+        <less-than>
+         <property>/controls/engines/engine[0]/starter-position-norm</property>
+         <value>1.0</value>
+        </less-than>
+        <equals>
+           <property>controls/engines/engine[1]/starter</property>
+           <value>false</value>
+        </equals>
+     </and>
+    </condition>
+  </animation>
+
+  <animation>
+    <type>select</type>
+    <object-name>starter-LH</object-name>
+    <condition>
+      <and>
+        <equals>
+         <property>/controls/engines/engine[0]/starter-position-norm</property>
+         <value>1.0</value>
+        </equals>
+        <less-than>
+         <property>/controls/engines/engine[1]/starter-position-norm</property>
+         <value>1.0</value>
+        </less-than>
+     </and>
+    </condition>
+  </animation>
+</PropertyList>
+
+
+

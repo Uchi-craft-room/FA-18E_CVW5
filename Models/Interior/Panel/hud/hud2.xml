@@ -1,0 +1,795 @@
+<?xml version="1.0"?>
+
+<PropertyList>
+<name>AirtoAirModeHud</name>
+
+
+
+    <enable3d>true</enable3d>
+
+
+    <ladder>
+        <name>Pitch Ladder-2</name>
+        <type>pitch</type>
+        <x>-25</x>
+        <y>-124</y>
+        <width>50</width>
+        <height>255</height>
+
+        <condition>
+         <and>
+         <or>
+            <property>controls/electric/engine/generator</property>
+            <property>controls/electric/engine[1]/generator</property>
+         </or>
+         <greater-than>
+            <property>systems/electrical/volts</property>
+            <value>16</value>
+         </greater-than>
+         </and>
+        </condition>
+
+        <roll-input>
+            <property>orientation/roll-deg</property>
+        </roll-input>
+        <pitch-input>
+            <property>orientation/pitch-deg</property>
+        </pitch-input>
+        <compression-factor>11</compression-factor>
+        <display-span>30.0</display-span>
+        <divisions>5.0</divisions>
+        <screen-hole>10</screen-hole>
+        <lbl-pos>0</lbl-pos>
+        <zero-bar-overlength>15</zero-bar-overlength>
+        <enable-dive-bar-angle>false</enable-dive-bar-angle>
+        <enable-dynamic-origin>true</enable-dynamic-origin>
+        <enable-fuselage-ref-line>false</enable-fuselage-ref-line>
+        <enable-target-spot>false</enable-target-spot>
+        <enable-target-markers>true</enable-target-markers>
+        <enable-velocity-vector>true</enable-velocity-vector>
+        <enable-drift-marker>false</enable-drift-marker>
+        <enable-alpha-bracket>false</enable-alpha-bracket>
+        <enable-energy-marker>false</enable-energy-marker>
+        <enable-climb-dive-marker>false</enable-climb-dive-marker>
+        <enable-energy-worm>false</enable-energy-worm>
+        <enable-waypoint-marker>false</enable-waypoint-marker>
+        <enable-zenith>false</enable-zenith>
+        <enable-nadir>false</enable-nadir>
+        <enable-hat>false</enable-hat>
+    </ladder>
+
+
+
+    <tape>
+        <name>Altitude-MSL greater than1000</name>
+        <x>53</x>
+        <y>-50</y>
+        <width>10</width>
+        <height>100</height>
+        <condition>
+         <and>
+         <greater-than>
+            <property>position/gear-agl-ft</property>
+            <value>1000</value>
+         </greater-than>
+         <or>
+            <property>controls/electric/engine/generator</property>
+            <property>controls/electric/engine[1]/generator</property>
+         </or>
+         <greater-than>
+            <property>systems/electrical/volts</property>
+            <value>16</value>
+         </greater-than>
+        </and>
+        </condition>
+        <input>
+            <property>instrumentation/altimeter/indicated-altitude-ft</property>
+            <factor>1</factor>
+            <max>100000</max>
+            <min>-500</min>
+        </input>
+        <major-divisions>500</major-divisions>
+        <minor-divisions>100</minor-divisions>
+        <display-span>1500</display-span>
+        <option>right</option>
+        <option>vertical</option>
+        <tick-bottom>false</tick-bottom>
+        <tick-top>false</tick-top>
+        <tick-right>false</tick-right>
+        <tick-left>false</tick-left>
+        <cap-bottom>false</cap-bottom>
+        <cap-top>false</cap-top>
+        <cap-right>false</cap-right>
+        <cap-left>true</cap-left>
+        <marker-offset>5</marker-offset>
+        <enable-pointer>true</enable-pointer>
+        <pointer-type>fixed</pointer-type>
+        <tick-length>variable</tick-length>
+    </tape>
+
+
+
+    <tape>
+        <name>less than Alt1000-2</name>
+        <x>53</x>
+        <y>-50</y>
+        <width>10</width>
+        <height>100</height>
+        <condition>
+         <and>
+         <less-than>
+            <property>position/gear-agl-ft</property>
+            <value>1000</value>
+         </less-than>
+         <or>
+            <property>controls/electric/engine/generator</property>
+            <property>controls/electric/engine[1]/generator</property>
+         </or>
+         <greater-than>
+            <property>systems/electrical/volts</property>
+            <value>16</value>
+         </greater-than>
+        </and>
+        </condition>
+        <input>
+            <property>position/gear-agl-ft</property>
+            <factor>1</factor>
+            <max>2500</max>
+            <min>0</min>
+        </input>
+        <major-divisions>100</major-divisions>
+        <minor-divisions>20</minor-divisions>
+        <display-span>300.0</display-span>
+        <option>right</option>
+        <option>vertical</option>
+        <tick-bottom>false</tick-bottom>
+        <tick-top>false</tick-top>
+        <tick-right>false</tick-right>
+        <tick-left>false</tick-left>
+        <cap-bottom>false</cap-bottom>
+        <cap-top>false</cap-top>
+        <cap-right>false</cap-right>
+        <cap-left>true</cap-left>
+        <marker-offset>4</marker-offset>
+        <enable-pointer>true</enable-pointer>
+        <pointer-type>fixed</pointer-type>
+        <tick-length>variable</tick-length>
+    </tape>
+
+   <label>
+        <name>RadioALT Mark-2</name>
+        <x>48</x>
+        <y>0</y>
+        <width>1</width>
+        <height>1</height>
+        <format>R</format>
+        <condition>
+         <and>
+         <less-than>
+            <property>position/gear-agl-ft</property>
+            <value>1000</value>
+         </less-than>
+         <or>
+            <property>controls/electric/engine/generator</property>
+            <property>controls/electric/engine[1]/generator</property>
+         </or>
+         <greater-than>
+            <property>systems/electrical/volts</property>
+            <value>16</value>
+         </greater-than>
+        </and>
+        </condition>
+    </label>
+
+
+    <tape>
+        <name>KIAS-gear up-2</name>
+        <x>-63</x>
+        <y>-50</y>
+        <width>10</width>
+        <height>100</height>
+        <condition>
+         <greater-than>
+            <property>systems/electrical/volts</property>
+            <value>16</value>
+         </greater-than>
+        </condition>
+        <input>
+            <property>velocities/airspeed-kt</property>
+            <factor>-1</factor>
+            <max>0</max>
+            <min>-2000</min>
+        </input>
+        <major-divisions>50</major-divisions>
+        <minor-divisions>10</minor-divisions>
+        <display-span>150.0</display-span>
+        <option>left</option>
+        <option>vertical</option>
+        <tick-bottom>false</tick-bottom>
+        <tick-top>false</tick-top>
+        <tick-right>false</tick-right>
+        <tick-left>false</tick-left>
+        <cap-bottom>false</cap-bottom>
+        <cap-top>false</cap-top>
+        <cap-right>true</cap-right>
+        <cap-left>false</cap-left>
+        <marker-offset>4</marker-offset>
+        <enable-pointer>true</enable-pointer>
+        <pointer-type>fixed</pointer-type>
+        <tick-length>variable</tick-length>
+    </tape>
+
+
+
+
+    <tape>
+        <name>Gyrocompass-2</name>
+        <x>-40</x>
+        <y>65</y>
+        <width>80</width>
+        <height>10</height>
+        <condition>
+         <and>
+         <or>
+            <property>controls/electric/engine/generator</property>
+            <property>controls/electric/engine[1]/generator</property>
+         </or>
+         <greater-than>
+            <property>systems/electrical/volts</property>
+            <value>16</value>
+         </greater-than>
+        </and>
+        </condition>
+        <input>
+            <property>orientation/heading-deg</property>
+            <factor>0.1</factor>
+            <max>85</max>
+            <min>0</min>
+        </input>
+        <display-span>3</display-span>
+        <modulo>36</modulo>
+        <option>top</option>
+        <major-divisions>1</major-divisions>
+        <minor-divisions>0.2</minor-divisions>
+        <tick-bottom>false</tick-bottom>
+        <tick-top>false</tick-top>
+        <tick-right>false</tick-right>
+        <tick-left>false</tick-left>
+        <cap-bottom>true</cap-bottom>
+        <cap-top>false</cap-top>
+        <cap-right>false</cap-right>
+        <cap-left>false</cap-left>
+        <marker-offset>0</marker-offset>
+        <enable-pointer>false</enable-pointer>
+        <pointer-type>fixed</pointer-type>
+        <tick-type>line</tick-type>
+        <tick-length>variable</tick-length>
+    </tape>
+
+    <label>
+        <name>Gyro Heading Marker-2</name>
+        <x>0</x>
+        <y>61</y>
+        <width>1</width>
+        <height>2</height>
+        <format>^</format>
+        <condition>
+         <and>
+         <or>
+            <property>controls/electric/engine/generator</property>
+            <property>controls/electric/engine[1]/generator</property>
+         </or>
+         <greater-than>
+            <property>systems/electrical/volts</property>
+            <value>16</value>
+         </greater-than>
+        </and>
+        </condition>
+    </label>
+
+
+
+
+
+
+    <label>
+        <name>W Mark1-2</name>
+        <x>2</x>
+        <y>0</y>
+        <width>1</width>
+        <height>1</height>
+        <format>v</format>
+        <condition>
+         <greater-than>
+            <property>systems/electrical/volts</property>
+            <value>16</value>
+         </greater-than>
+        </condition>
+    </label>
+
+    <label>
+        <name>W Mark2-2</name>
+        <x>-2</x>
+        <y>0</y>
+        <width>1</width>
+        <height>1</height>
+        <format>v</format>
+        <condition>
+         <greater-than>
+            <property>systems/electrical/volts</property>
+            <value>16</value>
+         </greater-than>
+        </condition>
+    </label>
+
+
+
+    <label>
+        <name>G Load-2</name>
+        <x>-77</x>
+        <y>-80</y>
+        <width>1</width>
+        <height>1</height>
+        <condition>
+         <greater-than>
+            <property>systems/electrical/volts</property>
+            <value>16</value>
+         </greater-than>
+        </condition>
+        <input>
+            <property>accelerations/pilot/z-accel-fps_sec</property>
+            <factor>-0.03108095</factor>
+            <damp>1.0</damp>
+        </input>
+        <format>%4.1f</format>
+        <halign>left</halign>
+    </label>
+
+    <label>
+        <name>G Mark-2</name>
+        <x>-56</x>
+        <y>-80</y>
+        <width>1</width>
+        <height>1</height>
+        <format>G</format>
+        <condition>
+         <greater-than>
+            <property>systems/electrical/volts</property>
+            <value>16</value>
+         </greater-than>
+        </condition>
+    </label>
+
+
+
+
+    <label>
+        <name>tanker0 callsign</name>
+        <x>35</x>
+        <y>-75</y>
+        <width>1</width>
+        <height>1</height>
+        <condition>
+         <and>
+           <equals>
+              <property>ai/models/tanker[0]/navaids/tacan/channel-ID</property>
+              <property>instrumentation/tacan/display/channel</property>
+           </equals>
+           <property>ai/models/tanker[0]/tanker</property>
+           <property>ai/models/tanker[0]/radar/in-range</property>
+           <greater-than>
+              <property>systems/electrical/volts</property>
+              <value>16</value>
+           </greater-than>
+          </and>
+        </condition>
+        <format>KC1</format>
+        <halign>left</halign>
+    </label>
+
+
+    <label>
+        <name>tanker0 miles</name>
+        <x>40</x>
+        <y>-80</y>
+        <width>1</width>
+        <height>1</height>
+        <condition>
+         <and>
+           <equals>
+              <property>ai/models/tanker[0]/navaids/tacan/channel-ID</property>
+              <property>instrumentation/tacan/display/channel</property>
+           </equals>
+           <property>ai/models/tanker[0]/tanker</property>
+           <property>ai/models/tanker[0]/radar/in-range</property>
+           <greater-than>
+              <property>systems/electrical/volts</property>
+              <value>16</value>
+           </greater-than>
+          </and>
+        </condition>
+        <input>
+          <property>ai/models/tanker[0]/radar/range-nm</property>
+          <damp>1.0</damp>
+        </input>
+        <format>%4.1f</format>
+        <halign>left</halign>
+    </label>
+
+    <label>
+        <name>tanker0 miles R</name>
+        <x>35</x>
+        <y>-80</y>
+        <width>1</width>
+        <height>1</height>
+        <condition>
+         <and>
+           <equals>
+              <property>ai/models/tanker[0]/navaids/tacan/channel-ID</property>
+              <property>instrumentation/tacan/display/channel</property>
+           </equals>
+           <property>ai/models/tanker[0]/tanker</property>
+           <property>ai/models/tanker[0]/radar/in-range</property>
+           <greater-than>
+              <property>systems/electrical/volts</property>
+              <value>16</value>
+           </greater-than>
+          </and>
+        </condition>
+        <format>R</format>
+        <halign>left</halign>
+    </label>
+
+
+
+     <label>
+        <name>tanker1 callsign</name>
+        <x>35</x>
+        <y>-75</y>
+        <width>1</width>
+        <height>1</height>
+        <condition>
+         <and>
+           <equals>
+              <property>ai/models/tanker[1]/navaids/tacan/channel-ID</property>
+              <property>instrumentation/tacan/display/channel</property>
+           </equals>
+           <property>ai/models/tanker[1]/tanker</property>
+           <property>ai/models/tanker[1]/radar/in-range</property>
+           <greater-than>
+              <property>systems/electrical/volts</property>
+              <value>16</value>
+           </greater-than>
+          </and>
+        </condition>
+        <format>KC2</format>
+        <halign>left</halign>
+    </label>
+
+
+    <label>
+        <name>tanker1 miles</name>
+        <x>40</x>
+        <y>-80</y>
+        <width>1</width>
+        <height>1</height>
+        <condition>
+         <and>
+           <equals>
+              <property>ai/models/tanker[1]/navaids/tacan/channel-ID</property>
+              <property>instrumentation/tacan/display/channel</property>
+           </equals>
+           <property>ai/models/tanker[1]/tanker</property>
+           <property>ai/models/tanker[1]/radar/in-range</property>
+           <greater-than>
+              <property>systems/electrical/volts</property>
+              <value>16</value>
+           </greater-than>
+          </and>
+        </condition>
+        <input>
+          <property>ai/models/tanker[1]/radar/range-nm</property>
+          <damp>1.0</damp>
+        </input>
+        <format>%4.1f</format>
+        <halign>left</halign>
+    </label>
+
+    <label>
+        <name>tanker1 miles R</name>
+        <x>35</x>
+        <y>-80</y>
+        <width>1</width>
+        <height>1</height>
+        <condition>
+         <and>
+           <equals>
+              <property>ai/models/tanker[1]/navaids/tacan/channel-ID</property>
+              <property>instrumentation/tacan/display/channel</property>
+           </equals>
+           <property>ai/models/tanker[1]/tanker</property>
+           <property>ai/models/tanker[1]/radar/in-range</property>
+           <greater-than>
+              <property>systems/electrical/volts</property>
+              <value>16</value>
+           </greater-than>
+          </and>
+        </condition>
+        <format>R</format>
+        <halign>left</halign>
+    </label>
+
+
+
+    <label>
+        <name>tanker2 callsign</name>
+        <x>35</x>
+        <y>-75</y>
+        <width>1</width>
+        <height>1</height>
+        <condition>
+         <and>
+           <equals>
+              <property>ai/models/tanker[2]/navaids/tacan/channel-ID</property>
+              <property>instrumentation/tacan/display/channel</property>
+           </equals>
+           <property>ai/models/tanker[2]/tanker</property>
+           <property>ai/models/tanker[2]/radar/in-range</property>
+           <greater-than>
+              <property>systems/electrical/volts</property>
+              <value>16</value>
+           </greater-than>
+          </and>
+        </condition>
+        <format>KC3</format>
+        <halign>left</halign>
+    </label>
+
+
+    <label>
+        <name>tanker2 miles</name>
+        <x>40</x>
+        <y>-80</y>
+        <width>1</width>
+        <height>1</height>
+        <condition>
+         <and>
+           <equals>
+              <property>ai/models/tanker[2]/navaids/tacan/channel-ID</property>
+              <property>instrumentation/tacan/display/channel</property>
+           </equals>
+           <property>ai/models/tanker[2]/tanker</property>
+           <property>ai/models/tanker[2]/radar/in-range</property>
+           <greater-than>
+              <property>systems/electrical/volts</property>
+              <value>16</value>
+           </greater-than>
+          </and>
+        </condition>
+        <input>
+          <property>ai/models/tanker[2]/radar/range-nm</property>
+          <damp>1.0</damp>
+        </input>
+        <format>%4.1f</format>
+        <halign>left</halign>
+    </label>
+
+    <label>
+        <name>tanker2 miles R</name>
+        <x>35</x>
+        <y>-80</y>
+        <width>1</width>
+        <height>1</height>
+        <condition>
+         <and>
+           <equals>
+              <property>ai/models/tanker[2]/navaids/tacan/channel-ID</property>
+              <property>instrumentation/tacan/display/channel</property>
+           </equals>
+           <property>ai/models/tanker[2]/tanker</property>
+           <property>ai/models/tanker[2]/radar/in-range</property>
+           <greater-than>
+              <property>systems/electrical/volts</property>
+              <value>16</value>
+           </greater-than>
+          </and>
+        </condition>
+        <format>R</format>
+        <halign>left</halign>
+    </label>
+
+
+    <label>
+        <name>MACH Number-2</name>
+        <x>-77</x>
+        <y>-75</y>
+       <width>1</width>
+        <height>1</height>
+        <condition>
+         <greater-than>
+            <property>systems/electrical/volts</property>
+            <value>16</value>
+         </greater-than>
+        </condition>
+        <input>
+            <property>velocities/mach</property>
+        </input>
+        <format>%4.1f</format>
+        <halign>left</halign>
+    </label>
+
+    <label>
+        <name>MACH M-2</name>
+        <x>-58</x>
+        <y>-75</y>
+       <width>1</width>
+        <height>1</height>
+        <format>M</format>
+        <halign>left</halign>
+        <condition>
+         <greater-than>
+            <property>systems/electrical/volts</property>
+            <value>16</value>
+         </greater-than>
+        </condition>
+    </label>
+
+    <ladder>
+        <name>PULL_UP1-2</name>
+        <type>pitch</type>
+        <x>-25</x>
+        <y>-105</y>
+        <width>50</width>
+        <height>255</height>
+   <condition>
+    <and>
+       <less-than>
+         <property>position/gear-agl-ft</property>
+         <value>1300</value>
+       </less-than>
+
+       <less-than>
+         <property>velocities/vertical-speed-fps</property>
+         <value>-50</value>
+       </less-than>
+         <greater-than>
+            <property>systems/electrical/volts</property>
+            <value>16</value>
+         </greater-than>
+   </and>
+   </condition>
+        <roll-input>
+          <property>controls/electric/engine/generator</property>
+          <factor>45</factor>
+        </roll-input>
+        <pitch-input>
+            <property>controls/electric/engine/generator</property>
+        </pitch-input>
+        <compression-factor>11.63</compression-factor>
+        <display-span>0</display-span>
+        <divisions>15</divisions>
+        <screen-hole>5</screen-hole>
+        <lbl-pos>10</lbl-pos>
+        <zero-bar-overlength>120</zero-bar-overlength>
+    </ladder>
+
+    <ladder>
+        <name>PULL_UP2-2</name>
+        <type>pitch</type>
+        <x>-25</x>
+        <y>-105</y>
+        <width>50</width>
+        <height>255</height>
+   <condition>
+    <and>
+       <less-than>
+         <property>position/gear-agl-ft</property>
+         <value>1300</value>
+       </less-than>
+
+       <less-than>
+         <property>velocities/vertical-speed-fps</property>
+         <value>-50</value>
+       </less-than>
+         <greater-than>
+            <property>systems/electrical/volts</property>
+            <value>16</value>
+         </greater-than>
+   </and>
+   </condition>
+        <roll-input>
+          <property>controls/electric/engine/generator</property>
+          <factor>-45</factor>
+        </roll-input>
+        <pitch-input>
+            <property>controls/electric/engine/generator</property>
+        </pitch-input>
+        <compression-factor>11.63</compression-factor>
+        <display-span>0</display-span>
+        <divisions>15</divisions>
+        <screen-hole>5</screen-hole>
+        <lbl-pos>10</lbl-pos>
+        <zero-bar-overlength>120</zero-bar-overlength>
+    </ladder>
+
+
+
+	<aiming-reticle>
+        <condition>
+         <and>
+         <or>
+            <property>controls/electric/engine/generator</property>
+            <property>controls/electric/engine[1]/generator</property>
+         </or>
+         <greater-than>
+            <property>systems/electrical/volts</property>
+            <value>16</value>
+         </greater-than>
+         </and>
+        </condition>
+		<diameter-input>
+		 <property>controls/electric/engine/generator</property>
+                 <factor>110</factor>
+		</diameter-input>
+		<x>-0.5</x>
+		<y>-0.5</y>
+		<width>1</width>
+		<height>1</height>
+	</aiming-reticle>
+
+
+<!-- TARGET REMAIN 1mile-->
+
+    <gauge>
+        <name>target_speed_remain1</name>
+        <x>28</x>
+        <y>-82</y>
+        <width>5</width>
+        <height>100</height>
+
+        <condition>
+         <and>
+         <or>
+            <property>controls/electric/engine/generator</property>
+            <property>controls/electric/engine[1]/generator</property>
+         </or>
+         <greater-than>
+            <property>systems/electrical/volts</property>
+            <value>16</value>
+         </greater-than>
+         <less-than>
+            <property>instrumentation/tacan/indicated-distance-nm</property>
+            <value>1</value>
+         </less-than>
+        </and>
+        </condition>
+
+        <input>
+            <property>instrumentation/tacan/indicated-distance-nm</property>
+            <factor>100</factor>
+            <max>100</max>
+            <min>0</min>
+        </input>
+        <major-divisions>10</major-divisions>
+        <minor-divisions>2</minor-divisions>
+        <display-span>100</display-span>
+        <option>left</option>
+        <option>vertical</option>
+        <option>notext</option>
+        <tick-bottom>false</tick-bottom>
+        <tick-top>false</tick-top>
+        <tick-right>false</tick-right>
+        <tick-left>false</tick-left>
+        <cap-bottom>false</cap-bottom>
+        <cap-top>false</cap-top>
+        <cap-right>false</cap-right>
+        <cap-left>false</cap-left>
+        <marker-offset>0</marker-offset>
+        <enable-pointer>true</enable-pointer>
+        <pointer-type>fixed</pointer-type>
+        <tick-length>variable</tick-length>
+    </gauge>
+
+
+
+</PropertyList>

@@ -1,0 +1,587 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<PropertyList>
+
+    <path>indicate-panel.ac</path>
+
+    <animation>
+        <type>material</type>
+        <object-name>base</object-name>
+        <object-name>base.001</object-name>
+        <object-name>base.002</object-name>
+     <emission>
+      <factor-prop>systems/electrical/outputs/instrument-lights-norm</factor-prop>
+      <red>   0.7 </red>
+      <green> 0.3 </green>
+      <blue>  0.3</blue>
+    </emission>
+  </animation>
+
+    <animation>
+        <type>material</type>
+        <object-name>SPD BRAKE</object-name>
+        <object-name>ENG1 OUT</object-name>
+        <object-name>ENG2 OUT</object-name>
+    	<object-name>STALL</object-name>
+   	<object-name>STALL SPD</object-name>
+ 	<object-name>GEAR BRK</object-name>
+  	<object-name>TERREIN</object-name>
+	<object-name>SINK RATE</object-name>
+	<object-name>LOW ALT</object-name>
+    	<object-name>FLAP SPEED</object-name>
+    	<object-name>DOOR OPEN</object-name>
+   	<object-name>REVERSER</object-name>
+        <object-name>BATT LOW</object-name>
+        <object-name>GEN OUT</object-name>
+        <object-name>GND PWR</object-name>
+    	<object-name>APU RUN</object-name>
+   	<object-name>APU GEN</object-name>
+ 	<object-name>APU PWR</object-name>
+  	<object-name>OIL PRESS1</object-name>
+	<object-name>OIL PRESS2</object-name>
+	<object-name>PUMP PWR1</object-name>
+    	<object-name>PUMP PWR2</object-name>
+    	<object-name>FUEL PUMP</object-name>
+   	<object-name>WING TANK P</object-name>
+   	<object-name>CTR TANK P</object-name>
+ 	<object-name>FUEL LOW</object-name>
+   	<object-name>WING TANK F</object-name>
+   	<object-name>CTR TANK F</object-name>
+  	<object-name>AIR TEMP</object-name>
+     <emission>
+      <red>   1 </red>
+      <green> 1 </green>
+      <blue>  1 </blue>
+    </emission>
+  </animation>
+
+
+
+  <animation>
+    <type>select</type>
+    <object-name>SPD BRAKE</object-name>
+  <condition>
+   <and>
+	<greater-than>
+		<property>systems/electrical/volts</property>
+		<value>16</value>
+	</greater-than>
+            <property>controls/flight/speedbrake</property>
+    </and>
+   </condition>
+  </animation>
+
+  <animation>
+    <type>select</type>
+    <object-name>ENG1 OUT</object-name>
+  <condition>
+   <and>
+	<greater-than>
+		<property>systems/electrical/volts</property>
+		<value>16</value>
+	</greater-than>
+       <property>engines/engine/out-of-fuel</property>
+    </and>
+   </condition>
+  </animation>
+
+  <animation>
+    <type>select</type>
+    <object-name>ENG2 OUT</object-name>
+    <condition>
+     <and>
+       <property>engines/engine/out-of-fuel</property>
+	<greater-than>
+           <property>systems/electrical/volts</property>
+	   <value>16</value>
+	</greater-than>
+       </and>
+    </condition>
+  </animation>
+
+  <animation>
+    <type>select</type>
+    <object-name>STALL</object-name>
+    <condition>
+     <and>
+         <greater-than>
+            <property>/orientation/alpha-deg</property>
+            <value>15</value>
+         </greater-than>
+          <not>
+             <property>gear/gear[0]/wow</property>
+             <property>gear/gear[1]/wow</property>
+             <property>gear/gear[2]/wow</property>
+          </not>
+              <greater-than>
+		  <property>systems/electrical/volts</property>
+		  <value>16</value>
+	      </greater-than>
+       </and>
+    </condition>
+  </animation>
+
+  <animation>
+    <type>select</type>
+    <object-name>STALL SPD</object-name>
+  <condition>
+   <and>
+     <greater-than>
+	<property>systems/electrical/volts</property>
+	<value>16</value>
+     </greater-than>
+     <greater-than>
+       <property>/orientation/alpha-deg</property>
+       <value>10</value>
+     </greater-than>
+     <less-than>
+       <property>/orientation/alpha-deg</property>
+       <value>15</value>
+     </less-than>
+    <not>
+       <property>gear/gear[0]/wow</property>
+       <property>gear/gear[1]/wow</property>
+       <property>gear/gear[2]/wow</property>
+     </not>
+    </and>
+   </condition>
+  </animation>
+
+  <animation>
+    <type>select</type>
+    <object-name>GEAR BRK</object-name>
+  <condition>
+   <and>
+     <greater-than>
+	<property>systems/electrical/volts</property>
+	<value>16</value>
+     </greater-than>
+     <or>
+      <property>controls/gear/brake-parking</property>
+      <property>controls/gear/brake-right</property>
+      <property>controls/gear/brake-left</property>
+     </or>
+   </and>
+   </condition>
+  </animation>
+
+  <animation>
+    <type>select</type>
+    <object-name>TERREIN</object-name>
+  <condition>
+   <and>
+		<greater-than>
+			<property>systems/electrical/volts</property>
+			<value>16</value>
+		</greater-than>
+       <less-than>
+         <property>/position/gear-agl-ft</property>
+         <value>300</value>
+       </less-than>
+    <not>
+       <property>gear/gear[0]/wow</property>
+       <property>gear/gear[1]/wow</property>
+       <property>gear/gear[2]/wow</property>
+     </not>
+    </and>
+   </condition>
+  </animation>
+
+  <animation>
+    <type>select</type>
+    <object-name>SINK RATE</object-name>
+  <condition>
+   <and>
+	<greater-than>
+		<property>systems/electrical/volts</property>
+		<value>16</value>
+	</greater-than>
+       <less-than>
+         <property>/position/gear-agl-ft</property>
+         <value>1300</value>
+       </less-than>
+
+       <less-than>
+         <property>/velocities/vertical-speed-fps</property>
+         <value>-60</value>
+       </less-than>
+    </and>
+   </condition>
+  </animation>
+
+  <animation>
+    <type>select</type>
+    <object-name>LOW ALT</object-name>
+  <condition>
+   <and>
+	<greater-than>
+	     <property>systems/electrical/volts</property>
+	     <value>16</value>
+	</greater-than>
+       <less-than>
+         <property>/position/gear-agl-ft</property>
+         <property>instrumentation/altimeter/setting-low-alert</property>
+       </less-than>
+
+       <not>
+         <property>gear/gear[0]/wow</property>
+         <property>gear/gear[1]/wow</property>
+         <property>gear/gear[2]/wow</property>
+       </not>
+
+       <or>
+        <equals>
+          <property>/gear/gear[0]/position-norm</property>
+          <value>0</value>
+        </equals>
+
+        <equals>
+          <property>/surface-positions/flap-pos-norm</property>
+          <value>0</value>
+        </equals>
+       </or>
+    </and>
+   </condition>
+  </animation>
+
+  <animation>
+    <type>select</type>
+    <object-name>FLAP SPEED</object-name>
+  <condition>
+   <and>
+	<greater-than>
+		<property>systems/electrical/volts</property>
+		<value>16</value>
+	</greater-than>
+	<less-than>
+		<property>velocities/airspeed-kt</property>
+		<value>160</value>
+	</less-than>
+    <not>
+       <property>gear/gear[0]/wow</property>
+       <property>gear/gear[1]/wow</property>
+       <property>gear/gear[2]/wow</property>
+     </not>
+    </and>
+   </condition>
+  </animation>
+
+  <animation>
+    <type>select</type>
+    <object-name>DOOR OPEN</object-name>
+  <condition>
+   <and>
+		<greater-than>
+			<property>systems/electrical/volts</property>
+			<value>16</value>
+		</greater-than>
+     <greater-than>
+       <property>instrumentation/doors/crew/position-norm</property>
+       <value>0.05</value>
+     </greater-than>
+    </and>
+   </condition>
+  </animation>
+
+  <animation>
+    <type>select</type>
+    <object-name>REVERSER</object-name>
+  <condition>
+   <and>
+	<greater-than>
+		<property>systems/electrical/volts</property>
+		<value>16</value>
+	</greater-than>
+       <property>controls/engines/engine/reverser</property>
+    </and>
+   </condition>
+  </animation>
+
+  <animation>
+    <type>select</type>
+    <object-name>BATT LOW</object-name>
+  <condition>
+   <and>
+	<greater-than>
+		<property>systems/electrical/volts</property>
+		<value>16</value>
+	</greater-than>
+	<less-than>
+		<property>systems/electrical/volts</property>
+		<value>24</value>
+	</less-than>
+    </and>
+   </condition>
+  </animation>
+
+  <animation>
+    <type>select</type>
+    <object-name>GEN OUT</object-name>
+  <condition>
+   <and>
+	<greater-than>
+		<property>systems/electrical/volts</property>
+		<value>16</value>
+	</greater-than>
+       <not>
+       <property>controls/electric/engine/generator</property>
+       </not>
+    </and>
+   </condition>
+  </animation>
+
+  <animation>
+    <type>select</type>
+    <object-name>GND PWR</object-name>
+  <condition>
+   <and>
+	<greater-than>
+		<property>systems/electrical/volts</property>
+		<value>16</value>
+	</greater-than>
+       <property>controls/electric/external-power</property>
+    </and>
+   </condition>
+  </animation>
+
+  <animation>
+    <type>select</type>
+    <object-name>APU RUN</object-name>
+  <condition>
+   <and>
+	<greater-than>
+		<property>systems/electrical/volts</property>
+		<value>16</value>
+	</greater-than>
+       <property>controls/APU/off-start-run</property>
+    </and>
+   </condition>
+  </animation>
+
+  <animation>
+    <type>select</type>
+    <object-name>APU GEN</object-name>
+  <condition>
+   <and>
+	<greater-than>
+		<property>systems/electrical/volts</property>
+		<value>16</value>
+	</greater-than>
+       <property>controls/electric/APU-generator</property>
+    </and>
+   </condition>
+  </animation>
+
+  <animation>
+    <type>select</type>
+    <object-name>APU PWR</object-name>
+  <condition>
+   <and>
+	<greater-than>
+		<property>systems/electrical/volts</property>
+		<value>16</value>
+	</greater-than>
+       <property>controls/APU/pressure</property>
+    </and>
+   </condition>
+  </animation>
+
+  <animation>
+    <type>select</type>
+    <object-name>OIL PRESS1</object-name>
+  <condition>
+   <and>
+	<greater-than>
+		<property>systems/electrical/volts</property>
+		<value>16</value>
+	</greater-than>
+        <not>
+        <property>/controls/engines/engine[1]/starter-position-norm</property>
+        </not>
+    </and>
+   </condition>
+  </animation>
+
+  <animation>
+    <type>select</type>
+    <object-name>OIL PRESS2</object-name>
+  <condition>
+   <and>
+	<greater-than>
+		<property>systems/electrical/volts</property>
+		<value>16</value>
+	</greater-than>
+        <not>
+        <property>/controls/engines/engine[0]/starter-position-norm</property>
+        </not>
+    </and>
+   </condition>
+  </animation>
+
+  <animation>
+    <type>select</type>
+    <object-name>PUMP PWR1</object-name>
+  <condition>
+      <and>
+        <not>
+	<property>controls/fuel/tank[2]/to_engine</property>
+        </not>
+        <greater-than>
+	  <property>systems/electrical/volts</property>
+          <value>16</value>
+        </greater-than>
+      </and>
+   </condition>
+  </animation>
+
+  <animation>
+    <type>select</type>
+    <object-name>PUMP PWR2</object-name>
+  <condition>
+      <and>
+        <not>
+	<property>controls/fuel/tank[1]/to_engine</property>
+        </not>
+        <greater-than>
+	  <property>systems/electrical/volts</property>
+          <value>16</value>
+        </greater-than>
+      </and>
+   </condition>
+  </animation>
+
+  <animation>
+    <type>select</type>
+    <object-name>FUEL PUMP</object-name>
+    <condition>
+     <or>
+     <and>
+	<greater-than>
+		<property>systems/electrical/volts</property>
+		<value>16</value>
+	</greater-than>
+        <not>
+	<property>controls/fuel/tank[2]/boost-pump</property>
+        </not>
+   </and>
+     <and>
+	<greater-than>
+		<property>systems/electrical/volts</property>
+		<value>16</value>
+	</greater-than>
+        <not>
+	<property>controls/fuel/tank[1]/boost-pump</property>
+        </not>
+   </and>
+   </or>
+   </condition>
+  </animation>
+
+  <animation>
+    <type>select</type>
+    <object-name>WING TANK P</object-name>
+  <condition>
+      <and>
+        <not>
+	<property>controls/fuel/tank[2]/boost-pump</property>
+        </not>
+        <greater-than>
+	  <property>systems/electrical/volts</property>
+          <value>16</value>
+        </greater-than>
+      </and>
+   </condition>
+  </animation>
+
+  <animation>
+    <type>select</type>
+    <object-name>CTR TANK P</object-name>
+  <condition>
+      <and>
+        <not>
+	<property>controls/fuel/tank[1]/boost-pump</property>
+        </not>
+        <greater-than>
+	  <property>systems/electrical/volts</property>
+          <value>16</value>
+        </greater-than>
+      </and>
+   </condition>
+  </animation>
+
+
+  <animation>
+    <type>select</type>
+    <object-name>FUEL LOW</object-name>
+  <condition>
+      <and>
+        <greater-than>
+	  <property>systems/electrical/volts</property>
+          <value>16</value>
+        </greater-than>
+        <less-than>
+	<property>consumables/fuel/total-fuel-norm</property>
+          <value>0.1</value>
+        </less-than>
+      </and>
+   </condition>
+  </animation>
+
+  <animation>
+    <type>select</type>
+    <object-name>WING TANK F</object-name>
+  <condition>
+      <and>
+        <less-than>
+	<property>consumables/fuel/tank[2]/level-norm</property>
+          <value>0.1</value>
+        </less-than>
+        <greater-than>
+	  <property>systems/electrical/volts</property>
+          <value>16</value>
+        </greater-than>
+      </and>
+   </condition>
+  </animation>
+
+  <animation>
+    <type>select</type>
+    <object-name>CTR TANK F</object-name>
+  <condition>
+      <and>
+        <less-than>
+	<property>consumables/fuel/tank[1]/level-norm</property>
+          <value>0.1</value>
+        </less-than>
+        <greater-than>
+	  <property>systems/electrical/volts</property>
+          <value>16</value>
+        </greater-than>
+       <property>sim/model/lights/sbc1/state</property>
+      </and>
+   </condition>
+  </animation>
+
+  <animation>
+    <type>select</type>
+    <object-name>AIR TEMP</object-name>
+  <condition>
+      <and>
+        <less-than>
+		<property>environment/total-air-temparature-degc</property>
+          <value>0</value>
+        </less-than>
+        <not>
+        <property>controls/anti-ice/window-heat</property>
+        </not>
+        <greater-than>
+	  <property>systems/electrical/volts</property>
+          <value>16</value>
+        </greater-than>
+       <property>sim/model/lights/sbc1/state</property>
+      </and>
+   </condition>
+  </animation>
+
+</PropertyList>
+

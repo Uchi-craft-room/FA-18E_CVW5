@@ -1,0 +1,60 @@
+<?xml version="1.0"?>
+
+<PropertyList>
+
+    <path>tgt.ac</path>
+
+ <animation>
+  <type>material</type>
+  <object-name>Face</object-name>
+  <object-name>PointerTip</object-name>   
+    <emission>
+      <factor-prop>systems/electrical/outputs/instrument-lights-norm</factor-prop>
+      <red>   0.5 </red>
+      <green> 0.5 </green>
+      <blue>  0.0 </blue>
+    </emission>
+ </animation>
+
+
+    <animation>
+        <type>rotate</type>
+        <object-name>PointerCentre</object-name>
+        <object-name>PointerTip</object-name>
+        <property>/controls/engines/engine[1]/starter-position-norm</property>
+        <interpolation>
+            <entry><ind>0</ind><dep>0.0</dep></entry>
+            <entry><ind>1</ind><dep>90</dep></entry>
+        </interpolation>
+        <axis>
+            <x>-1</x>
+            <y>0</y>
+            <z>0</z>
+        </axis>
+    </animation>
+
+ <animation> 
+  <type>rotate</type>
+  <object-name>PointerCentre</object-name>
+  <object-name>PointerTip</object-name>
+  <property>engines/engine[1]/itt-norm</property>
+  <interpolation>
+   <entry><ind>0</ind><dep>0</dep></entry>
+   <entry><ind>1</ind><dep>20</dep></entry>
+  </interpolation>
+  <axis> 
+   <x>-1</x>
+   <y>0</y>
+   <z>0</z>
+  </axis>
+  <center>
+   <x-m>0</x-m>
+   <y-m>0</y-m>
+   <z-m>0</z-m>  
+  </center>
+ </animation>   
+
+
+
+</PropertyList>
+

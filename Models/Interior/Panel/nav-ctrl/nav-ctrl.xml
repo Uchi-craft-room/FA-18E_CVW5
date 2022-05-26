@@ -1,0 +1,273 @@
+<?xml version="1.0"?>
+
+<PropertyList>
+<path>nav-ctrl.ac</path>
+
+
+<!--   LATITUDE  -->
+ <animation>
+  <type>textranslate</type>
+  <object-name>drum-1</object-name>
+  <property>instrumentation/gps/indicated-latitude-deg</property>
+  <factor>10</factor>
+  <offset>-0.01</offset>
+  <step>0.01</step>
+  <scroll>1</scroll>
+  <center>
+   <x-m>0</x-m>
+   <y-m>0</y-m>
+   <z-m>0</z-m>
+  </center>
+  <axis>
+   <x>0</x>
+   <y>-1</y>
+   <z>0</z>
+  </axis>
+ </animation>
+
+
+
+
+ <animation>
+  <type>textranslate</type>
+  <object-name>drum-2</object-name>
+  <property>instrumentation/gps/indicated-latitude-deg</property>
+  <factor>1</factor>
+  <offset>-0.1</offset>
+  <step>0.1</step>
+  <scroll>1</scroll>
+  <center>
+   <x-m>0</x-m>
+   <y-m>0</y-m>
+   <z-m>0</z-m>
+  </center>
+  <axis>
+   <x>0</x>
+   <y>-1</y>
+   <z>0</z>
+  </axis>
+ </animation>
+
+
+
+ <animation>
+  <type>textranslate</type>
+  <object-name>drum-3</object-name>
+  <property>instrumentation/gps/indicated-latitude-deg</property>
+  <factor>0.1</factor>
+  <offset>0</offset>
+  <step>1</step>
+  <scroll>0.01</scroll>
+  <center>
+   <x-m>0</x-m>
+   <y-m>0</y-m>
+   <z-m>0</z-m>
+  </center>
+  <axis>
+   <x>0</x>
+   <y>-1</y>
+   <z>0</z>
+  </axis>
+ </animation>
+
+
+
+ <animation>
+  <type>textranslate</type>
+  <object-name>drum-4</object-name>
+  <property>instrumentation/gps/indicated-latitude-deg</property>
+  <factor>0.01</factor>
+  <offset>0</offset>
+  <step>10</step>
+  <scroll>0.01</scroll>
+  <center>
+   <x-m>0</x-m>
+   <y-m>0</y-m>
+   <z-m>0</z-m>
+  </center>
+  <axis>
+   <x>0</x>
+   <y>-1</y>
+   <z>0</z>
+  </axis>
+ </animation>
+
+<!--   LONGITUDE  -->
+ <animation>
+  <type>textranslate</type>
+  <object-name>drum-A</object-name>
+  <property>instrumentation/gps/indicated-longitude-deg</property>
+  <factor>10</factor>
+  <offset>-0.01</offset>
+  <step>0.01</step>
+  <scroll>1</scroll>
+  <center>
+   <x-m>0</x-m>
+   <y-m>0</y-m>
+   <z-m>0</z-m>
+  </center>
+  <axis>
+   <x>0</x>
+   <y>-1</y>
+   <z>0</z>
+  </axis>
+ </animation>
+
+
+
+
+ <animation>
+  <type>textranslate</type>
+  <object-name>drum-B</object-name>
+  <property>instrumentation/gps/indicated-longitude-deg</property>
+  <factor>1</factor>
+  <offset>-0.1</offset>
+  <step>0.1</step>
+  <scroll>1</scroll>
+  <center>
+   <x-m>0</x-m>
+   <y-m>0</y-m>
+   <z-m>0</z-m>
+  </center>
+  <axis>
+   <x>0</x>
+   <y>-1</y>
+   <z>0</z>
+  </axis>
+ </animation>
+
+
+
+ <animation>
+  <type>textranslate</type>
+  <object-name>drum-C</object-name>
+  <property>instrumentation/gps/indicated-longitude-deg</property>
+  <factor>0.1</factor>
+  <offset>0</offset>
+  <step>1</step>
+  <scroll>0.01</scroll>
+  <center>
+   <x-m>0</x-m>
+   <y-m>0</y-m>
+   <z-m>0</z-m>
+  </center>
+  <axis>
+   <x>0</x>
+   <y>-1</y>
+   <z>0</z>
+  </axis>
+ </animation>
+
+
+
+ <animation>
+  <type>textranslate</type>
+  <object-name>drum-D</object-name>
+  <property>instrumentation/gps/indicated-longitude-deg</property>
+  <factor>0.01</factor>
+  <offset>0</offset>
+  <step>10</step>
+  <scroll>0.01</scroll>
+  <center>
+   <x-m>0</x-m>
+   <y-m>0</y-m>
+   <z-m>0</z-m>
+  </center>
+  <axis>
+   <x>0</x>
+   <y>-1</y>
+   <z>0</z>
+  </axis>
+ </animation>
+
+ <animation>
+  <type>textranslate</type>
+  <object-name>drum-E</object-name>
+  <property>instrumentation/gps/indicated-longitude-deg</property>
+  <factor>0.001</factor>
+  <offset>0</offset>
+  <step>100</step>
+  <scroll>0.01</scroll>
+  <center>
+   <x-m>0</x-m>
+   <y-m>0</y-m>
+   <z-m>0</z-m>
+  </center>
+  <axis>
+   <x>0</x>
+   <y>-1</y>
+   <z>0</z>
+  </axis>
+ </animation>
+
+<!-- lighting -->
+
+  <animation> 
+   <object-name>base</object-name>
+   <type>material</type>
+    <emission> 
+      <factor-prop>systems/electrical/outputs/instrument-lights-norm</factor-prop>
+        <red>0.5</red>
+        <green>0.2</green>
+        <blue>0.2</blue>
+      </emission>
+  </animation>
+
+
+  <animation> 
+   <object-name>drum-1</object-name>
+   <object-name>drum-2</object-name>
+   <object-name>drum-3</object-name>
+   <object-name>drum-4</object-name>
+   <object-name>drum-A</object-name>
+   <object-name>drum-B</object-name>
+   <object-name>drum-C</object-name>
+   <object-name>drum-D</object-name>
+   <object-name>drum-E</object-name>
+   <type>material</type>
+    <emission> 
+        <red>0.6</red>
+        <green>0.6</green>
+        <blue>0.6</blue>
+      </emission>
+  </animation>
+
+
+  <animation> 
+   <object-name>MARK</object-name>
+   <type>material</type>
+    <emission> 
+      <factor-prop>systems/electrical/outputs/instrument-lights-norm</factor-prop>
+        <red>0.5</red>
+        <green>0.3</green>
+        <blue>0.0</blue>
+      </emission>
+  </animation>
+
+
+    <animation>
+      <type>select</type>
+        <object-name>drum-1</object-name>
+        <object-name>drum-2</object-name>
+        <object-name>drum-3</object-name>
+        <object-name>drum-4</object-name>
+        <object-name>drum-A</object-name>
+        <object-name>drum-B</object-name>
+        <object-name>drum-C</object-name>
+        <object-name>drum-D</object-name>
+        <object-name>drum-E</object-name>
+      <condition>
+            <greater-than>
+                <property>systems/electrical/outputs/nav</property>
+                <value>1</value>
+            </greater-than>
+      </condition>
+    </animation>
+
+ <animation>
+  <type>range</type>
+  <min-m>0</min-m>
+  <max-m>10</max-m>
+ </animation>
+
+</PropertyList>

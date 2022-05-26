@@ -1,0 +1,890 @@
+<?xml version="1.0"?>
+
+
+<PropertyList>
+<path>symbol.ac</path>
+
+  <animation> 
+    <type>material</type>
+    <object-name>tacan</object-name>
+    <object-name>tanker0</object-name>
+    <object-name>tanker1</object-name>
+    <object-name>tanker2</object-name>
+    <object-name>multiplayer0</object-name>
+    <object-name>multiplayer1</object-name>
+    <object-name>multiplayer2</object-name>
+    <object-name>multiplayer3</object-name>
+    <object-name>multiplayer4</object-name>
+    <emission> 
+      <red>   1 </red>
+      <green> 1 </green>
+      <blue>  1 </blue>   
+      <factor-prop>sim/hud/color/brightness</factor-prop>
+    </emission>
+  </animation>
+
+
+
+
+
+<!-- TANKER0 (KC1) -->
+   <animation>
+     <type>select</type>
+	<object-name>tanker0</object-name>
+        <condition>
+         <and>
+         <or>
+            <property>controls/electric/engine/generator</property>
+            <property>controls/electric/engine[1]/generator</property>
+         </or>
+         <greater-than>
+            <property>systems/electrical/volts</property>
+            <value>24</value>
+         </greater-than>
+         <property>ai/models/tanker[0]/radar/in-range</property>
+         <less-than-equals>
+            <property>ai/models/tanker[0]/radar/range-nm</property>
+            <property>instrumentation/radar/range</property>
+         </less-than-equals>
+         <greater-than>
+            <property>ai/models/tanker[0]/radar/v-offset</property>
+            <value>-6</value>
+         </greater-than>
+         <less-than>
+            <property>ai/models/tanker[0]/radar/v-offset</property>
+            <value>6</value>
+         </less-than>
+         <greater-than>
+            <property>ai/models/tanker[0]/radar/h-offset</property>
+            <value>-10</value>
+         </greater-than>
+         <less-than>
+            <property>ai/models/tanker[0]/radar/h-offset</property>
+            <value>10</value>
+         </less-than>
+         <property>sim/hud/visibility[1]</property>
+         </and>
+        </condition>
+  </animation>
+
+  <animation>
+     <type>select</type>
+	<object-name>tacan</object-name>
+        <condition>
+         <and>
+         <or>
+            <property>controls/electric/engine/generator</property>
+            <property>controls/electric/engine[1]/generator</property>
+         </or>
+         <greater-than>
+            <property>systems/electrical/volts</property>
+            <value>24</value>
+         </greater-than>
+         <property>ai/models/tanker[0]/radar/in-range</property>
+         <less-than-equals>
+            <property>ai/models/tanker[0]/radar/range-nm</property>
+            <property>instrumentation/radar/range</property>
+         </less-than-equals>
+         <greater-than>
+            <property>ai/models/tanker[0]/radar/v-offset</property>
+            <value>-6</value>
+         </greater-than>
+         <less-than>
+            <property>ai/models/tanker[0]/radar/v-offset</property>
+            <value>6</value>
+         </less-than>
+         <greater-than>
+            <property>ai/models/tanker[0]/radar/h-offset</property>
+            <value>-10</value>
+         </greater-than>
+         <less-than>
+            <property>ai/models/tanker[0]/radar/h-offset</property>
+            <value>10</value>
+         </less-than>
+         <property>sim/hud/visibility[1]</property>
+         <equals>
+             <property>instrumentation/tacan/display/channel</property>
+             <property>ai/models/tanker[0]/navaids/tacan/channel-ID</property>
+          </equals>
+         </and>
+        </condition>
+  </animation>
+
+  <animation>
+     <type>rotate</type>
+     <object-name>tanker0</object-name>
+	<object-name>tacan</object-name>
+     <property>orientation/roll-deg</property>
+        <axis>
+            <x> 1.0 </x>
+            <y> 0.0 </y>
+            <z> 0.0 </z>
+        </axis>
+        <center>
+            <x-m>0.0</x-m>
+            <y-m>0.0</y-m>
+            <z-m>0.0</z-m>
+        </center>
+  </animation>
+
+  <animation>
+    <type>translate</type>
+	<object-name>tanker0</object-name>
+	<object-name>tacan</object-name>
+     <property>ai/models/tanker[0]/radar/h-offset</property>
+      <factor> 0.01 </factor>
+        <axis>
+            <x>0.0</x>
+            <y>1.0</y>
+            <z>0.0</z>
+        </axis>
+        <center>
+            <x-m>0.0</x-m>
+            <y-m>0.0</y-m>
+            <z-m>0.0</z-m>
+        </center>
+  </animation>
+
+  <animation>
+     <type>translate</type>
+     <object-name>tanker0</object-name>
+	<object-name>tacan</object-name>
+     <property>ai/models/tanker[0]/radar/v-offset</property>
+      <factor> 0.01 </factor>
+        <axis>
+            <x> 0.0 </x>
+            <y> 0.0 </y>
+            <z> 1.0 </z>
+        </axis>
+        <center>
+            <x-m>0.0</x-m>
+            <y-m>0.0</y-m>
+            <z-m>0.0</z-m>
+        </center>
+  </animation>
+
+
+<!-- TANKER1 (KC2) -->
+   <animation>
+     <type>select</type>
+	<object-name>tanker1</object-name>
+        <condition>
+         <and>
+         <or>
+            <property>controls/electric/engine/generator</property>
+            <property>controls/electric/engine[1]/generator</property>
+         </or>
+         <greater-than>
+            <property>systems/electrical/volts</property>
+            <value>24</value>
+         </greater-than>
+         <property>ai/models/tanker[1]/radar/in-range</property>
+         <less-than-equals>
+            <property>ai/models/tanker[1]/radar/range-nm</property>
+            <property>instrumentation/radar/range</property>
+         </less-than-equals>
+         <greater-than>
+            <property>ai/models/tanker[1]/radar/v-offset</property>
+            <value>-6</value>
+         </greater-than>
+         <less-than>
+            <property>ai/models/tanker[1]/radar/v-offset</property>
+            <value>6</value>
+         </less-than>
+         <greater-than>
+            <property>ai/models/tanker[1]/radar/h-offset</property>
+            <value>-10</value>
+         </greater-than>
+         <less-than>
+            <property>ai/models/tanker[1]/radar/h-offset</property>
+            <value>10</value>
+         </less-than>
+         <property>sim/hud/visibility[1]</property>
+         </and>
+        </condition>
+  </animation>
+
+  <animation>
+     <type>select</type>
+	<object-name>tacan1</object-name>
+        <condition>
+         <and>
+         <or>
+            <property>controls/electric/engine/generator</property>
+            <property>controls/electric/engine[1]/generator</property>
+         </or>
+         <greater-than>
+            <property>systems/electrical/volts</property>
+            <value>24</value>
+         </greater-than>
+         <property>ai/models/tanker[1]/radar/in-range</property>
+         <less-than-equals>
+            <property>ai/models/tanker[1]/radar/range-nm</property>
+            <property>instrumentation/radar/range</property>
+         </less-than-equals>
+         <greater-than>
+            <property>ai/models/tanker[1]/radar/v-offset</property>
+            <value>-6</value>
+         </greater-than>
+         <less-than>
+            <property>ai/models/tanker[1]/radar/v-offset</property>
+            <value>6</value>
+         </less-than>
+         <greater-than>
+            <property>ai/models/tanker[1]/radar/h-offset</property>
+            <value>-10</value>
+         </greater-than>
+         <less-than>
+            <property>ai/models/tanker[1]/radar/h-offset</property>
+            <value>10</value>
+         </less-than>
+         <property>sim/hud/visibility[1]</property>
+         <equals>
+             <property>instrumentation/tacan/display/channel</property>
+             <property>ai/models/tanker[1]/navaids/tacan/channel-ID</property>
+          </equals>
+         </and>
+        </condition>
+  </animation>
+
+  <animation>
+     <type>rotate</type>
+     <object-name>tanker1</object-name>
+     <object-name>tacan1</object-name>
+     <property>orientation/roll-deg</property>
+        <axis>
+            <x> 1.0 </x>
+            <y> 0.0 </y>
+            <z> 0.0 </z>
+        </axis>
+        <center>
+            <x-m>0.0</x-m>
+            <y-m>0.0</y-m>
+            <z-m>0.0</z-m>
+        </center>
+  </animation>
+
+  <animation>
+    <type>translate</type>
+     <object-name>tanker1</object-name>
+     <object-name>tacan1</object-name>
+     <property>ai/models/tanker[1]/radar/h-offset</property>
+      <factor> 0.01 </factor>
+        <axis>
+            <x>0.0</x>
+            <y>1.0</y>
+            <z>0.0</z>
+        </axis>
+        <center>
+            <x-m>0.0</x-m>
+            <y-m>0.0</y-m>
+            <z-m>0.0</z-m>
+        </center>
+  </animation>
+
+  <animation>
+     <type>translate</type>
+     <object-name>tanker1</object-name>
+     <object-name>tacan1</object-name>
+     <property>ai/models/tanker[1]/radar/v-offset</property>
+      <factor> 0.01 </factor>
+        <axis>
+            <x> 0.0 </x>
+            <y> 0.0 </y>
+            <z> 1.0 </z>
+        </axis>
+        <center>
+            <x-m>0.0</x-m>
+            <y-m>0.0</y-m>
+            <z-m>0.0</z-m>
+        </center>
+  </animation>
+
+<!-- TANKER2 (KC3) -->
+   <animation>
+     <type>select</type>
+	<object-name>tanker2</object-name>
+        <condition>
+         <and>
+         <or>
+            <property>controls/electric/engine/generator</property>
+            <property>controls/electric/engine[1]/generator</property>
+         </or>
+         <greater-than>
+            <property>systems/electrical/volts</property>
+            <value>24</value>
+         </greater-than>
+         <property>ai/models/tanker[2]/radar/in-range</property>
+         <less-than-equals>
+            <property>ai/models/tanker[2]/radar/range-nm</property>
+            <property>instrumentation/radar/range</property>
+         </less-than-equals>
+         <greater-than>
+            <property>ai/models/tanker[2]/radar/v-offset</property>
+            <value>-6</value>
+         </greater-than>
+         <less-than>
+            <property>ai/models/tanker[2]/radar/v-offset</property>
+            <value>6</value>
+         </less-than>
+         <greater-than>
+            <property>ai/models/tanker[2]/radar/h-offset</property>
+            <value>-10</value>
+         </greater-than>
+         <less-than>
+            <property>ai/models/tanker[2]/radar/h-offset</property>
+            <value>10</value>
+         </less-than>
+         <property>sim/hud/visibility[1]</property>
+         </and>
+        </condition>
+  </animation>
+
+   <animation>
+     <type>select</type>
+	<object-name>tacan2</object-name>
+        <condition>
+         <and>
+         <or>
+            <property>controls/electric/engine/generator</property>
+            <property>controls/electric/engine[1]/generator</property>
+         </or>
+         <greater-than>
+            <property>systems/electrical/volts</property>
+            <value>24</value>
+         </greater-than>
+         <property>ai/models/tanker[2]/radar/in-range</property>
+         <less-than-equals>
+            <property>ai/models/tanker[2]/radar/range-nm</property>
+            <property>instrumentation/radar/range</property>
+         </less-than-equals>
+         <greater-than>
+            <property>ai/models/tanker[2]/radar/v-offset</property>
+            <value>-6</value>
+         </greater-than>
+         <less-than>
+            <property>ai/models/tanker[2]/radar/v-offset</property>
+            <value>6</value>
+         </less-than>
+         <greater-than>
+            <property>ai/models/tanker[2]/radar/h-offset</property>
+            <value>-10</value>
+         </greater-than>
+         <less-than>
+            <property>ai/models/tanker[2]/radar/h-offset</property>
+            <value>10</value>
+         </less-than>
+         <property>sim/hud/visibility[1]</property>
+         <equals>
+             <property>instrumentation/tacan/display/channel</property>
+             <property>ai/models/tanker[2]/navaids/tacan/channel-ID</property>
+          </equals>
+         </and>
+        </condition>
+  </animation>
+
+  <animation>
+     <type>rotate</type>
+     <object-name>tanker2</object-name>
+	<object-name>tacan2</object-name>
+     <property>orientation/roll-deg</property>
+        <axis>
+            <x> 1.0 </x>
+            <y> 0.0 </y>
+            <z> 0.0 </z>
+        </axis>
+        <center>
+            <x-m>0.0</x-m>
+            <y-m>0.0</y-m>
+            <z-m>0.0</z-m>
+        </center>
+  </animation>
+
+  <animation>
+    <type>translate</type>
+	<object-name>tanker2</object-name>
+	<object-name>tacan2</object-name>
+     <property>ai/models/tanker[2]/radar/h-offset</property>
+      <factor> 0.01 </factor>
+        <axis>
+            <x>0.0</x>
+            <y>1.0</y>
+            <z>0.0</z>
+        </axis>
+        <center>
+            <x-m>0.0</x-m>
+            <y-m>0.0</y-m>
+            <z-m>0.0</z-m>
+        </center>
+  </animation>
+
+  <animation>
+     <type>translate</type>
+     <object-name>tanker2</object-name>
+	<object-name>tacan2</object-name>
+     <property>ai/models/tanker[2]/radar/v-offset</property>
+      <factor> 0.01 </factor>
+        <axis>
+            <x> 0.0 </x>
+            <y> 0.0 </y>
+            <z> 1.0 </z>
+        </axis>
+        <center>
+            <x-m>0.0</x-m>
+            <y-m>0.0</y-m>
+            <z-m>0.0</z-m>
+        </center>
+  </animation>
+
+<!-- multiplayer0 (MP1) -->
+   <animation>
+     <type>select</type>
+	<object-name>multiplayer0</object-name>
+        <condition>
+         <and>
+         <or>
+            <property>controls/electric/engine/generator</property>
+            <property>controls/electric/engine[1]/generator</property>
+         </or>
+         <greater-than>
+            <property>systems/electrical/volts</property>
+            <value>24</value>
+         </greater-than>
+         <property>ai/models/multiplayer[0]/radar/in-range</property>
+         <less-than-equals>
+            <property>ai/models/multiplayer[0]/radar/range-nm</property>
+            <property>instrumentation/radar/range</property>
+         </less-than-equals>
+         <greater-than>
+            <property>ai/models/multiplayer[0]/radar/v-offset</property>
+            <value>-6</value>
+         </greater-than>
+         <less-than>
+            <property>ai/models/multiplayer[0]/radar/v-offset</property>
+            <value>6</value>
+         </less-than>
+         <greater-than>
+            <property>ai/models/multiplayer[0]/radar/h-offset</property>
+            <value>-10</value>
+         </greater-than>
+         <less-than>
+            <property>ai/models/multiplayer[0]/radar/h-offset</property>
+            <value>10</value>
+         </less-than>
+         <property>sim/hud/visibility[1]</property>
+         </and>
+        </condition>
+  </animation>
+
+  <animation>
+     <type>rotate</type>
+     <object-name>multiplayer0</object-name>
+     <property>orientation/roll-deg</property>
+        <axis>
+            <x> 1.0 </x>
+            <y> 0.0 </y>
+            <z> 0.0 </z>
+        </axis>
+        <center>
+            <x-m>0.0</x-m>
+            <y-m>0.0</y-m>
+            <z-m>0.0</z-m>
+        </center>
+  </animation>
+
+  <animation>
+    <type>translate</type>
+	<object-name>multiplayer0</object-name>
+     <property>ai/models/multiplayer[0]/radar/h-offset</property>
+      <factor> 0.01 </factor>
+        <axis>
+            <x>0.0</x>
+            <y>1.0</y>
+            <z>0.0</z>
+        </axis>
+        <center>
+            <x-m>0.0</x-m>
+            <y-m>0.0</y-m>
+            <z-m>0.0</z-m>
+        </center>
+  </animation>
+
+  <animation>
+     <type>translate</type>
+     <object-name>multiplayer0</object-name>
+     <property>ai/models/multiplayer[0]/radar/v-offset</property>
+      <factor> 0.01 </factor>
+        <axis>
+            <x> 0.0 </x>
+            <y> 0.0 </y>
+            <z> 1.0 </z>
+        </axis>
+        <center>
+            <x-m>0.0</x-m>
+            <y-m>0.0</y-m>
+            <z-m>0.0</z-m>
+        </center>
+  </animation>
+
+<!-- multiplayer1 (MP2) -->
+   <animation>
+     <type>select</type>
+	<object-name>multiplayer1</object-name>
+        <condition>
+         <and>
+         <or>
+            <property>controls/electric/engine/generator</property>
+            <property>controls/electric/engine[1]/generator</property>
+         </or>
+         <greater-than>
+            <property>systems/electrical/volts</property>
+            <value>24</value>
+         </greater-than>
+         <property>ai/models/multiplayer[1]/radar/in-range</property>
+         <less-than-equals>
+            <property>ai/models/multiplayer[1]/radar/range-nm</property>
+            <property>instrumentation/radar/range</property>
+         </less-than-equals>
+         <greater-than>
+            <property>ai/models/multiplayer[1]/radar/v-offset</property>
+            <value>-6</value>
+         </greater-than>
+         <less-than>
+            <property>ai/models/multiplayer[1]/radar/v-offset</property>
+            <value>6</value>
+         </less-than>
+         <greater-than>
+            <property>ai/models/multiplayer[1]/radar/h-offset</property>
+            <value>-10</value>
+         </greater-than>
+         <less-than>
+            <property>ai/models/multiplayer[1]/radar/h-offset</property>
+            <value>10</value>
+         </less-than>
+         <property>sim/hud/visibility[1]</property>
+         </and>
+        </condition>
+  </animation>
+
+  <animation>
+     <type>rotate</type>
+     <object-name>multiplayer1</object-name>
+     <property>orientation/roll-deg</property>
+        <axis>
+            <x> 1.0 </x>
+            <y> 0.0 </y>
+            <z> 0.0 </z>
+        </axis>
+        <center>
+            <x-m>0.0</x-m>
+            <y-m>0.0</y-m>
+            <z-m>0.0</z-m>
+        </center>
+  </animation>
+
+  <animation>
+    <type>translate</type>
+	<object-name>multiplayer1</object-name>
+     <property>ai/models/multiplayer[1]/radar/h-offset</property>
+      <factor> 0.01 </factor>
+        <axis>
+            <x>0.0</x>
+            <y>1.0</y>
+            <z>0.0</z>
+        </axis>
+        <center>
+            <x-m>0.0</x-m>
+            <y-m>0.0</y-m>
+            <z-m>0.0</z-m>
+        </center>
+  </animation>
+
+  <animation>
+     <type>translate</type>
+     <object-name>multiplayer1</object-name>
+     <property>ai/models/multiplayer[1]/radar/v-offset</property>
+      <factor> 0.01 </factor>
+        <axis>
+            <x> 0.0 </x>
+            <y> 0.0 </y>
+            <z> 1.0 </z>
+        </axis>
+        <center>
+            <x-m>0.0</x-m>
+            <y-m>0.0</y-m>
+            <z-m>0.0</z-m>
+        </center>
+  </animation>
+
+<!-- multiplayer2 (MP3) -->
+   <animation>
+     <type>select</type>
+	<object-name>multiplayer2</object-name>
+        <condition>
+         <and>
+         <or>
+            <property>controls/electric/engine/generator</property>
+            <property>controls/electric/engine[1]/generator</property>
+         </or>
+         <greater-than>
+            <property>systems/electrical/volts</property>
+            <value>24</value>
+         </greater-than>
+         <property>ai/models/multiplayer[2]/radar/in-range</property>
+         <less-than-equals>
+            <property>ai/models/multiplayer[2]/radar/range-nm</property>
+            <property>instrumentation/radar/range</property>
+         </less-than-equals>
+         <greater-than>
+            <property>ai/models/multiplayer[2]/radar/v-offset</property>
+            <value>-6</value>
+         </greater-than>
+         <less-than>
+            <property>ai/models/multiplayer[2]/radar/v-offset</property>
+            <value>6</value>
+         </less-than>
+         <greater-than>
+            <property>ai/models/multiplayer[2]/radar/h-offset</property>
+            <value>-10</value>
+         </greater-than>
+         <less-than>
+            <property>ai/models/multiplayer[2]/radar/h-offset</property>
+            <value>10</value>
+         </less-than>
+         <property>sim/hud/visibility[1]</property>
+         </and>
+        </condition>
+  </animation>
+
+  <animation>
+     <type>rotate</type>
+     <object-name>multiplayer2</object-name>
+     <property>orientation/roll-deg</property>
+        <axis>
+            <x> 1.0 </x>
+            <y> 0.0 </y>
+            <z> 0.0 </z>
+        </axis>
+        <center>
+            <x-m>0.0</x-m>
+            <y-m>0.0</y-m>
+            <z-m>0.0</z-m>
+        </center>
+  </animation>
+
+  <animation>
+    <type>translate</type>
+	<object-name>multiplayer2</object-name>
+     <property>ai/models/multiplayer[2]/radar/h-offset</property>
+      <factor> 0.01 </factor>
+        <axis>
+            <x>0.0</x>
+            <y>1.0</y>
+            <z>0.0</z>
+        </axis>
+        <center>
+            <x-m>0.0</x-m>
+            <y-m>0.0</y-m>
+            <z-m>0.0</z-m>
+        </center>
+  </animation>
+
+  <animation>
+     <type>translate</type>
+     <object-name>multiplayer2</object-name>
+     <property>ai/models/multiplayer[2]/radar/v-offset</property>
+      <factor> 0.01 </factor>
+        <axis>
+            <x> 0.0 </x>
+            <y> 0.0 </y>
+            <z> 1.0 </z>
+        </axis>
+        <center>
+            <x-m>0.0</x-m>
+            <y-m>0.0</y-m>
+            <z-m>0.0</z-m>
+        </center>
+  </animation>
+
+<!-- multiplayer3 (MP4) -->
+   <animation>
+     <type>select</type>
+	<object-name>multiplayer3</object-name>
+        <condition>
+         <and>
+         <or>
+            <property>controls/electric/engine/generator</property>
+            <property>controls/electric/engine[1]/generator</property>
+         </or>
+         <greater-than>
+            <property>systems/electrical/volts</property>
+            <value>24</value>
+         </greater-than>
+         <property>ai/models/multiplayer[3]/radar/in-range</property>
+         <less-than-equals>
+            <property>ai/models/multiplayer[3]/radar/range-nm</property>
+            <property>instrumentation/radar/range</property>
+         </less-than-equals>
+         <greater-than>
+            <property>ai/models/multiplayer[3]/radar/v-offset</property>
+            <value>-6</value>
+         </greater-than>
+         <less-than>
+            <property>ai/models/multiplayer[3]/radar/v-offset</property>
+            <value>6</value>
+         </less-than>
+         <greater-than>
+            <property>ai/models/multiplayer[3]/radar/h-offset</property>
+            <value>-10</value>
+         </greater-than>
+         <less-than>
+            <property>ai/models/multiplayer[3]/radar/h-offset</property>
+            <value>10</value>
+         </less-than>
+         <property>sim/hud/visibility[1]</property>
+         </and>
+        </condition>
+  </animation>
+
+  <animation>
+     <type>rotate</type>
+     <object-name>multiplayer3</object-name>
+     <property>orientation/roll-deg</property>
+        <axis>
+            <x> 1.0 </x>
+            <y> 0.0 </y>
+            <z> 0.0 </z>
+        </axis>
+        <center>
+            <x-m>0.0</x-m>
+            <y-m>0.0</y-m>
+            <z-m>0.0</z-m>
+        </center>
+  </animation>
+
+  <animation>
+    <type>translate</type>
+	<object-name>multiplayer3</object-name>
+     <property>ai/models/multiplayer[3]/radar/h-offset</property>
+      <factor> 0.01 </factor>
+        <axis>
+            <x>0.0</x>
+            <y>1.0</y>
+            <z>0.0</z>
+        </axis>
+        <center>
+            <x-m>0.0</x-m>
+            <y-m>0.0</y-m>
+            <z-m>0.0</z-m>
+        </center>
+  </animation>
+
+  <animation>
+     <type>translate</type>
+     <object-name>multiplayer3</object-name>
+     <property>ai/models/multiplayer[3]/radar/v-offset</property>
+      <factor> 0.01 </factor>
+        <axis>
+            <x> 0.0 </x>
+            <y> 0.0 </y>
+            <z> 1.0 </z>
+        </axis>
+        <center>
+            <x-m>0.0</x-m>
+            <y-m>0.0</y-m>
+            <z-m>0.0</z-m>
+        </center>
+  </animation>
+
+
+<!-- multiplayer4 (MP5) -->
+   <animation>
+     <type>select</type>
+	<object-name>multiplayer4</object-name>
+        <condition>
+         <and>
+         <or>
+            <property>controls/electric/engine/generator</property>
+            <property>controls/electric/engine[1]/generator</property>
+         </or>
+         <greater-than>
+            <property>systems/electrical/volts</property>
+            <value>24</value>
+         </greater-than>
+         <property>ai/models/multiplayer[4]/radar/in-range</property>
+         <less-than-equals>
+            <property>ai/models/multiplayer[4]/radar/range-nm</property>
+            <property>instrumentation/radar/range</property>
+         </less-than-equals>
+         <greater-than>
+            <property>ai/models/multiplayer[4]/radar/v-offset</property>
+            <value>-6</value>
+         </greater-than>
+         <less-than>
+            <property>ai/models/multiplayer[4]/radar/v-offset</property>
+            <value>6</value>
+         </less-than>
+         <greater-than>
+            <property>ai/models/multiplayer[4]/radar/h-offset</property>
+            <value>-10</value>
+         </greater-than>
+         <less-than>
+            <property>ai/models/multiplayer[4]/radar/h-offset</property>
+            <value>10</value>
+         </less-than>
+         <property>sim/hud/visibility[1]</property>
+         </and>
+        </condition>
+  </animation>
+
+  <animation>
+     <type>rotate</type>
+     <object-name>multiplayer4</object-name>
+     <property>orientation/roll-deg</property>
+        <axis>
+            <x> 1.0 </x>
+            <y> 0.0 </y>
+            <z> 0.0 </z>
+        </axis>
+        <center>
+            <x-m>0.0</x-m>
+            <y-m>0.0</y-m>
+            <z-m>0.0</z-m>
+        </center>
+  </animation>
+
+  <animation>
+    <type>translate</type>
+	<object-name>multiplayer4</object-name>
+     <property>ai/models/multiplayer[4]/radar/h-offset</property>
+      <factor> 0.01 </factor>
+        <axis>
+            <x>0.0</x>
+            <y>1.0</y>
+            <z>0.0</z>
+        </axis>
+        <center>
+            <x-m>0.0</x-m>
+            <y-m>0.0</y-m>
+            <z-m>0.0</z-m>
+        </center>
+  </animation>
+
+  <animation>
+     <type>translate</type>
+     <object-name>multiplayer4</object-name>
+     <property>ai/models/multiplayer[4]/radar/v-offset</property>
+      <factor> 0.01 </factor>
+        <axis>
+            <x> 0.0 </x>
+            <y> 0.0 </y>
+            <z> 1.0 </z>
+        </axis>
+        <center>
+            <x-m>0.0</x-m>
+            <y-m>0.0</y-m>
+            <z-m>0.0</z-m>
+        </center>
+  </animation>
+
+</PropertyList>

@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<PropertyList>
+
+    <path>rpm.ac</path>
+
+    <animation>
+        <type>material</type>
+        <object-name>Prpm.1</object-name>
+        <object-name>Prop.ind</object-name>
+     <emission>
+      <factor-prop>systems/electrical/outputs/instrument-lights-norm</factor-prop>
+      <red>   0.5 </red>
+      <green> 0.2 </green>
+      <blue>  0.2 </blue>
+    </emission>
+  </animation>
+
+    <animation>
+        <type>material</type>
+        <object-name>PropRPM.face</object-name>
+        <object-name>PropRPMneedle</object-name>
+     <emission>
+      <factor-prop>systems/electrical/outputs/instrument-lights-norm</factor-prop>
+      <red>   0.5 </red>
+      <green> 0.5 </green>
+      <blue>  0.0 </blue>
+    </emission>
+  </animation>
+
+
+    <animation>
+        <type>rotate</type>
+        <object-name>PropRPMneedle</object-name>
+        <property>/instrumentation/rpm/engine-lh</property>
+        <interpolation>
+            <entry><ind>50</ind><dep>0</dep></entry>>
+            <entry><ind>100</ind><dep>135</dep></entry>
+            <entry><ind>110</ind><dep>140</dep></entry>
+        </interpolation>
+        <axis>
+            <x>-1</x>
+            <y>0</y>
+            <z>0</z>
+        </axis>
+    </animation>
+
+    <animation>
+        <type>rotate</type>
+        <object-name>PropRPMneedle</object-name>
+        <property>/controls/engines/engine[1]/starter-position-norm</property>
+        <interpolation>
+            <entry><ind>0</ind><dep>0.0</dep></entry>
+            <entry><ind>1</ind><dep>138</dep></entry>
+        </interpolation>
+        <axis>
+            <x>-1</x>
+            <y>0</y>
+            <z>0</z>
+        </axis>
+    </animation>
+
+    <animation>
+        <type>rotate</type>
+        <object-name>Prpm.1</object-name>
+        <property>engines/engine[1]/n1</property>
+        <interpolation>
+            <entry><ind>0</ind><dep>0</dep></entry>
+            <entry><ind>100</ind><dep>1800</dep></entry>
+        </interpolation>
+        <center>
+        <x-m> 0.002 </x-m>
+        <y-m>-0.008 </y-m>
+        <z-m> 0.011 </z-m>
+        </center>
+        <axis>
+            <x>-1</x>
+            <y>0</y>
+            <z>0</z>
+        </axis>
+    </animation>
+
+    <animation>
+        <type>rotate</type>
+        <object-name>Prpm.1</object-name>
+        <property>/controls/engines/engine/starter-position-norm</property>
+        <interpolation>
+            <entry><ind>0</ind><dep>0.0</dep></entry>
+            <entry><ind>1</ind><dep>1800</dep></entry>
+        </interpolation>
+        <center>
+        <x-m> 0.002 </x-m>
+        <y-m>-0.008 </y-m>
+        <z-m> 0.011 </z-m>
+        </center>
+        <axis>
+            <x>-1</x>
+            <y>0</y>
+            <z>0</z>
+        </axis>
+    </animation>
+
+
+</PropertyList>
+
+

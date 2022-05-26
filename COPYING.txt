@@ -1,0 +1,53 @@
+	　　　　GNU GENERAL PUBLIC LICENSE
+             FlightGear Model FA-18E_CVW5
+ Copyright (C) 2022 Uchi craft room / Hitoshi Uchida
+                       
+one line to give the program's name and an idea of what it does.
+Copyright (C) yyyy  name of author
+
+This program is free software; you can redistribute it and/or
+modify it under the terms of the GNU General Public License
+as published by the Free Software Foundation; either version 2
+of the License, or (at your option) any later version.
+
+This program is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+GNU General Public License for more details.
+
+You should have received a copy of the GNU General Public License
+along with this program; if not, write to the Free Software
+Foundation, Inc., 59 Temple Place - Suite 330, Boston, MA  02111-1307, USA.
+
+(訳: 
+             FlightGear Model FA-18E_CVW5
+ Copyright (C) 2022 Uchi craft room / Hitoshi Uchida
+
+このプログラムはフリーソフトウェアです。あなたはこれを、フリーソフトウェ
+ア財団によって発行された GNU 一般公衆利用許諾契約書(バージョン2か、希
+望によってはそれ以降のバージョンのうちどれか)の定める条件の下で再頒布
+または改変することができます。
+
+このプログラムは有用であることを願って頒布されますが、*全くの無保証* 
+です。商業可能性の保証や特定の目的への適合性は、言外に示されたものも含
+め全く存在しません。詳しくはGNU 一般公衆利用許諾契約書をご覧ください。
+ 
+あなたはこのプログラムと共に、GNU 一般公衆利用許諾契約書の複製物を一部
+受け取ったはずです。もし受け取っていなければ、フリーソフトウェア財団ま
+で請求してください(宛先は the Free Software Foundation, Inc., 59
+Temple Place, Suite 330, Boston, MA 02111-1307 USA)
+                       
+　　　　　　　　　　　利用規約
+
+・ダウンロードにて配信するデータの取り扱いはユーザーの責
+　任・管理にて実施してください。
+
+・本データに起因する機器の破損、データ消失などのトラブル
+　には当方は一切責任を負いませんのでご了承ください。
+
+・本データに関する情報は当方が運営する下記サイトにて公開
+　しています。
+　Web Site : http://uchi-craft-room.blog.enjoy.jp/website/
+・お問い合わせ
+　Hitoshi Uchida
+  mail : uchinmat@hi3.enjoy.ne.jp

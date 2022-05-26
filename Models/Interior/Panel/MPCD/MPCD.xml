@@ -1,0 +1,55 @@
+<?xml version="1.0"?>
+
+
+<PropertyList>
+<path>MPCD.ac</path>
+
+<!-- lighting -->
+
+  <animation> 
+   <type>material</type>
+   <object-name>base</object-name>
+    <emission> 
+      <factor-prop>systems/electrical/outputs/instrument-lights-norm</factor-prop>
+        <red>0.2</red>
+        <green>0.5</green>
+        <blue>0.2</blue>
+      </emission>
+  </animation>
+
+  <animation>
+    <type>material</type>
+    <object-name>SUPT</object-name>
+    <object-name>TAC</object-name>
+    <object-name>PB1</object-name>
+    <object-name>PB2</object-name>
+    <object-name>PB3</object-name>
+    <object-name>PB4</object-name>
+    <object-name>PB5</object-name>
+    <object-name>PB6</object-name>
+    <object-name>PB7</object-name>
+    <object-name>PB8</object-name>
+    <object-name>PB9</object-name>
+    <object-name>PB10</object-name>
+    <object-name>PB11</object-name>
+    <object-name>PB12</object-name>
+    <object-name>PB13</object-name>
+    <object-name>PB14</object-name>
+    <object-name>PB15</object-name>
+    <object-name>PB16</object-name>
+    <object-name>PB17</object-name>
+    <object-name>PB18</object-name>
+    <object-name>PB19</object-name>
+    <object-name>PB20</object-name>
+    <object-name>PB21</object-name>
+    <object-name>PB22</object-name>
+    <emission>
+      <red>   1 </red>
+      <green> 1</green>
+      <blue>  1 </blue>
+    </emission>
+  </animation>
+
+
+
+</PropertyList>

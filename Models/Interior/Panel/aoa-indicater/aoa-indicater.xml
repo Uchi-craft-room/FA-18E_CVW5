@@ -1,0 +1,82 @@
+<?xml version="1.0"?>
+
+
+<PropertyList>
+
+	<path>aoa-indicater.ac</path>
+
+	<animation>
+		<type>material</type>
+                <object-name>low</object-name>
+                <object-name>sl-low</object-name>
+                <object-name>sl-hi</object-name> 
+                <object-name>hi</object-name> 
+		<emission> 
+			<red>  1 </red>
+			<green>1 </green>
+			<blue> 1 </blue>
+		</emission>
+	</animation>
+
+	<animation>
+		<type>select</type>
+		<object-name>low</object-name>
+		<condition>
+			<and>
+			<greater-than>
+				<property>/orientation/alpha-deg</property>
+				<value>8.8</value>
+			</greater-than>
+            			<property>controls/gear/gear-down</property>
+         		<greater-than>
+            			<property>systems/electrical/volts</property>
+            			<value>16</value>
+         		</greater-than>
+			</and>
+		</condition>
+	</animation>
+
+	<animation>
+		<type>select</type>
+		<object-name>sl-low</object-name>
+		<object-name>sl-hi</object-name>
+		<condition>
+			<and>
+			<less-than>
+				<property>/orientation/alpha-deg</property>
+				<value>9.3</value>
+			</less-than>
+			<greater-than>
+				<property>/orientation/alpha-deg</property>
+				<value>6.9</value>
+			</greater-than>
+            			<property>controls/gear/gear-down</property>
+         		<greater-than>
+            			<property>systems/electrical/volts</property>
+            			<value>16</value>
+         		</greater-than>
+			</and>
+		</condition>
+	</animation>
+
+
+	<animation>
+		<type>select</type>
+		<object-name>hi</object-name>
+		<condition>
+			<and>
+			<less-than>
+				<property>/orientation/alpha-deg</property>
+				<value>7.4</value>
+			</less-than>
+            			<property>controls/gear/gear-down</property>
+         		<greater-than>
+            			<property>systems/electrical/volts</property>
+            			<value>16</value>
+         		</greater-than>
+			</and>
+		</condition>
+	</animation>
+
+</PropertyList>
+

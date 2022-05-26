@@ -1,0 +1,200 @@
+<?xml version="1.0"?>
+
+<PropertyList>
+
+    <path>Ext-LT.ac</path>
+    
+    <animation>
+       <type>range</type>
+       <min-m>0</min-m>
+       <max-m>5</max-m>
+    </animation>
+ 
+  <animation>
+ <object-name>base</object-name>
+    <object-name>position</object-name>
+    <object-name>wing</object-name>
+    <object-name>flash</object-name>
+    <object-name>formation</object-name>
+    <object-name>fus</object-name>
+    <object-name>knob</object-name>
+   <type>material</type>
+     <emission> 
+      <factor-prop>systems/electrical/outputs/instrument-lights-norm</factor-prop>
+        <red>0.5</red>
+        <green>0.2</green>
+        <blue>0.2</blue>
+      </emission>
+  </animation>
+
+
+    <animation>
+        <type>pick</type>
+        <object-name>formation</object-name>
+        <action>
+            <button>0</button>
+            <repeatable>true</repeatable>
+            <binding>
+                <command>property-toggle</command>
+                <property>controls/lighting/formation-lamp</property>
+            </binding>
+        <binding>
+        <command>property-toggle</command>
+        <property>sim/sound/click</property>
+         </binding>
+        </action>
+    </animation>
+
+
+    <animation>
+    <type>rotate</type>
+    <object-name>formation</object-name>
+    <property>controls/lighting/formation-lamp</property>
+    <factor>45</factor>
+    <axis>
+      <x> 0 </x>
+      <y> 0 </y>
+      <z> 1 </z>
+    </axis>
+    <center>
+      <x-m>  0.002 </x-m>
+      <y-m>  -0.044 </y-m>
+      <z-m>  -0.127 </z-m>
+    </center>
+    </animation>
+
+    <animation>
+    <type>rotate</type>
+    <object-name>knob</object-name>
+    <property>controls/lighting/formation-lamp</property>
+    <factor>135</factor>
+    <axis>
+      <x> -1 </x>
+      <y> 0 </y>
+      <z> 0 </z>
+    </axis>
+    <center>
+      <x-m>  0.006 </x-m>
+      <y-m> -0.005 </y-m>
+      <z-m>  -0.126 </z-m>
+    </center>
+    </animation>
+
+
+
+<!--  Switch  ANTI COLLISION-->
+
+
+  <animation>
+    <type>pick</type>
+    <visible>true</visible>
+    <object-name>flash</object-name>
+    <action>
+      <button>0</button>
+      <repeatable>false</repeatable>
+      <binding>
+        <command>property-toggle</command>
+	<property>controls/lighting/beacon</property>
+      </binding>
+      <binding>
+        <command>property-toggle</command>
+        <property>sim/sound/click</property>
+      </binding>
+    </action>
+  </animation>
+
+  <animation>
+    <type>rotate</type>
+    <object-name>flash</object-name>
+      <property>controls/lighting/beacon</property>
+    <factor>25</factor>
+    <axis>
+      <x>  0 </x>
+      <y>  0 </y>
+      <z>  1 </z>
+    </axis>
+    <center>
+      <x-m> 0.002 </x-m>
+      <y-m>-0.005 </y-m>
+      <z-m> -0.073 </z-m>
+    </center>
+  </animation>
+
+
+<!--  Switch  POSITION-LAMP-->
+
+
+  <animation>
+    <type>pick</type>
+    <visible>true</visible>
+    <object-name>position</object-name>
+    <action>
+      <button>0</button>
+      <repeatable>false</repeatable>
+      <binding>
+        <command>property-toggle</command>
+	<property>controls/lighting/nav-lights</property>
+      </binding>
+      <binding>
+        <command>property-toggle</command>
+        <property>sim/sound/click</property>
+      </binding>
+    </action>
+  </animation>
+
+  <animation>
+    <type>pick</type>
+    <visible>true</visible>
+    <object-name>fus</object-name>
+    <action>
+      <button>0</button>
+      <repeatable>false</repeatable>
+      <binding>
+        <command>property-toggle</command>
+	<property>controls/lighting/nav-lights</property>
+      </binding>
+      <binding>
+        <command>property-toggle</command>
+        <property>sim/sound/click</property>
+      </binding>
+    </action>
+  </animation>
+
+  <animation>
+    <type>rotate</type>
+    <object-name>position</object-name>
+      <property>controls/lighting/nav-lights</property>
+    <factor>25</factor>
+    <axis>
+      <x>  0 </x>
+      <y>  0 </y>
+      <z>  1 </z>
+    </axis>
+    <center>
+      <x-m> 0.002 </x-m>
+      <y-m>-0.044 </y-m>
+      <z-m>-0.075 </z-m>
+    </center>
+  </animation>
+
+  <animation>
+    <type>rotate</type>
+    <object-name>fus</object-name>
+      <property>controls/lighting/nav-lights</property>
+    <factor>25</factor>
+    <axis>
+      <x>  0 </x>
+      <y>  0 </y>
+      <z>  1 </z>
+    </axis>
+    <center>
+      <x-m> 0.002 </x-m>
+      <y-m>-0.002 </y-m>
+      <z-m>-0.022 </z-m>
+    </center>
+  </animation>
+
+
+</PropertyList>
+
+

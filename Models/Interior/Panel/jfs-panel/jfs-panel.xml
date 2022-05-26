@@ -1,0 +1,105 @@
+<?xml version="1.0"?>
+
+
+<PropertyList>
+
+	<path>pull-lever.ac</path>
+
+
+<!--  JFS starter -->
+  <animation>
+    <type>pick</type>
+    <visible>true</visible>
+    <object-name>pull-lever</object-name>
+    <action>
+      <button>0</button>
+      <repeatable>false</repeatable>
+      <binding>
+          <command>property-assign</command>
+          <property>controls/APU/fire-switch</property>
+          <value type="int">1</value>
+      </binding>
+      <binding>
+        <command>property-assign</command>
+        <property>controls/electric/battery-switch</property>
+        <value>true</value>
+      </binding>
+      <binding>
+        <command>property-toggle</command>
+        <property>sim/sound/click</property>
+      </binding>
+      <mod-up>
+        <binding>
+          <command>property-assign</command>
+          <property>controls/APU/fire-switch</property>
+          <value type="int">0</value>
+        </binding>
+      </mod-up>
+    </action>
+  </animation>
+
+
+
+  <animation>
+    <type>translate</type>
+    <object-name>pull-lever</object-name>
+    <property>controls//APU/fire-switch</property>
+    <factor>0.05</factor>
+    <axis>
+      <x>  1 </x>
+      <y>  0 </y>
+      <z>  0 </z>
+    </axis>
+    <center>
+      <x-m> 0 </x-m>
+      <y-m> 0 </y-m>
+      <z-m> 0 </z-m>
+    </center>
+  </animation>
+
+<!-- AIR OPENABLE LAMP -->
+  <animation>
+    <type>select</type>
+    <object-name>openable-on</object-name>
+    <condition>
+       <property>controls/APU/off-start-run</property>
+    </condition>
+  </animation>
+
+
+<!-- LIGHTING -->
+	<animation>
+		<object-name>base</object-name>
+		<type>material</type>
+		<emission> 
+			<factor-prop>systems/electrical/outputs/instrument-lights-norm</factor-prop>
+			<red>0.5</red>
+			<green>0.2</green>
+			<blue>0.2</blue>
+		</emission>
+	</animation>
+
+	<animation>
+		<object-name>openable-on</object-name>
+                <object-name>pull-lever</object-name> 
+		<type>material</type>
+		<emission> 
+			<red>0.5</red>
+			<green>0.5</green>
+			<blue>0.5</blue>
+		</emission>
+	</animation>
+
+<!-- *** LoD *** -->
+	<animation>
+		<type>range</type>
+		<min-m>0</min-m>
+		<max-m>10</max-m>
+	</animation>
+
+</PropertyList>
+
+
+
+
+

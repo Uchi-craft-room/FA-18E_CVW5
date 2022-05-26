@@ -1,0 +1,78 @@
+<?xml version="1.0"?>
+
+
+<PropertyList>
+
+	<path>accel.ac</path>
+	<animation>
+		<type>rotate</type>
+		<object-name>needle</object-name>
+		<property>accelerations/pilot-g</property>
+		<interpolation>
+			<entry><ind>-5</ind><dep>-134</dep></entry>
+			<entry><ind>-4</ind><dep>-112</dep></entry>
+			<entry><ind>-2</ind><dep>-66</dep></entry>
+			<entry><ind>-1</ind><dep>-44</dep></entry>
+			<entry><ind>0</ind><dep>-22.5</dep></entry>
+			<entry><ind>1</ind><dep>0</dep></entry>
+			<entry><ind>2</ind><dep>22</dep></entry>
+			<entry><ind>4</ind><dep>67.5</dep></entry>
+			<entry><ind>6</ind><dep>112.5</dep></entry>
+			<entry><ind>8</ind><dep>157</dep></entry>
+			<entry><ind>10</ind><dep>203</dep></entry>
+		</interpolation>
+		<center>
+			<x-m>0</x-m>
+			<y-m>0</y-m>
+			<z-m>0</z-m>
+		</center> 
+		<axis>
+			<x>-1</x>
+			<y>0</y>
+			<z>0</z>
+		</axis>
+	</animation>
+
+	<animation>
+		<object-name>mount</object-name>
+                <object-name>button</object-name> 
+		<type>material</type>
+		<emission> 
+			<factor-prop>systems/electrical/outputs/instrument-lights-norm</factor-prop>
+			<red>0.5</red>
+			<green>0.25</green>
+			<blue>0.25</blue>
+		</emission>
+	</animation>
+
+	<animation>
+                <object-name>face</object-name>
+                <object-name>needle</object-name> 
+		<type>material</type>
+		<emission> 
+			<factor-prop>systems/electrical/outputs/instrument-lights-norm</factor-prop>
+			<red>  0.5</red>
+			<green>0.5</green>
+			<blue> 0.0</blue>
+		</emission>
+	</animation>
+
+	<animation>
+		<object-name>accel</object-name>
+		<type>noshadow</type>
+	</animation>
+
+
+	<!-- *** LoD *** -->
+	<animation>
+		<type>range</type>
+		<min-m>0</min-m>
+		<max-m>10</max-m>
+	</animation>
+
+</PropertyList>
+
+
+
+
+

@@ -1,0 +1,1196 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<PropertyList>
+
+  <!-- Pilot -->
+  <model>
+    <name>Pilot</name>
+    <path>Aircraft/FA-18E_CVW5/Models/Pilot/pilot.xml</path>
+    <offsets>
+      <x-m> -5.640 </x-m>
+      <y-m>  0.000 </y-m>
+      <z-m>  0.760 </z-m>
+      <roll-deg>    0 </roll-deg>
+      <pitch-deg> -5 </pitch-deg>
+      <heading-deg> 0 </heading-deg>
+    </offsets>
+  </model>
+
+
+  <!-- Pilot seat -->
+  <model>
+    <name>Pilot seat</name>
+    <path>Aircraft/FA-18E_CVW5/Models/interior/seat/seat.ac</path>
+    <offsets>
+      <x-m> -2.850 </x-m>
+      <y-m>  0.000 </y-m>
+      <z-m>  0.520 </z-m>
+    </offsets>
+  </model>
+
+
+<!-- AOA INDICATER -->
+  <model>
+    <path>Aircraft/FA-18E_CVW5/Models/Interior/Panel/aoa-indicater/aoa-indicater.xml</path>
+    <offsets>
+      <x-m> -6.355 </x-m>
+      <y-m> -0.115 </y-m>
+      <z-m>  1.150 </z-m>
+      <roll-deg> 0 </roll-deg>
+      <pitch-deg>-5 </pitch-deg>
+      <heading-deg> 8 </heading-deg>
+    </offsets>
+  </model>
+
+
+<!-- HUD SYMBOL -->
+  <model>
+    <path>Aircraft/FA-18E_CVW5/Models/Interior/Panel/hud/symbol.xml</path>
+    <offsets>
+      <x-m> -6.350 </x-m>
+      <y-m> -0.000 </y-m>
+      <z-m> 1.23 </z-m>
+      <roll-deg>   0 </roll-deg>
+      <pitch-deg>  0 </pitch-deg>
+      <heading-deg> 0 </heading-deg>
+    </offsets>
+  </model>
+
+
+<!-- CAMERA UNIT-->
+  <model>
+    <path>Aircraft/FA-18E_CVW5/Models/Interior/Panel/cam-unit/cam-unit.xml</path>
+    <offsets>
+      <x-m> -6.270 </x-m>
+      <y-m> -0.000 </y-m>
+      <z-m> 1.080 </z-m>
+      <roll-deg>   0 </roll-deg>
+      <pitch-deg> -0 </pitch-deg>
+      <heading-deg> 0 </heading-deg>
+    </offsets>
+  </model>
+
+
+<!-- ANNUNCIATOR PANEL -->
+  <model>
+    <path>Aircraft/FA-18E_CVW5/Models/Interior/Panel/annunciator_panel/annunciator_panel.xml</path>
+    <offsets>
+      <x-m> -6.357 </x-m>
+      <y-m> -0.000 </y-m>
+      <z-m> 1.012 </z-m>
+      <roll-deg> 0 </roll-deg>
+      <pitch-deg>-5 </pitch-deg>
+      <heading-deg> 0 </heading-deg>
+    </offsets>
+  </model>
+
+
+<!-- UFCD -->
+  <model>
+    <path>Aircraft/FA-18E_CVW5/Models/Interior/Panel/UFCD/UFCD.xml</path>
+    <offsets>
+      <x-m> -6.259</x-m>
+      <y-m> -0.000 </y-m>
+      <z-m>  0.920 </z-m>
+      <roll-deg> 0 </roll-deg>
+      <pitch-deg>-5 </pitch-deg>
+      <heading-deg> 0 </heading-deg>
+    </offsets>
+  </model>
+
+
+<!-- DDI -->
+  <model>
+    <path>Aircraft/FA-18E_CVW5/Models/Interior/Panel/DDI/LDDI.xml</path>
+    <offsets>
+      <x-m> -6.328</x-m>
+      <y-m> -0.220 </y-m>
+      <z-m>  0.900 </z-m>
+      <roll-deg> 0 </roll-deg>
+      <pitch-deg> -15 </pitch-deg>
+      <heading-deg> 0 </heading-deg>
+    </offsets>
+  </model>
+
+  <model>
+    <path>Aircraft/FA-18E_CVW5/Models/Interior/Panel/DDI/RDDI.xml</path>
+    <offsets>
+      <x-m> -6.328</x-m>
+      <y-m>  0.220 </y-m>
+      <z-m>  0.900 </z-m>
+      <roll-deg> 0 </roll-deg>
+      <pitch-deg> -15 </pitch-deg>
+      <heading-deg> 0 </heading-deg>
+    </offsets>
+  </model>
+
+
+<!-- MASTER ARM SW -->
+  <model>
+    <path>Aircraft/FA-18E_CVW5/Models/Interior/Panel/master-arm-sw/master-arm-sw.xml</path>
+    <offsets>
+      <x-m> -6.308</x-m>
+      <y-m> -0.345 </y-m>
+      <z-m>  0.872 </z-m>
+      <roll-deg> 0 </roll-deg>
+      <pitch-deg> -15 </pitch-deg>
+      <heading-deg> 0 </heading-deg>
+    </offsets>
+  </model>
+
+
+<!-- IR COOL -->
+  <model>
+    <path>Aircraft/FA-18E_CVW5/Models/Interior/Panel/IR_COOL/IR_COOL.xml</path>
+    <offsets>
+      <x-m> -6.308</x-m>
+      <y-m>  0.345 </y-m>
+      <z-m>  0.872 </z-m>
+      <roll-deg> 0 </roll-deg>
+      <pitch-deg> -15 </pitch-deg>
+      <heading-deg> 0 </heading-deg>
+    </offsets>
+  </model>
+
+
+<!-- VSD -->
+  <model>
+    <path>Aircraft/FA-18E_CVW5/Models/Interior/Panel/VSD/VSD.xml</path>
+    <offsets>
+      <x-m> -6.295</x-m>
+      <y-m> -0.220 </y-m>
+      <z-m>  0.914 </z-m>
+      <roll-deg> 0 </roll-deg>
+      <pitch-deg> -15 </pitch-deg>
+      <heading-deg> 0 </heading-deg>
+    </offsets>
+  </model>
+
+
+<!-- TEWS -->
+  <model>
+    <path>Aircraft/FA-18E_CVW5/Models/Interior/Panel/TEWS/TEWS.xml</path>
+    <offsets>
+      <x-m> -6.296</x-m>
+      <y-m>  0.220 </y-m>
+      <z-m>  0.914 </z-m>
+      <roll-deg> 0 </roll-deg>
+      <pitch-deg> -15 </pitch-deg>
+      <heading-deg> 0 </heading-deg>
+    </offsets>
+  </model>
+
+
+<!-- MPCD -->
+  <model>
+    <path>Aircraft/FA-18E_CVW5/Models/Interior/Panel/MPCD/MPCD.xml</path>
+    <offsets>
+      <x-m>-6.240 </x-m>
+      <y-m> 0.000 </y-m>
+      <z-m> 0.675 </z-m>
+      <roll-deg>    0 </roll-deg>
+      <pitch-deg> -15 </pitch-deg>
+      <heading-deg> 0 </heading-deg>
+    </offsets>
+  </model>
+
+<!-- HSI -->
+  <model>
+    <path>Aircraft/FA-18E_CVW5/Models/Interior/Panel/hsi/f-18hsi.xml</path>
+    <offsets>
+      <x-m>-6.237 </x-m>
+      <y-m> 0.000 </y-m>
+      <z-m> 0.673 </z-m>
+      <roll-deg>    0 </roll-deg>
+      <pitch-deg> -15 </pitch-deg>
+      <heading-deg> 0 </heading-deg>
+    </offsets>
+  </model>
+
+
+<!-- EFD -->
+  <model>
+    <path>Aircraft/FA-18E_CVW5/Models/Interior/Panel/EFD/EFD.xml</path>
+    <offsets>
+      <x-m>-6.275 </x-m>
+      <y-m>-0.206 </y-m>
+      <z-m> 0.708 </z-m>
+      <roll-deg>    0 </roll-deg>
+      <pitch-deg> -15 </pitch-deg>
+      <heading-deg> 0 </heading-deg>
+    </offsets>
+  </model>
+
+
+<!-- GEAR FLAP LAMP -->
+  <model>
+    <path>Aircraft/FA-18E_CVW5/Models/Interior/Panel/gear_flap_lamp/gear_flap_lamp.xml</path>
+    <offsets>
+      <x-m>-6.285 </x-m>
+      <y-m>-0.330 </y-m>
+      <z-m> 0.678 </z-m>
+      <roll-deg>    0 </roll-deg>
+      <pitch-deg> -15 </pitch-deg>
+      <heading-deg> 0 </heading-deg>
+    </offsets>
+  </model>
+
+
+<!-- DG -->
+  <model>
+    <path>Aircraft/FA-18E_CVW5/Models/Interior/Panel/dg/dg.xml</path>
+    <offsets>
+      <x-m> -6.173 </x-m>
+      <y-m> 0.395 </y-m>
+      <z-m> 0.925 </z-m>
+      <roll-deg> 0 </roll-deg>
+      <pitch-deg>-8 </pitch-deg>
+      <heading-deg>-10 </heading-deg>
+    </offsets>
+  </model>
+
+
+<!-- HDG CRS -->
+  <model>
+    <path>Aircraft/FA-18E_CVW5/Models/Interior/Panel/hdg_crs/hdg_crs.xml</path>
+    <offsets>
+      <x-m>-6.270 </x-m>
+      <y-m>-0.221 </y-m>
+      <z-m> 0.610 </z-m>
+      <roll-deg>    0 </roll-deg>
+      <pitch-deg> -15 </pitch-deg>
+      <heading-deg> 0 </heading-deg>
+    </offsets>
+  </model>
+
+
+  <!-- ADI -->
+  <model>
+    <path>Aircraft/FA-18E_CVW5/Models/Interior/Panel/adi/adi.xml</path>
+    <offsets>
+      <x-m>-6.276 </x-m>
+      <y-m> 0.172 </y-m>
+      <z-m> 0.730 </z-m>
+      <roll-deg>    0 </roll-deg>
+      <pitch-deg> -15 </pitch-deg>
+      <heading-deg> 0 </heading-deg>
+    </offsets>
+  </model>
+
+
+  <!-- RWR -->
+  <model>
+    <path>Aircraft/FA-18E_CVW5/Models/Interior/Panel/RWR/RWR.xml</path>
+    <offsets>
+      <x-m>-6.276 </x-m>
+      <y-m> 0.285 </y-m>
+      <z-m> 0.730 </z-m>
+      <roll-deg>    0 </roll-deg>
+      <pitch-deg> -15 </pitch-deg>
+      <heading-deg> 0 </heading-deg>
+    </offsets>
+  </model>
+
+  <!-- ASI -->
+  <model>
+    <path>Aircraft/FA-18E_CVW5/Models/Interior/Panel/asi/asi.xml</path>
+    <offsets>
+      <x-m>-6.258 </x-m>
+      <y-m> 0.161 </y-m>
+      <z-m> 0.633 </z-m>
+      <roll-deg>    0 </roll-deg>
+      <pitch-deg> -15 </pitch-deg>
+      <heading-deg> 0 </heading-deg>
+    </offsets>
+  </model>
+
+
+  <!-- ALT -->
+  <model>
+    <path>Aircraft/FA-18E_CVW5/Models/Interior/Panel/alt/alt.xml</path>
+    <offsets>
+      <x-m>-6.255 </x-m>
+      <y-m> 0.240 </y-m>
+      <z-m> 0.631 </z-m>
+      <roll-deg>    0 </roll-deg>
+      <pitch-deg> -15 </pitch-deg>
+      <heading-deg> 0 </heading-deg>
+    </offsets>
+  </model>
+
+
+  <!-- VSI --> 
+  <model>
+    <path>Aircraft/FA-18E_CVW5/Models/Interior/Panel/vsi/vsi-6kfpm.xml</path>
+    <offsets>
+      <x-m>-6.250 </x-m>
+      <y-m> 0.323 </y-m>
+      <z-m> 0.633 </z-m>
+      <roll-deg>    0 </roll-deg>
+      <pitch-deg> -15 </pitch-deg>
+      <heading-deg> 0 </heading-deg>
+    </offsets>
+  </model>
+
+
+<!-- LANDING GEAR -->
+  <model>
+    <path>Aircraft/FA-18E_CVW5/Models/Interior/Panel/Landing-Gear/gearhandle.xml</path>
+    <offsets>
+      <x-m> 0 </x-m>
+      <y-m> 0 </y-m>
+      <z-m> 0.058</z-m>
+      <roll-deg> 0 </roll-deg>
+      <pitch-deg> 0 </pitch-deg>
+      <heading-deg> 0 </heading-deg>
+    </offsets>
+  </model>
+
+<!-- SUB PANEL -->
+  <model>
+    <path>Aircraft/FA-18E_CVW5/Models/Interior/Panel/sub-panel/sub-panel.xml</path>
+    <offsets>
+      <x-m> -6.0 </x-m>
+      <y-m> 0 </y-m>
+      <z-m> 0.058 </z-m>
+      <roll-deg>    0 </roll-deg>
+      <pitch-deg> 0 </pitch-deg>
+      <heading-deg> 0 </heading-deg>
+    </offsets>
+  </model>
+
+
+<!--HYD-->
+  <model>
+    <path>Aircraft/FA-18E_CVW5/Models/Interior/Panel/hyd/hyd-RH.xml</path>
+    <offsets>
+      <x-m>-6.132 </x-m>
+      <y-m> 0.345 </y-m>
+      <z-m> 0.498 </z-m>
+      <roll-deg>    0 </roll-deg>
+      <pitch-deg> -35 </pitch-deg>
+      <heading-deg>-20 </heading-deg>
+    </offsets>
+  </model>
+
+
+<!-- GEN  -->
+  <model>
+    <path>Aircraft/FA-18E_CVW5/Models/Interior/Panel/gen/gen.xml</path>
+    <offsets>
+      <x-m>-6.100 </x-m>
+      <y-m> 0.405 </y-m>
+      <z-m> 0.463</z-m>
+      <roll-deg> 0 </roll-deg>
+      <pitch-deg> -90 </pitch-deg>
+      <heading-deg> 0 </heading-deg>
+    </offsets>
+  </model>
+
+
+<!-- ECS  -->
+
+  <model>
+    <path>Aircraft/FA-18E_CVW5/Models/Interior/Panel/ECS/ECS.xml</path>
+    <offsets>
+      <x-m>-5.955 </x-m>
+      <y-m> 0.385 </y-m>
+      <z-m> 0.463</z-m>
+      <roll-deg> 0 </roll-deg>
+      <pitch-deg> -90 </pitch-deg>
+      <heading-deg> 0 </heading-deg>
+    </offsets>
+  </model>
+
+
+<!-- INTERIOR LT -->
+
+  <model>
+    <path>Aircraft/FA-18E_CVW5/Models/Interior/Panel/LT/LT.xml</path>
+    <offsets>
+      <x-m>-5.872 </x-m>
+      <y-m> 0.385 </y-m>
+      <z-m> 0.463</z-m>
+      <roll-deg> 0 </roll-deg>
+      <pitch-deg> -90 </pitch-deg>
+      <heading-deg> 0 </heading-deg>
+    </offsets>
+  </model>
+
+
+<!-- ARS -->
+
+  <model>
+    <path>Aircraft/FA-18E_CVW5/Models/Interior/Panel/ARS/ARS.xml</path>
+    <offsets>
+      <x-m>-5.798 </x-m>
+      <y-m> 0.385 </y-m>
+      <z-m> 0.463</z-m>
+      <roll-deg> 0 </roll-deg>
+      <pitch-deg> -90 </pitch-deg>
+      <heading-deg> 0 </heading-deg>
+    </offsets>
+  </model>
+
+<!-- SENSOR -->
+
+  <model>
+    <path>Aircraft/FA-18E_CVW5/Models/Interior/Panel/SENSOR/SENSOR.xml</path>
+    <offsets>
+      <x-m>-5.728 </x-m>
+      <y-m> 0.385 </y-m>
+      <z-m> 0.463</z-m>
+      <roll-deg> 0 </roll-deg>
+      <pitch-deg> -90 </pitch-deg>
+      <heading-deg> 0 </heading-deg>
+    </offsets>
+  </model>
+
+<!-- CANOPY-LEVER -->
+  <model>
+    <path>Aircraft/FA-18E_CVW5/Models/Interior/Panel/canopy-sw/canopy-sw.xml</path>
+    <offsets>
+      <x-m>-5.905 </x-m>
+      <y-m> 0.460 </y-m>
+      <z-m> 0.598</z-m>
+      <roll-deg> 0 </roll-deg>
+      <pitch-deg> 0 </pitch-deg>
+      <heading-deg> 0.0 </heading-deg>
+    </offsets>
+  </model>
+
+
+<!-- thrust-lever -->
+
+  <model>
+    <path>Aircraft/FA-18E_CVW5/Models/Interior/Panel/power_lever/power_lever.xml</path>
+    <offsets>
+      <x-m>-5.914 </x-m>
+      <y-m>-0.375 </y-m>
+      <z-m> 0.458</z-m>
+      <roll-deg> 0 </roll-deg>
+      <pitch-deg> 0 </pitch-deg>
+      <heading-deg> 0.0 </heading-deg>
+    </offsets>
+  </model>
+
+
+<!-- CANOPY EMERG JETT -->
+  <model>
+    <path>Aircraft/FA-18E_CVW5/Models/Interior/Panel/canopy-emer-jett/canopy-emer-jett.ac</path>
+    <offsets>
+      <x-m>-6.200</x-m>
+      <y-m>-0.375 </y-m>
+      <z-m> 0.720</z-m>
+      <roll-deg>    0 </roll-deg>
+      <pitch-deg>   0 </pitch-deg>
+      <heading-deg> 0 </heading-deg>
+    </offsets>
+  </model>
+
+<!-- DISPENCER -->
+  <model>
+    <path>Aircraft/FA-18E_CVW5/Models/Interior/Panel/disp/disp.ac</path>
+    <offsets>
+      <x-m>-6.000</x-m>
+      <y-m>-0.400 </y-m>
+      <z-m> 0.720</z-m>
+      <roll-deg>    0 </roll-deg>
+      <pitch-deg>   0 </pitch-deg>
+      <heading-deg> 0 </heading-deg>
+    </offsets>
+  </model>
+
+<!-- fuel  -->
+  <model>
+    <path>Aircraft/FA-18E_CVW5/Models/Interior/Panel/fuel/fuel.xml</path>
+    <offsets>
+      <x-m>-5.762 </x-m>
+      <y-m>-0.395 </y-m>
+      <z-m> 0.462</z-m>
+      <roll-deg> 0 </roll-deg>
+      <pitch-deg> -90 </pitch-deg>
+      <heading-deg> 0.0 </heading-deg>
+    </offsets>
+  </model>
+
+<!-- CAS -->
+  <model>
+    <path>Aircraft/FA-18E_CVW5/Models/Interior/Panel/cas/cas.xml</path>
+    <offsets>
+      <x-m>-5.692 </x-m>
+      <y-m>-0.405 </y-m>
+      <z-m> 0.462</z-m>
+      <roll-deg> 0 </roll-deg>
+      <pitch-deg> -90 </pitch-deg>
+      <heading-deg> 0.0 </heading-deg>
+    </offsets>
+  </model>
+
+
+<!-- AUDIO -->
+  <model>
+    <path>Aircraft/FA-18E_CVW5/Models/Interior/Panel/audio/audio.xml</path>
+    <offsets>
+      <x-m>-5.547 </x-m>
+      <y-m>-0.465 </y-m>
+      <z-m> 0.462</z-m>
+      <roll-deg> 0 </roll-deg>
+      <pitch-deg>-90 </pitch-deg>
+      <heading-deg> 90.0 </heading-deg>
+    </offsets>
+  </model>
+
+
+
+
+
+
+
+
+<!-- RUD-TRIM -->
+
+  <model>
+    <path>Aircraft/FA-18E_CVW5/Models/Interior/Panel/rud_trim/rud_trim.xml</path>
+    <offsets>
+      <x-m> -5.432 </x-m>
+      <y-m>-0.326 </y-m>
+      <z-m> 0.709</z-m>
+      <roll-deg> -11.5 </roll-deg>
+      <pitch-deg> 0 </pitch-deg>
+      <heading-deg>-90.0 </heading-deg>
+    </offsets>
+  </model>
+
+
+
+  <!-- MODE SELECT --> 
+  <model>
+    <path>Aircraft/FA-18E_CVW5/Models/Interior/Panel/mode-select/mode-select.xml</path>
+    <offsets>
+      <x-m> -5.000 </x-m>
+      <y-m>  0.081 </y-m>
+      <z-m>  0.800</z-m>
+      <roll-deg>    0 </roll-deg>
+      <pitch-deg> -10 </pitch-deg>
+      <heading-deg> 0 </heading-deg>
+    </offsets>
+  </model>
+
+
+
+
+
+<!--ff-RH -->
+  <model>
+    <path>Aircraft/FA-18E_CVW5/Models/Interior/Panel/ff/ff-RH.xml</path>
+    <offsets>
+      <x-m> -5.000 </x-m>
+      <y-m>  0.260</y-m>
+      <z-m>  0.830 </z-m>
+      <roll-deg>    0 </roll-deg>
+      <pitch-deg> -10 </pitch-deg>
+      <heading-deg> 0 </heading-deg>
+    </offsets>
+  </model>
+
+
+<!--ff-LH -->
+  <model>
+    <path>Aircraft/FA-18E_CVW5/Models/Interior/Panel/ff/ff-LH.xml</path>
+    <offsets>
+      <x-m> -5.000 </x-m>
+      <y-m>  0.197</y-m>
+      <z-m>  0.830 </z-m>
+      <roll-deg>    0 </roll-deg>
+      <pitch-deg> -10 </pitch-deg>
+      <heading-deg> 0 </heading-deg>
+    </offsets>
+  </model>
+
+<!-- N1 RH -->
+  <model>
+    <path>Aircraft/FA-18E_CVW5/Models/Interior/Panel/rpm/rpm-RH.xml</path>
+    <offsets>
+      <x-m> -5.000 </x-m>
+      <y-m>  0.260</y-m>
+      <z-m>  0.767 </z-m>
+      <roll-deg>    0 </roll-deg>
+      <pitch-deg> -10 </pitch-deg>
+      <heading-deg> 0 </heading-deg>
+    </offsets>
+  </model>
+
+
+<!-- N1 LH -->
+  <model>
+    <path>Aircraft/FA-18E_CVW5/Models/Interior/Panel/rpm/rpm-LH.xml</path>
+    <offsets>
+       <x-m> -5.000 </x-m>
+      <y-m>  0.197</y-m>
+      <z-m>  0.767 </z-m>
+      <roll-deg>    0 </roll-deg>
+      <pitch-deg> -10 </pitch-deg>
+      <heading-deg> 0 </heading-deg>
+    </offsets>
+  </model>
+
+
+<!--tgt-RH -->
+  <model>
+    <path>Aircraft/FA-18E_CVW5/Models/Interior/Panel/tgt/tgt-RH.xml</path>
+    <offsets>
+      <x-m> -5.000 </x-m>
+      <y-m>  0.260</y-m>
+      <z-m>  0.700 </z-m>
+      <roll-deg>    0 </roll-deg>
+      <pitch-deg> -10 </pitch-deg>
+      <heading-deg> 0 </heading-deg>
+    </offsets>
+  </model>
+
+
+<!--tgt-LH -->
+  <model>
+    <path>Aircraft/FA-18E_CVW5/Models/Interior/Panel/tgt/tgt-LH.xml</path>
+    <offsets>
+      <x-m> -5.000 </x-m>
+      <y-m>  0.197</y-m>
+      <z-m>  0.700 </z-m>
+      <roll-deg>    0 </roll-deg>
+      <pitch-deg> -10 </pitch-deg>
+      <heading-deg> 0 </heading-deg>
+    </offsets>
+  </model>
+
+<!--NOZZLE-POSITION-RH -->
+  <model>
+    <path>Aircraft/FA-18E_CVW5/Models/Interior/Panel/nozzle-pos/noz-pos-RH.xml</path>
+    <offsets>
+      <x-m> -5.000 </x-m>
+      <y-m>  0.260</y-m>
+      <z-m>  0.637 </z-m>
+      <roll-deg>    0 </roll-deg>
+      <pitch-deg> -10 </pitch-deg>
+      <heading-deg> 0 </heading-deg>
+    </offsets>
+  </model>
+
+
+<!--NOZZLE-POSITION-LH -->
+  <model>
+    <path>Aircraft/FA-18E_CVW5/Models/Interior/Panel/nozzle-pos/noz-pos-LH.xml</path>
+    <offsets>
+      <x-m> -5.000 </x-m>
+      <y-m>  0.197</y-m>
+      <z-m>  0.637 </z-m>
+      <roll-deg>    0 </roll-deg>
+      <pitch-deg> -10 </pitch-deg>
+      <heading-deg> 0 </heading-deg>
+    </offsets>
+  </model>
+
+<!--FuelGauge -->
+  <model>
+    <path>Aircraft/FA-18E_CVW5/Models/Interior/Panel/FuelGauge/FuelGauge.xml</path>
+    <offsets>
+      <x-m> -5.000 </x-m>
+      <y-m>  0.267 </y-m>
+      <z-m>  0.892 </z-m>
+      <roll-deg>  0 </roll-deg>
+      <pitch-deg> -10 </pitch-deg>
+      <heading-deg> 0 </heading-deg>
+    </offsets>
+  </model>
+
+<!-- chronograph -->
+
+  <model>
+    <path>Aircraft/FA-18E_CVW5/Models/Interior/Panel/chronograph/chronograph.xml</path>
+    <offsets>
+      <x-m> -5.000 </x-m>
+      <y-m>  0.318 </y-m>
+      <z-m>  0.880 </z-m>
+      <roll-deg>    0 </roll-deg>
+      <pitch-deg>  -10 </pitch-deg>
+      <heading-deg>-25 </heading-deg>
+    </offsets>
+  </model>
+
+  <!-- MASTER caution -->
+
+  <model>
+    <path>Aircraft/FA-18E_CVW5/Models/Interior/Panel/caution/master-caution.xml</path>
+    <offsets>
+       <x-m> -5.000 </x-m>
+      <y-m>  0.197</y-m>
+      <z-m>  0.908 </z-m>
+      <roll-deg>    0 </roll-deg>
+      <pitch-deg> -10 </pitch-deg>
+      <heading-deg> 0 </heading-deg>
+    </offsets>
+  </model>
+
+  <!-- ENGINE caution -->
+
+  <model>
+    <path>Aircraft/FA-18E_CVW5/Models/Interior/Panel/caution/eng-caution.xml</path>
+    <offsets>
+      <x-m> -5.000 </x-m>
+      <y-m>  0.197</y-m>
+      <z-m>  0.880 </z-m>  <animation>
+    <type>select</type>
+    <object-name>eng-fire-RH</object-name>
+    <condition>
+       <and>
+        <greater-than>
+	  <property>systems/electrical/volts</property>
+	  <value>16</value>
+        </greater-than>
+
+        <less-than>
+	  <property>systems/electrical/volts</property>
+	  <value>20</value>
+        </less-than>
+
+        <property>/sim/model/lights/sbc1/state</property>
+      </and>
+   </condition>
+  </animation>
+      <roll-deg>    0 </roll-deg>
+      <pitch-deg> -10 </pitch-deg>
+      <heading-deg> 0 </heading-deg>
+    </offsets>
+  </model>
+
+
+  <!-- MODE SELECT --> 
+  <model>
+    <path>Aircraft/FA-18E_CVW5/Models/Interior/Panel/steer-mode-sw/steer-mode-sw.xml</path>
+    <offsets>
+      <x-m> -5.000 </x-m>
+      <y-m>  0.130</y-m>
+      <z-m>  0.630 </z-m>
+      <roll-deg>    0 </roll-deg>
+      <pitch-deg> -10 </pitch-deg>
+      <heading-deg> 0 </heading-deg>
+    </offsets>
+  </model>
+
+
+
+<!-- CANOPY UNLOCK -->
+  <model>
+    <path>Aircraft/FA-18E_CVW5/Models/Interior/Panel/canopy-emer-jett/canopy-unlock.ac</path>
+    <offsets>
+      <x-m> -5.000 </x-m>
+      <y-m>  0.370 </y-m>
+      <z-m> 0.837 </z-m>
+      <roll-deg>    0 </roll-deg>
+      <pitch-deg>   0 </pitch-deg>
+      <heading-deg> 0 </heading-deg>
+    </offsets>
+  </model>
+
+
+
+
+
+<!-- GEAR CAUTION -->
+  <model>
+    <path>Aircraft/FA-18E_CVW5/Models/Interior/Panel/caution/gear-caution.xml</path>
+    <offsets>
+      <x-m> -5.000 </x-m>
+      <y-m>-0.095 </y-m>
+      <z-m> 0.990 </z-m>
+      <roll-deg>    0 </roll-deg>
+      <pitch-deg> -10 </pitch-deg>
+      <heading-deg> 0 </heading-deg>
+    </offsets>
+  </model>
+
+
+  <!-- LABEL CTR --> 
+  <model>
+     <path>Aircraft/FA-18E_CVW5/Models/Interior/Panel/label/do_not_lower_gear.ac</path>
+    <offsets>
+      <x-m> -5.000 </x-m>
+      <y-m> 0.001 </y-m>
+      <z-m> 0.618 </z-m>
+      <roll-deg>    0 </roll-deg>
+      <pitch-deg> -10 </pitch-deg>
+      <heading-deg> 0 </heading-deg>
+    </offsets>
+ </model>
+
+  <!-- LABEL JETT --> 
+  <model>
+     <path>Aircraft/FA-18E_CVW5/Models/Interior/Panel/label/EMERG_JETT.ac</path>
+    <offsets>
+      <x-m> -5.000 </x-m>
+      <y-m>-0.360 </y-m>
+      <z-m> 0.860 </z-m>
+      <roll-deg>   -5 </roll-deg>
+      <pitch-deg>   0 </pitch-deg>
+      <heading-deg> 83 </heading-deg>
+    </offsets>
+ </model>
+
+  <!-- LABEL JETT --> 
+  <model>
+     <path>Aircraft/FA-18E_CVW5/Models/Interior/Panel/label/EMERG_UNLOCK.ac</path>
+    <offsets>
+      <x-m> -5.000 </x-m>
+      <y-m> 0.360 </y-m>
+      <z-m> 0.860 </z-m>
+      <roll-deg>    5 </roll-deg>
+      <pitch-deg>   0 </pitch-deg>
+      <heading-deg>-83 </heading-deg>
+    </offsets>
+ </model>
+
+
+
+
+
+
+<!--HYD-UTILITY-->
+  <model>
+    <path>Aircraft/FA-18E_CVW5/Models/Interior/Panel/hyd/hyd-ut.xml</path>
+   <offsets>
+      <x-m> -5.000 </x-m>
+      <y-m> 0.069 </y-m>
+      <z-m> 0.533 </z-m>
+      <roll-deg>    0 </roll-deg>
+      <pitch-deg> -30 </pitch-deg>
+      <heading-deg> 0 </heading-deg>
+    </offsets>
+  </model>
+
+<!--oil-pressure-RH-->
+  <model>
+    <path>Aircraft/FA-18E_CVW5/Models/Interior/Panel/oil-p/oil-p-RH.xml</path>
+    <offsets>
+      <x-m> -5.000 </x-m>
+      <y-m>  0.069 </y-m>
+      <z-m>  0.483 </z-m>
+      <roll-deg>    0 </roll-deg>
+      <pitch-deg> -30 </pitch-deg>
+      <heading-deg> 0 </heading-deg>
+    </offsets>
+  </model>
+
+
+<!--cabin Pressure -->
+  <model>
+    <path>Aircraft/FA-18E_CVW5/Models/Interior/Panel/pai/pai.xml</path>
+    <offsets>
+      <x-m> -5.000 </x-m>
+      <y-m> 0.014 </y-m>
+      <z-m> 0.575 </z-m>
+      <roll-deg>    0 </roll-deg>
+      <pitch-deg> -30 </pitch-deg>
+      <heading-deg> 0 </heading-deg>
+    </offsets>
+  </model>
+
+
+
+<!-- OXY REG  -->
+  <model>
+    <path>Aircraft/FA-18E_CVW5/Models/Interior/Panel/oxyreg/oxyreg.xml</path>
+    <offsets>
+      <x-m> -5.015 </x-m>
+      <y-m>-0.372 </y-m>
+      <z-m> 0.720</z-m>
+      <roll-deg> -11.5 </roll-deg>
+      <pitch-deg>-90 </pitch-deg>
+      <heading-deg> 0.0 </heading-deg>
+    </offsets>
+  </model>
+
+<!-- anti-skid-sw  -->
+  <model>
+    <path>Aircraft/FA-18E_CVW5/Models/Interior/Panel/anti-skid-sw/anti-skid-sw.xml</path>
+    <offsets>
+      <x-m> -5.699 </x-m>
+      <y-m>-0.467 </y-m>
+      <z-m> 0.639</z-m>
+      <roll-deg> -11.5 </roll-deg>
+      <pitch-deg>-90 </pitch-deg>
+      <heading-deg> 0.0 </heading-deg>
+    </offsets>
+  </model>
+
+<!-- ENG MASTER  -->
+  <model>
+    <path>Aircraft/FA-18E_CVW5/Models/Interior/Panel/eng-master/eng-master.xml</path>
+    <offsets>
+      <x-m> -5.653 </x-m>
+      <y-m>-0.362 </y-m>
+      <z-m> 0.613</z-m>
+      <roll-deg> -11.5 </roll-deg>
+      <pitch-deg>-90 </pitch-deg>
+      <heading-deg> 0.0 </heading-deg>
+    </offsets>
+  </model>
+
+
+
+
+
+
+
+
+<!-- FLAP SW -->
+  <model>
+    <path>Aircraft/FA-18E_CVW5/Models/Interior/Panel/flap-switch/flap_sw.xml</path>
+    <offsets>
+      <x-m> -5.473 </x-m>
+      <y-m>-0.485 </y-m>
+      <z-m> 0.730</z-m>
+      <roll-deg> -17 </roll-deg>
+      <pitch-deg> 0 </pitch-deg>
+      <heading-deg> 0.0 </heading-deg>
+    </offsets>
+  </model>
+
+
+<!-- ICS -->
+  <model>
+    <path>Aircraft/FA-18E_CVW5/Models/Interior/Panel/ics/ics.xml</path>
+    <offsets>
+      <x-m> -5.309 </x-m>
+      <y-m>-0.362 </y-m>
+      <z-m> 0.614</z-m>
+      <roll-deg> -11.5 </roll-deg>
+      <pitch-deg> 0 </pitch-deg>
+      <heading-deg> 0.0 </heading-deg>
+    </offsets>
+  </model>
+
+
+
+
+
+<!-- low alt set -->
+  <model>
+    <path>Aircraft/FA-18E_CVW5/Models/Interior/Panel/alt-set/alt-set.xml</path>
+    <offsets>
+      <x-m> -5.180 </x-m>
+      <y-m>-0.480 </y-m>
+      <z-m> 0.643</z-m>
+      <roll-deg> 0 </roll-deg>
+      <pitch-deg>-79 </pitch-deg>
+      <heading-deg> 90.0 </heading-deg>
+    </offsets>
+  </model>
+
+
+
+
+<!-- TACAN  -->
+  <model>
+    <path>Aircraft/FA-18E_CVW5/Models/Interior/Panel/tacan/tacan.xml</path>
+    <offsets>
+      <x-m> -5.662 </x-m>
+      <y-m> 0.362 </y-m>
+      <z-m> 0.612</z-m>
+      <roll-deg> 11.5 </roll-deg>
+      <pitch-deg> -90 </pitch-deg>
+      <heading-deg> 0 </heading-deg>
+    </offsets>
+  </model>
+
+<!-- IFF CONTRL -->
+  <model>
+    <path>Aircraft/FA-18E_CVW5/Models/Interior/Panel/IFF_cntrl/IFF_cntrl.xml</path>
+    <offsets>
+      <x-m> -5.568 </x-m>
+      <y-m> 0.362 </y-m>
+      <z-m> 0.613</z-m>
+      <roll-deg> 11.5 </roll-deg>
+      <pitch-deg> -90 </pitch-deg>
+      <heading-deg> 0 </heading-deg>
+    </offsets>
+  </model>
+
+<!-- IFF -->
+  <model>
+    <path>Aircraft/FA-18E_CVW5/Models/Interior/Panel/IFF/IFF.xml</path>
+    <offsets>
+      <x-m> -5.469 </x-m>
+      <y-m> 0.362 </y-m>
+      <z-m> 0.613</z-m>
+      <roll-deg> 11.5 </roll-deg>
+      <pitch-deg> -90 </pitch-deg>
+      <heading-deg> 0 </heading-deg>
+    </offsets>
+  </model>
+
+<!-- COMPASS  -->
+  <model>
+    <path>Aircraft/FA-18E_CVW5/Models/Interior/Panel/compass/compass.xml</path>
+    <offsets>
+      <x-m> -5.414 </x-m>
+      <y-m> 0.427 </y-m>
+      <z-m> 0.628</z-m>
+      <roll-deg> 11.5 </roll-deg>
+      <pitch-deg> -90 </pitch-deg>
+      <heading-deg> 0 </heading-deg>
+    </offsets>
+  </model>
+
+<!-- SPACER  -->
+  <model>
+    <path>Aircraft/FA-18E_CVW5/Models/Interior/Panel/spacer/spacer2.xml</path>
+    <offsets>
+      <x-m> -5.214 </x-m>
+      <y-m> 0.357 </y-m>
+      <z-m> 0.615</z-m>
+      <roll-deg> 11.5 </roll-deg>
+      <pitch-deg> -90 </pitch-deg>
+      <heading-deg> 0 </heading-deg>
+    </offsets>
+  </model>
+
+<!-- EXT-LT -->
+  <model>
+    <path>Aircraft/FA-18E_CVW5/Models/Interior/Panel/EXT-LT/Ext-LT.xml</path>
+    <offsets>
+      <x-m> -5.204 </x-m>
+      <y-m> 0.515 </y-m>
+      <z-m> 0.645</z-m>
+      <roll-deg> 11.5 </roll-deg>
+      <pitch-deg> -90 </pitch-deg>
+      <heading-deg> 0 </heading-deg>
+    </offsets>
+  </model>
+
+
+<!-- TEMP -->
+  <model>
+    <path>Aircraft/FA-18E_CVW5/Models/Interior/Panel/temp/temp.xml</path>
+    <offsets>
+      <x-m>-5.535 </x-m>
+      <y-m> 0.484 </y-m>
+      <z-m> 0.638 </z-m>
+      <roll-deg> 11.5 </roll-deg>
+      <pitch-deg> -90 </pitch-deg>
+      <heading-deg> 0 </heading-deg>
+    </offsets>
+  </model>
+
+
+<!-- PAI -->
+  <model>
+    <path>Aircraft/FA-18E_CVW5/Models/Interior/Panel/pai/pai.xml</path>
+    <offsets>
+      <x-m>-5.620 </x-m>
+      <y-m> 0.480 </y-m>
+      <z-m> 0.640 </z-m>
+      <roll-deg> 11.5 </roll-deg>
+      <pitch-deg> -90 </pitch-deg>
+      <heading-deg> 0 </heading-deg>
+    </offsets>
+  </model>
+
+
+
+
+
+
+
+
+<!-- EJECT LT LOW ALT LT -->
+  <model>
+    <path>Aircraft/FA-18E_CVW5/Models/Interior/Panel/alt-set/low-alt.xml</path>
+    <offsets>
+      <x-m> -5.000 </x-m>
+      <y-m>-0.490 </y-m>
+      <z-m> 0.690</z-m>
+      <roll-deg> 0 </roll-deg>
+      <pitch-deg> 0 </pitch-deg>
+      <heading-deg> 70.0 </heading-deg>
+    </offsets>
+  </model>
+
+<!-- LOW ALT LT_0 -->
+  <model>
+    <path>Aircraft/FA-18E_CVW5/Models/Interior/Panel/alt-set/low-alt0.xml</path>
+    <offsets>
+      <x-m> -5.000 </x-m>
+      <y-m>-0.170 </y-m>
+      <z-m> 1.090 </z-m>
+      <roll-deg>    0 </roll-deg>
+      <pitch-deg> -10 </pitch-deg>
+      <heading-deg> 0 </heading-deg>
+    </offsets>
+  </model>
+
+<!-- FUNCTION -->
+  <model>
+    <path>Aircraft/FA-18E_CVW5/Models/Interior/Panel/function_parts/emerg-flood-LT-cntrl.xml</path>
+    <offsets>
+      <x-m> -5.470 </x-m>
+      <y-m> 0.500 </y-m>
+      <z-m> 0.730</z-m>
+      <roll-deg> 0 </roll-deg>
+      <pitch-deg> 18 </pitch-deg>
+      <heading-deg> -90.0 </heading-deg>
+    </offsets>
+  </model>
+
+  <model>
+    <path>Aircraft/FA-18E_CVW5/Models/Interior/Panel/function_parts/stby-A1.xml</path>
+    <offsets>
+      <x-m> -5.330 </x-m>
+      <y-m> 0.495 </y-m>
+      <z-m> 0.730</z-m>
+      <roll-deg> 0 </roll-deg>
+      <pitch-deg> 18 </pitch-deg>
+      <heading-deg> -90.0 </heading-deg>
+    </offsets>
+  </model>
+
+  <model>
+    <path>Aircraft/FA-18E_CVW5/Models/Interior/Panel/function_parts/intensety-cntrl.xml</path>
+    <offsets>
+      <x-m> -5.150 </x-m>
+      <y-m> 0.495 </y-m>
+      <z-m> 0.750</z-m>
+      <roll-deg> 0 </roll-deg>
+      <pitch-deg> 18 </pitch-deg>
+      <heading-deg> -90.0 </heading-deg>
+    </offsets>
+  </model>
+
+  <model>
+    <path>Aircraft/FA-18E_CVW5/Models/Interior/Panel/function_parts/drag-chute-lever.xml</path>
+    <offsets>
+      <x-m> -5.450 </x-m>
+      <y-m> -0.270 </y-m>
+      <z-m> 0.580</z-m>
+      <roll-deg> 0 </roll-deg>
+      <pitch-deg> 0 </pitch-deg>
+      <heading-deg> 0 </heading-deg>
+    </offsets>
+  </model>
+
+
+  <model>
+    <path>Aircraft/FA-18E_CVW5/Models/Interior/Panel/canopy-function/ext-tank-ind.xml</path>
+    <offsets>
+      <x-m>-5.420 </x-m>
+      <y-m>-0.100 </y-m>
+      <z-m> 0.580</z-m>
+      <roll-deg>15 </roll-deg>
+      <pitch-deg> 0 </pitch-deg>
+      <heading-deg> 0 </heading-deg>
+    </offsets>
+  </model>
+
+
+
+</PropertyList>
+

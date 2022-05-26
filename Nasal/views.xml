@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<PropertyList>
+
+  <chase-distance-m type="double" archive="y"> -20 </chase-distance-m>
+
+
+  <view n="101">
+    <name>HUD CAMERA View</name>
+    <type>lookfrom</type>
+    <internal archive="y">true</internal>
+    <config>
+      <from-model type="bool">true</from-model>
+      <from-model-idx type="int">0</from-model-idx>
+      <ground-level-nearplane-m type="double">0.01f</ground-level-nearplane-m>
+      <x-offset-m archive="y"> 0.000 </x-offset-m> <!--Right-->
+      <y-offset-m archive="y"> 1.15 </y-offset-m> <!--Up-->
+      <z-offset-m archive="y"> -5.52 </z-offset-m> <!--Back-->
+      <pitch-offset-deg> -5 </pitch-offset-deg>
+      <default-field-of-view-deg type="double"> 35 </default-field-of-view-deg>
+    </config>
+  </view>
+
+  <view n="0">
+    <type>lookfrom</type>
+    <internal archive="y">true</internal>
+    <config>
+      <from-model type="bool">true</from-model>
+      <ground-level-nearplane-m type="double">0.5f</ground-level-nearplane-m>
+       <x-offset-m archive="y">  0.000 </x-offset-m>	<!-- Right -->
+       <y-offset-m archive="y">  1.23 </y-offset-m>	<!-- Up    -->
+       <z-offset-m archive="y"> -5.75 </z-offset-m>	<!-- Back  -->
+       <pitch-offset-deg> -5 </pitch-offset-deg>
+      <default-field-of-view-deg> 75 </default-field-of-view-deg>
+      <dynamic-view type="bool">true</dynamic-view>
+        <limits>
+          <enabled type="bool">true</enabled>
+          <left>
+            <heading-max-deg type="double">140</heading-max-deg>
+            <x-offset-max-m type="double">0.20</x-offset-max-m>
+            <x-offset-threshold-deg type="double">65</x-offset-threshold-deg>
+          </left>
+          <right>
+            <heading-max-deg type="double">140</heading-max-deg>
+            <x-offset-max-m type="double">0.20</x-offset-max-m>
+            <x-offset-threshold-deg type="double">65</x-offset-threshold-deg>
+          </right>
+        </limits>
+    </config>
+  </view>
+
+</PropertyList>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
