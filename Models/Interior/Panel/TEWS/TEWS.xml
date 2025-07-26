@@ -170,7 +170,7 @@
 
 <model>
    <name>symbols</name>
-   <path>Aircraft/F-4EJ_ADTW/Models/Interior/Panel/TEWS/symbol.xml</path>
+   <path>Aircraft/FA-18E_CVW5/Models/Interior/Panel/TEWS/symbol.xml</path>
     <offsets>
       <x-m>  0.000 </x-m>
       <y-m>  0.000 </y-m>
